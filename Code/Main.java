@@ -5,6 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.*;
+import javafx.scene.image.*;
 
 import java.util.Random;
 
@@ -14,6 +16,19 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         // Create a label to display the random number
         Label randomNumberLabel = new Label("Edgar Productions Presets");
+
+        Image image = new Image("file:src/dnd-dice.jpg");
+        ImageView imageView = new ImageView(image);
+        imageView.setFitWidth(200); // Set the width you want
+        imageView.setFitHeight(150); // Set the height you want
+        imageView.setPreserveRatio(true);
+
+        imageView.setOnMouseClicked(event -> {
+            // Handle the click event here
+            System.out.println("Image clicked!");
+            int randomNumber = generateRandomNumber();
+            randomNumberLabel.setText("Random Number: " + randomNumber);
+        });
 
         // Create a button
         Button generateButton = new Button("Generate Random Number");
@@ -29,6 +44,7 @@ public class Main extends Application {
         root.getChildren().addAll(randomNumberLabel, generateButton);
         root.setAlignment(Pos.CENTER); // Center align the content vertically and horizontally
         root.setPrefSize(300, 200);
+        root.getChildren().add(imageView);
 
         // Create the scene and set it on the stage
         Scene scene = new Scene(root);

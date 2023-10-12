@@ -6,13 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "RandomNumberGeneratorApp",
-            "request": "launch",
-            "mainClass": "RandomNumberGeneratorApp",
-            "projectName": "SE370-2023-Team1-DND_CC_c099824c"
-        },
-        {
-            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -22,8 +15,8 @@
             "name": "Main",
             "request": "launch",
             "mainClass": "Main",
-            "projectName": "SE370-2023-Team1-DND_CC_c099824c",
-            "vmArgs": "--module-path \"C:\\javafx-sdk-21\\lib\" --add-modules javafx.controls,javafx.fxml"
+            "projectName": "SE370-2023-Team1-DND_CC_80367d05",
+            "vmArgs": "--module-path \"C:\\Users\\edgar\\Desktop\\DND-CC\\javafx-sdk-21\\lib\" --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }
