@@ -43,18 +43,15 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.effect.Glow?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Ellipse?>
-<?import javafx.scene.shape.Polygon?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
   <children>
@@ -101,7 +98,12 @@
       <items>
         <AnchorPane>
           <children>
-            <Label alignment="CENTER" layoutX="110.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Abilites " textAlignment="CENTER" textFill="RED" wrapText="false">
+                  <ImageView fitHeight="568.0" fitWidth="287.0" layoutX="-5.0" layoutY="-2.0">
+                     <image>
+                        <Image url="@Downloads/scoll.jpeg" />
+                     </image>
+                  </ImageView>
+            <Label alignment="CENTER" layoutX="103.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Abilites " textAlignment="CENTER" textFill="RED" wrapText="false">
               <font>
                 <Font size="32.0" fx:id="x1" />
               </font>
@@ -128,34 +130,31 @@
                   <ChoiceBox layoutX="119.0" layoutY="304.0" prefWidth="150.0" />
                   <Ellipse fill="#4ac3c3" layoutX="62.0" layoutY="389.0" radiusX="48.0" radiusY="27.0" stroke="BLACK" strokeType="INSIDE" />
                   <ChoiceBox layoutX="119.0" layoutY="377.0" prefWidth="150.0" />
-                  <Polygon fill="DODGERBLUE" layoutX="224.0" layoutY="486.0" points="-51.0, 40.0, 50.0, 40.0, 0.0, -60.0" stroke="BLACK" strokeType="INSIDE">
-                     <effect>
-                        <Glow level="0.81">
-                           <input>
-                              <Lighting>
-                                 <bumpInput>
-                                    <Shadow />
-                                 </bumpInput>
-                                 <light>
-                                    <Light.Distant />
-                                 </light>
-                              </Lighting>
-                           </input>
-                        </Glow>
-                     </effect>
-                  </Polygon>
-                  <Text layoutX="8.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Skill Points " wrappingWidth="267.0">
-                     <font>
-                        <Font size="32.0" />
-                     </font>
-                  </Text>
+                  <ImageView fitHeight="109.0" fitWidth="113.0" layoutX="32.0" layoutY="437.0">
+                     <image>
+                        <Image url="@../src/dnd-dice.jpg" />
+                     </image>
+                  </ImageView>
           </children>
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
           <content>
             <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0">
               <children>
-                <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Display Character Icon " textAlignment="CENTER" wrapText="false" />
+                        <ImageView fitHeight="655.0" fitWidth="666.0" layoutX="-138.0" layoutY="-63.0">
+                           <image>
+                              <Image url="@Downloads/scoll-removebg-preview%20(1).png" />
+                           </image>
+                        </ImageView>
+                <Label alignment="CENTER" layoutX="-6.0" prefHeight="129.0" prefWidth="386.0" style="&#10;" text="    Display Character Icon" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Brush Script MT Italic" size="43.0" />
+                           </font></Label>
+                        <ImageView fitHeight="162.0" fitWidth="171.0" layoutX="238.0" layoutY="96.0">
+                           <image>
+                              <Image url="@Downloads/d26ab6e45a7d77b5f41704c31403d40c.gif" />
+                           </image>
+                        </ImageView>
               </children>
             </AnchorPane>
           </content>
@@ -177,7 +176,7 @@
             <Color red="0.625" green="0.625" blue="0.625" fx:id="x4" />
           </textFill>
         </Label>
-        <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+        <Pane prefHeight="0.0" prefWidth="776.0" HBox.hgrow="ALWAYS" />
         <Label font="$x3" maxWidth="-1.0" text="Right status" textFill="$x4" HBox.hgrow="NEVER" />
       </children>
       <padding>
