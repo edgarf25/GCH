@@ -5,7 +5,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.scene.*;
 import javafx.scene.image.*;
 
 import java.util.Random;
@@ -16,8 +15,9 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         // Create a label to display the random number
         Label randomNumberLabel = new Label("Edgar Productions Presets");
-
-        Image image = new Image("file:src/dnd-dice.jpg");
+        
+        //adding and image
+        Image image = new Image("file:src/dice-gif.gif");
         ImageView imageView = new ImageView(image);
         imageView.setFitWidth(200); // Set the width you want
         imageView.setFitHeight(150); // Set the height you want
