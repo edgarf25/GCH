@@ -1,0 +1,23 @@
+Scene by Scene
+1. Welcome Screen
+2. Race and SubRace
+3. Class Scene
+	add descriptions of abilities etc
+4. Ability Score
+	3 options
+		Array (8,10,12,13,14,15)
+		Roll Dice(roll 4 keep top 3)
+		Manual (input manually)
+	Score Calculations(add maybe)
+5. Background/descriptions(character,faith,etc)/GenerateStory
+6.Equipment(Maybe)
+7. Summary (Main Scene)
+	Updates(Maybe)
+		level up
+		take damage
+		etc
+		
+Extra Features
+	Save?
+	Export?
+	
