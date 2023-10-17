@@ -15,13 +15,18 @@
             <Image url="@../../src/background%20color.png" />
          </image>
       </ImageView>
-      <Label layoutX="66.0" layoutY="70.0" prefWidth="368.0" text="Dungeons and Dragons Charactor Creator" textAlignment="CENTER" wrapText="true">
+      <Button blendMode="HARD_LIGHT" layoutX="138.0" layoutY="340.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="224.0" text="Start" />
+      <Button blendMode="HARD_LIGHT" layoutX="138.0" layoutY="420.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="224.0" text="Settings" />
+      <Button blendMode="HARD_LIGHT" layoutX="138.0" layoutY="500.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="224.0" text="Credits" />
+      <ImageView fitHeight="169.0" fitWidth="272.0" layoutX="114.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../src/dungeons-dragons.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="94.0" layoutY="179.0" text="Character Creator" textFill="#998543">
          <font>
-            <Font size="35.0" />
+            <Font name="Lucida Sans Italic" size="35.0" />
          </font>
       </Label>
-      <Button layoutX="138.0" layoutY="340.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="224.0" text="Start" />
-      <Button layoutX="138.0" layoutY="420.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="224.0" text="Settings" />
-      <Button layoutX="138.0" layoutY="500.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="224.0" text="Credits" />
    </children>
 </AnchorPane>
