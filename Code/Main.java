@@ -1,5 +1,7 @@
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -12,55 +14,17 @@ import java.util.Random;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) {
-        // Create a label to display the random number
-        Label randomNumberLabel = new Label("Edgar Productions Presets");
-        
-        //adding and image
-        Image image = new Image("file:src/dice-gif.gif");
-        ImageView imageView = new ImageView(image);
-        imageView.setFitWidth(200); // Set the width you want
-        imageView.setFitHeight(150); // Set the height you want
-        imageView.setPreserveRatio(true);
-
-        imageView.setOnMouseClicked(event -> {
-            // Handle the click event here
-            System.out.println("Image clicked!");
-            int randomNumber = generateRandomNumber();
-            randomNumberLabel.setText("Random Number: " + randomNumber);
-        });
-
-        // Create a button
-        Button generateButton = new Button("Generate Random Number");
-
-        // Add an event handler to the button to generate and display a random number
-        generateButton.setOnAction(event -> {
-            int randomNumber = generateRandomNumber();
-            randomNumberLabel.setText("Random Number: " + randomNumber);
-        });
-
-        // Create a VBox to hold the button and label, and center them
-        VBox root = new VBox(10);
-        root.getChildren().addAll(randomNumberLabel, generateButton);
-        root.setAlignment(Pos.CENTER); // Center align the content vertically and horizontally
-        root.setPrefSize(300, 200);
-        root.getChildren().add(imageView);
-
-        // Create the scene and set it on the stage
-        Scene scene = new Scene(root);
-
-        // Set the title of the window
-        primaryStage.setTitle("Random Number Generator");
-
-        // Set the scene on the stage and show the window
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
-
-    // Method to generate a random number between 1 and 100
-    private int generateRandomNumber() {
-        Random random = new Random();
-        return random.nextInt(100) + 1;
+    public void start(Stage primaryStage) 
+    {
+        try
+        {
+            Parent root = FXMLLoader.load(getClass().getResource("/Scenes/Welcome.fxml"));
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
