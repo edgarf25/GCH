@@ -23,7 +23,7 @@
             <Font name="Century" size="25.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="MyChoiceBox" blendMode="HARD_LIGHT" layoutX="403.0" layoutY="109.0" prefWidth="206.0" />
+      <ChoiceBox fx:id="myChoiceBox" blendMode="HARD_LIGHT" layoutX="403.0" layoutY="109.0" prefWidth="206.0" />
       <Label layoutX="132.0" layoutY="240.0" text="Subrace">
          <font>
             <Font size="25.0" />
