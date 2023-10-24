@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.sceneController">
    <children>
       <ImageView fitHeight="600.0" fitWidth="759.0" layoutX="-4.0" layoutY="2.0" pickOnBounds="true">
          <image>
@@ -23,7 +23,7 @@
             <Font name="Century" size="25.0" />
          </font>
       </Label>
-      <ChoiceBox blendMode="HARD_LIGHT" layoutX="403.0" layoutY="109.0" prefWidth="206.0" />
+      <ChoiceBox fx:id="MyChoiceBox" blendMode="HARD_LIGHT" layoutX="403.0" layoutY="109.0" prefWidth="206.0" />
       <Label layoutX="132.0" layoutY="240.0" text="Subrace">
          <font>
             <Font size="25.0" />
