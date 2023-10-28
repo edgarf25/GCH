@@ -35,7 +35,6 @@ public class sceneController {
             stage.show();
             counter = 1;
     }
-<<<<<<< HEAD
 
     public void prev(ActionEvent event) throws IOException
     {
@@ -63,7 +62,5 @@ public class sceneController {
     }
 
    
-=======
->>>>>>> 0e780fea60429a97c8295a8891cf200de626dba3
 }
 
