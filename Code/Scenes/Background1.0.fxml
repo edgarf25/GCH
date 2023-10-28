@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.sceneController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="759.0" layoutX="-4.0" layoutY="2.0" pickOnBounds="true">
+         <image>
+            <Image url="@../src/background%20color.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="68.0" layoutX="50.0" layoutY="224.0" stroke="#ae8406" strokeType="INSIDE" width="647.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="68.0" layoutX="50.0" layoutY="88.0" stroke="#ae8406" strokeType="INSIDE" width="647.0" />
+      <Label layoutX="150.0" layoutY="102.0" text="Background">
+         <font>
+            <Font name="Century" size="25.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="myChoiceBox" blendMode="HARD_LIGHT" layoutX="403.0" layoutY="109.0" prefWidth="206.0" />
+      <Label layoutX="52.0" layoutY="374.0" text="Description">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="-4.0" layoutY="3.0" prefHeight="68.0" prefWidth="759.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="759.0" />
+            <Line endX="113.0" layoutX="219.0" layoutY="36.0" startX="-207.20001220703125" stroke="#ff010a" />
+            <Line endX="120.199951171875" layoutX="622.0" layoutY="36.0" startX="-197.39999389648438" stroke="#ff010a" />
+            <ImageView fitHeight="46.0" fitWidth="62.0" layoutX="344.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../src/DnD-Symbol.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="150.0" layoutY="14.0" text="Class" textFill="#ff010a">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="14.0" text="Race" textFill="#ff010a">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="255.0" layoutY="14.0" text="Ability" textFill="#ff010a">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="440.0" layoutY="14.0" text="Background" textFill="#ff010a">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="660.0" layoutY="14.0" text="Summary" textFill="#ff010a">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="550.0" layoutY="14.0" text="Equipment" textFill="#ff010a">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="164.0" layoutX="52.0" layoutY="419.0" stroke="#ae8406" strokeType="INSIDE" width="647.0" />
+      <Button layoutX="684.0" layoutY="557.0" mnemonicParsing="false" onAction="#next" text="Next" />
+      <Button layoutX="14.0" layoutY="557.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
+   </children>
+</AnchorPane>

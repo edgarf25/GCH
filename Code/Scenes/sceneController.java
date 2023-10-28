@@ -17,17 +17,15 @@ public class sceneController {
     private Stage stage;
     private Scene scene;
     private Parent root;
-    @FXML
-    private ChoiceBox<String> racebox;
 
 
-    String array[] = {"Welcome.fxml","Race-Subrace 1.0.fxml","Dnd Front1.0.fxml"};
+    String array[] = {"Welcome.fxml","Race-Subrace 1.0.fxml","Class1.0.fxml","Ability1.0.fxml","Background1.0.fxml","Equipment1.0.fxml","Summary1.0.fxml"};
     public static int counter = 0;
 
     public void switchToScene2(ActionEvent event) throws IOException 
     {
             Image cursor = new Image("/src/sword.png");//changing cursor
-            root = FXMLLoader.load(getClass().getResource("../application/Race-Subrace 1.0.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/Scenes/Race-Subrace 1.0.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             scene.setCursor(new ImageCursor(cursor));
