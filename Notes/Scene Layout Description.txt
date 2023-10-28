@@ -1,7 +1,7 @@
 Scene by Scene
 1. Welcome Screen
 2. Race and SubRace
-3. Class Scene
+3. Class Scene 12 Class
 	add descriptions of abilities etc
 4. Ability Score
 	3 options
