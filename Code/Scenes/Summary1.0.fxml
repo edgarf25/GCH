@@ -73,7 +73,6 @@
          </children>
       </AnchorPane>
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="164.0" layoutX="52.0" layoutY="419.0" stroke="#ae8406" strokeType="INSIDE" width="647.0" />
-      <Button layoutX="684.0" layoutY="557.0" mnemonicParsing="false" onAction="#next" text="Next" />
       <Button layoutX="14.0" layoutY="557.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
    </children>
 </AnchorPane>
