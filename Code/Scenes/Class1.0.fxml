@@ -26,7 +26,7 @@
          </font>
       </Label>
       <ChoiceBox fx:id="myChoiceBox" blendMode="HARD_LIGHT" layoutX="442.0" layoutY="180.0" prefWidth="206.0" />
-      <Label layoutX="308.0" layoutY="378.0" text="Description">
+      <Label layoutX="308.0" layoutY="372.0" text="Description">
          <font>
             <Font name="Century" size="25.0" />
          </font>
