@@ -50,7 +50,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="255.0" layoutY="14.0" text="Ability" textFill="#ff010a">
+            <Label layoutX="255.0" layoutY="14.0" text="Ability" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>

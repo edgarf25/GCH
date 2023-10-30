@@ -65,7 +65,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="14.0" text="Equipment" textFill="#ff010a">
+            <Label layoutX="550.0" layoutY="14.0" text="Equipment" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
