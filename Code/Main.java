@@ -15,7 +15,7 @@ public class Main extends Application {
     {
         try
         {
-            Image cursor = new Image("/src/sword.png");
+            Image cursor = new Image("/src/sword.png"); //loading custom cursor
             Parent root = FXMLLoader.load(getClass().getResource("/Scenes/Welcome.fxml"));
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
