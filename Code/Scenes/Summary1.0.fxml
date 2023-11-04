@@ -12,14 +12,15 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.sceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.sceneController">
    <children>
-      <ImageView fitHeight="682.0" fitWidth="1010.0" layoutX="-7.0" layoutY="-5.0" pickOnBounds="true">
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="236.0" layoutX="678.0" layoutY="80.0" stroke="#ae8406" strokeType="INSIDE" width="304.0" />
+      <ImageView fitHeight="856.0" fitWidth="1016.0" layoutX="-11.0" layoutY="7.0" pickOnBounds="true">
          <image>
             <Image url="@../src/background%20color.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="20.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="8.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
       <AnchorPane layoutX="122.0" layoutY="-1.0" prefHeight="68.0" prefWidth="759.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="-123.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="1005.0" />
@@ -62,91 +63,332 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="25.0" layoutY="632.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="140.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="260.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="380.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="500.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="620.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="199.0" layoutX="734.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="244.0" />
-      <Circle fill="DODGERBLUE" layoutX="808.0" layoutY="150.0" radius="57.0" stroke="BLACK" strokeType="INSIDE" />
-      <Button layoutX="925.0" layoutY="189.0" mnemonicParsing="false" text="Heal" />
-      <TextField layoutX="925.0" layoutY="220.0" prefHeight="26.0" prefWidth="42.0" />
-      <Button layoutX="925.0" layoutY="250.0" mnemonicParsing="false" text="Dmg" />
-      <Text layoutX="886.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Name" wrappingWidth="74.63828702602541">
+      <Button layoutX="25.0" layoutY="824.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="121.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="235.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="347.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="462.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="574.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="236.0" layoutX="678.0" layoutY="78.0" stroke="#ae8406" strokeType="INSIDE" width="319.0" />
+      <Circle fill="#1f93ff11" layoutX="778.0" layoutY="148.0" radius="61.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button layoutX="891.0" layoutY="231.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="42.0" text="Heal" textFill="#07d000" />
+      <TextField layoutX="912.0" layoutY="195.0" prefHeight="26.0" prefWidth="42.0" />
+      <Button layoutX="940.0" layoutY="231.0" mnemonicParsing="false" text="Dmg" textFill="#fc0101" />
+      <Text layoutX="851.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Name" wrappingWidth="122.0">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <Line endX="-76.86590576171875" endY="-51.01612854003906" layoutX="901.0" layoutY="274.0" startX="-100.26275634765625" startY="0.03143310546875" strokeWidth="3.0" />
-      <Text layoutX="771.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Text>
-      <Text layoutX="825.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Text>
-      <Text layoutX="35.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Strength">
+      <Text layoutX="24.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Strength">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="155.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dexterity">
+      <Text layoutX="134.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dexterity">
          <font>
-            <Font size="18.0" />
+            <Font name="Century" size="18.0" />
          </font>
       </Text>
-      <Text layoutX="265.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Constituion">
+      <Text layoutX="237.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Constituion">
          <font>
-            <Font size="18.0" />
+            <Font name="Century" size="18.0" />
          </font>
       </Text>
-      <Text layoutX="386.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intelligence">
+      <Text layoutX="347.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intelligence">
          <font>
-            <Font size="18.0" />
+            <Font name="Century" size="18.0" />
          </font>
       </Text>
-      <Text layoutX="515.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wisdom">
+      <Text layoutX="479.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wisdom">
          <font>
-            <Font size="18.0" />
+            <Font name="Baskerville Old Face" size="18.0" />
          </font>
       </Text>
-      <Text layoutX="632.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Charisma">
+      <Text layoutX="582.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Charisma">
          <font>
-            <Font size="18.0" />
+            <Font name="Century" size="18.0" />
          </font>
       </Text>
-      <Text layoutX="56.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+      <Text layoutX="46.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
          <font>
             <Font size="48.0" />
          </font>
       </Text>
-      <Text layoutX="180.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+      <Text layoutX="157.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
          <font>
             <Font size="48.0" />
          </font>
       </Text>
-      <Text layoutX="298.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+      <Text layoutX="273.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
          <font>
             <Font size="48.0" />
          </font>
       </Text>
-      <Text layoutX="418.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+      <Text layoutX="385.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
          <font>
             <Font size="48.0" />
          </font>
       </Text>
-      <Text layoutX="539.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+      <Text layoutX="497.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
          <font>
             <Font size="48.0" />
          </font>
       </Text>
-      <Text layoutX="645.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10">
+      <Text layoutX="600.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10">
          <font>
             <Font size="48.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="571.0" layoutX="20.0" layoutY="241.0" stroke="#ae8406" strokeType="INSIDE" width="275.0" />
+      <Text layoutX="114.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SKILLS">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#16426b" height="39.0" layoutX="690.0" layoutY="225.0" stroke="BLACK" strokeType="INSIDE" width="179.0" />
+      <Label layoutX="717.0" layoutY="211.0" prefHeight="57.0" prefWidth="16.0" text="1" textFill="#23f7b1">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <Label layoutX="796.0" layoutY="212.0" prefHeight="66.0" prefWidth="68.0" text="10" textFill="#23f7b1">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4aa8ff" height="45.0" layoutX="766.0" layoutY="221.0" stroke="BLACK" strokeType="INSIDE" width="15.0" />
+      <Text layoutX="707.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CUR">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="796.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAX">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TabPane layoutX="309.0" layoutY="321.0" prefHeight="505.0" prefWidth="664.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Background">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab text="Features and Traits ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="600.0" />
+            </content>
+          </Tab>
+            <Tab text="Equipment">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Notes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Text layoutX="40.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MOD">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SKILLS">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="214.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BONUS">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEX">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal handling ">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIS">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acrobatics">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INT">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STR">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INT">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHA">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHA">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INT">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIS">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INT">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIS">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHA">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="650.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHA">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INT">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="710.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEX">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="740.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEX">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="770.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIS">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arcana">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Athletics">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deception">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="118.0" layoutY="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="History">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insight ">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intimidation">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Investigation">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nature">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perception">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Performance ">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="650.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Persuasion">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Religion">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="710.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sleight of Hand">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="740.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stealth">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="770.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Survival">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="90.0" layoutY="796.0" strokeType="OUTSIDE" strokeWidth="0.0" text="History">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="796.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INT">
+         <font>
+            <Font name="Century" size="12.0" />
          </font>
       </Text>
    </children>
