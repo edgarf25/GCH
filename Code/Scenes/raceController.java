@@ -83,6 +83,54 @@ public class raceController implements Initializable{
                     subraceChoiceBox.getItems().addAll(gnomeSubraces);
                     backgroundDescription.setText(descriptions[11]);
                 }
+                else if (newValue.equals("Half-Elf"))
+                {
+                    backgroundDescription.setText(descriptions[14]);
+                }
+                else if (newValue.equals("Half-Orc"))
+                {
+                    backgroundDescription.setText(descriptions[15]);
+                }
+                else if (newValue.equals("Tiefling"))
+                {
+                    backgroundDescription.setText(descriptions[16]);
+                }
+            }
+        });
+        subraceChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null)
+            {
+                if (newValue.equals("Hill Dwarf")) {
+                    backgroundDescription.setText(descriptions[1]);
+                }
+                else if (newValue.equals("Mountain Dwarf"))
+                {
+                    backgroundDescription.setText(descriptions[2]);
+                }
+                else if (newValue.equals("High Elf"))
+                {
+                    backgroundDescription.setText(descriptions[4]);
+                }
+                else if (newValue.equals("Wood Elf"))
+                {
+                    backgroundDescription.setText(descriptions[5]);
+                }
+                else if (newValue.equals("Lightfoot Halfling"))
+                {
+                    backgroundDescription.setText(descriptions[7]);
+                }
+                else if (newValue.equals("Stout Halfling"))
+                {
+                    backgroundDescription.setText(descriptions[8]);
+                }
+                else if (newValue.equals("Rock Gnome"))
+                {
+                    backgroundDescription.setText(descriptions[12]);
+                }
+                else if (newValue.equals("Deep Gnome"))
+                {
+                    backgroundDescription.setText(descriptions[13]);
+                }
             }
         });
     }
