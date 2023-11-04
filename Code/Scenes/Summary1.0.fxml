@@ -1,38 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.sceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.sceneController">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="759.0" layoutX="-4.0" layoutY="2.0" pickOnBounds="true">
+      <ImageView fitHeight="856.0" fitWidth="1002.0" layoutX="-7.0" layoutY="-5.0" pickOnBounds="true">
          <image>
             <Image url="@../src/background%20color.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="68.0" layoutX="50.0" layoutY="224.0" stroke="#ae8406" strokeType="INSIDE" width="647.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="68.0" layoutX="50.0" layoutY="88.0" stroke="#ae8406" strokeType="INSIDE" width="647.0" />
-      <Label layoutX="150.0" layoutY="102.0" text="Summary">
-         <font>
-            <Font name="Century" size="25.0" />
-         </font>
-      </Label>
-      <ChoiceBox fx:id="myChoiceBox" blendMode="HARD_LIGHT" layoutX="403.0" layoutY="109.0" prefWidth="206.0" />
-      <Label layoutX="52.0" layoutY="374.0" text="Description">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Label>
-      <AnchorPane layoutX="-4.0" layoutY="3.0" prefHeight="68.0" prefWidth="759.0">
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="20.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <AnchorPane layoutX="122.0" layoutY="-1.0" prefHeight="68.0" prefWidth="759.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="759.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="-123.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="1005.0" />
             <Line endX="113.0" layoutX="219.0" layoutY="36.0" startX="-207.20001220703125" stroke="#ff010a" />
             <Line endX="120.199951171875" layoutX="622.0" layoutY="36.0" startX="-197.39999389648438" stroke="#ff010a" />
             <ImageView fitHeight="46.0" fitWidth="62.0" layoutX="344.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
@@ -72,7 +62,92 @@
             </Label>
          </children>
       </AnchorPane>
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="164.0" layoutX="52.0" layoutY="419.0" stroke="#ae8406" strokeType="INSIDE" width="647.0" />
-      <Button layoutX="14.0" layoutY="557.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
+      <Button layoutX="28.0" layoutY="804.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="140.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="260.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="380.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="500.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="620.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="199.0" layoutX="734.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="244.0" />
+      <Circle fill="DODGERBLUE" layoutX="808.0" layoutY="150.0" radius="57.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button layoutX="925.0" layoutY="189.0" mnemonicParsing="false" text="Heal" />
+      <TextField layoutX="925.0" layoutY="220.0" prefHeight="26.0" prefWidth="42.0" />
+      <Button layoutX="925.0" layoutY="250.0" mnemonicParsing="false" text="Dmg" />
+      <Text layoutX="886.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Name" wrappingWidth="74.63828702602541">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Line endX="-76.86590576171875" endY="-51.01612854003906" layoutX="901.0" layoutY="274.0" startX="-100.26275634765625" startY="0.03143310546875" strokeWidth="3.0" />
+      <Text layoutX="771.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Text layoutX="825.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Text layoutX="35.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Strength">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="155.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dexterity">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="265.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Constituion">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="386.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intelligence">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="515.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wisdom">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="632.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Charisma">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="56.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Text layoutX="180.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Text layoutX="298.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Text layoutX="418.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Text layoutX="539.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Text layoutX="645.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
