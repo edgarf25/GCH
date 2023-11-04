@@ -17,7 +17,7 @@
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="236.0" layoutX="678.0" layoutY="80.0" stroke="#ae8406" strokeType="INSIDE" width="304.0" />
       <ImageView fitHeight="856.0" fitWidth="1016.0" layoutX="-11.0" layoutY="7.0" pickOnBounds="true">
          <image>
-            <Image url="@../src/background%20color.png" />
+            <Image url="@../src/background color.png" />
          </image>
       </ImageView>
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="8.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
@@ -167,30 +167,6 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <TabPane layoutX="309.0" layoutY="321.0" prefHeight="505.0" prefWidth="664.0" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab text="Background">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </Tab>
-          <Tab text="Features and Traits ">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="600.0" />
-            </content>
-          </Tab>
-            <Tab text="Equipment">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </Tab>
-            <Tab text="Notes">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </Tab>
-        </tabs>
-      </TabPane>
       <Text layoutX="40.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MOD">
          <font>
             <Font name="Century Gothic Bold" size="12.0" />
