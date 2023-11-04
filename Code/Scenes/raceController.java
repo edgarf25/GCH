@@ -7,6 +7,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
+
 
 
 public class raceController implements Initializable{
@@ -14,6 +16,19 @@ public class raceController implements Initializable{
     private ChoiceBox<String> myChoiceBox;
     @FXML
     private ChoiceBox<String> subraceChoiceBox;
+    @FXML 
+    private Label raceLabel;
+    @FXML
+    private Label classLabel;
+    @FXML
+    private Label abilityLabel;
+    @FXML
+    private Label backgroundLabel;
+    @FXML
+    private Label equipmentLabel;
+    @FXML
+    private Label summaryLabel;
+
     private String[] racesArray = {"Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling"};
     private String[] dwarfSubraces = {"Hill Dwarf", "Mountain Dwarf"};
     private String[] elfSubraces = {"High Elf", "Wood Elf", "Eladrin Elf"};
@@ -53,6 +68,10 @@ public class raceController implements Initializable{
                 }
             }
         });
+
+        // Add event handlers to the labels
+        
+
     }
 
 
@@ -67,6 +86,37 @@ public class raceController implements Initializable{
         controller = new sceneController();
         controller.next(event); // Called the prev method with the empty event
     }
+
+    public void switchToScene3(ActionEvent event) throws IOException
+    {
+        controller = new sceneController();
+        controller.switchToScene3(event); // Called the prev method with the empty event
+    }
+
+    public void switchToScene4(ActionEvent event) throws IOException
+    {
+        controller = new sceneController();
+        controller.switchToScene4(event); // Called the prev method with the empty event
+    }
+
+    public void switchToScene5(ActionEvent event) throws IOException
+    {
+        controller = new sceneController();
+        controller.switchToScene5(event); // Called the prev method with the empty event
+    }
+
+    public void switchToScene6(ActionEvent event) throws IOException
+    {
+        controller = new sceneController();
+        controller.switchToScene6(event); // Called the prev method with the empty event
+    }
+
+    public void switchToScene7(ActionEvent event) throws IOException
+    {
+        controller = new sceneController();
+        controller.switchToScene7(event); // Called the prev method with the empty event
+    }
+    
 
 
 }

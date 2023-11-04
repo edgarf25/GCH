@@ -36,6 +36,9 @@
             <Font size="25.0" />
          </font>
       </Label>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="164.0" layoutX="52.0" layoutY="419.0" stroke="#ae8406" strokeType="INSIDE" width="647.0" />
+      <Button layoutX="684.0" layoutY="557.0" mnemonicParsing="false" onAction="#next" text="Next" />
+      <Button layoutX="14.0" layoutY="557.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
       <AnchorPane layoutX="-4.0" layoutY="3.0" prefHeight="68.0" prefWidth="759.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="759.0" />
@@ -46,40 +49,42 @@
                   <Image url="@../src/DnD-Symbol.png" />
                </image>
             </ImageView>
-            <Label layoutX="150.0" layoutY="14.0" text="Class" textFill="#ff010a">
+            <Label fx:id="classLabel" accessibleRole="BUTTON" layoutX="150.0" layoutY="14.0" onMousePressed="#next" text="Class" textFill="#ff010a">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="45.0" layoutY="14.0" text="Race" textFill="WHITE">
+            <Label fx:id="raceLabel" layoutX="45.0" layoutY="14.0" text="Race" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="255.0" layoutY="14.0" text="Ability" textFill="#ff010a">
+            <Label fx:id="abilityLabel" layoutX="255.0" layoutY="14.0" text="Ability" textFill="#ff010a">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="440.0" layoutY="14.0" text="Background" textFill="#ff010a">
+            <Label fx:id="backgroundLabel" layoutX="440.0" layoutY="14.0" text="Background" textFill="#ff010a">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="660.0" layoutY="14.0" text="Summary" textFill="#ff010a">
+            <Label fx:id="summaryLabel" layoutX="660.0" layoutY="14.0" text="Summary" textFill="#ff010a">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="14.0" text="Equipment" textFill="#ff010a">
+            <Label fx:id="equipmentLabel" layoutX="550.0" layoutY="14.0" text="Equipment" textFill="#ff010a">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
+            <Button layoutX="140.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToScene3" opacity="0.0" text="Class" textFill="TRANSPARENT" />
+            <Button layoutX="249.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene4" opacity="0.0" text="Ability" />
+            <Button layoutX="440.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToScene5" opacity="0.0" text="Background" />
+            <Button layoutX="547.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene6" opacity="0.0" text="Equipment" />
+            <Button layoutX="652.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene7" opacity="0.0" text="Summary" />
          </children>
       </AnchorPane>
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="164.0" layoutX="52.0" layoutY="419.0" stroke="#ae8406" strokeType="INSIDE" width="647.0" />
-      <Button layoutX="684.0" layoutY="557.0" mnemonicParsing="false" onAction="#next" text="Next" />
-      <Button layoutX="14.0" layoutY="557.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
    </children>
 </AnchorPane>

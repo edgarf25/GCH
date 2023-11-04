@@ -31,6 +31,22 @@
             <Font name="Century" size="25.0" />
          </font>
       </Label>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="169.0" layoutX="92.0" layoutY="410.0" stroke="#ae8406" strokeType="INSIDE" width="577.0" />
+      <Button layoutX="684.0" layoutY="557.0" mnemonicParsing="false" onAction="#next" text="Next" />
+      <Button layoutX="14.0" layoutY="557.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="231.0" layoutX="92.0" layoutY="112.0" stroke="#ae8406" strokeType="INSIDE" width="237.0" />
+      <Text layoutX="482.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SubClass">
+         <font>
+            <Font name="Century" size="28.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="111.0" layoutY="144.0">
+         <image>
+            <Image url="@../../../../Downloads/2109978-200-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="466.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="152.0" />
+      <TextField layoutX="466.0" layoutY="272.0" />
       <AnchorPane layoutX="-4.0" layoutY="3.0" prefHeight="68.0" prefWidth="759.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="759.0" />
@@ -71,23 +87,12 @@
                   <Font size="14.0" />
                </font>
             </Label>
+            <Button layoutX="38.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene2" opacity="0.0" text="Race" textFill="TRANSPARENT" />
+            <Button layoutX="250.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene4" opacity="0.0" text="Ability" />
+            <Button layoutX="437.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene5" opacity="0.0" text="Background" />
+            <Button layoutX="547.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene6" opacity="0.0" text="Equipment" />
+            <Button layoutX="656.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToScene7" opacity="0.0" text="Summary" />
          </children>
       </AnchorPane>
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="169.0" layoutX="92.0" layoutY="410.0" stroke="#ae8406" strokeType="INSIDE" width="577.0" />
-      <Button layoutX="684.0" layoutY="557.0" mnemonicParsing="false" onAction="#next" text="Next" />
-      <Button layoutX="14.0" layoutY="557.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="231.0" layoutX="92.0" layoutY="112.0" stroke="#ae8406" strokeType="INSIDE" width="237.0" />
-      <Text layoutX="482.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SubClass">
-         <font>
-            <Font name="Century" size="28.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="111.0" layoutY="144.0">
-         <image>
-            <Image url="@../../../../Downloads/2109978-200-removebg-preview.png" />
-         </image>
-      </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="466.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="152.0" />
-      <TextField layoutX="466.0" layoutY="272.0" />
    </children>
 </AnchorPane>

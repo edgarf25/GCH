@@ -65,7 +65,7 @@
                   <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-11-01_-_19-36-10-removebg-preview.png" />
                </image>
             </ImageView>
-            <Text layoutX="87.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STR">
+            <Text layoutX="87.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEX">
                <font>
                   <Font name="Century" size="12.0" />
                </font>
@@ -83,7 +83,7 @@
                   <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-11-01_-_19-36-10-removebg-preview.png" />
                </image>
             </ImageView>
-            <Text layoutX="87.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STR">
+            <Text layoutX="87.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CON">
                <font>
                   <Font name="Century" size="12.0" />
                </font>
@@ -101,7 +101,7 @@
                   <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-11-01_-_19-36-10-removebg-preview.png" />
                </image>
             </ImageView>
-            <Text layoutX="87.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STR">
+            <Text layoutX="87.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INT">
                <font>
                   <Font name="Century" size="12.0" />
                </font>
@@ -119,7 +119,7 @@
                   <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-11-01_-_19-36-10-removebg-preview.png" />
                </image>
             </ImageView>
-            <Text layoutX="87.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STR">
+            <Text layoutX="87.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIS">
                <font>
                   <Font name="Century" size="12.0" />
                </font>
@@ -137,7 +137,7 @@
                   <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-11-01_-_19-36-10-removebg-preview.png" />
                </image>
             </ImageView>
-            <Text layoutX="87.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STR">
+            <Text layoutX="87.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHA">
                <font>
                   <Font name="Century" size="12.0" />
                </font>
@@ -187,6 +187,11 @@
                   <Font size="14.0" />
                </font>
             </Label>
+            <Button layoutX="144.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene3" opacity="0.0" text="Class" textFill="TRANSPARENT" />
+            <Button layoutX="437.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene5" opacity="0.0" text="Background" />
+            <Button layoutX="546.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene6" opacity="0.0" text="Equipment" />
+            <Button layoutX="656.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene7" opacity="0.0" text="Summary" />
+            <Button layoutX="39.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene2" opacity="0.0" text="Race" />
          </children>
       </AnchorPane>
    </children>

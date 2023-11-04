@@ -32,6 +32,39 @@
             <Font size="25.0" />
          </font>
       </Label>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="206.0" layoutX="135.0" layoutY="387.0" stroke="#ae8406" strokeType="INSIDE" width="544.0" />
+      <Button layoutX="684.0" layoutY="557.0" mnemonicParsing="false" onAction="#next" text="Next" />
+      <Button layoutX="14.0" layoutY="557.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="38.0" layoutY="166.0" stroke="#ae8406" strokeType="INSIDE" width="447.0" />
+      <Text layoutX="74.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Armor ">
+         <font>
+            <Font name="Century" size="25.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="myChoiceBox1" blendMode="HARD_LIGHT" layoutX="248.0" layoutY="186.0" prefWidth="206.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="38.0" layoutY="241.0" stroke="#ae8406" strokeType="INSIDE" width="447.0" />
+      <Text layoutX="53.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Possesions">
+         <font>
+            <Font name="Century" size="25.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="myChoiceBox11" blendMode="HARD_LIGHT" layoutX="251.0" layoutY="261.0" prefWidth="206.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="491.0" layoutY="316.0" stroke="#ae8406" strokeType="INSIDE" width="194.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="37.0" layoutY="316.0" stroke="#ae8406" strokeType="INSIDE" width="447.0" />
+      <Text layoutX="74.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gold ">
+         <font>
+            <Font name="Century" size="25.0" />
+         </font>
+      </Text>
+      <TextField layoutX="248.0" layoutY="336.0" prefHeight="25.0" prefWidth="213.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="491.0" layoutY="241.0" stroke="#ae8406" strokeType="INSIDE" width="194.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="491.0" layoutY="166.0" stroke="#ae8406" strokeType="INSIDE" width="194.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="491.0" layoutY="84.0" stroke="#ae8406" strokeType="INSIDE" width="194.0" />
+      <Button layoutX="517.0" layoutY="95.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" text="ADD" />
+      <Button layoutX="517.0" layoutY="177.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" text="ADD" />
+      <Button layoutX="516.0" layoutY="252.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" text="ADD" />
+      <Button layoutX="515.0" layoutY="326.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" text="ADD" />
+      <TextArea blendMode="MULTIPLY" editable="false" layoutX="145.0" layoutY="396.0" prefHeight="190.0" prefWidth="524.0" />
       <AnchorPane layoutX="-4.0" layoutY="3.0" prefHeight="68.0" prefWidth="759.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="759.0" />
@@ -72,40 +105,12 @@
                   <Font size="14.0" />
                </font>
             </Label>
+            <Button layoutX="144.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene3" opacity="0.0" text="Class" textFill="TRANSPARENT" />
+            <Button layoutX="250.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene4" opacity="0.0" text="Ability" />
+            <Button layoutX="437.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene5" opacity="0.0" text="Background" />
+            <Button layoutX="39.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene2" opacity="0.0" text="Race" />
+            <Button layoutX="656.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene7" opacity="0.0" text="Summary" />
          </children>
       </AnchorPane>
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="206.0" layoutX="135.0" layoutY="387.0" stroke="#ae8406" strokeType="INSIDE" width="544.0" />
-      <Button layoutX="684.0" layoutY="557.0" mnemonicParsing="false" onAction="#next" text="Next" />
-      <Button layoutX="14.0" layoutY="557.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="38.0" layoutY="166.0" stroke="#ae8406" strokeType="INSIDE" width="447.0" />
-      <Text layoutX="74.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Armor ">
-         <font>
-            <Font name="Century" size="25.0" />
-         </font>
-      </Text>
-      <ChoiceBox fx:id="myChoiceBox1" blendMode="HARD_LIGHT" layoutX="248.0" layoutY="186.0" prefWidth="206.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="38.0" layoutY="241.0" stroke="#ae8406" strokeType="INSIDE" width="447.0" />
-      <Text layoutX="53.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Possesions">
-         <font>
-            <Font name="Century" size="25.0" />
-         </font>
-      </Text>
-      <ChoiceBox fx:id="myChoiceBox11" blendMode="HARD_LIGHT" layoutX="251.0" layoutY="261.0" prefWidth="206.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="491.0" layoutY="316.0" stroke="#ae8406" strokeType="INSIDE" width="194.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="37.0" layoutY="316.0" stroke="#ae8406" strokeType="INSIDE" width="447.0" />
-      <Text layoutX="74.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gold ">
-         <font>
-            <Font name="Century" size="25.0" />
-         </font>
-      </Text>
-      <TextField layoutX="248.0" layoutY="336.0" prefHeight="25.0" prefWidth="213.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="491.0" layoutY="241.0" stroke="#ae8406" strokeType="INSIDE" width="194.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="491.0" layoutY="166.0" stroke="#ae8406" strokeType="INSIDE" width="194.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="491.0" layoutY="84.0" stroke="#ae8406" strokeType="INSIDE" width="194.0" />
-      <Button layoutX="517.0" layoutY="95.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" text="ADD" />
-      <Button layoutX="517.0" layoutY="177.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" text="ADD" />
-      <Button layoutX="516.0" layoutY="252.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" text="ADD" />
-      <Button layoutX="515.0" layoutY="326.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" text="ADD" />
-      <TextArea blendMode="MULTIPLY" editable="false" layoutX="145.0" layoutY="396.0" prefHeight="190.0" prefWidth="524.0" />
    </children>
 </AnchorPane>
