@@ -30,7 +30,7 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <ChoiceBox blendMode="HARD_LIGHT" layoutX="403.0" layoutY="245.0" prefWidth="206.0" />
+      <ChoiceBox fx:id="subraceChoiceBox" blendMode="HARD_LIGHT" layoutX="403.0" layoutY="245.0" prefWidth="206.0" />
       <Label layoutX="52.0" layoutY="374.0" text="Description">
          <font>
             <Font size="25.0" />
