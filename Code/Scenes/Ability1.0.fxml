@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.sceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.AbilityController">
    <children>
       <ImageView fitHeight="600.0" fitWidth="759.0" layoutX="-4.0" layoutY="2.0" pickOnBounds="true">
          <image>
@@ -38,7 +38,7 @@
             <Font name="Centaur" size="30.0" />
          </font>
       </Label>
-      <ChoiceBox layoutX="398.0" layoutY="82.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="optionsChoiceBox" layoutX="398.0" layoutY="82.0" prefWidth="150.0" />
       <AnchorPane layoutX="25.0" layoutY="125.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="200.0" stroke="#ae8406" strokeType="INSIDE" width="200.0" />
