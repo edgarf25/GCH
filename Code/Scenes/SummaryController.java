@@ -24,12 +24,12 @@ public class SummaryController implements Initializable{
 
 
         };
-    public void heal()
+    public void heal() // Heal Control
     {
         healthValue++;
         currentHealth.setText(Integer.toString(healthValue));
     }
-    public void dmg()
+    public void dmg()  // Damage Control
     {
         healthValue--;
         currentHealth.setText(Integer.toString(healthValue));
