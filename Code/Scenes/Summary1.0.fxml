@@ -72,7 +72,7 @@
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="236.0" layoutX="678.0" layoutY="78.0" stroke="#ae8406" strokeType="INSIDE" width="319.0" />
       <Circle fill="#1f93ff11" layoutX="778.0" layoutY="148.0" radius="61.0" stroke="BLACK" strokeType="INSIDE" />
       <Button fx:id="healButton" layoutX="891.0" layoutY="231.0" mnemonicParsing="false" onMouseClicked="#heal" prefHeight="25.0" prefWidth="42.0" text="Heal" textFill="#07d000" />
-      <TextField layoutX="912.0" layoutY="195.0" prefHeight="26.0" prefWidth="42.0" />
+      <TextField fx:id="healthAmount" layoutX="912.0" layoutY="195.0" prefHeight="26.0" prefWidth="42.0" />
       <Button layoutX="940.0" layoutY="231.0" mnemonicParsing="false" onMouseClicked="#dmg" text="Dmg" textFill="#fc0101" />
       <Text layoutX="851.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Name" wrappingWidth="122.0">
          <font>

@@ -2,6 +2,7 @@ package Scenes;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -9,13 +10,17 @@ import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.fxml.FXML;
+import org.w3c.dom.Text;
 
 public class SummaryController implements Initializable{
     @FXML
     private Button healButton;
     @FXML
     private Label currentHealth;
+    @FXML
+    private TextField healthAmount;
     private int healthValue = 1;
     private sceneController controller; //created a scenceController instance
 
@@ -26,12 +31,26 @@ public class SummaryController implements Initializable{
         };
     public void heal() // Heal Control
     {
-        healthValue++;
+        if (!Objects.equals(healthAmount.getText(), ""))
+        {
+            healthValue += Integer.parseInt(healthAmount.getText());
+        }
+        else
+        {
+            healthValue++;
+        }
         currentHealth.setText(Integer.toString(healthValue));
     }
     public void dmg()  // Damage Control
     {
-        healthValue--;
+        if (!Objects.equals(healthAmount.getText(), ""))
+        {
+            healthValue -= Integer.parseInt(healthAmount.getText());
+        }
+        else
+        {
+            healthValue--;
+        }
         currentHealth.setText(Integer.toString(healthValue));
     }
 
