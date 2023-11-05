@@ -16,8 +16,6 @@ import org.w3c.dom.Text;
 
 public class SummaryController implements Initializable{
     @FXML
-    private Button healButton;
-    @FXML
     private Label currentHealth;
     @FXML
     private TextField healthAmount;
@@ -40,6 +38,7 @@ public class SummaryController implements Initializable{
             healthValue++;
         }
         currentHealth.setText(Integer.toString(healthValue));
+        healthAmount.setText("");
     }
     public void dmg()  // Damage Control
     {
@@ -52,6 +51,7 @@ public class SummaryController implements Initializable{
             healthValue--;
         }
         currentHealth.setText(Integer.toString(healthValue));
+        healthAmount.setText("");
     }
 
 
