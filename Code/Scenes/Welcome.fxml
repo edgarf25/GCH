@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="650.0" fitWidth="605.0" layoutX="-105.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../src/background%20color.png" />
+            <Image url="@../src/background color.png" />
          </image>
       </ImageView>
       <Button fx:id="buttonStart" blendMode="HARD_LIGHT" layoutX="138.0" layoutY="340.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="51.0" prefWidth="224.0" text="Start" />

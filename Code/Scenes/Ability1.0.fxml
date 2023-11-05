@@ -16,7 +16,7 @@
    <children>
       <ImageView fitHeight="600.0" fitWidth="759.0" layoutX="-4.0" layoutY="2.0" pickOnBounds="true">
          <image>
-            <Image url="@../src/background%20color.png" />
+            <Image url="@../src/background color.png" />
          </image>
       </ImageView>
       <Label layoutX="268.0" layoutY="72.0" text="Ability">
@@ -42,11 +42,6 @@
       <AnchorPane layoutX="25.0" layoutY="125.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="200.0" stroke="#ae8406" strokeType="INSIDE" width="200.0" />
-            <ImageView fitHeight="98.0" fitWidth="67.0" layoutX="65.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-11-01_-_19-36-10-removebg-preview.png" />
-               </image>
-            </ImageView>
             <Text layoutX="87.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STR">
                <font>
                   <Font name="Century" size="12.0" />
@@ -60,11 +55,6 @@
       <AnchorPane layoutX="275.0" layoutY="125.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="200.0" stroke="#ae8406" strokeType="INSIDE" width="200.0" />
-            <ImageView fitHeight="98.0" fitWidth="67.0" layoutX="65.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-11-01_-_19-36-10-removebg-preview.png" />
-               </image>
-            </ImageView>
             <Text layoutX="87.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEX">
                <font>
                   <Font name="Century" size="12.0" />
@@ -78,11 +68,6 @@
       <AnchorPane layoutX="525.0" layoutY="125.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="200.0" stroke="#ae8406" strokeType="INSIDE" width="200.0" />
-            <ImageView fitHeight="98.0" fitWidth="67.0" layoutX="65.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-11-01_-_19-36-10-removebg-preview.png" />
-               </image>
-            </ImageView>
             <Text layoutX="87.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CON">
                <font>
                   <Font name="Century" size="12.0" />
@@ -96,11 +81,6 @@
       <AnchorPane layoutX="25.0" layoutY="340.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="200.0" stroke="#ae8406" strokeType="INSIDE" width="200.0" />
-            <ImageView fitHeight="98.0" fitWidth="67.0" layoutX="65.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-11-01_-_19-36-10-removebg-preview.png" />
-               </image>
-            </ImageView>
             <Text layoutX="87.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INT">
                <font>
                   <Font name="Century" size="12.0" />
@@ -114,11 +94,6 @@
       <AnchorPane layoutX="275.0" layoutY="340.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="200.0" stroke="#ae8406" strokeType="INSIDE" width="200.0" />
-            <ImageView fitHeight="98.0" fitWidth="67.0" layoutX="65.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-11-01_-_19-36-10-removebg-preview.png" />
-               </image>
-            </ImageView>
             <Text layoutX="87.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIS">
                <font>
                   <Font name="Century" size="12.0" />
@@ -132,11 +107,6 @@
       <AnchorPane layoutX="525.0" layoutY="340.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="200.0" stroke="#ae8406" strokeType="INSIDE" width="200.0" />
-            <ImageView fitHeight="98.0" fitWidth="67.0" layoutX="65.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-11-01_-_19-36-10-removebg-preview.png" />
-               </image>
-            </ImageView>
             <Text layoutX="87.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHA">
                <font>
                   <Font name="Century" size="12.0" />
