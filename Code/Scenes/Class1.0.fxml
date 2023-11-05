@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.sceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.ClassController">
    <children>
       <ImageView fitHeight="600.0" fitWidth="759.0" layoutX="-4.0" layoutY="2.0" pickOnBounds="true">
          <image>
@@ -25,13 +26,13 @@
             <Font name="Century" size="33.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="myChoiceBox" blendMode="HARD_LIGHT" layoutX="442.0" layoutY="180.0" prefWidth="206.0" />
+      <ChoiceBox fx:id="classChoiceBox" blendMode="HARD_LIGHT" layoutX="442.0" layoutY="180.0" prefWidth="206.0" />
       <Label layoutX="308.0" layoutY="372.0" text="Description">
          <font>
             <Font name="Century" size="25.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="169.0" layoutX="92.0" layoutY="410.0" stroke="#ae8406" strokeType="INSIDE" width="577.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="150.0" layoutX="80.0" layoutY="400.0" stroke="#ae8406" strokeType="INSIDE" width="600.0" />
       <Button layoutX="684.0" layoutY="557.0" mnemonicParsing="false" onAction="#next" text="Next" />
       <Button layoutX="14.0" layoutY="557.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="231.0" layoutX="92.0" layoutY="112.0" stroke="#ae8406" strokeType="INSIDE" width="237.0" />
@@ -94,5 +95,10 @@
             <Button layoutX="656.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToScene7" opacity="0.0" text="Summary" />
          </children>
       </AnchorPane>
+      <TextArea fx:id="classDescription" blendMode="MULTIPLY" layoutX="80.0" layoutY="400.0" prefHeight="150.0" prefWidth="600.0" wrapText="true">
+         <font>
+            <Font name="Lucida Calligraphy Italic" size="16.0" />
+         </font>
+      </TextArea>
    </children>
 </AnchorPane>
