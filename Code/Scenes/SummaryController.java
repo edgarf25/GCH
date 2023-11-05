@@ -4,15 +4,11 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.fxml.FXML;
-import org.w3c.dom.Text;
 
 public class SummaryController implements Initializable{
     @FXML
@@ -24,9 +20,8 @@ public class SummaryController implements Initializable{
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+    };
 
-
-        };
     public void heal() // Heal Control
     {
         if (!Objects.equals(healthAmount.getText(), ""))
@@ -95,5 +90,11 @@ public class SummaryController implements Initializable{
     {
         controller = new sceneController();
         controller.switchToScene7(event); // Called the prev method with the empty event
+    }
+
+    public void switchToScene2(ActionEvent event) throws IOException
+    {
+        controller = new sceneController();
+        controller.switchToScene2(event); // Called the prev method with the empty event
     }
 }

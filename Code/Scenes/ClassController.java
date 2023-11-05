@@ -100,7 +100,7 @@ public class ClassController implements Initializable{
     public void switchToScene2(ActionEvent event) throws IOException
     {
         controller = new sceneController();
-        controller.switchToScene4(event); // Called the prev method with the empty event
+        controller.switchToScene2(event); // Called the prev method with the empty event
     }
     public void switchToScene4(ActionEvent event) throws IOException
     {
