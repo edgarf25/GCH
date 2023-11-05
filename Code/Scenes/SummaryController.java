@@ -1,12 +1,39 @@
 package Scenes;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.fxml.FXML;
 
-public class SummaryController {
-
+public class SummaryController implements Initializable{
+    @FXML
+    private Button healButton;
+    @FXML
+    private Label currentHealth;
+    private int healthValue = 1;
     private sceneController controller; //created a scenceController instance
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+
+
+        };
+    public void heal()
+    {
+        healthValue++;
+        currentHealth.setText(Integer.toString(healthValue));
+    }
+    public void dmg()
+    {
+        healthValue--;
+        currentHealth.setText(Integer.toString(healthValue));
+    }
 
 
     public void prev(ActionEvent event) throws IOException
