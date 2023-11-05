@@ -102,46 +102,46 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="759.0" />
             <Line endX="113.0" layoutX="219.0" layoutY="36.0" startX="-207.20001220703125" stroke="#ff010a" />
             <Line endX="120.199951171875" layoutX="622.0" layoutY="36.0" startX="-197.39999389648438" stroke="#ff010a" />
-            <ImageView fitHeight="46.0" fitWidth="62.0" layoutX="344.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="46.0" fitWidth="62.0" layoutX="350.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../src/DnD-Symbol.png" />
                </image>
             </ImageView>
-            <Label layoutX="150.0" layoutY="14.0" text="Class" textFill="#ff010a">
+            <Label layoutX="150.0" layoutY="15.0" text="Class" textFill="#ff010a">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="45.0" layoutY="14.0" text="Race" textFill="#ff010a">
+            <Label layoutX="50.0" layoutY="15.0" text="Race" textFill="#ff010a">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="255.0" layoutY="14.0" text="Ability" textFill="#ff010a">
+            <Label layoutX="250.0" layoutY="15.0" text="Ability" textFill="#ff010a">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="440.0" layoutY="14.0" text="Background" textFill="WHITE">
+            <Label layoutX="450.0" layoutY="15.0" text="Background" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="660.0" layoutY="14.0" text="Summary" textFill="#ff010a">
+            <Label layoutX="650.0" layoutY="15.0" text="Summary" textFill="#ff010a">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="14.0" text="Equipment" textFill="#ff010a">
+            <Label layoutX="550.0" layoutY="15.0" text="Equipment" textFill="#ff010a">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button layoutX="144.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene3" opacity="0.0" text="Class" textFill="TRANSPARENT" />
-            <Button layoutX="250.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene4" opacity="0.0" text="Ability" />
-            <Button layoutX="39.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene2" opacity="0.0" text="Race" />
-            <Button layoutX="546.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene6" opacity="0.0" text="Equipment" />
-            <Button layoutX="656.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchToScene7" opacity="0.0" text="Summary" />
+            <Button layoutX="150.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToScene3" opacity="0.0" text="Class" textFill="TRANSPARENT" />
+            <Button layoutX="250.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToScene4" opacity="0.0" text="Ability" />
+            <Button layoutX="50.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToScene2" opacity="0.0" text="Race" />
+            <Button layoutX="550.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToScene6" opacity="0.0" text="Equipment" />
+            <Button layoutX="650.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToScene7" opacity="0.0" text="Summary" />
          </children>
       </AnchorPane>
    </children>
