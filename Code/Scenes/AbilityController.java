@@ -1,12 +1,23 @@
 package Scenes;
 
 import java.io.IOException;
-
 import javafx.event.ActionEvent;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.scene.control.TextArea;
+import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ChoiceBox;
+import javafx.fxml.FXML;
 
-public class AbilityController {
+public class AbilityController implements Initializable{
 
-    private sceneController controller; //created a scenceController instance
+
+    @FXML
+    private ChoiceBox<String> optionsChoiceBox;
+    private String[] options = {"Standard Array", "Point Buy", "Randomize"};
+   private sceneController controller; //created a scenceController instance
+
 
     public void prev(ActionEvent event) throws IOException
     {
@@ -20,11 +31,14 @@ public class AbilityController {
         controller.next(event); // Called the prev method with the empty event
     }
 
-    public void switchToScene2(ActionEvent event) throws IOException
+    public void initialize(URL arg0, ResourceBundle arg1)
     {
-        controller = new sceneController();
-        controller.switchToScene2(event); // Called the prev method with the empty event
-    }
+        optionsChoiceBox.getItems().addAll(options);
+        optionsChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
+        {
+
+        });
+    };
 
     public void switchToScene3(ActionEvent event) throws IOException
     {
@@ -32,6 +46,11 @@ public class AbilityController {
         controller.switchToScene3(event); // Called the prev method with the empty event
     }
 
+    public void switchToScene2(ActionEvent event) throws IOException
+    {
+        controller = new sceneController();
+        controller.switchToScene4(event); // Called the prev method with the empty event
+    }
     public void switchToScene4(ActionEvent event) throws IOException
     {
         controller = new sceneController();
