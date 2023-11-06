@@ -40,7 +40,7 @@
             <Font name="Century" size="20.0" />
          </font>
       </Text>
-      <ChoiceBox fx:id="backgroundChoice" layoutX="180.0" layoutY="154.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="backgroundChoiceBox" layoutX="180.0" layoutY="154.0" prefWidth="150.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000001" height="211.0" layoutX="30.0" layoutY="209.0" stroke="#ae8406e8" strokeType="INSIDE" width="401.0" />
       <Text layoutX="35.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Skill Proficiencies" wrappingWidth="174.0">
          <font>
