@@ -51,6 +51,7 @@ public class BackgroundController implements Initializable {
         String myBackground = backgroundChoiceBox.getValue();
         if (Objects.equals(myBackground, "Acolyte")) {
             backgroundTextBox.setText(descriptions[0]);
+            System.out.println("bruh");
         }
         if (Objects.equals(myBackground, "Criminal/Spy")) {
             backgroundTextBox.setText(descriptions[1]);
