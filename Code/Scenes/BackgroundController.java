@@ -53,28 +53,48 @@ public class BackgroundController implements Initializable {
         backgroundChoiceBox.setOnAction(this::getBackground);
     }
 
-    public void getBackground(ActionEvent event) {
+    public void getBackground(ActionEvent event) 
+    {
         String myBackground = backgroundChoiceBox.getValue();
-        if (Objects.equals(myBackground, "Acolyte")) {
+        if (Objects.equals(myBackground, "Acolyte")) 
+        {
             backgroundTextBox.setText(descriptions[0]);
+            backgroundTextBox.setEditable(false);
         }
-        if (Objects.equals(myBackground, "Criminal/Spy")) {
+        else if (Objects.equals(myBackground, "Criminal/Spy")) 
+        {
             backgroundTextBox.setText(descriptions[1]);
+            backgroundTextBox.setEditable(false);
         }
-        if (Objects.equals(myBackground, "Folk Hero")) {
+        else if (Objects.equals(myBackground, "Folk Hero")) 
+        {
             backgroundTextBox.setText(descriptions[2]);
+            backgroundTextBox.setEditable(false);
         }
-        if (Objects.equals(myBackground, "Haunted One")) {
+        else if (Objects.equals(myBackground, "Haunted One")) 
+        {
             backgroundTextBox.setText(descriptions[3]);
+            backgroundTextBox.setEditable(false);
         }
-        if (Objects.equals(myBackground, "Noble")) {
+        else if (Objects.equals(myBackground, "Noble")) 
+        {
             backgroundTextBox.setText(descriptions[4]);
+            backgroundTextBox.setEditable(false);
         }
-        if (Objects.equals(myBackground, "Sage")) {
+        else if (Objects.equals(myBackground, "Sage")) 
+        {
             backgroundTextBox.setText(descriptions[5]);
+            backgroundTextBox.setEditable(false);
         }
-        if (Objects.equals(myBackground, "Soldier")) {
+        else if (Objects.equals(myBackground, "Soldier")) 
+        {
             backgroundTextBox.setText(descriptions[6]);
+            backgroundTextBox.setEditable(false);
+        }
+        else
+        {
+            backgroundTextBox.setEditable(true);
+            backgroundTextBox.setText(""); 
         }
 
     }

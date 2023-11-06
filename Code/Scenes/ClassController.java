@@ -51,40 +51,52 @@ public class ClassController implements Initializable{
         {
             if (newValue != null)
             {
-                if (newValue.equals("Barbarian")) {
+                if (newValue.equals("Barbarian")) 
+                {
                     classDescription.setText(descriptions[0]);
                 }
-                else if (newValue.equals("Bard")) {
+                else if (newValue.equals("Bard")) 
+                {
                     classDescription.setText(descriptions[1]);
                 }
-                else if (newValue.equals("Cleric")) {
+                else if (newValue.equals("Cleric")) 
+                {
                     classDescription.setText(descriptions[2]);
                 }
-                else if (newValue.equals("Druid")) {
+                else if (newValue.equals("Druid")) 
+                {
                     classDescription.setText(descriptions[3]);
                 }
-                else if (newValue.equals("Fighter")) {
+                else if (newValue.equals("Fighter")) 
+                {
                     classDescription.setText(descriptions[4]);
                 }
-                else if (newValue.equals("Monk")) {
+                else if (newValue.equals("Monk")) 
+                {
                     classDescription.setText(descriptions[5]);
                 }
-                else if (newValue.equals("Paladin")) {
+                else if (newValue.equals("Paladin")) 
+                {
                     classDescription.setText(descriptions[6]);
                 }
-                else if (newValue.equals("Ranger")) {
+                else if (newValue.equals("Ranger")) 
+                {
                     classDescription.setText(descriptions[7]);
                 }
-                else if (newValue.equals("Rogue")) {
+                else if (newValue.equals("Rogue")) 
+                {
                     classDescription.setText(descriptions[8]);
                 }
-                else if (newValue.equals("Sorcerer")) {
+                else if (newValue.equals("Sorcerer")) 
+                {
                     classDescription.setText(descriptions[9]);
                 }
-                else if (newValue.equals("Warlock")) {
+                else if (newValue.equals("Warlock")) 
+                {
                     classDescription.setText(descriptions[10]);
                 }
-                else if (newValue.equals("Wizard")) {
+                else if (newValue.equals("Wizard")) 
+                {
                     classDescription.setText(descriptions[11]);
                 }
             }

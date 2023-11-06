@@ -4,8 +4,6 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.scene.control.TextArea;
-import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.fxml.FXML;
@@ -15,8 +13,8 @@ public class AbilityController implements Initializable{
 
     @FXML
     private ChoiceBox<String> optionsChoiceBox;
-    private String[] options = {"Standard Array", "Point Buy", "Randomize"};
-   private sceneController controller; //created a scenceController instance
+    private String[] options = {"Standard Array", "Point Buy", "Dice Roll"};
+    private sceneController controller; //created a scenceController instance
 
 
     public void prev(ActionEvent event) throws IOException
