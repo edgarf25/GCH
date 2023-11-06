@@ -16,6 +16,8 @@ public class BackgroundController implements Initializable {
     @FXML
     private TextArea backgroundTextBox = new TextArea();
 
+
+
     private String[] backgrounds = {"Custom Background", "Acolyte", "Criminal/Spy", "Folk Hero", "Haunted One", "Noble", "Sage", "Soldier"};
 
     private String[] descriptions = {"You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshipers into the presence of the divine. You are not necessarily a cleric—performing sacred rites is not the same thing as channeling divine power.\n" +
@@ -43,6 +45,7 @@ public class BackgroundController implements Initializable {
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+        backgroundTextBox.setWrapText(true);
         backgroundChoiceBox.getItems().addAll(backgrounds);
         backgroundChoiceBox.setOnAction(this::getBackground);
     }
