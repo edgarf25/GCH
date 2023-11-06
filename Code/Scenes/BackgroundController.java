@@ -46,7 +46,7 @@ public class BackgroundController implements Initializable {
         backgroundChoiceBox.getItems().addAll(backgrounds);
         //backgroundChoiceBox.setOnAction(this::getBackground);
     }
-/*
+
     public void getBackground(ActionEvent event) {
         String myBackground = backgroundChoiceBox.getValue();
         if (Objects.equals(myBackground, "Acolyte")) {
@@ -72,7 +72,7 @@ public class BackgroundController implements Initializable {
         }
 
     }
-*/
+
     public void prev(ActionEvent event) throws IOException
     {
         controller = new sceneController();
