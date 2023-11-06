@@ -43,7 +43,7 @@ public class BackgroundController implements Initializable {
     private sceneController controller; //created a scenceController instance
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL arg0, ResourceBundle arg1) {
         backgroundChoice.getItems().addAll(backgrounds);
         backgroundChoice.setOnAction(this::getBackground);
     }
