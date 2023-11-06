@@ -48,7 +48,6 @@ public class BackgroundController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         backgroundTextBox.setWrapText(true);
-        backgroundTextBox.setFont(Font.font(18));
         backgroundChoiceBox.getItems().addAll(backgrounds);
         backgroundChoiceBox.setOnAction(this::getBackground);
     }
