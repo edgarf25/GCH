@@ -11,7 +11,6 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
 
 public class BackgroundController implements Initializable {
-
     @FXML
     private ChoiceBox<String> backgroundChoice;
     @FXML
@@ -42,10 +41,10 @@ public class BackgroundController implements Initializable {
 
     private sceneController controller; //created a scenceController instance
 
-    @Override
+    // @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         backgroundChoice.getItems().addAll(backgrounds);
-       // backgroundChoice.setOnAction(this::getBackground);
+        backgroundChoice.setOnAction(this::getBackground);
     }
 
     public void getBackground(ActionEvent event) {
