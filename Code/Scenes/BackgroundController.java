@@ -44,14 +44,13 @@ public class BackgroundController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         backgroundChoiceBox.getItems().addAll(backgrounds);
-        //backgroundChoiceBox.setOnAction(this::getBackground);
+        backgroundChoiceBox.setOnAction(this::getBackground);
     }
 
     public void getBackground(ActionEvent event) {
         String myBackground = backgroundChoiceBox.getValue();
         if (Objects.equals(myBackground, "Acolyte")) {
             backgroundTextBox.setText(descriptions[0]);
-            System.out.println("bruh");
         }
         if (Objects.equals(myBackground, "Criminal/Spy")) {
             backgroundTextBox.setText(descriptions[1]);
