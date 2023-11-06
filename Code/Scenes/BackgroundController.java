@@ -12,7 +12,7 @@ import javafx.scene.control.TextArea;
 
 public class BackgroundController implements Initializable {
     @FXML
-    private ChoiceBox<String> backgroundChoice;
+    private ChoiceBox<String> backgroundChoiceBox;
     @FXML
     private TextArea backgroundTextBox = new TextArea();
 
@@ -41,14 +41,14 @@ public class BackgroundController implements Initializable {
 
     private sceneController controller; //created a scenceController instance
 
-    // @Override
+    @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        backgroundChoice.getItems().addAll(backgrounds);
-        backgroundChoice.setOnAction(this::getBackground);
+        backgroundChoiceBox.getItems().addAll(backgrounds);
+        backgroundChoiceBox.setOnAction(this::getBackground);
     }
 
     public void getBackground(ActionEvent event) {
-        String myBackground = backgroundChoice.getValue();
+        String myBackground = backgroundChoiceBox.getValue();
         if (Objects.equals(myBackground, "Acolyte")) {
             backgroundTextBox.setText(descriptions[0]);
         }
