@@ -1,10 +1,39 @@
 package Scenes;
 
 import java.io.IOException;
-
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextArea;
 
-public class EquipmentController {
+public class EquipmentController implements Initializable {
+     @FXML
+     private ChoiceBox<String> myChoiceBox0;   //WEAPON-DROP-DOWN
+     @FXML
+     private ChoiceBox<String> myChoiceBox1;   //ARMOR-DROP-DOWN
+     @FXML
+     private ChoiceBox<String>  myChoiceBox11;  //Possessions-DROP-DOWN
+//    @FXML
+//     private TextArea listItems = new TextArea();  // DISPLAYING ITEMS ON LIST
+    private final String[] weaponArray = {"Club","Dagger", "GreatClub", "HandAxe", "Javelin","Light Hammer", "Mace", "Quarterstaff", "Sickle", "Spear"};
+    // WEAPON ARRAY CONTAINING LIST OF ARRAY OF WEAPONS MELEE
+    private final String[] armorArray ={"Light Armor","Medium Armor","Heavy Armor","Shield"};
+    // ARMOR CONTAINING LIST OF ARRAY ARMOR
+    private final String[] posArray = {"DINGLE"};
+    // WILL UPDATE POS
+
+    public void initialize(URL arg0, ResourceBundle arg1){
+        //  Weapons Array Lists of String
+        // Add items to the first ChoiceBox
+        myChoiceBox0.getItems().addAll(weaponArray);  // GET ALL WEAPONS IN ARRAY
+        myChoiceBox1.getItems().addAll(armorArray);  //  GET ALL ARMOR   IN ARRAY
+        myChoiceBox11.getItems().addAll(posArray);  //   GET ALL POS     IN ARRAY
+
+
+    }
 
     private sceneController controller; //created a scenceController instance
 

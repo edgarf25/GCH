@@ -26,7 +26,7 @@
             <Font name="Century" size="25.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="myChoiceBox" blendMode="HARD_LIGHT" layoutX="248.0" layoutY="105.0" prefWidth="206.0" />
+      <ChoiceBox fx:id="myChoiceBox0" blendMode="HARD_LIGHT" layoutX="248.0" layoutY="105.0" prefWidth="206.0" />
       <Label layoutX="63.0" layoutY="387.0" text="&lt;List&gt;">
          <font>
             <Font size="25.0" />
@@ -60,11 +60,11 @@
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="491.0" layoutY="241.0" stroke="#ae8406" strokeType="INSIDE" width="194.0" />
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="491.0" layoutY="166.0" stroke="#ae8406" strokeType="INSIDE" width="194.0" />
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="491.0" layoutY="84.0" stroke="#ae8406" strokeType="INSIDE" width="194.0" />
-      <Button layoutX="517.0" layoutY="95.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" text="ADD" />
-      <Button layoutX="517.0" layoutY="177.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" text="ADD" />
-      <Button layoutX="516.0" layoutY="252.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" text="ADD" />
-      <Button layoutX="515.0" layoutY="326.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" text="ADD" />
-      <TextArea blendMode="MULTIPLY" editable="false" layoutX="145.0" layoutY="396.0" prefHeight="190.0" prefWidth="524.0" />
+      <Button fx:id="addButton0" layoutX="517.0" layoutY="95.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" text="ADD" />
+      <Button fx:id="addButton1" layoutX="517.0" layoutY="177.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" text="ADD" />
+      <Button fx:id="addButton2" layoutX="516.0" layoutY="252.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" text="ADD" />
+      <Button fx:id="addButton4" layoutX="515.0" layoutY="326.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" text="ADD" />
+      <TextArea fx:id="TextAreaList" blendMode="MULTIPLY" editable="false" layoutX="145.0" layoutY="396.0" prefHeight="190.0" prefWidth="524.0" />
       <AnchorPane layoutX="-4.0" layoutY="3.0" prefHeight="68.0" prefWidth="759.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="759.0" />

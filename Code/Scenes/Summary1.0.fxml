@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -15,7 +17,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.SummaryController">
    <children>
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="236.0" layoutX="678.0" layoutY="80.0" stroke="#ae8406" strokeType="INSIDE" width="304.0" />
-      <ImageView fitHeight="856.0" fitWidth="1016.0" layoutX="-11.0" layoutY="7.0" pickOnBounds="true">
+      <ImageView fitHeight="856.0" fitWidth="1016.0" layoutX="-8.0" layoutY="8.0" pickOnBounds="true">
          <image>
             <Image url="@../src/background color.png" />
          </image>
@@ -367,5 +369,55 @@
             <Font name="Century" size="12.0" />
          </font>
       </Text>
+      <Label layoutX="220.0" layoutY="277.0" text="Label" />
+      <Label layoutX="220.0" layoutY="306.0" text="Label" />
+      <Label layoutX="220.0" layoutY="337.0" text="Label" />
+      <Label layoutX="220.0" layoutY="367.0" text="Label" />
+      <Label layoutX="220.0" layoutY="397.0" text="Label" />
+      <Label layoutX="220.0" layoutY="427.0" text="Label" />
+      <Label layoutX="220.0" layoutY="457.0" text="Label" />
+      <Label layoutX="220.0" layoutY="487.0" text="Label" />
+      <Label layoutX="220.0" layoutY="517.0" text="Label" />
+      <Label layoutX="220.0" layoutY="546.0" text="Label" />
+      <Label layoutX="220.0" layoutY="577.0" text="Label" />
+      <Label layoutX="220.0" layoutY="607.0" text="Label" />
+      <Label layoutX="220.0" layoutY="637.0" text="Label" />
+      <Label layoutX="220.0" layoutY="667.0" text="Label" />
+      <Label layoutX="220.0" layoutY="697.0" text="Label" />
+      <Label layoutX="220.0" layoutY="725.0" text="Label" />
+      <Label layoutX="220.0" layoutY="750.0" text="Label" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="35.0" layoutX="193.0" layoutY="268.0" stroke="#ae8406" strokeType="INSIDE" width="82.0" />
+      <Label layoutX="220.0" layoutY="776.0" text="Label" />
+      <TabPane layoutX="305.0" layoutY="322.0" prefHeight="514.0" prefWidth="679.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Background">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="54.0" layoutY="66.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Features &amp; Traits">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Circle fill="DODGERBLUE" layoutX="190.0" layoutY="213.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Notes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="64.0" layoutX="130.0" layoutY="74.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
    </children>
 </AnchorPane>
