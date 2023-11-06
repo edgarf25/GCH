@@ -11,7 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
 
-public class BackgroundController implements Initializable {
+public class BackgroundController /* implements Initializable */{
 
     @FXML
     private ChoiceBox<String> backgroundChoice;
@@ -19,7 +19,7 @@ public class BackgroundController implements Initializable {
     private TextArea backgroundTextBox = new TextArea();
 
     private String[] backgrounds = {"Custom Background", "Acolyte", "Criminal/Spy", "Folk Hero", "Haunted One", "Noble", "Sage", "Soldier"};
-
+/*
     private String[] descriptions = {"You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshipers into the presence of the divine. You are not necessarily a cleric—performing sacred rites is not the same thing as channeling divine power.\n" +
                                      "\n" +
                                      "Choose a god, a pantheon of gods, or some other quasi-divine being, and work with your DM to detail the nature of your religious service. The Gods of the Multiverse section contains a sample pantheon, from the Forgotten Realms setting. Were you a lesser functionary in a temple, raised from childhood to assist the priests in the sacred rites? Or were you a high priest who suddenly experienced a call to serve your god in a different way? Perhaps you were the leader of a small cult outside of any established temple structure, or even an occult group that served a fiendish master that you now deny.",
@@ -40,8 +40,9 @@ public class BackgroundController implements Initializable {
                                              "War has been your life for as long as you care to remember. You trained as a youth, studied the use of weapons and armor, learned basic survival techniques, including how to stay alive on the battlefield. You might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war.\n" +
                                                      "\n" +
                                                      "When you choose this background, work with your DM to determine which military organization you were a part of, how far through its ranks you progressed, and what kind of experiences you had during your military career. Was it a standing army, a town guard, or a village militia? Or it might have been a noble’s or merchant’s private army, or a mercenary company."};
-
+*/
     private sceneController controller; //created a scenceController instance
+    /*
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         backgroundChoice.getItems().addAll(backgrounds);
@@ -71,8 +72,9 @@ public class BackgroundController implements Initializable {
         if (Objects.equals(myBackground, "Soldier")) {
             backgroundTextBox.setText(descriptions[6]);
         }
-    }
 
+    }
+*/
     public void prev(ActionEvent event) throws IOException
     {
         controller = new sceneController();
