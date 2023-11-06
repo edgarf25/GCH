@@ -16,12 +16,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.BackgroundController">
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000001" height="211.0" layoutX="30.0" layoutY="209.0" stroke="#ae8406e8" strokeType="INSIDE" width="401.0" />
       <ImageView fitHeight="600.0" fitWidth="759.0" layoutX="-4.0" layoutY="2.0" pickOnBounds="true">
          <image>
             <Image url="@../src/background color.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000001" height="211.0" layoutX="30.0" layoutY="209.0" stroke="#ae8406e8" strokeType="INSIDE" width="401.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000001" height="107.0" layoutX="30.0" layoutY="88.0" stroke="#ae8406e8" strokeType="INSIDE" width="401.0" />
       <TextArea fx:id="backgroundTextBox" blendMode="MULTIPLY" layoutX="30.0" layoutY="209.0" prefHeight="211.0" prefWidth="401.0" />
       <Button layoutX="684.0" layoutY="557.0" mnemonicParsing="false" onAction="#next" text="Next" />
