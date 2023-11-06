@@ -45,7 +45,7 @@ public class BackgroundController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         backgroundChoice.getItems().addAll(backgrounds);
-        backgroundChoice.setOnAction(this::getBackground);
+       // backgroundChoice.setOnAction(this::getBackground);
     }
 
     public void getBackground(ActionEvent event) {
