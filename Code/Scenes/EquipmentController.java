@@ -65,6 +65,10 @@ public class EquipmentController implements Initializable {
             TextAreaList.setText(ListText);
         }
      }
+
+     public void clear(){
+        TextAreaList.setText("");
+     }
     private sceneController controller; //created a scenceController instance
 
     public void prev(ActionEvent event) throws IOException
