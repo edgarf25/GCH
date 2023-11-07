@@ -2,12 +2,14 @@ package Scenes;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 public class EquipmentController implements Initializable {
      @FXML
@@ -16,6 +18,8 @@ public class EquipmentController implements Initializable {
      private ChoiceBox<String> myChoiceBox1;   //ARMOR-DROP-DOWN
      @FXML
      private ChoiceBox<String>  myChoiceBox11;  //Possessions-DROP-DOWN
+    @FXML
+    private TextField GoldInput;  //GOLD  INPUT TEXT BOX
     @FXML
     private TextArea TextAreaList;  // DISPLAYING ITEMS ON LIST
     private static String ListText = "";
@@ -52,17 +56,23 @@ public class EquipmentController implements Initializable {
         });
 
     }
+
     public void addToString(String s)
     {
         if (s != null)
         {
             ListText += s;
-
         }
     }
      public  void addAll() {
         if(ListText != null ){
-            TextAreaList.setText(ListText);
+            if (GoldInput != null && !GoldInput.getText().isEmpty())
+            {
+                TextAreaList.setText(ListText + "Gold: " + GoldInput.getText());
+            } else
+            {
+                TextAreaList.setText(ListText);
+            }
         }
      }
 

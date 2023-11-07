@@ -55,7 +55,7 @@
             <Font name="Century" size="25.0" />
          </font>
       </Text>
-      <TextField layoutX="248.0" layoutY="336.0" prefHeight="25.0" prefWidth="213.0" />
+      <TextField fx:id="GoldInput" layoutX="248.0" layoutY="336.0" prefHeight="25.0" prefWidth="213.0" />
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="275.0" layoutY="404.0" stroke="#ae8406" strokeType="INSIDE" width="194.0" />
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="37.0" layoutY="404.0" stroke="#ae8406" strokeType="INSIDE" width="194.0" />
       <Button fx:id="addButton0" layoutX="65.0" layoutY="415.0" mnemonicParsing="false" onMouseClicked="#addAll" prefHeight="43.0" prefWidth="139.0" text="ADD ALL " />
