@@ -23,6 +23,9 @@ public class EquipmentController implements Initializable {
     @FXML
     private TextArea TextAreaList;  // DISPLAYING ITEMS ON LIST
     private static String ListText = "";
+    private String weaponText = "";
+    private String armorText = "";
+    private String posText = "";
     private final String[] weaponArray = {"Club","Dagger", "GreatClub", "HandAxe", "Javelin","Light Hammer", "Mace", "Quarterstaff", "Sickle", "Spear"};
     // WEAPON ARRAY CONTAINING LIST OF ARRAY OF WEAPONS MELEE
     private final String[] armorArray ={"Light Armor","Medium Armor","Heavy Armor","Shield"};
@@ -38,34 +41,55 @@ public class EquipmentController implements Initializable {
         myChoiceBox11.getItems().addAll(posArray);  //   GET ALL POS     IN ARRAY
         myChoiceBox0.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
-                addToString("Weapon: " + newValue + "\n");
+                addToString("Weapon: " + newValue + "\n", 0);
 
             }
         });
         myChoiceBox1.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
-                addToString("Armor: " + newValue + "\n");
+                addToString("Armor: " + newValue + "\n", 1);
 
             }
         });
         myChoiceBox11.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
-                addToString("Possessions: " + newValue + "\n");
+                addToString("Possessions: " + newValue + "\n", 2);
 
             }
         });
 
     }
 
-    public void addToString(String s)
+    public void addToString(String s, int e)
     {
-        if (s != null)
+        if (e == 0)
         {
-            ListText += s;
+            weaponText = s;
         }
+        else if (e == 1)
+        {
+            armorText = s;
+        }
+        else if (e == 2)
+        {
+            posText = s;
+        }
+
     }
      public  void addAll() {
-        if(ListText != null ){
+        if (weaponText != null)
+        {
+            ListText += weaponText;
+        }
+        if (armorText != null)
+        {
+            ListText += armorText;
+        }
+        if (posText != null)
+        {
+            ListText += posText;
+        }
+        if(ListText != null){
             if (GoldInput != null && !GoldInput.getText().isEmpty())
             {
                 TextAreaList.setText(ListText + "Gold: " + GoldInput.getText());
@@ -74,6 +98,7 @@ public class EquipmentController implements Initializable {
                 TextAreaList.setText(ListText);
             }
         }
+        weaponText = armorText = posText = null;
      }
 
      public void clear(){
