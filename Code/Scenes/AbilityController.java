@@ -5,11 +5,14 @@ import javafx.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.fxml.FXML;
 
 public class AbilityController implements Initializable{
+
+    public static int pointBuy = 27;
 
     @FXML
     private Label strLabel;
@@ -23,6 +26,32 @@ public class AbilityController implements Initializable{
     private Label wisLabel;
     @FXML
     private Label chaLabel;
+    @FXML
+    private Button strPlusButton;
+    @FXML
+    private Button dexPlusButton;
+    @FXML
+    private Button conPlusButton;
+    @FXML
+    private Button intPlusButton;
+    @FXML
+    private Button wisPlusButton;
+    @FXML
+    private Button chaPlusButton;
+    @FXML
+    private Button strSubButton;
+    @FXML
+    private Button dexSubButton;
+    @FXML
+    private Button conSubButton;
+    @FXML
+    private Button intSubButton;
+    @FXML
+    private Button wisSubButton;
+    @FXML
+    private Button chaSubButton;
+    @FXML
+    private Label pointBuyLabel;
     @FXML
     private ChoiceBox<String> optionsChoiceBox;
     private String[] options = {"Standard Array", "Point Buy", "Dice Roll"};
@@ -56,11 +85,30 @@ public class AbilityController implements Initializable{
                     intLabel.setText("8");
                     wisLabel.setText("8");
                     chaLabel.setText("8");
+                    System.out.println(String.valueOf(strLabel.getText()));
                 }
             }
 
         });
     };
+
+    public void plusPointBuy(ActionEvent event)
+    {
+        String buttonId = ((Button) event.getSource()).getId();
+        int currentValue;
+        if (pointBuy != 0)
+        {
+            if ("strPlusButton".equals(buttonId))
+            {
+            currentValue = Integer.parseInt(strLabel.getText()) + 1;
+            strLabel.setText(String.valueOf(currentValue));
+            pointBuy -= 1;
+            pointBuyLabel.setText(String.valueOf(pointBuy));
+            }
+        }
+    }
+
+
 
     public void switchToScene3(ActionEvent event) throws IOException
     {
