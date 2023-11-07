@@ -6,11 +6,23 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.fxml.FXML;
 
 public class AbilityController implements Initializable{
 
-
+    @FXML
+    private Label strLabel;
+    @FXML
+    private Label dexLabel;
+    @FXML
+    private Label conLabel;
+    @FXML
+    private Label intLabel;
+    @FXML
+    private Label wisLabel;
+    @FXML
+    private Label chaLabel;
     @FXML
     private ChoiceBox<String> optionsChoiceBox;
     private String[] options = {"Standard Array", "Point Buy", "Dice Roll"};
@@ -34,6 +46,18 @@ public class AbilityController implements Initializable{
         optionsChoiceBox.getItems().addAll(options);
         optionsChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
         {
+            if (newValue != null)
+            {
+                if (newValue == "Point Buy") 
+                {
+                    strLabel.setText("8");
+                    dexLabel.setText("8");
+                    conLabel.setText("8");
+                    intLabel.setText("8");
+                    wisLabel.setText("8");
+                    chaLabel.setText("8");
+                }
+            }
 
         });
     };

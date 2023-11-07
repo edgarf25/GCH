@@ -148,7 +148,7 @@
          </font>
       </Text>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#16426b" height="39.0" layoutX="690.0" layoutY="225.0" stroke="BLACK" strokeType="INSIDE" width="179.0" />
-      <Label fx:id="currentHealth" layoutX="717.0" layoutY="211.0" prefHeight="57.0" prefWidth="16.0" text="1" textFill="#23f7b1">
+      <Label fx:id="currentHealth" layoutX="704.0" layoutY="211.0" prefHeight="66.0" prefWidth="68.0" text="1" textFill="#23f7b1">
          <font>
             <Font size="45.0" />
          </font>

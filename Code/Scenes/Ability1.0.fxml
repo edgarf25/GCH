@@ -47,7 +47,7 @@
                   <Font name="Century" size="12.0" />
                </font>
             </Text>
-            <Label layoutX="82.0" layoutY="103.0" text="Label" />
+            <Label fx:id="strLabel" layoutX="82.0" layoutY="103.0" text="Label" />
             <Button layoutX="132.0" layoutY="149.0" mnemonicParsing="false" text="+" />
             <Button layoutX="31.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" text="-" />
          </children>
@@ -60,7 +60,7 @@
                   <Font name="Century" size="12.0" />
                </font>
             </Text>
-            <Label layoutX="82.0" layoutY="103.0" text="Label" />
+            <Label fx:id="dexLabel" layoutX="82.0" layoutY="103.0" text="Label" />
             <Button layoutX="132.0" layoutY="149.0" mnemonicParsing="false" text="+" />
             <Button layoutX="31.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" text="-" />
          </children>
@@ -73,7 +73,7 @@
                   <Font name="Century" size="12.0" />
                </font>
             </Text>
-            <Label layoutX="82.0" layoutY="103.0" text="Label" />
+            <Label fx:id="conLabel" layoutX="82.0" layoutY="103.0" text="Label" />
             <Button layoutX="132.0" layoutY="149.0" mnemonicParsing="false" text="+" />
             <Button layoutX="31.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" text="-" />
          </children>
@@ -86,7 +86,7 @@
                   <Font name="Century" size="12.0" />
                </font>
             </Text>
-            <Label layoutX="82.0" layoutY="103.0" text="Label" />
+            <Label fx:id="intLabel" layoutX="82.0" layoutY="103.0" text="Label" />
             <Button layoutX="132.0" layoutY="149.0" mnemonicParsing="false" text="+" />
             <Button layoutX="31.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" text="-" />
          </children>
@@ -99,7 +99,7 @@
                   <Font name="Century" size="12.0" />
                </font>
             </Text>
-            <Label layoutX="82.0" layoutY="103.0" text="Label" />
+            <Label fx:id="wisLabel" layoutX="82.0" layoutY="103.0" text="Label" />
             <Button layoutX="132.0" layoutY="149.0" mnemonicParsing="false" text="+" />
             <Button layoutX="31.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" text="-" />
          </children>
@@ -112,7 +112,7 @@
                   <Font name="Century" size="12.0" />
                </font>
             </Text>
-            <Label layoutX="82.0" layoutY="103.0" text="Label" />
+            <Label fx:id="chaLabel" layoutX="82.0" layoutY="103.0" text="Label" />
             <Button layoutX="132.0" layoutY="149.0" mnemonicParsing="false" text="+" />
             <Button layoutX="31.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" text="-" />
          </children>
