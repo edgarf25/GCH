@@ -182,7 +182,7 @@
             <Button layoutX="50.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToScene2" opacity="0.0" text="Race" />
          </children>
       </AnchorPane>
-      <Label fx:id="pointBuyLabel" layoutX="327.0" layoutY="559.0" text="27">
+      <Label fx:id="pointBuyLabel" layoutX="327.0" layoutY="559.0" text="27" visible="false">
          <font>
             <Font size="18.0" />
          </font>

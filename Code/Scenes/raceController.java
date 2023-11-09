@@ -177,7 +177,4 @@ public class raceController implements Initializable{
         controller = new sceneController();
         controller.switchToScene7(event); // Called the prev method with the empty event
     }
-
-
-
 }

@@ -82,7 +82,7 @@ public class AbilityController implements Initializable{
         {
             if (newValue != null)
             {
-                if (newValue == "Point Buy") 
+                if (newValue.equals("Point Buy")) 
                 {
                     pointBuy = 27;
                     strLabel.setText("8");
@@ -92,6 +92,12 @@ public class AbilityController implements Initializable{
                     wisLabel.setText("8");
                     chaLabel.setText("8");
                     pointBuyLabel.setText(String.valueOf(pointBuy));
+                    pointBuyLabel.setVisible(true);
+                }
+
+                if (newValue.equals("Standard Array"))
+                {
+                    System.out.println("Hello");
                 }
             }
 
