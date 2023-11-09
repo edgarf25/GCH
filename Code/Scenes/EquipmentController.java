@@ -103,6 +103,7 @@ public class EquipmentController implements Initializable {
 
      public void clear(){
         TextAreaList.setText("");
+        ListText = "";
      }
      
     private sceneController controller; //created a scenceController instance

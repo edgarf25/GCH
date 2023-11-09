@@ -20,4 +20,9 @@ Scene by Scene
 Extra Features
 	Save?
 	Export?
+	database
+	spells
+	saves throws
+	print sheet
+
 	
