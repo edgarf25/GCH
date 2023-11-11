@@ -28,6 +28,23 @@ public class ClassController implements Initializable{
     private ImageView wizardIcon;
     @FXML
     private ImageView monkIcon;
+    @FXML
+    private ImageView warlockIcon;
+    @FXML
+    private ImageView paladinIcon;
+    @FXML
+    private ImageView druidIcon;
+    @FXML
+    private ImageView clericIcon;
+    @FXML
+    private ImageView fighterIcon;
+    @FXML
+    private ImageView rangerIcon;
+    @FXML
+    private ImageView rogueIcon;
+    @FXML
+    private ImageView sorcererIcon;
+
     private String[] descriptions = {"Barbarians tap into their inner rage to become fierce melee fighters, using abilities like \"Rage\" for increased strength and toughness. They often wield two-handed weapons, have high hit points, and can choose different paths, like the \"Totem Warrior.\" In a party, they serve as front-line damage dealers and can fill roles as scouts or survivalists.",
                                      "Bards are charismatic and versatile. They use music and performance to cast spells and inspire allies. They come from diverse backgrounds and can excel in combat, magic, or social roles. Bards choose Bardic Colleges to specialize in their abilities. In a party, they provide utility, healing, and support. Bards are known for their charm, creativity, and adaptability, making them valuable in various situations.",
                                      "Clerics are spellcasters known for healing magic and protection spells. Clerics choose a Divine Domain that reflects their deity's nature, and they can excel in combat and support roles. Their alignment aligns with their deity's values. In a party, clerics are crucial healers, spiritual guides, and versatile contributors to various aspects of the game.",
@@ -79,14 +96,20 @@ public class ClassController implements Initializable{
                 else if (newValue.equals("Cleric")) 
                 {
                     classDescription.setText(descriptions[2]);
+                    clearImg();
+                    clericIcon.setVisible(true);
                 }
                 else if (newValue.equals("Druid")) 
                 {
                     classDescription.setText(descriptions[3]);
+                    clearImg();
+                    druidIcon.setVisible(true);
                 }
                 else if (newValue.equals("Fighter")) 
                 {
                     classDescription.setText(descriptions[4]);
+                    clearImg();
+                    fighterIcon.setVisible(true);
                 }
                 else if (newValue.equals("Monk")) 
                 {
@@ -97,22 +120,32 @@ public class ClassController implements Initializable{
                 else if (newValue.equals("Paladin")) 
                 {
                     classDescription.setText(descriptions[6]);
+                    clearImg();
+                    paladinIcon.setVisible(true);
                 }
                 else if (newValue.equals("Ranger")) 
                 {
                     classDescription.setText(descriptions[7]);
+                    clearImg();
+                    rangerIcon.setVisible(true);
                 }
                 else if (newValue.equals("Rogue")) 
                 {
                     classDescription.setText(descriptions[8]);
+                    clearImg();
+                    rogueIcon.setVisible(true);
                 }
                 else if (newValue.equals("Sorcerer")) 
                 {
                     classDescription.setText(descriptions[9]);
+                    clearImg();
+                    sorcererIcon.setVisible(true);
                 }
                 else if (newValue.equals("Warlock")) 
                 {
                     classDescription.setText(descriptions[10]);
+                    clearImg();
+                    warlockIcon.setVisible(true);
                 }
                 else if (newValue.equals("Wizard")) 
                 {
@@ -131,6 +164,14 @@ public class ClassController implements Initializable{
         monkIcon.setVisible(false);
         wizardIcon.setVisible(false);
         missingIcon.setVisible(false);
+        warlockIcon.setVisible(false);
+        paladinIcon.setVisible(false);
+        druidIcon.setVisible(false);
+        clericIcon.setVisible(false);
+        fighterIcon.setVisible(false);
+        rangerIcon.setVisible(false);
+        rogueIcon.setVisible(false);
+        sorcererIcon.setVisible(false);
     }
     public void switchToScene3(ActionEvent event) throws IOException
     {
