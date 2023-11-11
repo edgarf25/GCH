@@ -12,12 +12,12 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class EquipmentController implements Initializable {
-    @FXML
-    private ChoiceBox<String> myChoiceBox0;   //WEAPON-DROP-DOWN
-    @FXML
-    private ChoiceBox<String> myChoiceBox1;   //ARMOR-DROP-DOWN
-    @FXML
-    private ChoiceBox<String>  myChoiceBox11;  //Possessions-DROP-DOWN
+     @FXML
+     private ChoiceBox<String> myChoiceBox0;   //WEAPON-DROP-DOWN
+     @FXML
+     private ChoiceBox<String> myChoiceBox1;   //ARMOR-DROP-DOWN
+     @FXML
+     private ChoiceBox<String>  myChoiceBox11;  //Possessions-DROP-DOWN
     @FXML
     private TextField GoldInput;  //GOLD  INPUT TEXT BOX
     @FXML
@@ -57,7 +57,6 @@ public class EquipmentController implements Initializable {
 
             }
         });
-
     }
 
     public void addToString(String s, int e)
@@ -76,8 +75,7 @@ public class EquipmentController implements Initializable {
         }
 
     }
-     public  void addAll() 
-     {
+     public  void addAll() {
         if (weaponText != null)
         {
             ListText += weaponText;
@@ -99,13 +97,11 @@ public class EquipmentController implements Initializable {
                 TextAreaList.setText(ListText);
             }
         }
-
+        ListText = "";
      }
 
      public void clear(){
         TextAreaList.setText("");
-        ListText = "";
-
      }
      
     private sceneController controller; //created a scenceController instance
