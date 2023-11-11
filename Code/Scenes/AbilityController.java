@@ -156,29 +156,7 @@ public class AbilityController implements Initializable{
     }
     public void standardArray()
     {
-        pointsRemainingText.setVisible(false);
-        pointBuyLabel.setVisible(false);
-        pointsRemaining.setVisible(false);
-        diceRollImage.setVisible(false);
-        diceRollLabel.setVisible(false);
-        strPlusButton.setVisible(false);
-        strSubButton.setVisible(false);
-        strLabel.setVisible(false);
-        dexPlusButton.setVisible(false);
-        dexSubButton.setVisible(false);
-        dexLabel.setVisible(false);
-        conPlusButton.setVisible(false);
-        conSubButton.setVisible(false);
-        conLabel.setVisible(false);
-        intPlusButton.setVisible(false);
-        intSubButton.setVisible(false);
-        intLabel.setVisible(false);
-        wisPlusButton.setVisible(false);
-        wisSubButton.setVisible(false);
-        wisLabel.setVisible(false);
-        chaPlusButton.setVisible(false);
-        chaSubButton.setVisible(false);
-        chaLabel.setVisible(false);
+        startAbilityScene();
         strDropdown.setVisible(true);
         dexDropdown.setVisible(true);
         conDropdown.setVisible(true);
@@ -188,11 +166,10 @@ public class AbilityController implements Initializable{
     }
     public void pointBuy()
     {
+        startAbilityScene();
         pointsRemainingText.setVisible(true);
         pointBuyLabel.setVisible(true);
         pointsRemaining.setVisible(true);
-        diceRollImage.setVisible(false);
-        diceRollLabel.setVisible(false);
         strPlusButton.setVisible(true);
         strSubButton.setVisible(true);
         strLabel.setVisible(true);
@@ -211,12 +188,6 @@ public class AbilityController implements Initializable{
         chaPlusButton.setVisible(true);
         chaSubButton.setVisible(true);
         chaLabel.setVisible(true);
-        strDropdown.setVisible(false);
-        dexDropdown.setVisible(false);
-        conDropdown.setVisible(false);
-        intDropdown.setVisible(false);
-        wisDropdown.setVisible(false);
-        chaDropdown.setVisible(false);
         pointBuy = 27;
         strLabel.setText("8");
         dexLabel.setText("8");
@@ -228,29 +199,21 @@ public class AbilityController implements Initializable{
     }
     public void diceRoll()
     {
-        pointsRemainingText.setVisible(false);
-        pointBuyLabel.setVisible(false);
-        pointsRemaining.setVisible(false);
+        startAbilityScene();
         diceRollImage.setVisible(true);
         diceRollLabel.setVisible(true);
-        strPlusButton.setVisible(false);
-        strSubButton.setVisible(false);
-        dexPlusButton.setVisible(false);
-        dexSubButton.setVisible(false);
-        conPlusButton.setVisible(false);
-        conSubButton.setVisible(false);
-        intPlusButton.setVisible(false);
-        intSubButton.setVisible(false);
-        wisPlusButton.setVisible(false);
-        wisSubButton.setVisible(false);
-        chaPlusButton.setVisible(false);
-        chaSubButton.setVisible(false);
-        strDropdown.setVisible(false);
-        dexDropdown.setVisible(false);
-        conDropdown.setVisible(false);
-        intDropdown.setVisible(false);
-        wisDropdown.setVisible(false);
-        chaDropdown.setVisible(false);
+        strLabel.setVisible(true);
+        dexLabel.setVisible(true);
+        conLabel.setVisible(true);
+        intLabel.setVisible(true);
+        wisLabel.setVisible(true);
+        chaLabel.setVisible(true);
+        strLabel.setText("?");
+        dexLabel.setText("?");
+        conLabel.setText("?");
+        intLabel.setText("?");
+        wisLabel.setText("?");
+        chaLabel.setText("?");
     }
 
     public void plusPointBuy(ActionEvent event) //increases label 
