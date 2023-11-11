@@ -7,6 +7,7 @@ import javafx.scene.control.TextArea;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.image.ImageView;
 import javafx.fxml.FXML;
 
 public class ClassController implements Initializable{
@@ -17,6 +18,16 @@ public class ClassController implements Initializable{
     private String[] classes = {"Barbarian","Bard","Cleric","Druid","Fighter","Monk","Paladin","Ranger","Rogue","Sorcerer","Warlock","Wizard"};
     @FXML
     private TextArea classDescription;
+    @FXML
+    private ImageView barbIcon;
+    @FXML
+    private ImageView missingIcon;
+    @FXML
+    private ImageView bardIcon;
+    @FXML
+    private ImageView wizardIcon;
+    @FXML
+    private ImageView monkIcon;
     private String[] descriptions = {"Barbarians tap into their inner rage to become fierce melee fighters, using abilities like \"Rage\" for increased strength and toughness. They often wield two-handed weapons, have high hit points, and can choose different paths, like the \"Totem Warrior.\" In a party, they serve as front-line damage dealers and can fill roles as scouts or survivalists.",
                                      "Bards are charismatic and versatile. They use music and performance to cast spells and inspire allies. They come from diverse backgrounds and can excel in combat, magic, or social roles. Bards choose Bardic Colleges to specialize in their abilities. In a party, they provide utility, healing, and support. Bards are known for their charm, creativity, and adaptability, making them valuable in various situations.",
                                      "Clerics are spellcasters known for healing magic and protection spells. Clerics choose a Divine Domain that reflects their deity's nature, and they can excel in combat and support roles. Their alignment aligns with their deity's values. In a party, clerics are crucial healers, spiritual guides, and versatile contributors to various aspects of the game.",
@@ -46,6 +57,8 @@ public class ClassController implements Initializable{
 
     public void initialize(URL arg0, ResourceBundle arg1)
     {
+        clearImg();
+        missingIcon.setVisible(true);
         classChoiceBox.getItems().addAll(classes);
         classChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
         {
@@ -54,10 +67,14 @@ public class ClassController implements Initializable{
                 if (newValue.equals("Barbarian")) 
                 {
                     classDescription.setText(descriptions[0]);
+                    clearImg();
+                    barbIcon.setVisible(true);
                 }
                 else if (newValue.equals("Bard")) 
                 {
                     classDescription.setText(descriptions[1]);
+                    clearImg();
+                    bardIcon.setVisible(true);
                 }
                 else if (newValue.equals("Cleric")) 
                 {
@@ -74,6 +91,8 @@ public class ClassController implements Initializable{
                 else if (newValue.equals("Monk")) 
                 {
                     classDescription.setText(descriptions[5]);
+                    clearImg();
+                    monkIcon.setVisible(true);
                 }
                 else if (newValue.equals("Paladin")) 
                 {
@@ -98,11 +117,21 @@ public class ClassController implements Initializable{
                 else if (newValue.equals("Wizard")) 
                 {
                     classDescription.setText(descriptions[11]);
+                    clearImg();
+                    wizardIcon.setVisible(true);
                 }
             }
         });
     };
 
+    public void clearImg()
+    {
+        barbIcon.setVisible(false);
+        bardIcon.setVisible(false);
+        monkIcon.setVisible(false);
+        wizardIcon.setVisible(false);
+        missingIcon.setVisible(false);
+    }
     public void switchToScene3(ActionEvent event) throws IOException
     {
         controller = new sceneController();
