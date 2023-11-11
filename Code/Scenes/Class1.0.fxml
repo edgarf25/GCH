@@ -102,22 +102,22 @@
       </ImageView>
       <ImageView fx:id="monkIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
          <image>
-            <Image url="@../src/Monk%20Icon.png" />
+            <Image url="@../src/Monk Icon.png" />
          </image>
       </ImageView>
       <ImageView fx:id="wizardIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
          <image>
-            <Image url="@../src/Wizard%20Icon.png" />
+            <Image url="@../src/Wizard Icon.png" />
          </image>
       </ImageView>
       <ImageView fx:id="barbIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
          <image>
-            <Image url="@../src/barb%20Icon.png" />
+            <Image url="@../src/barb Icon.png" />
          </image>
       </ImageView>
       <ImageView fx:id="bardIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
          <image>
-            <Image url="@../src/bard%20Icon.png" />
+            <Image url="@../src/bard Icon.png" />
          </image>
       </ImageView>
    </children>
