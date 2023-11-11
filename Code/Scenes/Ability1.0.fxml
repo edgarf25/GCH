@@ -187,5 +187,11 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <ChoiceBox fx:id="strDropdown" layoutX="50.0" layoutY="225.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="dexDropdown" layoutX="300.0" layoutY="225.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="conDropdown" layoutX="550.0" layoutY="225.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="intDropdown" layoutX="50.0" layoutY="435.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="wisDropdown" layoutX="300.0" layoutY="435.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="chaDropdown" layoutX="550.0" layoutY="435.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

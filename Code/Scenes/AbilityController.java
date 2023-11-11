@@ -32,6 +32,18 @@ public class AbilityController implements Initializable{
     @FXML
     private Label chaLabel;
     @FXML
+    private ChoiceBox<String> strDropdown;
+    @FXML
+    private ChoiceBox<String> dexDropdown;
+    @FXML
+    private ChoiceBox<String> conDropdown;
+    @FXML
+    private ChoiceBox<String> intDropdown;
+    @FXML
+    private ChoiceBox<String> wisDropdown;
+    @FXML
+    private ChoiceBox<String> chaDropdown;
+    @FXML
     private Button strPlusButton;
     @FXML
     private Button dexPlusButton;
@@ -134,6 +146,12 @@ public class AbilityController implements Initializable{
         chaPlusButton.setVisible(false);
         chaSubButton.setVisible(false);
         chaLabel.setVisible(false);
+        strDropdown.setVisible(false);
+        dexDropdown.setVisible(false);
+        conDropdown.setVisible(false);
+        intDropdown.setVisible(false);
+        wisDropdown.setVisible(false);
+        chaDropdown.setVisible(false);
 
     }
     public void standardArray()
@@ -161,6 +179,12 @@ public class AbilityController implements Initializable{
         chaPlusButton.setVisible(false);
         chaSubButton.setVisible(false);
         chaLabel.setVisible(false);
+        strDropdown.setVisible(true);
+        dexDropdown.setVisible(true);
+        conDropdown.setVisible(true);
+        intDropdown.setVisible(true);
+        wisDropdown.setVisible(true);
+        chaDropdown.setVisible(true);
     }
     public void pointBuy()
     {
@@ -187,6 +211,12 @@ public class AbilityController implements Initializable{
         chaPlusButton.setVisible(true);
         chaSubButton.setVisible(true);
         chaLabel.setVisible(true);
+        strDropdown.setVisible(false);
+        dexDropdown.setVisible(false);
+        conDropdown.setVisible(false);
+        intDropdown.setVisible(false);
+        wisDropdown.setVisible(false);
+        chaDropdown.setVisible(false);
         pointBuy = 27;
         strLabel.setText("8");
         dexLabel.setText("8");
@@ -215,6 +245,12 @@ public class AbilityController implements Initializable{
         wisSubButton.setVisible(false);
         chaPlusButton.setVisible(false);
         chaSubButton.setVisible(false);
+        strDropdown.setVisible(false);
+        dexDropdown.setVisible(false);
+        conDropdown.setVisible(false);
+        intDropdown.setVisible(false);
+        wisDropdown.setVisible(false);
+        chaDropdown.setVisible(false);
     }
 
     public void plusPointBuy(ActionEvent event) //increases label 
