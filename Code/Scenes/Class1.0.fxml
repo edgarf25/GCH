@@ -122,42 +122,42 @@
       </ImageView>
       <ImageView fx:id="warlockIcon" fitHeight="235.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
          <image>
-            <Image url="@../src/Warlock%20Icon.jpg" />
+            <Image url="@../src/Warlock Icon.jpg" />
          </image>
       </ImageView>
       <ImageView fx:id="paladinIcon" fitHeight="235.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
          <image>
-            <Image url="@../src/Pala%20Icon.jpg" />
+            <Image url="@../src/Pala Icon.jpg" />
          </image>
       </ImageView>
       <ImageView fx:id="druidIcon" fitHeight="235.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
          <image>
-            <Image url="@../src/Druid%20Icon.jpg" />
+            <Image url="@../src/Druid Icon.jpg" />
          </image>
       </ImageView>
       <ImageView fx:id="clericIcon" fitHeight="235.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
          <image>
-            <Image url="@../src/Cleric%20Icon.png" />
+            <Image url="@../src/Cleric Icon.png" />
          </image>
       </ImageView>
       <ImageView fx:id="fighterIcon" fitHeight="235.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
          <image>
-            <Image url="@../src/Fighter%20Icon.png" />
+            <Image url="@../src/Fighter Icon.png" />
          </image>
       </ImageView>
       <ImageView fx:id="rangerIcon" fitHeight="235.0" fitWidth="262.0" layoutX="91.0" layoutY="113.0">
          <image>
-            <Image url="@../src/Ranger%20Icon.png" />
+            <Image url="@../src/Ranger Icon.png" />
          </image>
       </ImageView>
       <ImageView fx:id="rogueIcon" fitHeight="235.0" fitWidth="262.0" layoutX="92.0" layoutY="113.0">
          <image>
-            <Image url="@../src/Rogue%20Icon.png" />
+            <Image url="@../src/Rogue Icon.png" />
          </image>
       </ImageView>
       <ImageView fx:id="sorcererIcon" fitHeight="242.0" fitWidth="262.0" layoutX="92.0" layoutY="110.0">
          <image>
-            <Image url="@../src/Sorcerer%20Icon.png" />
+            <Image url="@../src/Sorcerer Icon.png" />
          </image>
       </ImageView>
    </children>
