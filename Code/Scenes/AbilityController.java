@@ -12,7 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.shape.Circle;
+import javafx.scene.image.ImageView;
 import javafx.fxml.FXML;
 
 public class AbilityController implements Initializable{
@@ -76,7 +76,7 @@ public class AbilityController implements Initializable{
     @FXML
     private Label diceRollLabel;
     @FXML
-    private Circle diceRollImage;
+    private ImageView diceGif;
     @FXML
     private ChoiceBox<String> optionsChoiceBox;
     private String[] options = {"Standard Array", "Point Buy", "Dice Roll"};
@@ -126,7 +126,7 @@ public class AbilityController implements Initializable{
         pointsRemainingText.setVisible(false);
         pointBuyLabel.setVisible(false);
         pointsRemaining.setVisible(false);
-        diceRollImage.setVisible(false);
+        diceGif.setVisible(false);
         diceRollLabel.setVisible(false);
         strPlusButton.setVisible(false);
         strSubButton.setVisible(false);
@@ -200,7 +200,7 @@ public class AbilityController implements Initializable{
     public void diceRoll()
     {
         startAbilityScene();
-        diceRollImage.setVisible(true);
+        diceGif.setVisible(true);
         diceRollLabel.setVisible(true);
         strLabel.setVisible(true);
         dexLabel.setVisible(true);

@@ -6,7 +6,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -31,7 +30,6 @@
       </Label>
       <Button layoutX="684.0" layoutY="557.0" mnemonicParsing="false" onAction="#next" text="Next" />
       <Button layoutX="14.0" layoutY="557.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
-      <Circle fx:id="diceRollImage" fill="DODGERBLUE" layoutX="553.0" layoutY="572.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
       <Label fx:id="diceRollLabel" layoutX="407.0" layoutY="551.0" text="Dice Roll ">
          <font>
             <Font name="Centaur" size="30.0" />
@@ -193,5 +191,10 @@
       <ChoiceBox fx:id="intDropdown" layoutX="50.0" layoutY="435.0" prefWidth="150.0" />
       <ChoiceBox fx:id="wisDropdown" layoutX="300.0" layoutY="435.0" prefWidth="150.0" />
       <ChoiceBox fx:id="chaDropdown" layoutX="550.0" layoutY="435.0" prefWidth="150.0" />
+      <ImageView fx:id="diceGif" fitHeight="50.0" fitWidth="50.0" layoutX="530.0" layoutY="545.0" pickOnBounds="true">
+         <image>
+            <Image url="@../src/D20_Dice.gif" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
