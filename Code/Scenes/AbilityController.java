@@ -11,6 +11,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.image.ImageView;
 import javafx.fxml.FXML;
 
 public class AbilityController implements Initializable{
@@ -29,6 +31,18 @@ public class AbilityController implements Initializable{
     private Label wisLabel;
     @FXML
     private Label chaLabel;
+    @FXML
+    private ChoiceBox<String> strDropdown;
+    @FXML
+    private ChoiceBox<String> dexDropdown;
+    @FXML
+    private ChoiceBox<String> conDropdown;
+    @FXML
+    private ChoiceBox<String> intDropdown;
+    @FXML
+    private ChoiceBox<String> wisDropdown;
+    @FXML
+    private ChoiceBox<String> chaDropdown;
     @FXML
     private Button strPlusButton;
     @FXML
@@ -56,6 +70,14 @@ public class AbilityController implements Initializable{
     @FXML
     private Label pointBuyLabel;
     @FXML
+    private Label pointsRemainingText;
+    @FXML
+    private Rectangle pointsRemaining;
+    @FXML
+    private Label diceRollLabel;
+    @FXML
+    private ImageView diceGif;
+    @FXML
     private ChoiceBox<String> optionsChoiceBox;
     private String[] options = {"Standard Array", "Point Buy", "Dice Roll"};
     private sceneController controller; //created a scenceController instance
@@ -77,32 +99,122 @@ public class AbilityController implements Initializable{
 
     public void initialize(URL arg0, ResourceBundle arg1)
     {
+        startAbilityScene();
         optionsChoiceBox.getItems().addAll(options);
         optionsChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
         {
-            if (newValue != null)
-            {
-                if (newValue.equals("Point Buy")) 
-                {
-                    pointBuy = 27;
-                    strLabel.setText("8");
-                    dexLabel.setText("8");
-                    conLabel.setText("8");
-                    intLabel.setText("8");
-                    wisLabel.setText("8");
-                    chaLabel.setText("8");
-                    pointBuyLabel.setText(String.valueOf(pointBuy));
-                    pointBuyLabel.setVisible(true);
+            if (newValue != null) {
+                if (newValue.equals("Point Buy")) {
+                    pointBuy();
                 }
-
-                if (newValue.equals("Standard Array"))
+                else if (newValue.equals("Standard Array"))
                 {
-                    System.out.println("Hello");
+                    standardArray();
+                }
+                else if (newValue.equals("Dice Roll"))
+                {
+                    diceRoll();
                 }
             }
 
+
         });
     };
+
+    public void startAbilityScene()
+    {
+        pointsRemainingText.setVisible(false);
+        pointBuyLabel.setVisible(false);
+        pointsRemaining.setVisible(false);
+        diceGif.setVisible(false);
+        diceRollLabel.setVisible(false);
+        strPlusButton.setVisible(false);
+        strSubButton.setVisible(false);
+        strLabel.setVisible(false);
+        dexPlusButton.setVisible(false);
+        dexSubButton.setVisible(false);
+        dexLabel.setVisible(false);
+        conPlusButton.setVisible(false);
+        conSubButton.setVisible(false);
+        conLabel.setVisible(false);
+        intPlusButton.setVisible(false);
+        intSubButton.setVisible(false);
+        intLabel.setVisible(false);
+        wisPlusButton.setVisible(false);
+        wisSubButton.setVisible(false);
+        wisLabel.setVisible(false);
+        chaPlusButton.setVisible(false);
+        chaSubButton.setVisible(false);
+        chaLabel.setVisible(false);
+        strDropdown.setVisible(false);
+        dexDropdown.setVisible(false);
+        conDropdown.setVisible(false);
+        intDropdown.setVisible(false);
+        wisDropdown.setVisible(false);
+        chaDropdown.setVisible(false);
+
+    }
+    public void standardArray()
+    {
+        startAbilityScene();
+        strDropdown.setVisible(true);
+        dexDropdown.setVisible(true);
+        conDropdown.setVisible(true);
+        intDropdown.setVisible(true);
+        wisDropdown.setVisible(true);
+        chaDropdown.setVisible(true);
+    }
+    public void pointBuy()
+    {
+        startAbilityScene();
+        pointsRemainingText.setVisible(true);
+        pointBuyLabel.setVisible(true);
+        pointsRemaining.setVisible(true);
+        strPlusButton.setVisible(true);
+        strSubButton.setVisible(true);
+        strLabel.setVisible(true);
+        dexPlusButton.setVisible(true);
+        dexSubButton.setVisible(true);
+        dexLabel.setVisible(true);
+        conPlusButton.setVisible(true);
+        conSubButton.setVisible(true);
+        conLabel.setVisible(true);
+        intPlusButton.setVisible(true);
+        intSubButton.setVisible(true);
+        intLabel.setVisible(true);
+        wisPlusButton.setVisible(true);
+        wisSubButton.setVisible(true);
+        wisLabel.setVisible(true);
+        chaPlusButton.setVisible(true);
+        chaSubButton.setVisible(true);
+        chaLabel.setVisible(true);
+        pointBuy = 27;
+        strLabel.setText("8");
+        dexLabel.setText("8");
+        conLabel.setText("8");
+        intLabel.setText("8");
+        wisLabel.setText("8");
+        chaLabel.setText("8");
+        pointBuyLabel.setText(String.valueOf(pointBuy));
+    }
+    public void diceRoll()
+    {
+        startAbilityScene();
+        diceGif.setVisible(true);
+        diceRollLabel.setVisible(true);
+        strLabel.setVisible(true);
+        dexLabel.setVisible(true);
+        conLabel.setVisible(true);
+        intLabel.setVisible(true);
+        wisLabel.setVisible(true);
+        chaLabel.setVisible(true);
+        strLabel.setText("?");
+        dexLabel.setText("?");
+        conLabel.setText("?");
+        intLabel.setText("?");
+        wisLabel.setText("?");
+        chaLabel.setText("?");
+    }
 
     public void plusPointBuy(ActionEvent event) //increases label 
     {

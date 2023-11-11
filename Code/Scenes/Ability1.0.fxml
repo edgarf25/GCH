@@ -6,7 +6,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -24,21 +23,20 @@
             <Font name="Century" size="35.0" />
          </font>
       </Label>
-      <Label layoutX="133.0" layoutY="549.0" text="Points Remaing ">
+      <Label fx:id="pointsRemainingText" layoutX="133.0" layoutY="549.0" text="Points Remaing ">
          <font>
             <Font name="Centaur" size="30.0" />
          </font>
       </Label>
       <Button layoutX="684.0" layoutY="557.0" mnemonicParsing="false" onAction="#next" text="Next" />
       <Button layoutX="14.0" layoutY="557.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
-      <Circle fill="DODGERBLUE" layoutX="553.0" layoutY="572.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
-      <Label layoutX="407.0" layoutY="551.0" text="Dice Roll ">
+      <Label fx:id="diceRollLabel" layoutX="407.0" layoutY="551.0" text="Dice Roll ">
          <font>
             <Font name="Centaur" size="30.0" />
          </font>
       </Label>
       <ChoiceBox fx:id="optionsChoiceBox" layoutX="398.0" layoutY="82.0" prefWidth="150.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="40.0" layoutX="315.0" layoutY="553.0" stroke="#ae8406" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="pointsRemaining" arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="40.0" layoutX="315.0" layoutY="553.0" stroke="#ae8406" strokeType="INSIDE" width="45.0" />
       <AnchorPane layoutX="25.0" layoutY="125.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="200.0" stroke="#ae8406" strokeType="INSIDE" width="200.0" />
@@ -187,5 +185,16 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <ChoiceBox fx:id="strDropdown" layoutX="50.0" layoutY="225.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="dexDropdown" layoutX="300.0" layoutY="225.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="conDropdown" layoutX="550.0" layoutY="225.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="intDropdown" layoutX="50.0" layoutY="435.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="wisDropdown" layoutX="300.0" layoutY="435.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="chaDropdown" layoutX="550.0" layoutY="435.0" prefWidth="150.0" />
+      <ImageView fx:id="diceGif" fitHeight="50.0" fitWidth="50.0" layoutX="530.0" layoutY="545.0" pickOnBounds="true">
+         <image>
+            <Image url="@../src/D20_Dice.gif" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

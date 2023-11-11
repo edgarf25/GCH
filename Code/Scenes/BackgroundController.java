@@ -15,7 +15,7 @@ public class BackgroundController implements Initializable {
     @FXML
     private ChoiceBox<String> backgroundChoiceBox;
     @FXML
-    private TextArea backgroundTextBox = new TextArea();
+    private TextArea backgroundTextBox;
 
 
 
@@ -50,6 +50,7 @@ public class BackgroundController implements Initializable {
         backgroundTextBox.setWrapText(true);
         backgroundChoiceBox.getItems().addAll(backgrounds);
         backgroundChoiceBox.setOnAction(this::getBackground);
+
     }
 
     public void getBackground(ActionEvent event) 
