@@ -196,5 +196,6 @@
             <Image url="@../src/D20_Dice.gif" />
          </image>
       </ImageView>
+      <Button fx:id="diceButton" layoutX="524.0" layoutY="544.0" mnemonicParsing="false" onAction="#RollDice" opacity="0.0" prefHeight="50.0" prefWidth="62.0" text="Button" />
    </children>
 </AnchorPane>

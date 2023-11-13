@@ -6,6 +6,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -67,6 +68,8 @@ public class AbilityController implements Initializable{
     private Button wisSubButton;
     @FXML
     private Button chaSubButton;
+    @FXML
+    private Button diceButton;
     @FXML
     private Label pointBuyLabel;
     @FXML
@@ -152,6 +155,7 @@ public class AbilityController implements Initializable{
         intDropdown.setVisible(false);
         wisDropdown.setVisible(false);
         chaDropdown.setVisible(false);
+        diceButton.setVisible(false);
 
     }
     public void standardArray()
@@ -208,12 +212,64 @@ public class AbilityController implements Initializable{
         intLabel.setVisible(true);
         wisLabel.setVisible(true);
         chaLabel.setVisible(true);
+        diceButton.setVisible(true);
         strLabel.setText("?");
         dexLabel.setText("?");
         conLabel.setText("?");
         intLabel.setText("?");
         wisLabel.setText("?");
         chaLabel.setText("?");
+    }
+
+    public void RollDice(ActionEvent event)
+    {
+        int[] strArray = new int[4];
+        int[] dexArray = new int[4];
+        int[] conArray = new int[4];
+        int[] intArray = new int[4];
+        int[] wisArray = new int[4];
+        int[] chaArray = new int[4];
+        Random random = new Random();
+        int strSum = 0, dexSum = 0, conSum = 0, intSum = 0, wisSum = 0, chaSum = 0;
+        int strResult, dexResult, conResult, intResult, wisResult, chaResult;
+
+
+        for (int i = 0; i < 4; i++) 
+        {
+            strArray[i] = random.nextInt(6) + 1; // Generates random values from 1 to 6
+            dexArray[i] = random.nextInt(6) + 1;
+            conArray[i] = random.nextInt(6) + 1;
+            intArray[i] = random.nextInt(6) + 1;
+            wisArray[i] = random.nextInt(6) + 1;
+            chaArray[i] = random.nextInt(6) + 1;
+            strSum += strArray[i];
+            dexSum += dexArray[i];
+            conSum += conArray[i];
+            intSum += intArray[i];
+            wisSum += wisArray[i];
+            chaSum += chaArray[i];
+        }
+
+        Arrays.sort(strArray);
+        Arrays.sort(dexArray);
+        Arrays.sort(conArray);
+        Arrays.sort(intArray);
+        Arrays.sort(wisArray);
+        Arrays.sort(chaArray);
+
+        strResult = strSum - strArray[1];
+        dexResult = dexSum - dexArray[1];
+        conResult = conSum - conArray[1];
+        intResult = intSum - intArray[1];
+        wisResult = wisSum - wisArray[1];
+        chaResult= chaSum - chaArray[1];
+
+        strLabel.setText(String.valueOf(strResult));
+        dexLabel.setText(String.valueOf(dexResult));
+        conLabel.setText(String.valueOf(conResult));
+        intLabel.setText(String.valueOf(intResult));
+        wisLabel.setText(String.valueOf(wisResult));
+        chaLabel.setText(String.valueOf(chaResult));
     }
 
     public void plusPointBuy(ActionEvent event) //increases label 
@@ -304,7 +360,7 @@ public class AbilityController implements Initializable{
     public void switchToScene2(ActionEvent event) throws IOException
     {
         controller = new sceneController();
-        controller.switchToScene4(event); // Called the prev method with the empty event
+        controller.switchToScene2(event); // Called the prev method with the empty event
     }
     public void switchToScene4(ActionEvent event) throws IOException
     {
