@@ -33,6 +33,54 @@ public class AbilityController implements Initializable{
     @FXML
     private Label chaLabel;
     @FXML
+    private Label strVal1;
+    @FXML
+    private Label strVal2;
+    @FXML
+    private Label strVal3;
+    @FXML
+    private Label strVal4;
+    @FXML
+    private Label dexVal1;
+    @FXML
+    private Label dexVal2;
+    @FXML
+    private Label dexVal3;
+    @FXML
+    private Label dexVal4;
+    @FXML
+    private Label conVal1;
+    @FXML
+    private Label conVal2;
+    @FXML
+    private Label conVal3;
+    @FXML
+    private Label conVal4;
+    @FXML
+    private Label intVal1;
+    @FXML
+    private Label intVal2;
+    @FXML
+    private Label intVal3;
+    @FXML
+    private Label intVal4;
+    @FXML
+    private Label wisVal1;
+    @FXML
+    private Label wisVal2;
+    @FXML
+    private Label wisVal3;
+    @FXML
+    private Label wisVal4;
+    @FXML
+    private Label chaVal1;
+    @FXML
+    private Label chaVal2;
+    @FXML
+    private Label chaVal3;
+    @FXML
+    private Label chaVal4;
+    @FXML
     private ChoiceBox<String> strDropdown;
     @FXML
     private ChoiceBox<String> dexDropdown;
@@ -156,7 +204,30 @@ public class AbilityController implements Initializable{
         wisDropdown.setVisible(false);
         chaDropdown.setVisible(false);
         diceButton.setVisible(false);
-
+        strVal1.setVisible(false);
+        strVal2.setVisible(false);
+        strVal3.setVisible(false);
+        strVal4.setVisible(false);
+        dexVal1.setVisible(false);
+        dexVal2.setVisible(false);
+        dexVal3.setVisible(false);
+        dexVal4.setVisible(false);
+        conVal1.setVisible(false);
+        conVal2.setVisible(false);
+        conVal3.setVisible(false);
+        conVal4.setVisible(false);
+        intVal1.setVisible(false);
+        intVal2.setVisible(false);
+        intVal3.setVisible(false);
+        intVal4.setVisible(false);
+        wisVal1.setVisible(false);
+        wisVal2.setVisible(false);
+        wisVal3.setVisible(false);
+        wisVal4.setVisible(false);
+        chaVal1.setVisible(false);
+        chaVal2.setVisible(false);
+        chaVal3.setVisible(false);
+        chaVal4.setVisible(false);
     }
     public void standardArray()
     {
@@ -219,6 +290,54 @@ public class AbilityController implements Initializable{
         intLabel.setText("?");
         wisLabel.setText("?");
         chaLabel.setText("?");
+        strVal1.setVisible(true);
+        strVal2.setVisible(true);
+        strVal3.setVisible(true);
+        strVal4.setVisible(true);
+        dexVal1.setVisible(true);
+        dexVal2.setVisible(true);
+        dexVal3.setVisible(true);
+        dexVal4.setVisible(true);
+        conVal1.setVisible(true);
+        conVal2.setVisible(true);
+        conVal3.setVisible(true);
+        conVal4.setVisible(true);
+        intVal1.setVisible(true);
+        intVal2.setVisible(true);
+        intVal3.setVisible(true);
+        intVal4.setVisible(true);
+        wisVal1.setVisible(true);
+        wisVal2.setVisible(true);
+        wisVal3.setVisible(true);
+        wisVal4.setVisible(true);
+        chaVal1.setVisible(true);
+        chaVal2.setVisible(true);
+        chaVal3.setVisible(true);
+        chaVal4.setVisible(true);
+        strVal1.setText("?");
+        strVal2.setText("?");
+        strVal3.setText("?");
+        strVal4.setText("?");
+        dexVal1.setText("?");
+        dexVal2.setText("?");
+        dexVal3.setText("?");
+        dexVal4.setText("?");
+        conVal1.setText("?");
+        conVal2.setText("?");
+        conVal3.setText("?");
+        conVal4.setText("?");
+        intVal1.setText("?");
+        intVal2.setText("?");
+        intVal3.setText("?");
+        intVal4.setText("?");
+        wisVal1.setText("?");
+        wisVal2.setText("?");
+        wisVal3.setText("?");
+        wisVal4.setText("?");
+        chaVal1.setText("?");
+        chaVal2.setText("?");
+        chaVal3.setText("?");
+        chaVal4.setText("?");
     }
 
     public void RollDice(ActionEvent event)
@@ -257,12 +376,12 @@ public class AbilityController implements Initializable{
         Arrays.sort(wisArray);
         Arrays.sort(chaArray);
 
-        strResult = strSum - strArray[1];
-        dexResult = dexSum - dexArray[1];
-        conResult = conSum - conArray[1];
-        intResult = intSum - intArray[1];
-        wisResult = wisSum - wisArray[1];
-        chaResult= chaSum - chaArray[1];
+        strResult = strSum - strArray[0];
+        dexResult = dexSum - dexArray[0];
+        conResult = conSum - conArray[0];
+        intResult = intSum - intArray[0];
+        wisResult = wisSum - wisArray[0];
+        chaResult= chaSum - chaArray[0];
 
         strLabel.setText(String.valueOf(strResult));
         dexLabel.setText(String.valueOf(dexResult));
@@ -270,6 +389,50 @@ public class AbilityController implements Initializable{
         intLabel.setText(String.valueOf(intResult));
         wisLabel.setText(String.valueOf(wisResult));
         chaLabel.setText(String.valueOf(chaResult));
+
+        for (int i = 4; i > 0; i--) 
+        {
+            if (i == 4)
+            {
+                strVal1.setText(String.valueOf(strArray[i - 1]));
+                dexVal1.setText(String.valueOf(dexArray[i - 1]));
+                conVal1.setText(String.valueOf(conArray[i - 1]));
+                intVal1.setText(String.valueOf(intArray[i - 1]));
+                wisVal1.setText(String.valueOf(wisArray[i - 1]));
+                chaVal1.setText(String.valueOf(chaArray[i - 1]));
+            }
+
+            if (i == 3) 
+            {
+                strVal2.setText(String.valueOf(strArray[i - 1]));
+                dexVal2.setText(String.valueOf(dexArray[i - 1]));
+                conVal2.setText(String.valueOf(conArray[i - 1]));
+                intVal2.setText(String.valueOf(intArray[i - 1]));
+                wisVal2.setText(String.valueOf(wisArray[i - 1]));
+                chaVal2.setText(String.valueOf(chaArray[i - 1]));
+            }
+
+            if (i == 2)
+            {
+                strVal3.setText(String.valueOf(strArray[i - 1]));
+                dexVal3.setText(String.valueOf(dexArray[i - 1]));
+                conVal3.setText(String.valueOf(conArray[i - 1]));
+                intVal3.setText(String.valueOf(intArray[i - 1]));
+                wisVal3.setText(String.valueOf(wisArray[i - 1]));
+                chaVal3.setText(String.valueOf(chaArray[i - 1]));
+            }
+
+            if (i == 1)
+            {
+                strVal4.setText(String.valueOf(strArray[i - 1]));
+                dexVal4.setText(String.valueOf(dexArray[i - 1]));
+                conVal4.setText(String.valueOf(conArray[i - 1]));
+                intVal4.setText(String.valueOf(intArray[i - 1]));
+                wisVal4.setText(String.valueOf(wisArray[i - 1]));
+                chaVal4.setText(String.valueOf(chaArray[i - 1]));
+            }
+
+        }
     }
 
     public void plusPointBuy(ActionEvent event) //increases label 

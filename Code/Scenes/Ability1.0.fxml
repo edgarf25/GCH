@@ -49,8 +49,12 @@
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <Button fx:id="strPlusButton" layoutX="140.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
+            <Button fx:id="strPlusButton" layoutX="143.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
             <Button fx:id="strSubButton" layoutX="30.0" layoutY="150.0" mnemonicParsing="false" onAction="#subPointBuy" prefHeight="25.0" prefWidth="26.0" text="-" />
+            <Label fx:id="strVal1" layoutX="29.0" layoutY="154.0" text="Label" />
+            <Label fx:id="strVal2" layoutX="67.0" layoutY="154.0" text="Label" />
+            <Label fx:id="strVal3" layoutX="105.0" layoutY="154.0" text="Label" />
+            <Label fx:id="strVal4" layoutX="143.0" layoutY="154.0" text="Label" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="275.0" layoutY="125.0" prefHeight="200.0" prefWidth="200.0">
@@ -65,8 +69,12 @@
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <Button fx:id="dexPlusButton" layoutX="140.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
+            <Button fx:id="dexPlusButton" layoutX="143.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
             <Button fx:id="dexSubButton" layoutX="30.0" layoutY="150.0" mnemonicParsing="false" onAction="#subPointBuy" prefHeight="25.0" prefWidth="26.0" text="-" />
+            <Label fx:id="dexVal1" layoutX="29.0" layoutY="154.0" text="Label" />
+            <Label fx:id="dexVal2" layoutX="67.0" layoutY="154.0" text="Label" />
+            <Label fx:id="dexVal3" layoutX="105.0" layoutY="154.0" text="Label" />
+            <Label fx:id="dexVal4" layoutX="143.0" layoutY="154.0" text="Label" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="525.0" layoutY="125.0" prefHeight="200.0" prefWidth="200.0">
@@ -81,8 +89,12 @@
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <Button fx:id="conPlusButton" layoutX="140.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
+            <Button fx:id="conPlusButton" layoutX="143.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
             <Button fx:id="conSubButton" layoutX="30.0" layoutY="150.0" mnemonicParsing="false" onAction="#subPointBuy" prefHeight="25.0" prefWidth="26.0" text="-" />
+            <Label fx:id="conVal1" layoutX="29.0" layoutY="154.0" text="Label" />
+            <Label fx:id="conVal2" layoutX="67.0" layoutY="154.0" text="Label" />
+            <Label fx:id="conVal3" layoutX="105.0" layoutY="154.0" text="Label" />
+            <Label fx:id="conVal4" layoutX="143.0" layoutY="154.0" text="Label" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="25.0" layoutY="340.0" prefHeight="200.0" prefWidth="200.0">
@@ -97,8 +109,12 @@
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <Button fx:id="intPlusButton" layoutX="140.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
+            <Button fx:id="intPlusButton" layoutX="143.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
             <Button fx:id="intSubButton" layoutX="30.0" layoutY="150.0" mnemonicParsing="false" onAction="#subPointBuy" prefHeight="25.0" prefWidth="26.0" text="-" />
+            <Label fx:id="intVal1" layoutX="29.0" layoutY="154.0" text="Label" />
+            <Label fx:id="intVal2" layoutX="67.0" layoutY="154.0" text="Label" />
+            <Label fx:id="intVal3" layoutX="105.0" layoutY="154.0" text="Label" />
+            <Label fx:id="intVal4" layoutX="143.0" layoutY="154.0" text="Label" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="275.0" layoutY="340.0" prefHeight="200.0" prefWidth="200.0">
@@ -113,8 +129,12 @@
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <Button fx:id="wisPlusButton" layoutX="140.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
+            <Button fx:id="wisPlusButton" layoutX="143.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
             <Button fx:id="wisSubButton" layoutX="30.0" layoutY="150.0" mnemonicParsing="false" onAction="#subPointBuy" prefHeight="25.0" prefWidth="26.0" text="-" />
+            <Label fx:id="wisVal1" layoutX="29.0" layoutY="154.0" text="Label" />
+            <Label fx:id="wisVal2" layoutX="67.0" layoutY="154.0" text="Label" />
+            <Label fx:id="wisVal3" layoutX="105.0" layoutY="154.0" text="Label" />
+            <Label fx:id="wisVal4" layoutX="143.0" layoutY="154.0" text="Label" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="525.0" layoutY="340.0" prefHeight="200.0" prefWidth="200.0">
@@ -129,8 +149,12 @@
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <Button fx:id="chaPlusButton" layoutX="140.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
+            <Button fx:id="chaPlusButton" layoutX="143.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
             <Button fx:id="chaSubButton" layoutX="30.0" layoutY="150.0" mnemonicParsing="false" onAction="#subPointBuy" prefHeight="25.0" prefWidth="26.0" text="-" />
+            <Label fx:id="chaVal1" layoutX="29.0" layoutY="154.0" text="Label" />
+            <Label fx:id="chaVal2" layoutX="67.0" layoutY="154.0" text="Label" />
+            <Label fx:id="chaVal3" layoutX="105.0" layoutY="154.0" text="Label" />
+            <Label fx:id="chaVal4" layoutX="143.0" layoutY="154.0" text="Label" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="-4.0" layoutY="3.0" prefHeight="68.0" prefWidth="759.0">
