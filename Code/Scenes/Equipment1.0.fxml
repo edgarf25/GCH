@@ -15,52 +15,49 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.EquipmentController">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="794.0" layoutX="-39.0" layoutY="6.0" pickOnBounds="true">
+      <ImageView fitHeight="600.0" fitWidth="794.0" layoutX="-39.0" layoutY="49.0" pickOnBounds="true">
          <image>
             <Image url="@../src/background color.png" />
          </image>
       </ImageView>
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="38.0" layoutY="84.0" stroke="#ae8406" strokeType="INSIDE" width="447.0" />
-      <Label layoutX="72.0" layoutY="100.0" text="Weapon ">
+      <Label layoutX="70.0" layoutY="100.0" text="Weapon ">
          <font>
             <Font name="Century" size="25.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="myChoiceBox0" blendMode="HARD_LIGHT" layoutX="248.0" layoutY="105.0" prefWidth="206.0" />
+      <ChoiceBox fx:id="weaponChoiceBox" blendMode="HARD_LIGHT" layoutX="250.0" layoutY="105.0" prefWidth="150.0" />
       <Label layoutX="575.0" layoutY="71.0" text="&lt;List&gt;">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="361.0" layoutX="499.0" layoutY="110.0" stroke="#ae8406" strokeType="INSIDE" width="244.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="345.0" layoutX="499.0" layoutY="110.0" stroke="#ae8406" strokeType="INSIDE" width="244.0" />
       <Button layoutX="684.0" layoutY="557.0" mnemonicParsing="false" onAction="#next" text="Next" />
       <Button layoutX="14.0" layoutY="557.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="38.0" layoutY="166.0" stroke="#ae8406" strokeType="INSIDE" width="447.0" />
-      <Text layoutX="74.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Armor ">
+      <Text layoutX="70.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Armor ">
          <font>
             <Font name="Century" size="25.0" />
          </font>
       </Text>
-      <ChoiceBox fx:id="myChoiceBox1" blendMode="HARD_LIGHT" layoutX="248.0" layoutY="186.0" prefWidth="206.0" />
+      <ChoiceBox fx:id="armorChoiceBox" blendMode="HARD_LIGHT" layoutX="250.0" layoutY="186.0" prefWidth="150.0" />
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="38.0" layoutY="241.0" stroke="#ae8406" strokeType="INSIDE" width="447.0" />
       <Text layoutX="53.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Possesions">
          <font>
             <Font name="Century" size="25.0" />
          </font>
       </Text>
-      <ChoiceBox fx:id="myChoiceBox11" blendMode="HARD_LIGHT" layoutX="251.0" layoutY="261.0" prefWidth="206.0" />
+      <ChoiceBox fx:id="possessionChoiceBox" blendMode="HARD_LIGHT" layoutX="250.0" layoutY="261.0" prefWidth="150.0" />
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="37.0" layoutY="316.0" stroke="#ae8406" strokeType="INSIDE" width="447.0" />
-      <Text layoutX="74.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gold ">
+      <Text layoutX="70.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gold ">
          <font>
             <Font name="Century" size="25.0" />
          </font>
       </Text>
-      <TextField fx:id="GoldInput" layoutX="248.0" layoutY="336.0" prefHeight="25.0" prefWidth="213.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="275.0" layoutY="404.0" stroke="#ae8406" strokeType="INSIDE" width="194.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="37.0" layoutY="404.0" stroke="#ae8406" strokeType="INSIDE" width="194.0" />
-      <Button fx:id="addButton0" layoutX="65.0" layoutY="415.0" mnemonicParsing="false" onMouseClicked="#addAll" prefHeight="43.0" prefWidth="139.0" text="ADD ALL " />
-      <Button fx:id="addButton1" layoutX="303.0" layoutY="415.0" mnemonicParsing="false" onMouseClicked="#clear" prefHeight="43.0" prefWidth="139.0" text="CLEAR ALL " />
-      <TextArea fx:id="TextAreaList" blendMode="MULTIPLY" editable="false" layoutX="509.0" layoutY="119.0" prefHeight="344.0" prefWidth="224.0">
+      <TextField fx:id="GoldInput" layoutX="250.0" layoutY="410.0" prefHeight="25.0" prefWidth="150.0" />
+      <Button fx:id="addWeapon" layoutX="420.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#addWeapon" prefHeight="43.0" prefWidth="50.0" text="ADD " />
+      <TextArea fx:id="TextAreaList" blendMode="MULTIPLY" editable="false" layoutX="509.0" layoutY="119.0" prefHeight="325.0" prefWidth="224.0">
          <font>
             <Font name="Lucida Calligraphy Italic" size="15.0" />
          </font></TextArea>
@@ -111,5 +108,17 @@
             <Button layoutX="650.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToScene7" opacity="0.0" text="Summary" />
          </children>
       </AnchorPane>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="65.0" layoutX="37.0" layoutY="388.0" stroke="#ae8406" strokeType="INSIDE" width="447.0" />
+      <Text layoutX="70.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spell">
+         <font>
+            <Font name="Century" size="25.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="spellChoiceBox" blendMode="HARD_LIGHT" layoutX="250.0" layoutY="335.0" prefWidth="150.0" />
+      <Button fx:id="addArmor" layoutX="420.0" layoutY="175.0" mnemonicParsing="false" onMouseClicked="#addArmor" prefHeight="43.0" prefWidth="50.0" text="ADD " />
+      <Button fx:id="addPossession" layoutX="420.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#addPossession" prefHeight="43.0" prefWidth="50.0" text="ADD " />
+      <Button fx:id="addSpell" layoutX="420.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#addSpell" prefHeight="43.0" prefWidth="50.0" text="ADD " />
+      <Button fx:id="addGold" layoutX="420.0" layoutY="400.0" mnemonicParsing="false" onMouseClicked="#addGold" prefHeight="43.0" prefWidth="50.0" text="ADD " />
+      <Button fx:id="clear" layoutX="416.0" layoutY="475.0" mnemonicParsing="false" onMouseClicked="#clear" prefHeight="43.0" prefWidth="58.0" text="CLEAR" />
    </children>
 </AnchorPane>
