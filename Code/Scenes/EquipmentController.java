@@ -36,14 +36,15 @@ public class EquipmentController implements Initializable {
     private final String[] posArray = {"DINGLE","SHEMCKLES"};
     private final String[] nonspellArray = {"Acid Splash", "Chill Touch", "Dancing Lights", "Fire Bolt","Light","Mage Hand","Mending","Message", "Minor Illusion","Poison Spray", "Prestidigitation","Ray of Frost","Shocking Grasp","True Strike"};
     // NON-Spell Casters BASIC SPELLS
-//    private final String[] halfspellArray = {"Acid Splash", "Chill Touch", "Dancing Lights", "Fire Bolt","Light","Mage Hand","Mending"};
+    private final String[] halfspellArray = {"Acid Splash", "Chill Touch", "Dancing Lights", "Fire Bolt","Light","Mage Hand","Mending"};
     // Half Spell Casters + special cartered to that specific class.
- //   private final String[] fullspellArray ={"Acid Splash", "Chill Touch", "Dancing Lights", "Fire Bolt","Light","Mage Hand","Mending","Message", "Minor Illusion","Poison Spray", "Prestidigitation","Ray of Frost","Shocking Grasp","True Strike"};
+    private final String[] fullspellArray ={"Acid Splash", "Chill Touch", "Dancing Lights", "Fire Bolt","Light","Mage Hand","Mending","Message", "Minor Illusion","Poison Spray", "Prestidigitation","Ray of Frost","Shocking Grasp","True Strike"};
     // FULL Spell Casters + ALL EXTRA Spells
 
     public void initialize(URL arg0, ResourceBundle arg1){
         //  Weapons Array Lists of String
         // Add items to the first ChoiceBox
+        specifySpells();
         weaponChoiceBox.getItems().addAll(weaponArray);   // GET ALL WEAPONS IN ARRAY
         armorChoiceBox.getItems().addAll(armorArray);     // GET ALL ARMOR   IN ARRAY
         possessionChoiceBox.getItems().addAll(posArray);  // GET ALL POS     IN ARRAY
@@ -76,6 +77,59 @@ public class EquipmentController implements Initializable {
             }
         });
 
+    }
+
+    public void specifySpells()
+    {
+        cController = new ClassController();
+        if (cController.userClass.equals("Barbarian"))
+        {
+            spellChoiceBox.getItems().addAll(nonspellArray);
+        }
+        else if(cController.userClass.equals("Bard"))
+        {
+            spellChoiceBox.getItems().addAll(fullspellArray);
+        }
+        else if(cController.userClass.equals("Cleric"))
+        {
+            spellChoiceBox.getItems().addAll(fullspellArray);
+        }
+        else if(cController.userClass.equals("Druid"))
+        {
+            spellChoiceBox.getItems().addAll(fullspellArray);
+        }
+        else if(cController.userClass.equals("Fighter"))
+        {
+            spellChoiceBox.getItems().addAll(nonspellArray);
+        }
+        else if(cController.userClass.equals("Monk"))
+        {
+            spellChoiceBox.getItems().addAll(nonspellArray);
+        }
+        else if(cController.userClass.equals("Paladin"))
+        {
+            spellChoiceBox.getItems().addAll(nonspellArray);
+        }
+        else if(cController.userClass.equals("Ranger"))
+        {
+            spellChoiceBox.getItems().addAll(halfspellArray);
+        }
+        else if(cController.userClass.equals("Rogue"))
+        {
+            spellChoiceBox.getItems().addAll(nonspellArray);
+        }
+        else if(cController.userClass.equals("Sorcerer"))
+        {
+            spellChoiceBox.getItems().addAll(fullspellArray);
+        }
+        else if(cController.userClass.equals("Warlock"))
+        {
+            spellChoiceBox.getItems().addAll(fullspellArray);
+        }
+        else if(cController.userClass.equals("Wizard"))
+        {
+            spellChoiceBox.getItems().addAll(fullspellArray);
+        }
     }
 
     public void addToString(String s, int e)
@@ -150,7 +204,7 @@ public class EquipmentController implements Initializable {
      }
      
     private sceneController controller; //created a scenceController instance
-
+    private ClassController cController;
 
 
 

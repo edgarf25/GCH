@@ -18,6 +18,7 @@ public class ClassController implements Initializable{
     private String[] classes = {"Barbarian","Bard","Cleric","Druid","Fighter","Monk","Paladin","Ranger","Rogue","Sorcerer","Warlock","Wizard"};
     @FXML
     private TextArea classDescription;
+    public static String userClass;
     @FXML
     private ImageView barbIcon;
     @FXML
@@ -59,6 +60,10 @@ public class ClassController implements Initializable{
                                      "Wizards are spellcasters known for their scholarly pursuit of magic through study and spellbook knowledge. They use their spellbook to cast a variety of magical spells, prepare spells daily, and recover spell slots through \"Arcane Recovery.\" Wizards choose an \"Arcane Tradition\" that defines their magical focus. They excel in roles like damage dealing, control, utility, and support."};
     private sceneController controller; //created a scenceController instance
 
+    public String setClass()
+    {
+        return userClass;
+    }
 
     public void prev(ActionEvent event) throws IOException
     {
@@ -153,6 +158,7 @@ public class ClassController implements Initializable{
                     clearImg();
                     wizardIcon.setVisible(true);
                 }
+                userClass = newValue;
             }
         });
     };
