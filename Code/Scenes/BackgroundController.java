@@ -77,6 +77,7 @@ public class BackgroundController implements Initializable {
                 if (newValue.equals("Acolyte")) {
                     skillText1.setEditable(false);
                     skillText2.setEditable(false);
+                    backgroundTextBox.setEditable(false);
                     skillText1.setVisible(true);
                     skillText2.setVisible(true);
                     skillBox1.setVisible(false);
@@ -88,6 +89,7 @@ public class BackgroundController implements Initializable {
                 else if (newValue.equals("Criminal/Spy")) {
                     skillText1.setEditable(false);
                     skillText2.setEditable(false);
+                    backgroundTextBox.setEditable(false);
                     skillText1.setVisible(true);
                     skillText2.setVisible(true);
                     skillBox1.setVisible(false);
@@ -99,6 +101,7 @@ public class BackgroundController implements Initializable {
                 else if (newValue.equals("Folk Hero")) {
                     skillText1.setEditable(false);
                     skillText2.setEditable(false);
+                    backgroundTextBox.setEditable(false);
                     skillText1.setVisible(true);
                     skillText2.setVisible(true);
                     skillBox1.setVisible(false);
@@ -111,6 +114,7 @@ public class BackgroundController implements Initializable {
                     backgroundTextBox.setText(descriptions[3]);
                     skillText1.setVisible(false);
                     skillText2.setVisible(false);
+                    backgroundTextBox.setEditable(false);
                     skillBox1.setVisible(true);
                     skillBox2.setVisible(true);
                     skillBox1.getItems().addAll(hauntedOneProf);
@@ -177,6 +181,7 @@ public class BackgroundController implements Initializable {
                 else if (newValue.equals("Noble")) {
                     skillText1.setEditable(false);
                     skillText2.setEditable(false);
+                    backgroundTextBox.setEditable(false);
                     skillText1.setVisible(true);
                     skillText2.setVisible(true);
                     skillBox1.setVisible(false);
@@ -188,6 +193,7 @@ public class BackgroundController implements Initializable {
                 else if (newValue.equals("Sage")) {
                     skillText1.setEditable(false);
                     skillText2.setEditable(false);
+                    backgroundTextBox.setEditable(false);
                     skillText1.setVisible(true);
                     skillText2.setVisible(true);
                     skillBox1.setVisible(false);
@@ -199,6 +205,7 @@ public class BackgroundController implements Initializable {
                 else if (newValue.equals("Soldier")) {
                     skillText1.setEditable(false);
                     skillText2.setEditable(false);
+                    backgroundTextBox.setEditable(false);
                     skillText1.setVisible(true);
                     skillText2.setVisible(true);
                     skillBox1.setVisible(false);
