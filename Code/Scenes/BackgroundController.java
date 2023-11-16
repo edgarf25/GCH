@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.text.Font;
 
 public class BackgroundController implements Initializable {
@@ -16,8 +17,14 @@ public class BackgroundController implements Initializable {
     private ChoiceBox<String> backgroundChoiceBox;
     @FXML
     private TextArea backgroundTextBox;
-
-
+    @FXML
+    private TextField skillText1;
+    @FXML
+    private TextField skillText2;
+    @FXML
+    private ChoiceBox<String> skillBox1;
+    @FXML
+    private ChoiceBox<String> skillBox2;
 
     private String[] backgrounds = {"Custom Background", "Acolyte", "Criminal/Spy", "Folk Hero", "Haunted One", "Noble", "Sage", "Soldier"};
 
@@ -43,16 +50,166 @@ public class BackgroundController implements Initializable {
                                                      "\n" +
                                                      "When you choose this background, work with your DM to determine which military organization you were a part of, how far through its ranks you progressed, and what kind of experiences you had during your military career. Was it a standing army, a town guard, or a village militia? Or it might have been a noble’s or merchant’s private army, or a mercenary company."};
 
+
+    private String[] hauntedOneProf = {"Arcana", "Investigation", "Religion", "Survival"};
+    private String[] noArcana = {"Investigation", "Religion", "Survival"};
+    private String[] noInvestigation = {"Arcana", "Religion", "Survival"};
+    private String[] noReligion = {"Arcana", "Investigation", "Survival"};
+    private String[] noSurvival= {"Arcana", "Investigation", "Religion"};
     private sceneController controller; //created a scenceController instance
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         backgroundTextBox.setWrapText(true);
         backgroundChoiceBox.getItems().addAll(backgrounds);
-        backgroundChoiceBox.setOnAction(this::getBackground);
+        // backgroundChoiceBox.setOnAction(this::getBackground);
+        backgroundTextBox.setEditable(false);
+        skillText1.setEditable(false);
+        skillText2.setEditable(false);
+        skillBox1.setVisible(false);
+        skillBox2.setVisible(false);
 
+        backgroundChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                skillBox1.getItems().clear();
+                skillBox2.getItems().clear();
+
+                if (newValue.equals("Acolyte")) {
+                    skillText1.setVisible(true);
+                    skillText2.setVisible(true);
+                    skillBox1.setVisible(false);
+                    skillBox2.setVisible(false);
+                    backgroundTextBox.setText(descriptions[0]);
+                    skillText1.setText("Insight");
+                    skillText2.setText("Religion");
+                }
+                else if (newValue.equals("Criminal/Spy")) {
+                    skillText1.setVisible(true);
+                    skillText2.setVisible(true);
+                    skillBox1.setVisible(false);
+                    skillBox2.setVisible(false);
+                    backgroundTextBox.setText(descriptions[1]);
+                    skillText1.setText("Deception");
+                    skillText2.setText("Stealth");
+                }
+                else if (newValue.equals("Folk Hero")) {
+                    skillText1.setVisible(true);
+                    skillText2.setVisible(true);
+                    skillBox1.setVisible(false);
+                    skillBox2.setVisible(false);
+                    backgroundTextBox.setText(descriptions[2]);
+                    skillText1.setText("Animal Handling");
+                    skillText2.setText("Survival");
+                }
+                else if (newValue.equals("Haunted One")) {
+                    backgroundTextBox.setText(descriptions[3]);
+                    skillText1.setVisible(false);
+                    skillText2.setVisible(false);
+                    skillBox1.setVisible(true);
+                    skillBox2.setVisible(true);
+                    skillBox1.getItems().addAll(hauntedOneProf);
+                    skillBox2.getItems().addAll(hauntedOneProf);
+                    skillBox1.getSelectionModel().selectedItemProperty().addListener((observable2, oldValue2, newValue2) -> {
+                        if (newValue2 != null)
+                        {
+                            if (newValue2.equals("Arcana")) {
+                                if (skillBox2.getSelectionModel().isEmpty() || skillBox2.getValue().equals("Arcana")) {
+                                    skillBox2.getItems().clear();
+                                    skillBox2.getItems().addAll(noArcana);
+                                }
+                            }
+                            else if (newValue2.equals("Investigation")) {
+                                if (skillBox2.getSelectionModel().isEmpty() || skillBox2.getValue().equals("Investigation")) {
+                                    skillBox2.getItems().clear();
+                                    skillBox2.getItems().addAll(noInvestigation);
+                                }
+                            }
+                            else if (newValue2.equals("Religion")) {
+                                if (skillBox2.getSelectionModel().isEmpty() || skillBox2.getValue().equals("Religion")) {
+                                    skillBox2.getItems().clear();
+                                    skillBox2.getItems().addAll(noReligion);
+                                }
+                            }
+                            else if (newValue2.equals("Survival")) {
+                                if (skillBox2.getSelectionModel().isEmpty() || skillBox2.getValue().equals("Survival")) {
+                                    skillBox2.getItems().clear();
+                                    skillBox2.getItems().addAll(noSurvival);
+                                }
+                            }
+                        }
+                    });
+                    skillBox2.getSelectionModel().selectedItemProperty().addListener((observable3, oldValue3, newValue3) -> {
+                        if (newValue3 != null)
+                        {
+                            if (newValue3.equals("Arcana")) {
+                                if (skillBox1.getSelectionModel().isEmpty() || skillBox1.getValue().equals("Arcana")) {
+                                    skillBox1.getItems().clear();
+                                    skillBox1.getItems().addAll(noArcana);
+                                }
+                            }
+                            else if (newValue3.equals("Investigation")) {
+                                if (skillBox1.getSelectionModel().isEmpty() || skillBox1.getValue().equals("Investigation")) {
+                                    skillBox1.getItems().clear();
+                                    skillBox1.getItems().addAll(noInvestigation);
+                                }
+                            }
+                            else if (newValue3.equals("Religion")) {
+                                if (skillBox1.getSelectionModel().isEmpty() || skillBox1.getValue().equals("Religion")) {
+                                    skillBox1.getItems().clear();
+                                    skillBox1.getItems().addAll(noReligion);
+                                }
+                            }
+                            else if (newValue3.equals("Survival")) {
+                                if (skillBox1.getSelectionModel().isEmpty() || skillBox1.getValue().equals("Survival")) {
+                                    skillBox1.getItems().clear();
+                                    skillBox1.getItems().addAll(noSurvival);
+                                }
+                            }
+                        }
+                    });
+                }
+                else if (newValue.equals("Noble")) {
+                    skillText1.setVisible(true);
+                    skillText2.setVisible(true);
+                    skillBox1.setVisible(false);
+                    skillBox2.setVisible(false);
+                    backgroundTextBox.setText(descriptions[4]);
+                    skillText1.setText("History");
+                    skillText2.setText("Persuasion");
+                }
+                else if (newValue.equals("Sage")) {
+                    skillText1.setVisible(true);
+                    skillText2.setVisible(true);
+                    skillBox1.setVisible(false);
+                    skillBox2.setVisible(false);
+                    backgroundTextBox.setText(descriptions[5]);
+                    skillText1.setText("Arcana");
+                    skillText2.setText("History");
+                }
+                else if (newValue.equals("Soldier")) {
+                    skillText1.setVisible(true);
+                    skillText2.setVisible(true);
+                    skillBox1.setVisible(false);
+                    skillBox2.setVisible(false);
+                    backgroundTextBox.setText(descriptions[6]);
+                    skillText1.setText("Athletics");
+                    skillText2.setText("Intimidation");
+                }
+                else {
+                    backgroundTextBox.setEditable(true);
+                    backgroundTextBox.setText("");
+                    skillText1.setVisible(true);
+                    skillText2.setVisible(true);
+                    skillBox1.setVisible(false);
+                    skillBox2.setVisible(false);
+                    skillText1.setEditable(true);
+                    skillText2.setEditable(true);
+                }
+            }
+        });
     }
 
+    /*
     public void getBackground(ActionEvent event) 
     {
         String myBackground = backgroundChoiceBox.getValue();
@@ -96,9 +253,9 @@ public class BackgroundController implements Initializable {
             backgroundTextBox.setEditable(true);
             backgroundTextBox.setText(""); 
         }
-
     }
 
+     */
     public void prev(ActionEvent event) throws IOException
     {
         controller = new sceneController();
