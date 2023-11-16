@@ -88,11 +88,8 @@ public class EquipmentController implements Initializable {
     {
         if (ClassController.userClass != null)
         {
-            if (ClassController.userClass.equals("Barbarian"))
-            {
-                spellChoiceBox.getItems().addAll(BarbArray);
-            }
-            else if(ClassController.userClass.equals("Bard"))
+
+            if(ClassController.userClass.equals("Bard"))
             {
                 spellChoiceBox.getItems().addAll(BarbArray);
             }
