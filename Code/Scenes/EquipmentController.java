@@ -34,11 +34,19 @@ public class EquipmentController implements Initializable {
     private final String[] armorArray ={"Light Armor","Medium Armor","Heavy Armor","Shield"};
     // ARMOR CONTAINING LIST OF ARRAY ARMOR
     private final String[] posArray = {"DINGLE","SHEMCKLES"};
+    private final String[] BarbArray  = {"Vicious Mockery", "Thunderwave", "Healing Word"};
+    private final String[] clericArray  = {"Sacred Flame", "Cure Wounds ",  "Spirit Guardians" };
 
+    private final String[] druidArray = {"Druid-craft","Entangle", "Moonbeam "};
+    private final String[] sorcArray = {"Druid-craft","Entangle", "Moonbeam "};
     private final String[] wizardArray = {"Mage Hand", "Detect Magic", "Fireball"};
     private final String[] warlockArray = {"Eldritch Blast", "Hex", "Doom"};
     private final String[] paladinArray = {"Divine Smite", "Lay on Hands"};
     private final String[] rangerArray = {"Hunter's Mark", "Cordon of Arrows"};
+
+    private final String[] rogueArray = {"Arcane Trickster", "Mage Hand", " Mage Armor" };
+    private final String[] monkArray = {"Fist of Unbroken Air", "Flowing River"};
+
 
     public void initialize(URL arg0, ResourceBundle arg1){
         //  Weapons Array Lists of String
@@ -47,9 +55,7 @@ public class EquipmentController implements Initializable {
         weaponChoiceBox.getItems().addAll(weaponArray);   // GET ALL WEAPONS IN ARRAY
         armorChoiceBox.getItems().addAll(armorArray);     // GET ALL ARMOR   IN ARRAY
         possessionChoiceBox.getItems().addAll(posArray);  // GET ALL POS     IN ARRAY
-        //spellChoiceBox.getItems().addAll(nonspellArray); // GET ALL Spellnon    IN ARRAY
-//       spellChoiceBox.getItems().addAll(halfspellArray); // GET ALL Spellhalf  IN ARRAY
-//       spellChoiceBox.getItems().addAll(fullspellArray); // GET ALL Spellfull   IN ARRAY
+
 
         weaponChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
@@ -84,27 +90,23 @@ public class EquipmentController implements Initializable {
         {
             if (ClassController.userClass.equals("Barbarian"))
             {
-                // spellChoiceBox.getItems().addAll(nonspellArray);
+                spellChoiceBox.getItems().addAll(BarbArray);
             }
             else if(ClassController.userClass.equals("Bard"))
             {
-                // spellChoiceBox.getItems().addAll(fullspellArray);
+                spellChoiceBox.getItems().addAll(BarbArray);
             }
             else if(ClassController.userClass.equals("Cleric"))
             {
-                // spellChoiceBox.getItems().addAll(fullspellArray);
+                spellChoiceBox.getItems().addAll(clericArray);
             }
             else if(ClassController.userClass.equals("Druid"))
             {
-                // spellChoiceBox.getItems().addAll(fullspellArray);
-            }
-            else if(ClassController.userClass.equals("Fighter"))
-            {
-                // spellChoiceBox.getItems().addAll(nonspellArray);
+                spellChoiceBox.getItems().addAll(druidArray);
             }
             else if(ClassController.userClass.equals("Monk"))
             {
-                // spellChoiceBox.getItems().addAll(nonspellArray);
+                 spellChoiceBox.getItems().addAll(monkArray);
             }
             else if(ClassController.userClass.equals("Paladin"))
             {
@@ -116,11 +118,11 @@ public class EquipmentController implements Initializable {
             }
             else if(ClassController.userClass.equals("Rogue"))
             {
-                // spellChoiceBox.getItems().addAll(nonspellArray);
+                 spellChoiceBox.getItems().addAll(rogueArray);
             }
             else if(ClassController.userClass.equals("Sorcerer"))
             {
-               // spellChoiceBox.getItems().addAll(fullspellArray);
+                spellChoiceBox.getItems().addAll(sorcArray);
             }
             else if(ClassController.userClass.equals("Warlock"))
             {
