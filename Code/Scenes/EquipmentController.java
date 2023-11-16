@@ -81,52 +81,51 @@ public class EquipmentController implements Initializable {
 
     public void specifySpells()
     {
-        cController = new ClassController();
-        if (cController.userClass.equals("Barbarian"))
+        if (ClassController.userClass.equals("Barbarian"))
         {
             spellChoiceBox.getItems().addAll(nonspellArray);
         }
-        else if(cController.userClass.equals("Bard"))
+        else if(ClassController.userClass.equals("Bard"))
         {
             spellChoiceBox.getItems().addAll(fullspellArray);
         }
-        else if(cController.userClass.equals("Cleric"))
+        else if(ClassController.userClass.equals("Cleric"))
         {
             spellChoiceBox.getItems().addAll(fullspellArray);
         }
-        else if(cController.userClass.equals("Druid"))
+        else if(ClassController.userClass.equals("Druid"))
         {
             spellChoiceBox.getItems().addAll(fullspellArray);
         }
-        else if(cController.userClass.equals("Fighter"))
+        else if(ClassController.userClass.equals("Fighter"))
         {
             spellChoiceBox.getItems().addAll(nonspellArray);
         }
-        else if(cController.userClass.equals("Monk"))
+        else if(ClassController.userClass.equals("Monk"))
         {
             spellChoiceBox.getItems().addAll(nonspellArray);
         }
-        else if(cController.userClass.equals("Paladin"))
+        else if(ClassController.userClass.equals("Paladin"))
         {
             spellChoiceBox.getItems().addAll(nonspellArray);
         }
-        else if(cController.userClass.equals("Ranger"))
+        else if(ClassController.userClass.equals("Ranger"))
         {
             spellChoiceBox.getItems().addAll(halfspellArray);
         }
-        else if(cController.userClass.equals("Rogue"))
+        else if(ClassController.userClass.equals("Rogue"))
         {
             spellChoiceBox.getItems().addAll(nonspellArray);
         }
-        else if(cController.userClass.equals("Sorcerer"))
+        else if(ClassController.userClass.equals("Sorcerer"))
         {
             spellChoiceBox.getItems().addAll(fullspellArray);
         }
-        else if(cController.userClass.equals("Warlock"))
+        else if(ClassController.userClass.equals("Warlock"))
         {
             spellChoiceBox.getItems().addAll(fullspellArray);
         }
-        else if(cController.userClass.equals("Wizard"))
+        else if(ClassController.userClass.equals("Wizard"))
         {
             spellChoiceBox.getItems().addAll(fullspellArray);
         }
@@ -204,7 +203,6 @@ public class EquipmentController implements Initializable {
      }
      
     private sceneController controller; //created a scenceController instance
-    private ClassController cController;
 
 
 
