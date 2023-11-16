@@ -17,7 +17,7 @@ public class EquipmentController implements Initializable {
      @FXML
      private ChoiceBox<String> armorChoiceBox;        //ARMOR-DROP-DOWN
      @FXML
-     private ChoiceBox<String>  possessionChoiceBox;  //Possessions-DROP-DOWN
+     private ChoiceBox<String> possessionChoiceBox;  //Possessions-DROP-DOWN
     @FXML
     private ChoiceBox<String>  spellChoiceBox;        ///SPELL-DROP-DOWN
     @FXML
@@ -48,9 +48,9 @@ public class EquipmentController implements Initializable {
         weaponChoiceBox.getItems().addAll(weaponArray);   // GET ALL WEAPONS IN ARRAY
         armorChoiceBox.getItems().addAll(armorArray);     // GET ALL ARMOR   IN ARRAY
         possessionChoiceBox.getItems().addAll(posArray);  // GET ALL POS     IN ARRAY
-        spellChoiceBox.getItems().addAll(nonspellArray);  // GET ALL Spellnon    IN ARRAY
-//        spellChoiceBox.getItems().addAll(halfspellArray); // GET ALL Spellhalf  IN ARRAY
-//        spellChoiceBox.getItems().addAll(fullspellArray); // GET ALL Spellfull   IN ARRAY
+        spellChoiceBox.getItems().addAll(nonspellArray); // GET ALL Spellnon    IN ARRAY
+//       spellChoiceBox.getItems().addAll(halfspellArray); // GET ALL Spellhalf  IN ARRAY
+//       spellChoiceBox.getItems().addAll(fullspellArray); // GET ALL Spellfull   IN ARRAY
 
         weaponChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
@@ -82,53 +82,56 @@ public class EquipmentController implements Initializable {
     public void specifySpells()
     {
         cController = new ClassController();
-        if (cController.userClass.equals("Barbarian"))
+        if (ClassController.userClass != null)
         {
-            spellChoiceBox.getItems().addAll(nonspellArray);
-        }
-        else if(cController.userClass.equals("Bard"))
-        {
-            spellChoiceBox.getItems().addAll(fullspellArray);
-        }
-        else if(cController.userClass.equals("Cleric"))
-        {
-            spellChoiceBox.getItems().addAll(fullspellArray);
-        }
-        else if(cController.userClass.equals("Druid"))
-        {
-            spellChoiceBox.getItems().addAll(fullspellArray);
-        }
-        else if(cController.userClass.equals("Fighter"))
-        {
-            spellChoiceBox.getItems().addAll(nonspellArray);
-        }
-        else if(cController.userClass.equals("Monk"))
-        {
-            spellChoiceBox.getItems().addAll(nonspellArray);
-        }
-        else if(cController.userClass.equals("Paladin"))
-        {
-            spellChoiceBox.getItems().addAll(nonspellArray);
-        }
-        else if(cController.userClass.equals("Ranger"))
-        {
-            spellChoiceBox.getItems().addAll(halfspellArray);
-        }
-        else if(cController.userClass.equals("Rogue"))
-        {
-            spellChoiceBox.getItems().addAll(nonspellArray);
-        }
-        else if(cController.userClass.equals("Sorcerer"))
-        {
-            spellChoiceBox.getItems().addAll(fullspellArray);
-        }
-        else if(cController.userClass.equals("Warlock"))
-        {
-            spellChoiceBox.getItems().addAll(fullspellArray);
-        }
-        else if(cController.userClass.equals("Wizard"))
-        {
-            spellChoiceBox.getItems().addAll(fullspellArray);
+            if (ClassController.userClass.equals("Barbarian"))
+            {
+                spellChoiceBox.getItems().addAll(nonspellArray);
+            }
+            else if(ClassController.userClass.equals("Bard"))
+            {
+                spellChoiceBox.getItems().addAll(fullspellArray);
+            }
+            else if(ClassController.userClass.equals("Cleric"))
+            {
+                spellChoiceBox.getItems().addAll(fullspellArray);
+            }
+            else if(ClassController.userClass.equals("Druid"))
+            {
+                spellChoiceBox.getItems().addAll(fullspellArray);
+            }
+            else if(ClassController.userClass.equals("Fighter"))
+            {
+                spellChoiceBox.getItems().addAll(nonspellArray);
+            }
+            else if(ClassController.userClass.equals("Monk"))
+            {
+                spellChoiceBox.getItems().addAll(nonspellArray);
+            }
+            else if(ClassController.userClass.equals("Paladin"))
+            {
+                spellChoiceBox.getItems().addAll(nonspellArray);
+            }
+            else if(ClassController.userClass.equals("Ranger"))
+            {
+                spellChoiceBox.getItems().addAll(halfspellArray);
+            }
+            else if(ClassController.userClass.equals("Rogue"))
+            {
+                spellChoiceBox.getItems().addAll(nonspellArray);
+            }
+            else if(ClassController.userClass.equals("Sorcerer"))
+            {
+                spellChoiceBox.getItems().addAll(fullspellArray);
+            }
+            else if(ClassController.userClass.equals("Warlock"))
+            {
+                spellChoiceBox.getItems().addAll(fullspellArray);
+            }
+            else if(ClassController.userClass.equals("Wizard"))
+            {
+                spellChoiceBox.getItems().addAll(fullspellArray);
+            }
         }
     }
 
