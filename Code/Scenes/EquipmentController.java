@@ -13,13 +13,13 @@ import javafx.scene.control.TextField;
 
 public class EquipmentController implements Initializable {
      @FXML
-     private ChoiceBox<String> weaponChoiceBox;   //WEAPON-DROP-DOWN
+     private ChoiceBox<String> weaponChoiceBox;        //WEAPON-DROP-DOWN
      @FXML
-     private ChoiceBox<String> armorChoiceBox;   //ARMOR-DROP-DOWN
+     private ChoiceBox<String> armorChoiceBox;        //ARMOR-DROP-DOWN
      @FXML
      private ChoiceBox<String>  possessionChoiceBox;  //Possessions-DROP-DOWN
     @FXML
-    private ChoiceBox<String>  spellChoiceBox;
+    private ChoiceBox<String>  spellChoiceBox;        ///SPELL-DROP-DOWN
     @FXML
     private TextField GoldInput;  //GOLD  INPUT TEXT BOX
     @FXML
@@ -33,17 +33,24 @@ public class EquipmentController implements Initializable {
     // WEAPON ARRAY CONTAINING LIST OF ARRAY OF WEAPONS MELEE
     private final String[] armorArray ={"Light Armor","Medium Armor","Heavy Armor","Shield"};
     // ARMOR CONTAINING LIST OF ARRAY ARMOR
-    private final String[] posArray = {"DINGLE"};
-    private final String[] spellArray = {""};
-    // WILL UPDATE POS
+    private final String[] posArray = {"DINGLE","SHEMCKLES"};
+    private final String[] nonspellArray = {"Acid Splash", "Chill Touch", "Dancing Lights", "Fire Bolt","Light","Mage Hand","Mending","Message", "Minor Illusion","Poison Spray", "Prestidigitation","Ray of Frost","Shocking Grasp","True Strike"};
+    // NON-Spell Casters BASIC SPELLS
+//    private final String[] halfspellArray = {"Acid Splash", "Chill Touch", "Dancing Lights", "Fire Bolt","Light","Mage Hand","Mending"};
+    // Half Spell Casters + special cartered to that specific class.
+ //   private final String[] fullspellArray ={"Acid Splash", "Chill Touch", "Dancing Lights", "Fire Bolt","Light","Mage Hand","Mending","Message", "Minor Illusion","Poison Spray", "Prestidigitation","Ray of Frost","Shocking Grasp","True Strike"};
+    // FULL Spell Casters + ALL EXTRA Spells
 
     public void initialize(URL arg0, ResourceBundle arg1){
         //  Weapons Array Lists of String
         // Add items to the first ChoiceBox
-        weaponChoiceBox.getItems().addAll(weaponArray);  // GET ALL WEAPONS IN ARRAY
-        armorChoiceBox.getItems().addAll(armorArray);  //  GET ALL ARMOR   IN ARRAY
-        possessionChoiceBox.getItems().addAll(posArray);  //   GET ALL POS     IN ARRAY
-        spellChoiceBox.getItems().addAll(spellArray);
+        weaponChoiceBox.getItems().addAll(weaponArray);   // GET ALL WEAPONS IN ARRAY
+        armorChoiceBox.getItems().addAll(armorArray);     // GET ALL ARMOR   IN ARRAY
+        possessionChoiceBox.getItems().addAll(posArray);  // GET ALL POS     IN ARRAY
+        spellChoiceBox.getItems().addAll(nonspellArray);  // GET ALL Spellnon    IN ARRAY
+//        spellChoiceBox.getItems().addAll(halfspellArray); // GET ALL Spellhalf  IN ARRAY
+//        spellChoiceBox.getItems().addAll(fullspellArray); // GET ALL Spellfull   IN ARRAY
+
         weaponChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
                 addToString("Weapon: " + newValue + "\n", 0);
@@ -62,21 +69,32 @@ public class EquipmentController implements Initializable {
 
             }
         });
+        spellChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                addToString("Spells: " + newValue + "\n", 3);
+
+            }
+        });
+
     }
 
     public void addToString(String s, int e)
     {
         if (e == 0)
         {
-            weaponText = s;
+            weaponText = s; // WEAPON
         }
         else if (e == 1)
         {
-            armorText = s;
+            armorText = s; // ARMOR
         }
         else if (e == 2)
         {
-            posText = s;
+            posText = s;  // POS
+        }
+        else if (e == 3)
+        {
+            spellText = s; // SPELL
         }
 
     }
@@ -120,7 +138,7 @@ public class EquipmentController implements Initializable {
     }
      public void addGold() {
          if (GoldInput != null) {
-             ListText += GoldInput.getText();
+             ListText +=  "Gold: "  +  GoldInput.getText();
              TextAreaList.setText(ListText);
              GoldInput.setText("");
          }
@@ -132,6 +150,11 @@ public class EquipmentController implements Initializable {
      }
      
     private sceneController controller; //created a scenceController instance
+
+
+
+
+
 
     public void prev(ActionEvent event) throws IOException
     {
