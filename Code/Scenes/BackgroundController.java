@@ -4,15 +4,18 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
+
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.text.Font;
 
 public class BackgroundController implements Initializable {
+    @FXML
+    private TextField ageEntry;
     @FXML
     private ChoiceBox<String> backgroundChoiceBox;
     @FXML
@@ -25,6 +28,7 @@ public class BackgroundController implements Initializable {
     private ChoiceBox<String> skillBox1;
     @FXML
     private ChoiceBox<String> skillBox2;
+    int currentValue;
 
     private String[] backgrounds = {"Custom Background", "Acolyte", "Criminal/Spy", "Folk Hero", "Haunted One", "Noble", "Sage", "Soldier"};
 
@@ -58,6 +62,7 @@ public class BackgroundController implements Initializable {
     private String[] noSurvival= {"Arcana", "Investigation", "Religion"};
     private sceneController controller; //created a scenceController instance
 
+
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         backgroundTextBox.setWrapText(true);
@@ -68,6 +73,7 @@ public class BackgroundController implements Initializable {
         skillText2.setEditable(false);
         skillBox1.setVisible(false);
         skillBox2.setVisible(false);
+        ageEntry.setEditable(true);
 
         backgroundChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
@@ -228,6 +234,14 @@ public class BackgroundController implements Initializable {
                 }
             }
         });
+    }
+
+    public void checker() {
+        try {
+            Integer.parseInt(ageEntry.getText());
+        } catch (NumberFormatException nfe){
+            ageEntry.setText("");
+        }
     }
 
     /*

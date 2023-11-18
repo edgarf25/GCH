@@ -3,7 +3,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -61,7 +60,6 @@
             <Font name="Century" size="20.0" />
          </font>
       </Text>
-      <Spinner layoutX="540.0" layoutY="400.0" prefWidth="75.0" />
       <Text layoutX="485.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hair" wrappingWidth="52.000020345052235">
          <font>
             <Font name="Century" size="20.0" />
@@ -151,5 +149,6 @@
          </font></TextArea>
       <TextField fx:id="skillText1" layoutX="35.0" layoutY="471.0" prefHeight="29.0" prefWidth="150.0" />
       <TextField fx:id="skillText2" layoutX="236.0" layoutY="471.0" prefHeight="29.0" prefWidth="150.0" />
+      <TextField fx:id="ageEntry" layoutX="540.0" layoutY="399.0" onKeyTyped="#checker" prefHeight="26.0" prefWidth="51.0" />
    </children>
 </AnchorPane>
