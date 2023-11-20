@@ -131,7 +131,7 @@ public class EquipmentController implements Initializable {
             }
         }
     }
-
+    /// Inistialize  ArrayList
     public void addToString(String s, int e)
     {
         if (e == 0)

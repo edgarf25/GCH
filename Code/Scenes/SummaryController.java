@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.fxml.FXML;
+import javafx.scene.text.Text;
 
 public class SummaryController implements Initializable{
     @FXML
@@ -16,10 +17,13 @@ public class SummaryController implements Initializable{
     @FXML
     private TextField healthAmount;
     private int healthValue = 1;
+    @FXML
+    public Label nameS;
     private sceneController controller; //created a scenceController instance
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+        nameS.setText(BackgroundController.name);
     };
 
     public void heal() // Heal Control
