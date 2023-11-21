@@ -2,15 +2,11 @@ package Scenes;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Objects;
 import java.util.ResourceBundle;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.text.Font;
 
 public class BackgroundController implements Initializable {
     @FXML
@@ -243,8 +239,7 @@ public class BackgroundController implements Initializable {
     }
     public void updateName()
     {
-        characterData.setName("Edgar");
-        System.out.println(nameText.getText());
+        characterData.setName(nameText.getText());
     }
 
     public void checker() {
