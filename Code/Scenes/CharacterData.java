@@ -1,6 +1,10 @@
+package Scenes;
+
 import java.util.List;
 
 public class CharacterData {
+    private static CharacterData instance = new CharacterData(); // Singleton instance
+
     private String race;
     private String subrace;
     private String characterClass;
@@ -19,10 +23,15 @@ public class CharacterData {
     private String gender;
     private List<String> equipment;
 
-    // Constructor
-    public CharacterData() 
+    // Private constructor to prevent external instantiation
+    private CharacterData() 
     {
         // You can initialize default values here if needed
+    }
+
+    public static CharacterData getInstance() 
+    {
+        return instance;
     }
 
     // Getter and Setter methods for each variable
@@ -85,6 +94,7 @@ public class CharacterData {
     public void setName(String name) 
     {
         this.name = name;
+        System.out.println("The name is " + this.name);
     }
 
     public String getBackground() 

@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
-
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -31,7 +30,11 @@ public class BackgroundController implements Initializable {
     @FXML
     private ChoiceBox<String> skillBox2;
     int currentValue;
-    public static String name;
+
+    CharacterData characterData = CharacterData.getInstance();
+
+    //dataControler = new CharacterData();
+
 
     private String[] backgrounds = {"Custom Background", "Acolyte", "Criminal/Spy", "Folk Hero", "Haunted One", "Noble", "Sage", "Soldier"};
 
@@ -240,7 +243,8 @@ public class BackgroundController implements Initializable {
     }
     public void updateName()
     {
-        name = nameText.getText();
+        characterData.setName("Edgar");
+        System.out.println(nameText.getText());
     }
 
     public void checker() {

@@ -20,10 +20,17 @@ public class SummaryController implements Initializable{
     @FXML
     public Label nameS;
     private sceneController controller; //created a scenceController instance
+    CharacterData characterData = CharacterData.getInstance();
+
+    
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        nameS.setText(BackgroundController.name);
+        if (characterData.getName() != null) 
+        {
+            nameS.setText(characterData.getName());
+        }
+        System.out.println(characterData.getName());
     };
 
     public void heal() // Heal Control
