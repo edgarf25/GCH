@@ -17,6 +17,8 @@ public class BackgroundController implements Initializable {
     @FXML
     private TextField ageEntry;
     @FXML
+    private TextField nameText;
+    @FXML
     private ChoiceBox<String> backgroundChoiceBox;
     @FXML
     private TextArea backgroundTextBox;
@@ -29,6 +31,7 @@ public class BackgroundController implements Initializable {
     @FXML
     private ChoiceBox<String> skillBox2;
     int currentValue;
+    public static String name;
 
     private String[] backgrounds = {"Custom Background", "Acolyte", "Criminal/Spy", "Folk Hero", "Haunted One", "Noble", "Sage", "Soldier"};
 
@@ -234,6 +237,10 @@ public class BackgroundController implements Initializable {
                 }
             }
         });
+    }
+    public void updateName()
+    {
+        name = nameText.getText();
     }
 
     public void checker() {

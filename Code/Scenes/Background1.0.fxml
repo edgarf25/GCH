@@ -34,7 +34,7 @@
             <Font name="Century" size="20.0" />
          </font>
       </Text>
-      <TextField layoutX="180.0" layoutY="100.0" />
+      <TextField fx:id="nameText" layoutX="180.0" layoutY="100.0" onKeyTyped="#updateName" />
       <Text layoutX="34.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Background" wrappingWidth="136.66667683919286">
          <font>
             <Font name="Century" size="20.0" />
