@@ -194,11 +194,11 @@ public class EquipmentController implements Initializable {
         }
     }
      public void addGold() {
-        StringBuffer text = new StringBuffer(ListText);
-        amountOfGold += Integer.valueOf(GoldInput.getText());
-        String sub = "";
         // System.out.println(amountOfGold);
-         if (GoldInput != null) {
+         if (GoldInput != null && !GoldInput.getText().isEmpty()) {
+             StringBuffer text = new StringBuffer(ListText);
+             amountOfGold += Integer.valueOf(GoldInput.getText());
+             String sub = "";
              if (ListText.contains("Gold")) {
                  goldLine = "Gold: "  +  amountOfGold + "g";
                  System.out.println(goldLine);
