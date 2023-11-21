@@ -200,7 +200,16 @@ public class EquipmentController implements Initializable {
      }
 
      public void clear(){
+        ListText = "";
         TextAreaList.setText("");
+        weaponText = "";
+        armorText = "";
+        posText = "";
+        spellText = "";
+        weaponChoiceBox.getSelectionModel().clearSelection();
+        armorChoiceBox.getSelectionModel().clearSelection();
+        possessionChoiceBox.getSelectionModel().clearSelection();
+        spellChoiceBox.getSelectionModel().clearSelection();
      }
      
     private sceneController controller; //created a scenceController instance
