@@ -47,6 +47,9 @@ public class EquipmentController implements Initializable {
     private final String[] rogueArray = {"Arcane Trickster", "Mage Hand", " Mage Armor" };
     private final String[] monkArray = {"Fist of Unbroken Air", "Flowing River"};
 
+    private int amountOfGold = 0;
+    private String goldLine = "";
+
 
     public void initialize(URL arg0, ResourceBundle arg1){
         //  Weapons Array Lists of String
@@ -191,8 +194,20 @@ public class EquipmentController implements Initializable {
         }
     }
      public void addGold() {
+        StringBuffer text = new StringBuffer(ListText);
+        amountOfGold += Integer.valueOf(GoldInput.getText());
+        String sub = "";
+        // System.out.println(amountOfGold);
          if (GoldInput != null) {
-             ListText +=  "Gold: "  +  GoldInput.getText();
+             if (ListText.contains("Gold")) {
+                 goldLine = "Gold: "  +  amountOfGold + "g";
+                 System.out.println(goldLine);
+                 text.replace(ListText.indexOf("Gold") , ListText.indexOf("g")+1, goldLine);
+                 sub = ListText.substring(ListText.indexOf("Gold") , ListText.indexOf("g")+1);
+                 ListText = ListText.replace(sub, goldLine);
+             } else {
+                 ListText +=  "Gold: "  +  amountOfGold + "g\n";
+             }
              TextAreaList.setText(ListText);
              GoldInput.setText("");
          }
@@ -206,6 +221,7 @@ public class EquipmentController implements Initializable {
         armorText = "";
         posText = "";
         spellText = "";
+        amountOfGold = 0;
         weaponChoiceBox.getSelectionModel().clearSelection();
         armorChoiceBox.getSelectionModel().clearSelection();
         possessionChoiceBox.getSelectionModel().clearSelection();
