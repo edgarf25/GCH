@@ -79,6 +79,7 @@ public class ClassController implements Initializable{
 
     public void initialize(URL arg0, ResourceBundle arg1)
     {
+        classDescription.setEditable(false);
         clearImg();
         missingIcon.setVisible(true);
         classChoiceBox.getItems().addAll(classes);
