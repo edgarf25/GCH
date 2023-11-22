@@ -16,6 +16,8 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.image.ImageView;
 import javafx.fxml.FXML;
 
+import javax.print.attribute.standard.PrintQuality;
+
 public class AbilityController implements Initializable{
 
     public static int pointBuy;
@@ -81,17 +83,17 @@ public class AbilityController implements Initializable{
     @FXML
     private Label chaVal4;
     @FXML
-    private ChoiceBox<String> strDropdown;
+    private ChoiceBox<Integer> strDropdown;
     @FXML
-    private ChoiceBox<String> dexDropdown;
+    private ChoiceBox<Integer> dexDropdown;
     @FXML
-    private ChoiceBox<String> conDropdown;
+    private ChoiceBox<Integer> conDropdown;
     @FXML
-    private ChoiceBox<String> intDropdown;
+    private ChoiceBox<Integer> intDropdown;
     @FXML
-    private ChoiceBox<String> wisDropdown;
+    private ChoiceBox<Integer> wisDropdown;
     @FXML
-    private ChoiceBox<String> chaDropdown;
+    private ChoiceBox<Integer> chaDropdown;
     @FXML
     private Button strPlusButton;
     @FXML
@@ -130,6 +132,13 @@ public class AbilityController implements Initializable{
     private ImageView diceGif;
     @FXML
     private ChoiceBox<String> optionsChoiceBox;
+    public int strChoice;
+    public int dexChoice;
+    public int conChoice;
+    public int intChoice;
+    public int wisChoice;
+    public int chaChoice;
+
     private String[] options = {"Standard Array", "Point Buy", "Dice Roll"};
     private sceneController controller; //created a scenceController instance
     private Integer[] stdArray = {8, 10, 12, 13, 14, 15};
@@ -167,11 +176,148 @@ public class AbilityController implements Initializable{
                     diceRoll();
                 }
             }
-
-
         });
-    };
+        strDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
+        {
+            setChoice(strDropdown, newValue);
+        });
+        dexDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
+        {
+            setChoice(dexDropdown, newValue);
+        });
+        conDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
+        {
+            setChoice(conDropdown, newValue);
+        });
+        intDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
+        {
+            setChoice(intDropdown, newValue);
+        });
+        wisDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
+        {
+            setChoice(wisDropdown, newValue);
+        });
+        chaDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
+        {
+            setChoice(chaDropdown, newValue);
+        });
+    }
 
+    private void setChoice(ChoiceBox<Integer> c, Integer newValue) {
+        if (c == strDropdown) {
+            if (newValue != null) {
+                if (newValue.equals(8)) {
+                    strChoice = 8;
+                } else if (newValue.equals(10)) {
+                    strChoice = 10;
+                } else if (newValue.equals(12)) {
+                    strChoice = 12;
+                } else if (newValue.equals(13)) {
+                    strChoice = 13;
+                } else if (newValue.equals(14)) {
+                    strChoice = 14;
+                } else if (newValue.equals(15)) {
+                    strChoice = 15;
+                }
+            }
+        } else if (c == dexDropdown) {
+            if (newValue != null) {
+                if (newValue.equals(8)) {
+                    dexChoice = 8;
+                } else if (newValue.equals(10)) {
+                    dexChoice = 10;
+                } else if (newValue.equals(12)) {
+                    dexChoice = 12;
+                } else if (newValue.equals(13)) {
+                    dexChoice = 13;
+                } else if (newValue.equals(14)) {
+                    dexChoice = 14;
+                } else if (newValue.equals(15)) {
+                    dexChoice = 15;
+                }
+            }
+        }
+        else if (c == conDropdown) {
+            if (newValue != null) {
+                if (newValue.equals(8)) {
+                    conChoice = 8;
+                } else if (newValue.equals(10)) {
+                    conChoice = 10;
+                } else if (newValue.equals(12)) {
+                    conChoice = 12;
+                } else if (newValue.equals(13)) {
+                    conChoice = 13;
+                } else if (newValue.equals(14)) {
+                    conChoice = 14;
+                } else if (newValue.equals(15)) {
+                    conChoice = 15;
+                }
+            }
+        }
+        else if (c == intDropdown) {
+            if (newValue != null) {
+                if (newValue.equals(8)) {
+                    intChoice = 8;
+                } else if (newValue.equals(10)) {
+                    intChoice = 10;
+                } else if (newValue.equals(12)) {
+                    intChoice = 12;
+                } else if (newValue.equals(13)) {
+                    intChoice = 13;
+                } else if (newValue.equals(14)) {
+                    intChoice = 14;
+                } else if (newValue.equals(15)) {
+                    intChoice = 15;
+                }
+            }
+        }
+        else if (c == wisDropdown) {
+            if (newValue != null) {
+                if (newValue.equals(8)) {
+                    wisChoice = 8;
+                } else if (newValue.equals(10)) {
+                    wisChoice = 10;
+                } else if (newValue.equals(12)) {
+                    wisChoice = 12;
+                } else if (newValue.equals(13)) {
+                    wisChoice = 13;
+                } else if (newValue.equals(14)) {
+                    wisChoice = 14;
+                } else if (newValue.equals(15)) {
+                    wisChoice = 15;
+                }
+            }
+        }
+        else if (c == chaDropdown) {
+            if (newValue != null) {
+                if (newValue.equals(8)) {
+                    chaChoice = 8;
+                } else if (newValue.equals(10)) {
+                    chaChoice = 10;
+                } else if (newValue.equals(12)) {
+                    chaChoice = 12;
+                } else if (newValue.equals(13)) {
+                    chaChoice = 13;
+                } else if (newValue.equals(14)) {
+                    chaChoice = 14;
+                } else if (newValue.equals(15)) {
+                    chaChoice = 15;
+                }
+            }
+        }
+    }
+
+
+    public void updateAttributeDropdowns(){
+        strDropdown.getItems().clear();
+        dexDropdown.getItems().clear();
+        conDropdown.getItems().clear();
+        intDropdown.getItems().clear();
+        wisDropdown.getItems().clear();
+        chaDropdown.getItems().clear();
+
+
+    }
     public void startAbilityScene()
     {
         pointsRemainingText.setVisible(false);
@@ -238,6 +384,13 @@ public class AbilityController implements Initializable{
         intDropdown.setVisible(true);
         wisDropdown.setVisible(true);
         chaDropdown.setVisible(true);
+        strDropdown.getItems().addAll(stdArray);
+        dexDropdown.getItems().addAll(stdArray);
+        conDropdown.getItems().addAll(stdArray);
+        intDropdown.getItems().addAll(stdArray);
+        wisDropdown.getItems().addAll(stdArray);
+        chaDropdown.getItems().addAll(stdArray);
+
     }
     public void pointBuy()
     {
