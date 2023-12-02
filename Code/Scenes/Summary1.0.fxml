@@ -23,7 +23,7 @@
             <Image url="@../src/background color.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="8.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="10.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
       <AnchorPane prefHeight="70.0" prefWidth="1016.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" stroke="BLACK" strokeType="INSIDE" width="1016.0" />
@@ -72,74 +72,44 @@
          </children>
       </AnchorPane>
       <Button layoutX="25.0" layoutY="824.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="121.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="235.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="347.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="462.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="574.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="120.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="230.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="340.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="450.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="560.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="236.0" layoutX="678.0" layoutY="78.0" stroke="#ae8406" strokeType="INSIDE" width="319.0" />
       <Circle fill="#1f93ff11" layoutX="752.0" layoutY="148.0" radius="61.0" stroke="BLACK" strokeType="INSIDE" />
       <Button fx:id="healButton" layoutX="891.0" layoutY="231.0" mnemonicParsing="false" onMouseClicked="#heal" prefHeight="25.0" prefWidth="42.0" text="Heal" textFill="#07d000" />
       <TextField fx:id="healthAmount" layoutX="912.0" layoutY="195.0" prefHeight="26.0" prefWidth="42.0" />
       <Button layoutX="940.0" layoutY="231.0" mnemonicParsing="false" onMouseClicked="#dmg" text="Dmg" textFill="#fc0101" />
-      <Text layoutX="24.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Strength">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Text layoutX="134.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dexterity">
+      <Text layoutX="22.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Strength">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Text>
-      <Text layoutX="237.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Constituion">
+      <Text layoutX="130.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dexterity">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Text>
-      <Text layoutX="347.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intelligence">
+      <Text layoutX="230.0" layoutY="105.0" scaleX="0.95" scaleY="0.95" strokeType="OUTSIDE" strokeWidth="0.0" text="Constituion">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Text>
-      <Text layoutX="479.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wisdom">
-         <font>
-            <Font name="Baskerville Old Face" size="18.0" />
-         </font>
-      </Text>
-      <Text layoutX="582.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Charisma">
+      <Text layoutX="340.0" layoutY="105.0" scaleX="0.9" scaleY="0.9" strokeType="OUTSIDE" strokeWidth="0.0" text="Intelligence">
          <font>
             <Font name="Century" size="18.0" />
          </font>
       </Text>
-      <Text layoutX="46.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+      <Text layoutX="465.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wisdom">
          <font>
-            <Font size="48.0" />
+            <Font name="Century" size="18.0" />
          </font>
       </Text>
-      <Text layoutX="157.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+      <Text layoutX="568.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Charisma">
          <font>
-            <Font size="48.0" />
-         </font>
-      </Text>
-      <Text layoutX="273.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Text>
-      <Text layoutX="385.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Text>
-      <Text layoutX="497.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Text>
-      <Text layoutX="600.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10">
-         <font>
-            <Font size="48.0" />
+            <Font name="Century" size="18.0" />
          </font>
       </Text>
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="571.0" layoutX="20.0" layoutY="241.0" stroke="#ae8406" strokeType="INSIDE" width="275.0" />
@@ -577,9 +547,39 @@
             </Tab>
         </tabs>
       </TabPane>
-      <Label fx:id="nameS" layoutX="823.0" layoutY="57.0" prefHeight="168.0" prefWidth="179.0" text="myName" wrapText="true">
+      <Label fx:id="nameS" alignment="CENTER" contentDisplay="CENTER" layoutX="813.0" layoutY="81.0" prefHeight="114.0" prefWidth="186.0" text="Name" textAlignment="CENTER">
          <font>
-            <Font size="32.0" />
+            <Font name="Century" size="32.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="115.0" prefHeight="62.0" prefWidth="98.0" text="?" textAlignment="CENTER">
+         <font>
+            <Font name="Century" size="48.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="115.0" prefHeight="62.0" prefWidth="98.0" text="?" textAlignment="CENTER">
+         <font>
+            <Font name="Century" size="48.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="230.0" layoutY="115.0" prefHeight="62.0" prefWidth="98.0" text="?" textAlignment="CENTER">
+         <font>
+            <Font name="Century" size="48.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="340.0" layoutY="115.0" prefHeight="62.0" prefWidth="98.0" text="?" textAlignment="CENTER">
+         <font>
+            <Font name="Century" size="48.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="450.0" layoutY="115.0" prefHeight="62.0" prefWidth="98.0" text="?" textAlignment="CENTER">
+         <font>
+            <Font name="Century" size="48.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="560.0" layoutY="115.0" prefHeight="62.0" prefWidth="98.0" text="?" textAlignment="CENTER">
+         <font>
+            <Font name="Century" size="48.0" />
          </font>
       </Label>
    </children>
