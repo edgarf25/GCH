@@ -15,51 +15,51 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.SummaryController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.SummaryController">
    <children>
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="236.0" layoutX="678.0" layoutY="80.0" stroke="#ae8406" strokeType="INSIDE" width="304.0" />
-      <ImageView fitHeight="856.0" fitWidth="1016.0" layoutX="-8.0" layoutY="8.0" pickOnBounds="true">
+      <ImageView fitHeight="856.0" fitWidth="1025.0" layoutX="-8.0" layoutY="8.0" pickOnBounds="true">
          <image>
             <Image url="@../src/background color.png" />
          </image>
       </ImageView>
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="8.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
-      <AnchorPane layoutX="122.0" layoutY="-1.0" prefHeight="68.0" prefWidth="759.0">
+      <AnchorPane prefHeight="70.0" prefWidth="1016.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="-123.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="1005.0" />
-            <Line endX="113.0" layoutX="219.0" layoutY="36.0" startX="-207.20001220703125" stroke="#ff010a" />
-            <Line endX="120.199951171875" layoutX="622.0" layoutY="36.0" startX="-197.39999389648438" stroke="#ff010a" />
-            <ImageView fitHeight="46.0" fitWidth="62.0" layoutX="344.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" stroke="BLACK" strokeType="INSIDE" width="1016.0" />
+            <Line layoutX="30.0" layoutY="40.0" startX="420.0" stroke="#ff010a" />
+            <Line layoutX="560.0" layoutY="40.0" startX="420.0" stroke="#ff010a" />
+            <ImageView fitHeight="46.0" fitWidth="62.0" layoutX="475.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../src/DnD-Symbol.png" />
                </image>
             </ImageView>
-            <Label layoutX="150.0" layoutY="14.0" text="Class" textFill="#ff010a">
+            <Label layoutX="220.0" layoutY="18.0" text="Class" textFill="#ff010a">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="45.0" layoutY="14.0" text="Race" textFill="#ff010a">
+            <Label layoutX="60.0" layoutY="18.0" text="Race" textFill="#ff010a">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="255.0" layoutY="14.0" text="Ability" textFill="#ff010a">
+            <Label layoutX="380.0" layoutY="18.0" text="Ability" textFill="#ff010a">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="440.0" layoutY="14.0" text="Background" textFill="#ff010a">
+            <Label layoutX="580.0" layoutY="18.0" text="Background" textFill="#ff010a">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="660.0" layoutY="14.0" text="Summary" textFill="WHITE">
+            <Label layoutX="900.0" layoutY="18.0" text="Summary" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="14.0" text="Equipment" textFill="#ff010a">
+            <Label layoutX="750.0" layoutY="18.0" text="Equipment" textFill="#ff010a">
                <font>
                   <Font size="14.0" />
                </font>
