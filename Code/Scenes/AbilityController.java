@@ -16,8 +16,6 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.image.ImageView;
 import javafx.fxml.FXML;
 
-import javax.print.attribute.standard.PrintQuality;
-
 public class AbilityController implements Initializable{
 
     public static int pointBuy;
@@ -142,7 +140,10 @@ public class AbilityController implements Initializable{
     private String[] options = {"Standard Array", "Point Buy", "Dice Roll"};
     private sceneController controller; //created a scenceController instance
     private Integer[] stdArray = {8, 10, 12, 13, 14, 15};
+    private Integer[] finalValues = {0, 0, 0, 0, 0, 0,};
     List<Integer> stdList = new ArrayList<>(Arrays.asList(stdArray));
+
+    CharacterData characterData = CharacterData.getInstance(); //created a character data instance
 
 
     public void prev(ActionEvent event) throws IOException
@@ -506,7 +507,7 @@ public class AbilityController implements Initializable{
         int strResult, dexResult, conResult, intResult, wisResult, chaResult;
 
 
-        for (int i = 0; i < 4; i++) 
+        for (int i = 0; i < 4; i++) //generating an array with 4 random values
         {
             strArray[i] = random.nextInt(6) + 1; // Generates random values from 1 to 6
             dexArray[i] = random.nextInt(6) + 1;
@@ -536,6 +537,7 @@ public class AbilityController implements Initializable{
         wisResult = wisSum - wisArray[0];
         chaResult= chaSum - chaArray[0];
 
+        //setting main labels to the final value
         strLabel.setText(String.valueOf(strResult));
         dexLabel.setText(String.valueOf(dexResult));
         conLabel.setText(String.valueOf(conResult));
@@ -543,7 +545,16 @@ public class AbilityController implements Initializable{
         wisLabel.setText(String.valueOf(wisResult));
         chaLabel.setText(String.valueOf(chaResult));
 
-        for (int i = 4; i > 0; i--) 
+        //adding final values to the final values array
+        finalValues[0] = strResult;
+        finalValues[1] = dexResult;
+        finalValues[2] = conResult;
+        finalValues[3] = intResult;
+        finalValues[4] = wisResult;
+        finalValues[5] = chaResult;
+        characterData.setAbilities(finalValues);//storing finalvalues in characterData
+
+        for (int i = 4; i > 0; i--) //this shows the 4 values rolled
         {
             if (i == 4)
             {
@@ -595,27 +606,27 @@ public class AbilityController implements Initializable{
         {
             if ("strPlusButton".equals(buttonId) && !strLabel.getText().equals("15"))
             {   
-                updateValues(strLabel, +1, 'p');
+                updateValues(strLabel, +1, 'p', 0);
             }
             else if ("dexPlusButton".equals(buttonId) && !dexLabel.getText().equals("15"))
             {   
-                updateValues(dexLabel, +1, 'p');
+                updateValues(dexLabel, +1, 'p', 1);
             }
             else if ("conPlusButton".equals(buttonId) && !conLabel.getText().equals("15"))
             {   
-                updateValues(conLabel, +1, 'p');
+                updateValues(conLabel, +1, 'p', 2);
             }
             else if ("intPlusButton".equals(buttonId) && !intLabel.getText().equals("15"))
             {   
-                updateValues(intLabel, +1, 'p');
+                updateValues(intLabel, +1, 'p', 3);
             }
             else if ("wisPlusButton".equals(buttonId) && !wisLabel.getText().equals("15"))
             {   
-                updateValues(wisLabel, +1, 'p');
+                updateValues(wisLabel, +1, 'p', 4);
             }
             else if ("chaPlusButton".equals(buttonId) && !chaLabel.getText().equals("15"))
             {   
-                updateValues(chaLabel, +1, 'p');
+                updateValues(chaLabel, +1, 'p', 5);
             }
             
         }
@@ -628,35 +639,37 @@ public class AbilityController implements Initializable{
         {
             if ("strSubButton".equals(buttonId) && !strLabel.getText().equals("8"))
             {
-                updateValues(strLabel, -1, 's');
+                updateValues(strLabel, -1, 's', 0);
             }
             else if ("dexSubButton".equals(buttonId) && !dexLabel.getText().equals("8"))
             {   
-                updateValues(dexLabel, -1, 's');
+                updateValues(dexLabel, -1, 's', 1);
             }
             else if ("conSubButton".equals(buttonId) && !conLabel.getText().equals("8"))
             {   
-                updateValues(conLabel, -1, 's');
+                updateValues(conLabel, -1, 's', 2);
             }
             else if ("intSubButton".equals(buttonId) && !intLabel.getText().equals("8"))
             {   
-                updateValues(intLabel, -1, 's');
+                updateValues(intLabel, -1, 's', 3);
             }
             else if ("wisSubButton".equals(buttonId) && !wisLabel.getText().equals("8"))
             {   
-                updateValues(wisLabel, -1, 's');
+                updateValues(wisLabel, -1, 's', 4);
             }
             else if ("chaSubButton".equals(buttonId) && !chaLabel.getText().equals("8"))
             {   
-                updateValues(chaLabel, -1, 's');
+                updateValues(chaLabel, -1, 's', 5);
             }
+            characterData.setAbilities(finalValues);
         }
     }
     
-    private void updateValues(Label label, int change, char operator) //class that updates the actual values
+    private void updateValues(Label label, int change, char operator, int slot) //class that updates the actual values
     {
         int currentValue = Integer.parseInt(label.getText()) + change;
         label.setText(String.valueOf(currentValue));
+        finalValues[slot] = currentValue;
         if (operator == 's')
         {
             pointBuy += 1;

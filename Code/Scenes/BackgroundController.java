@@ -29,8 +29,6 @@ public class BackgroundController implements Initializable {
 
     CharacterData characterData = CharacterData.getInstance();
 
-    //dataControler = new CharacterData();
-
 
     private String[] backgrounds = {"Custom Background", "Acolyte", "Criminal/Spy", "Folk Hero", "Haunted One", "Noble", "Sage", "Soldier"};
 
@@ -92,7 +90,9 @@ public class BackgroundController implements Initializable {
                     skillBox2.setVisible(false);
                     backgroundTextBox.setText(descriptions[0]);
                     skillText1.setText("Insight");
+                    characterData.setSkillsAndProficiencies1("Insight"); //setting 
                     skillText2.setText("Religion");
+                    characterData.setSkillsAndProficiencies2("Religion");
                 }
                 else if (newValue.equals("Criminal/Spy")) {
                     skillText1.setEditable(false);
@@ -234,6 +234,8 @@ public class BackgroundController implements Initializable {
                     skillText1.setEditable(true);
                     skillText2.setEditable(true);
                 }
+
+                characterData.setBackground(newValue);
             }
         });
     }

@@ -41,6 +41,7 @@ public class raceController implements Initializable{
                                      "Tieflings are a distinctive race with infernal ancestry, marked by unique physical traits like horns and tails, as well as supernatural abilities tied to their fiendish lineage. They often face prejudice and struggle with their identity but are known for their resilience and determination."};
 
     private sceneController controller; //created a scenceController instance
+    CharacterData characterData = CharacterData.getInstance(); //created a character data instance
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -95,6 +96,8 @@ public class raceController implements Initializable{
                 {
                     backgroundDescription.setText(descriptions[16]);
                 }
+
+                characterData.setRace(newValue); //setting the race on character data
             }
         });
         subraceChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
@@ -131,9 +134,13 @@ public class raceController implements Initializable{
                 {
                     backgroundDescription.setText(descriptions[13]);
                 }
+
+                characterData.setSubrace(newValue); //setting subrace on data class
             }
         });
     }
+
+
 
 
     public void prev(ActionEvent event) throws IOException

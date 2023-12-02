@@ -9,7 +9,7 @@ public class CharacterData {
     private String subrace;
     private String characterClass;
     private String subclass;
-    private int[] abilities;
+    private Integer[] abilities;
     private String name;
     private String background;
     private String skillsAndProficiencies1;
@@ -21,6 +21,24 @@ public class CharacterData {
     private String weight;
     private int age;
     private String gender;
+    private int acrobaticsBonus;
+    private int animalHandlingBonus;
+    private int arcanaBonus;
+    private int athleticsBonus;
+    private int deceptionBonus;
+    private int insightBonus;
+    private int intimidationBonus;
+    private int investigationBonus;
+    private int medicineBonus;
+    private int natureBonus;
+    private int perceptionBonus;
+    private int performanceBonus;
+    private int persuasionBonus;
+    private int religionBonus;
+    private int sleightOfHandBonus;
+    private int stealthBonus;
+    private int survivalBonus;
+    private int historyBonus;
     private List<String> equipment;
 
     // Private constructor to prevent external instantiation
@@ -76,12 +94,12 @@ public class CharacterData {
         this.subclass = subclass;
     }
 
-    public int[] getAbilities() 
+    public Integer[] getAbilities() 
     {
         return abilities;
     }
 
-    public void setAbilities(int[] abilities) 
+    public void setAbilities(Integer[] abilities) 
     {
         this.abilities = abilities;
     }
@@ -206,4 +224,149 @@ public class CharacterData {
     {
         this.equipment = equipment;
     }
+
+    public int getAcrobaticsBonus() {
+        return acrobaticsBonus;
+    }
+    
+    public void setAcrobaticsBonus(int acrobaticsBonus) {
+        this.acrobaticsBonus = acrobaticsBonus;
+    }
+    
+    public int getAnimalHandlingBonus() {
+        return animalHandlingBonus;
+    }
+    
+    public void setAnimalHandlingBonus(int animalHandlingBonus) {
+        this.animalHandlingBonus = animalHandlingBonus;
+    }
+    
+    public int getArcanaBonus() {
+        return arcanaBonus;
+    }
+    
+    public void setArcanaBonus(int arcanaBonus) {
+        this.arcanaBonus = arcanaBonus;
+    }
+    
+    public int getAthleticsBonus() {
+        return athleticsBonus;
+    }
+    
+    public void setAthleticsBonus(int athleticsBonus) {
+        this.athleticsBonus = athleticsBonus;
+    }
+    
+    public int getDeceptionBonus() {
+        return deceptionBonus;
+    }
+    
+    public void setDeceptionBonus(int deceptionBonus) {
+        this.deceptionBonus = deceptionBonus;
+    }
+    
+    public int getInsightBonus() {
+        return insightBonus;
+    }
+    
+    public void setInsightBonus(int insightBonus) {
+        this.insightBonus = insightBonus;
+    }
+    
+    public int getIntimidationBonus() {
+        return intimidationBonus;
+    }
+    
+    public void setIntimidationBonus(int intimidationBonus) {
+        this.intimidationBonus = intimidationBonus;
+    }
+    
+    public int getInvestigationBonus() {
+        return investigationBonus;
+    }
+    
+    public void setInvestigationBonus(int investigationBonus) {
+        this.investigationBonus = investigationBonus;
+    }
+    
+    public int getMedicineBonus() {
+        return medicineBonus;
+    }
+    
+    public void setMedicineBonus(int medicineBonus) {
+        this.medicineBonus = medicineBonus;
+    }
+    
+    public int getNatureBonus() {
+        return natureBonus;
+    }
+    
+    public void setNatureBonus(int natureBonus) {
+        this.natureBonus = natureBonus;
+    }
+    
+    public int getPerceptionBonus() {
+        return perceptionBonus;
+    }
+    
+    public void setPerceptionBonus(int perceptionBonus) {
+        this.perceptionBonus = perceptionBonus;
+    }
+    
+    public int getPerformanceBonus() {
+        return performanceBonus;
+    }
+    
+    public void setPerformanceBonus(int performanceBonus) {
+        this.performanceBonus = performanceBonus;
+    }
+    
+    public int getPersuasionBonus() {
+        return persuasionBonus;
+    }
+    
+    public void setPersuasionBonus(int persuasionBonus) {
+        this.persuasionBonus = persuasionBonus;
+    }
+    
+    public int getReligionBonus() {
+        return religionBonus;
+    }
+    
+    public void setReligionBonus(int religionBonus) {
+        this.religionBonus = religionBonus;
+    }
+    
+    public int getSleightOfHandBonus() {
+        return sleightOfHandBonus;
+    }
+    
+    public void setSleightOfHandBonus(int sleightOfHandBonus) {
+        this.sleightOfHandBonus = sleightOfHandBonus;
+    }
+    
+    public int getStealthBonus() {
+        return stealthBonus;
+    }
+    
+    public void setStealthBonus(int stealthBonus) {
+        this.stealthBonus = stealthBonus;
+    }
+    
+    public int getSurvivalBonus() {
+        return survivalBonus;
+    }
+    
+    public void setSurvivalBonus(int survivalBonus) {
+        this.survivalBonus = survivalBonus;
+    }
+    
+    public int getHistoryBonus() {
+        return historyBonus;
+    }
+    
+    public void setHistoryBonus(int historyBonus) {
+        this.historyBonus = historyBonus;
+    }
+    
 }

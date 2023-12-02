@@ -42,7 +42,7 @@
          </font>
       </Text>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="466.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="152.0" />
-      <TextField layoutX="466.0" layoutY="272.0" />
+      <TextField fx:id="subClassText" layoutX="466.0" layoutY="272.0" onKeyTyped="#updateSubClass" />
       <AnchorPane layoutX="-4.0" layoutY="3.0" prefHeight="68.0" prefWidth="759.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="759.0" />

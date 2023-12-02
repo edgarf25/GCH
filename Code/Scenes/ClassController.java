@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
@@ -45,6 +46,8 @@ public class ClassController implements Initializable{
     private ImageView rogueIcon;
     @FXML
     private ImageView sorcererIcon;
+    @FXML
+    private TextField subClassText;
 
     private String[] descriptions = {"Barbarians tap into their inner rage to become fierce melee fighters, using abilities like \"Rage\" for increased strength and toughness. They often wield two-handed weapons, have high hit points, and can choose different paths, like the \"Totem Warrior.\" In a party, they serve as front-line damage dealers and can fill roles as scouts or survivalists.",
                                      "Bards are charismatic and versatile. They use music and performance to cast spells and inspire allies. They come from diverse backgrounds and can excel in combat, magic, or social roles. Bards choose Bardic Colleges to specialize in their abilities. In a party, they provide utility, healing, and support. Bards are known for their charm, creativity, and adaptability, making them valuable in various situations.",
@@ -59,6 +62,8 @@ public class ClassController implements Initializable{
                                      "Warlocks are spellcasters who form pacts with powerful otherworldly entities for magical abilities. They have unique spellcasting mechanics, choose abilities called \"Eldritch Invocations,\" and are defined by their patrons, such as Archfey or Fiends. Warlocks serve as versatile spellcasters in a party, specializing in various roles. Their character alignment and motivations vary, often shaped by their patrons.",
                                      "Wizards are spellcasters known for their scholarly pursuit of magic through study and spellbook knowledge. They use their spellbook to cast a variety of magical spells, prepare spells daily, and recover spell slots through \"Arcane Recovery.\" Wizards choose an \"Arcane Tradition\" that defines their magical focus. They excel in roles like damage dealing, control, utility, and support."};
     private sceneController controller; //created a scenceController instance
+    CharacterData characterData = CharacterData.getInstance(); //created a character data instance
+
 
     public String setClass()
     {
@@ -160,9 +165,15 @@ public class ClassController implements Initializable{
                     wizardIcon.setVisible(true);
                 }
                 userClass = newValue;
+                characterData.setCharacterClass(newValue);
             }
         });
     };
+
+    public void updateSubClass()
+    {
+        characterData.setSubclass(subClassText.getText());
+    }
 
     public void clearImg()
     {
