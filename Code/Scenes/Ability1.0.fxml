@@ -40,121 +40,121 @@
       <AnchorPane layoutX="25.0" layoutY="125.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="200.0" stroke="#ae8406" strokeType="INSIDE" width="200.0" />
-            <Text layoutX="87.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STR">
+            <Text layoutX="90.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STR">
                <font>
                   <Font name="Century" size="12.0" />
                </font>
             </Text>
-            <Label fx:id="strLabel" layoutX="95.0" layoutY="93.0" text="0" textAlignment="CENTER">
+            <Label fx:id="strLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="100.0" prefHeight="25.0" prefWidth="25.0" text="0" textAlignment="JUSTIFY">
                <font>
                   <Font size="18.0" />
                </font></Label>
             <Button fx:id="strPlusButton" layoutX="143.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
             <Button fx:id="strSubButton" layoutX="30.0" layoutY="150.0" mnemonicParsing="false" onAction="#subPointBuy" prefHeight="25.0" prefWidth="26.0" text="-" />
-            <Label fx:id="strVal1" layoutX="29.0" layoutY="154.0" text="Label" />
-            <Label fx:id="strVal2" layoutX="67.0" layoutY="154.0" text="Label" />
-            <Label fx:id="strVal3" layoutX="105.0" layoutY="154.0" text="Label" />
-            <Label fx:id="strVal4" layoutX="143.0" layoutY="154.0" text="Label" />
+            <Label fx:id="strVal1" layoutX="40.0" layoutY="154.0" text="Label" />
+            <Label fx:id="strVal2" layoutX="78.0" layoutY="154.0" text="Label" />
+            <Label fx:id="strVal3" layoutX="116.0" layoutY="154.0" text="Label" />
+            <Label fx:id="strVal4" layoutX="154.0" layoutY="154.0" text="Label" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="275.0" layoutY="125.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="200.0" stroke="#ae8406" strokeType="INSIDE" width="200.0" />
-            <Text layoutX="87.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEX">
+            <Text layoutX="90.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEX">
                <font>
                   <Font name="Century" size="12.0" />
                </font>
             </Text>
-            <Label fx:id="dexLabel" layoutX="95.0" layoutY="93.0" text="0">
+            <Label fx:id="dexLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="100.0" prefHeight="25.0" prefWidth="25.0" text="0" textAlignment="JUSTIFY">
                <font>
                   <Font size="18.0" />
                </font></Label>
             <Button fx:id="dexPlusButton" layoutX="143.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
             <Button fx:id="dexSubButton" layoutX="30.0" layoutY="150.0" mnemonicParsing="false" onAction="#subPointBuy" prefHeight="25.0" prefWidth="26.0" text="-" />
-            <Label fx:id="dexVal1" layoutX="29.0" layoutY="154.0" text="Label" />
-            <Label fx:id="dexVal2" layoutX="67.0" layoutY="154.0" text="Label" />
-            <Label fx:id="dexVal3" layoutX="105.0" layoutY="154.0" text="Label" />
-            <Label fx:id="dexVal4" layoutX="143.0" layoutY="154.0" text="Label" />
+            <Label fx:id="dexVal1" layoutX="40.0" layoutY="154.0" text="Label" />
+            <Label fx:id="dexVal2" layoutX="78.0" layoutY="154.0" text="Label" />
+            <Label fx:id="dexVal3" layoutX="116.0" layoutY="154.0" text="Label" />
+            <Label fx:id="dexVal4" layoutX="154.0" layoutY="154.0" text="Label" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="525.0" layoutY="125.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="200.0" stroke="#ae8406" strokeType="INSIDE" width="200.0" />
-            <Text layoutX="87.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CON">
+            <Text layoutX="90.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CON">
                <font>
                   <Font name="Century" size="12.0" />
                </font>
             </Text>
-            <Label fx:id="conLabel" layoutX="95.0" layoutY="93.0" text="0">
+            <Label fx:id="conLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="100.0" prefHeight="25.0" prefWidth="25.0" text="0" textAlignment="JUSTIFY">
                <font>
                   <Font size="18.0" />
                </font></Label>
             <Button fx:id="conPlusButton" layoutX="143.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
             <Button fx:id="conSubButton" layoutX="30.0" layoutY="150.0" mnemonicParsing="false" onAction="#subPointBuy" prefHeight="25.0" prefWidth="26.0" text="-" />
-            <Label fx:id="conVal1" layoutX="29.0" layoutY="154.0" text="Label" />
-            <Label fx:id="conVal2" layoutX="67.0" layoutY="154.0" text="Label" />
-            <Label fx:id="conVal3" layoutX="105.0" layoutY="154.0" text="Label" />
-            <Label fx:id="conVal4" layoutX="143.0" layoutY="154.0" text="Label" />
+            <Label fx:id="conVal1" layoutX="40.0" layoutY="154.0" text="Label" />
+            <Label fx:id="conVal2" layoutX="78.0" layoutY="154.0" text="Label" />
+            <Label fx:id="conVal3" layoutX="116.0" layoutY="154.0" text="Label" />
+            <Label fx:id="conVal4" layoutX="154.0" layoutY="154.0" text="Label" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="25.0" layoutY="340.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="200.0" stroke="#ae8406" strokeType="INSIDE" width="200.0" />
-            <Text layoutX="87.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INT">
+            <Text layoutX="90.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INT">
                <font>
                   <Font name="Century" size="12.0" />
                </font>
             </Text>
-            <Label fx:id="intLabel" layoutX="95.0" layoutY="93.0" text="0">
+            <Label fx:id="intLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="95.0" prefHeight="25.0" prefWidth="25.0" text="0" textAlignment="JUSTIFY">
                <font>
                   <Font size="18.0" />
                </font></Label>
             <Button fx:id="intPlusButton" layoutX="143.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
             <Button fx:id="intSubButton" layoutX="30.0" layoutY="150.0" mnemonicParsing="false" onAction="#subPointBuy" prefHeight="25.0" prefWidth="26.0" text="-" />
-            <Label fx:id="intVal1" layoutX="29.0" layoutY="154.0" text="Label" />
-            <Label fx:id="intVal2" layoutX="67.0" layoutY="154.0" text="Label" />
-            <Label fx:id="intVal3" layoutX="105.0" layoutY="154.0" text="Label" />
-            <Label fx:id="intVal4" layoutX="143.0" layoutY="154.0" text="Label" />
+            <Label fx:id="intVal1" layoutX="40.0" layoutY="154.0" text="Label" />
+            <Label fx:id="intVal2" layoutX="78.0" layoutY="154.0" text="Label" />
+            <Label fx:id="intVal3" layoutX="116.0" layoutY="154.0" text="Label" />
+            <Label fx:id="intVal4" layoutX="154.0" layoutY="154.0" text="Label" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="275.0" layoutY="340.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="200.0" stroke="#ae8406" strokeType="INSIDE" width="200.0" />
-            <Text layoutX="87.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIS">
+            <Text layoutX="90.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIS">
                <font>
                   <Font name="Century" size="12.0" />
                </font>
             </Text>
-            <Label fx:id="wisLabel" layoutX="95.0" layoutY="93.0" text="0">
+            <Label fx:id="wisLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="95.0" prefHeight="25.0" prefWidth="25.0" text="0" textAlignment="JUSTIFY">
                <font>
                   <Font size="18.0" />
                </font></Label>
             <Button fx:id="wisPlusButton" layoutX="143.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
             <Button fx:id="wisSubButton" layoutX="30.0" layoutY="150.0" mnemonicParsing="false" onAction="#subPointBuy" prefHeight="25.0" prefWidth="26.0" text="-" />
-            <Label fx:id="wisVal1" layoutX="29.0" layoutY="154.0" text="Label" />
-            <Label fx:id="wisVal2" layoutX="67.0" layoutY="154.0" text="Label" />
-            <Label fx:id="wisVal3" layoutX="105.0" layoutY="154.0" text="Label" />
-            <Label fx:id="wisVal4" layoutX="143.0" layoutY="154.0" text="Label" />
+            <Label fx:id="wisVal1" layoutX="40.0" layoutY="154.0" text="Label" />
+            <Label fx:id="wisVal2" layoutX="78.0" layoutY="154.0" text="Label" />
+            <Label fx:id="wisVal3" layoutX="116.0" layoutY="154.0" text="Label" />
+            <Label fx:id="wisVal4" layoutX="154.0" layoutY="154.0" text="Label" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="525.0" layoutY="340.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="200.0" stroke="#ae8406" strokeType="INSIDE" width="200.0" />
-            <Text layoutX="87.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHA">
+            <Text layoutX="90.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHA">
                <font>
                   <Font name="Century" size="12.0" />
                </font>
             </Text>
-            <Label fx:id="chaLabel" layoutX="95.0" layoutY="93.0" text="0">
+            <Label fx:id="chaLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="91.0" layoutY="95.0" prefHeight="25.0" prefWidth="25.0" text="0" textAlignment="JUSTIFY">
                <font>
                   <Font size="18.0" />
                </font></Label>
             <Button fx:id="chaPlusButton" layoutX="143.0" layoutY="149.0" mnemonicParsing="false" onAction="#plusPointBuy" text="+" />
             <Button fx:id="chaSubButton" layoutX="30.0" layoutY="150.0" mnemonicParsing="false" onAction="#subPointBuy" prefHeight="25.0" prefWidth="26.0" text="-" />
-            <Label fx:id="chaVal1" layoutX="29.0" layoutY="154.0" text="Label" />
-            <Label fx:id="chaVal2" layoutX="67.0" layoutY="154.0" text="Label" />
-            <Label fx:id="chaVal3" layoutX="105.0" layoutY="154.0" text="Label" />
-            <Label fx:id="chaVal4" layoutX="143.0" layoutY="154.0" text="Label" />
+            <Label fx:id="chaVal1" layoutX="40.0" layoutY="154.0" text="Label" />
+            <Label fx:id="chaVal2" layoutX="78.0" layoutY="154.0" text="Label" />
+            <Label fx:id="chaVal3" layoutX="116.0" layoutY="154.0" text="Label" />
+            <Label fx:id="chaVal4" layoutX="154.0" layoutY="154.0" text="Label" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="-4.0" layoutY="3.0" prefHeight="68.0" prefWidth="759.0">
