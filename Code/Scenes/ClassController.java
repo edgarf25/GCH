@@ -28,7 +28,7 @@ public class ClassController implements Initializable{
     @FXML
     private ImageView wizardIcon;
     @FXML
-    private ImageView monkIcon;
+    private ImageView monkImage;
     @FXML
     private ImageView warlockIcon;
     @FXML
@@ -38,11 +38,17 @@ public class ClassController implements Initializable{
     @FXML
     private ImageView clericIcon;
     @FXML
+    private ImageView clericLady;
+    @FXML
     private ImageView fighterIcon;
     @FXML
     private ImageView rangerIcon;
     @FXML
+    private ImageView dndRanger;
+    @FXML
     private ImageView rogueIcon;
+    @FXML
+    private ImageView rogueGirl;
     @FXML
     private ImageView sorcererIcon;
 
@@ -103,7 +109,7 @@ public class ClassController implements Initializable{
                 {
                     classDescription.setText(descriptions[2]);
                     clearImg();
-                    clericIcon.setVisible(true);
+                    clericLady.setVisible(true);
                 }
                 else if (newValue.equals("Druid")) 
                 {
@@ -121,7 +127,7 @@ public class ClassController implements Initializable{
                 {
                     classDescription.setText(descriptions[5]);
                     clearImg();
-                    monkIcon.setVisible(true);
+                    monkImage.setVisible(true);
                 }
                 else if (newValue.equals("Paladin")) 
                 {
@@ -133,13 +139,13 @@ public class ClassController implements Initializable{
                 {
                     classDescription.setText(descriptions[7]);
                     clearImg();
-                    rangerIcon.setVisible(true);
+                    dndRanger.setVisible(true);
                 }
                 else if (newValue.equals("Rogue")) 
                 {
                     classDescription.setText(descriptions[8]);
                     clearImg();
-                    rogueIcon.setVisible(true);
+                    rogueGirl.setVisible(true);
                 }
                 else if (newValue.equals("Sorcerer")) 
                 {
@@ -168,16 +174,16 @@ public class ClassController implements Initializable{
     {
         barbIcon.setVisible(false);
         bardIcon.setVisible(false);
-        monkIcon.setVisible(false);
+        monkImage.setVisible(false);
         wizardIcon.setVisible(false);
         missingIcon.setVisible(false);
         warlockIcon.setVisible(false);
         paladinIcon.setVisible(false);
         druidIcon.setVisible(false);
-        clericIcon.setVisible(false);
+        clericLady.setVisible(false);
         fighterIcon.setVisible(false);
-        rangerIcon.setVisible(false);
-        rogueIcon.setVisible(false);
+        dndRanger.setVisible(false);
+        rogueGirl.setVisible(false);
         sorcererIcon.setVisible(false);
     }
     public void switchToScene3(ActionEvent event) throws IOException
