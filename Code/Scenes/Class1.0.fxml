@@ -107,7 +107,7 @@
       </ImageView>
       <ImageView fx:id="wizardIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
          <image>
-            <Image url="@../src/Wizard%20Icon.png" />
+            <Image url="@../src/Wizard Icon.png" />
          </image>
       </ImageView>
       <ImageView fx:id="barbIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
