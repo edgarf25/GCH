@@ -16,7 +16,7 @@ public class EquipmentController implements Initializable {
      @FXML
      private ChoiceBox<String> armorChoiceBox;        //ARMOR-DROP-DOWN
      @FXML
-     private ChoiceBox<String> possessionChoiceBox;  //Possessions-DROP-DOWN
+     private ChoiceBox<String> possessionChoiceBox;   //Possessions-DROP-DOWN
     @FXML
     private ChoiceBox<String>  spellChoiceBox;        ///SPELL-DROP-DOWN
     @FXML
@@ -227,7 +227,7 @@ public class EquipmentController implements Initializable {
         spellChoiceBox.getSelectionModel().clearSelection();
      }
      
-    private sceneController controller; //created a scenceController instance
+    private sceneController controller; //created a scenceControl7ler instance
 
 
 
