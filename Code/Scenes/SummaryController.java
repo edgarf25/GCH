@@ -18,6 +18,7 @@ public class SummaryController implements Initializable{
     private int healthValue = 1;
     @FXML
     public Label nameS;
+
     private sceneController controller; //created a scenceController instance
     CharacterData characterData = CharacterData.getInstance();
 
@@ -94,12 +95,6 @@ public class SummaryController implements Initializable{
     {
         controller = new sceneController();
         controller.switchToScene6(event); // Called the prev method with the empty event
-    }
-
-    public void switchToScene7(ActionEvent event) throws IOException
-    {
-        controller = new sceneController();
-        controller.switchToScene7(event); // Called the prev method with the empty event
     }
 
     public void switchToScene2(ActionEvent event) throws IOException

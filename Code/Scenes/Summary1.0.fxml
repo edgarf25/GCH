@@ -64,6 +64,11 @@
                   <Font size="14.0" />
                </font>
             </Label>
+            <Button layoutX="49.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToScene2" onMouseClicked="#switchToScene2" opacity="0.0" text="Button" />
+            <Button layoutX="210.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToScene3" onMouseClicked="#switchToScene3" opacity="0.0" text="Button" />
+            <Button layoutX="374.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToScene4" onMouseClicked="#switchToScene4" opacity="0.0" text="Button" />
+            <Button layoutX="576.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToScene5" onMouseClicked="#switchToScene5" opacity="0.0" prefHeight="26.0" prefWidth="82.0" text="Button" />
+            <Button layoutX="747.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToScene6" onMouseClicked="#switchToScene6" opacity="0.0" prefHeight="26.0" prefWidth="74.0" text="Button" />
          </children>
       </AnchorPane>
       <Button layoutX="25.0" layoutY="824.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
