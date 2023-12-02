@@ -30,9 +30,9 @@ public class EquipmentController implements Initializable {
     private String spellText = "";
     private final String[] weaponArray = {"Club","Dagger", "GreatClub", "HandAxe", "Javelin","Light Hammer", "Mace", "Quarterstaff", "Sickle", "Spear"};
     // WEAPON ARRAY CONTAINING LIST OF ARRAY OF WEAPONS MELEE
-    private final String[] armorArray ={"Light Armor","Medium Armor","Heavy Armor","Shield"};
+    private final String[] armorArray ={"Light Armor","Medium Armor","Heavy Armor"};
     // ARMOR CONTAINING LIST OF ARRAY ARMOR
-    private final String[] posArray = {"DINGLE","SHEMCKLES"};
+    private final String[] posArray = {"DINGLE","SHEMCKLES","Shield"};
     private final String[] BarbArray  = {"Vicious Mockery", "Thunderwave", "Healing Word"};
     private final String[] clericArray  = {"Sacred Flame", "Cure Wounds ",  "Spirit Guardians" };
 
