@@ -2,6 +2,7 @@ package Scenes;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -49,7 +50,7 @@ public class raceController implements Initializable{
 
         // Add items to the first ChoiceBox
         myChoiceBox.getItems().addAll(racesArray);
-
+        saveData();
         // Set up a listener for the first ChoiceBox
         myChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
@@ -141,7 +142,84 @@ public class raceController implements Initializable{
     }
 
 
+    private void saveData()
+    {
+        if (characterData.getRace() != null)
+        {
+            String newValue = characterData.getRace();
+            myChoiceBox.getSelectionModel().select(newValue);
+            if (newValue != null) {
+                // Clear existing items in the second ChoiceBox
+                subraceChoiceBox.getItems().clear();
 
+                // Based on the selected race, add corresponding subraces to the second ChoiceBox
+                if (newValue.equals("Dwarf")) {
+                    subraceChoiceBox.getItems().addAll(dwarfSubraces);
+                    backgroundDescription.setText(descriptions[0]);
+                } else if (newValue.equals("Elf")) {
+                    subraceChoiceBox.getItems().addAll(elfSubraces);
+                    backgroundDescription.setText(descriptions[3]);
+                } else if (newValue.equals("Halfling")) {
+                    subraceChoiceBox.getItems().addAll(halflingSubraces);
+                    backgroundDescription.setText(descriptions[6]);
+                } else if (newValue.equals("Human")) {
+                    backgroundDescription.setText(descriptions[9]);
+                } else if (newValue.equals("Dragonborn")) {
+                    backgroundDescription.setText(descriptions[10]);
+                } else if (newValue.equals("Gnome")) {
+                    subraceChoiceBox.getItems().addAll(gnomeSubraces);
+                    backgroundDescription.setText(descriptions[11]);
+                } else if (newValue.equals("Half-Elf")) {
+                    backgroundDescription.setText(descriptions[14]);
+                } else if (newValue.equals("Half-Orc")) {
+                    backgroundDescription.setText(descriptions[15]);
+                } else if (newValue.equals("Tiefling")) {
+                    backgroundDescription.setText(descriptions[16]);
+                }
+            }
+        }
+
+        if (characterData.getSubrace() != null)
+        {
+            String newValue = characterData.getSubrace();
+            subraceChoiceBox.getSelectionModel().select(newValue);
+            if (newValue != null)
+            {
+                if (newValue.equals("Hill Dwarf")) {
+                    backgroundDescription.setText(descriptions[1]);
+                }
+                else if (newValue.equals("Mountain Dwarf"))
+                {
+                    backgroundDescription.setText(descriptions[2]);
+                }
+                else if (newValue.equals("High Elf"))
+                {
+                    backgroundDescription.setText(descriptions[4]);
+                }
+                else if (newValue.equals("Wood Elf"))
+                {
+                    backgroundDescription.setText(descriptions[5]);
+                }
+                else if (newValue.equals("Lightfoot Halfling"))
+                {
+                    backgroundDescription.setText(descriptions[7]);
+                }
+                else if (newValue.equals("Stout Halfling"))
+                {
+                    backgroundDescription.setText(descriptions[8]);
+                }
+                else if (newValue.equals("Rock Gnome"))
+                {
+                    backgroundDescription.setText(descriptions[12]);
+                }
+                else if (newValue.equals("Deep Gnome"))
+                {
+                    backgroundDescription.setText(descriptions[13]);
+                }
+            }
+        }
+
+    }
 
     public void prev(ActionEvent event) throws IOException
     {
