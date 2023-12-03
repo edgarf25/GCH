@@ -614,17 +614,17 @@
                         <Line endX="155.0" layoutX="341.0" layoutY="338.0" startX="-202.45751953125" startY="-1.75" stroke="#ff010a" />
                         <ImageView fitHeight="191.0" fitWidth="221.0" layoutX="501.0" layoutY="64.0">
                            <image>
-                              <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-12-02_-_17-13-00-removebg-preview.png" />
+                              <Image url="@../src/Screenshot_Capture_-_2023-12-02_-_17-13-00-removebg-preview.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="168.0" fitWidth="162.0" layoutX="-17.0" layoutY="68.0">
                            <image>
-                              <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-12-02_-_17-25-36-removebg-preview.png" />
+                              <Image url="@../src/Screenshot_Capture_-_2023-12-02_-_17-25-36-removebg-preview.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="183.0" fitWidth="259.0" layoutX="468.0" layoutY="300.0">
                            <image>
-                              <Image url="@../../../../Downloads/output-onlinegiftools%20(3).gif" />
+                              <Image url="@../src/output-onlinegiftools (3).gif" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="144.0" fitWidth="135.0" layoutX="528.0" layoutY="334.0">
@@ -634,12 +634,12 @@
                         </ImageView>
                         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="493.0" layoutY="251.0">
                            <image>
-                              <Image url="@../../../../Downloads/output-onlinegiftools%20(6).gif" />
+                              <Image url="@../src/output-onlinegiftools (6).gif" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="122.0" fitWidth="146.0" layoutX="-2.0" layoutY="320.0">
                            <image>
-                              <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-12-02_-_20-08-17-removebg-preview.png" />
+                              <Image url="@../src/Screenshot_Capture_-_2023-12-02_-_20-08-17-removebg-preview.png" />
                            </image>
                         </ImageView>
                      </children>
