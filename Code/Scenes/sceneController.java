@@ -34,7 +34,6 @@ public class sceneController {
 
     public void loadScene(ActionEvent event) throws IOException
     {
-        System.out.println(counter);
         Image cursor = new Image("/src/sword.png");//changing cursor
         root = FXMLLoader.load(getClass().getResource(array[counter]));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

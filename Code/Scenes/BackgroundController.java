@@ -146,30 +146,30 @@ public class BackgroundController implements Initializable {
                         {
                             if (newValue2.equals("Arcana")) {
                                 if (skillBox2.getSelectionModel().isEmpty() || skillBox2.getValue().equals("Arcana")) {
+                                    characterData.setSkillsAndProficiencies1("Arcana"); //setting the skill and proficiencies on data class
                                     skillBox2.getItems().clear();
                                     skillBox2.getItems().addAll(noArcana);
-                                    characterData.setSkillsAndProficiencies1("Arcana"); //setting the skill and proficiencies on data class
                                 }
                             }
                             else if (newValue2.equals("Investigation")) {
                                 if (skillBox2.getSelectionModel().isEmpty() || skillBox2.getValue().equals("Investigation")) {
+                                    characterData.setSkillsAndProficiencies1("Investigation"); //setting the skill and proficiencies on data class
                                     skillBox2.getItems().clear();
                                     skillBox2.getItems().addAll(noInvestigation);
-                                    characterData.setSkillsAndProficiencies1("Investigation"); //setting the skill and proficiencies on data class
                                 }
                             }
                             else if (newValue2.equals("Religion")) {
                                 if (skillBox2.getSelectionModel().isEmpty() || skillBox2.getValue().equals("Religion")) {
+                                    characterData.setSkillsAndProficiencies1("Religion"); //setting the skill and proficiencies on data class
                                     skillBox2.getItems().clear();
                                     skillBox2.getItems().addAll(noReligion);
-                                    characterData.setSkillsAndProficiencies1("Religion"); //setting the skill and proficiencies on data class
                                 }
                             }
                             else if (newValue2.equals("Survival")) {
                                 if (skillBox2.getSelectionModel().isEmpty() || skillBox2.getValue().equals("Survival")) {
+                                    characterData.setSkillsAndProficiencies1("Survival"); //setting the skill and proficiencies on data class
                                     skillBox2.getItems().clear();
                                     skillBox2.getItems().addAll(noSurvival);
-                                    characterData.setSkillsAndProficiencies1("Survival"); //setting the skill and proficiencies on data class
                                 }
                             }
                         }
@@ -179,30 +179,30 @@ public class BackgroundController implements Initializable {
                         {
                             if (newValue3.equals("Arcana")) {
                                 if (skillBox1.getSelectionModel().isEmpty() || skillBox1.getValue().equals("Arcana")) {
+                                    characterData.setSkillsAndProficiencies2("Arcana"); //setting the skill and proficiencies on data class
                                     skillBox1.getItems().clear();
                                     skillBox1.getItems().addAll(noArcana);
-                                    characterData.setSkillsAndProficiencies2("Arcana"); //setting the skill and proficiencies on data class
                                 }
                             }
                             else if (newValue3.equals("Investigation")) {
                                 if (skillBox1.getSelectionModel().isEmpty() || skillBox1.getValue().equals("Investigation")) {
+                                    characterData.setSkillsAndProficiencies2("Investigation"); //setting the skill and proficiencies on data class
                                     skillBox1.getItems().clear();
                                     skillBox1.getItems().addAll(noInvestigation);
-                                    characterData.setSkillsAndProficiencies2("Investigation"); //setting the skill and proficiencies on data class
                                 }
                             }
                             else if (newValue3.equals("Religion")) {
                                 if (skillBox1.getSelectionModel().isEmpty() || skillBox1.getValue().equals("Religion")) {
+                                    characterData.setSkillsAndProficiencies2("Religion"); //setting the skill and proficiencies on data class
                                     skillBox1.getItems().clear();
                                     skillBox1.getItems().addAll(noReligion);
-                                    characterData.setSkillsAndProficiencies2("Religion"); //setting the skill and proficiencies on data class
                                 }
                             }
                             else if (newValue3.equals("Survival")) {
                                 if (skillBox1.getSelectionModel().isEmpty() || skillBox1.getValue().equals("Survival")) {
+                                    characterData.setSkillsAndProficiencies2("Survival"); //setting the skill and proficiencies on data class
                                     skillBox1.getItems().clear();
                                     skillBox1.getItems().addAll(noSurvival);
-                                    characterData.setSkillsAndProficiencies2("Survival"); //setting the skill and proficiencies on data class
                                 }
                             }
                         }
