@@ -212,7 +212,15 @@ public class EquipmentController implements Initializable {
          }
 
      }
-
+    public void checker() //checking that age only has number inputs
+    {
+        try
+        {
+            Integer.parseInt(GoldInput.getText());
+        } catch (NumberFormatException nfe){
+            GoldInput.setText("");
+        }
+    }
      public void clear(){
         ListText = "";
         TextAreaList.setText("");

@@ -113,7 +113,7 @@
       <Button fx:id="addPossession" layoutX="420.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#addPossession" prefHeight="43.0" prefWidth="50.0" text="ADD " />
       <Button fx:id="addSpell" layoutX="420.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#addSpell" prefHeight="43.0" prefWidth="50.0" text="ADD " />
       <Button fx:id="clear" layoutX="416.0" layoutY="475.0" mnemonicParsing="false" onMouseClicked="#clear" prefHeight="43.0" prefWidth="58.0" text="CLEAR" />
-      <TextField fx:id="GoldInput" layoutX="250.0" layoutY="410.0" prefHeight="25.0" prefWidth="150.0" />
+      <TextField fx:id="GoldInput" layoutX="250.0" layoutY="410.0" onKeyTyped="#checker" prefHeight="25.0" prefWidth="150.0" />
       <Text layoutX="70.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gold ">
          <font>
             <Font name="Century" size="25.0" />
