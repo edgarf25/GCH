@@ -92,8 +92,8 @@ public class ClassController implements Initializable{
     {
         classDescription.setEditable(false);
         clearImg();
-        missingIcon.setVisible(true);
         classChoiceBox.getItems().addAll(classes);
+        saveData();
         classChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
         {
             if (newValue != null)
@@ -179,6 +179,95 @@ public class ClassController implements Initializable{
     public void updateSubClass()
     {
         characterData.setSubclass(subClassText.getText());
+    }
+
+
+    private void saveData()
+    {
+        String newValue = characterData.getCharacterClass();
+        subClassText.setText(characterData.getSubclass());
+        if(newValue == null)
+        {
+            missingIcon.setVisible(true);
+        }
+        else
+        {
+            classChoiceBox.getSelectionModel().select(newValue);
+            if (newValue.equals("Barbarian"))
+            {
+                classDescription.setText(descriptions[0]);
+                clearImg();
+                barbIcon.setVisible(true);
+            }
+            else if (newValue.equals("Bard"))
+            {
+                classDescription.setText(descriptions[1]);
+                clearImg();
+                bardIcon.setVisible(true);
+            }
+            else if (newValue.equals("Cleric"))
+            {
+                classDescription.setText(descriptions[2]);
+                clearImg();
+                clericLady.setVisible(true);
+            }
+            else if (newValue.equals("Druid"))
+            {
+                classDescription.setText(descriptions[3]);
+                clearImg();
+                druidIcon.setVisible(true);
+            }
+            else if (newValue.equals("Fighter"))
+            {
+                classDescription.setText(descriptions[4]);
+                clearImg();
+                fighterIcon.setVisible(true);
+            }
+            else if (newValue.equals("Monk"))
+            {
+                classDescription.setText(descriptions[5]);
+                clearImg();
+                monkImage.setVisible(true);
+            }
+            else if (newValue.equals("Paladin"))
+            {
+                classDescription.setText(descriptions[6]);
+                clearImg();
+                paladinIcon.setVisible(true);
+            }
+            else if (newValue.equals("Ranger"))
+            {
+                classDescription.setText(descriptions[7]);
+                clearImg();
+                dndRanger.setVisible(true);
+            }
+            else if (newValue.equals("Rogue"))
+            {
+                classDescription.setText(descriptions[8]);
+                clearImg();
+                rogueGirl.setVisible(true);
+            }
+            else if (newValue.equals("Sorcerer"))
+            {
+                classDescription.setText(descriptions[9]);
+                clearImg();
+                sorcererIcon.setVisible(true);
+            }
+            else if (newValue.equals("Warlock"))
+            {
+                classDescription.setText(descriptions[10]);
+                clearImg();
+                warlockIcon.setVisible(true);
+            }
+            else if (newValue.equals("Wizard"))
+            {
+                classDescription.setText(descriptions[11]);
+                clearImg();
+                wizardIcon.setVisible(true);
+            }
+            userClass = newValue;
+            characterData.setCharacterClass(newValue);
+        }
     }
 
     public void clearImg()

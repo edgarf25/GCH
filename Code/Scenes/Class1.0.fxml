@@ -15,7 +15,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.ClassController">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="759.0" layoutX="-4.0" layoutY="2.0" pickOnBounds="true">
+      <ImageView fx:id="sorcererIcon" fitHeight="600.0" fitWidth="759.0" layoutX="-4.0" layoutY="2.0" pickOnBounds="true">
          <image>
             <Image url="@../src/background color.png" />
          </image>
@@ -95,67 +95,67 @@
             <Font name="Lucida Calligraphy Italic" size="16.0" />
          </font>
       </TextArea>
+      <ImageView fx:id="monkImage" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0" visible="false">
+         <image>
+            <Image url="@../src/monkImage.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="wizardIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0" visible="false">
+         <image>
+            <Image url="@../src/Wizard Icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="barbIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0" visible="false">
+         <image>
+            <Image url="@../src/barb Icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bardIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0" visible="false">
+         <image>
+            <Image url="@../src/bard Icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="warlockIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0" visible="false">
+         <image>
+            <Image url="@../src/Warlock Icon.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="paladinIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0" visible="false">
+         <image>
+            <Image url="@../src/Pala Icon.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="druidIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0" visible="false">
+         <image>
+            <Image url="@../src/Druid Icon.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="clericLady" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0" visible="false">
+         <image>
+            <Image url="@../src/clericLady.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fighterIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0" visible="false">
+         <image>
+            <Image url="@../src/Fighter Icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dndRanger" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0" visible="false">
+         <image>
+            <Image url="@../src/dndRanger.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rogueGirl" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0" visible="false">
+         <image>
+            <Image url="@../src/rogueGirl.png" />
+         </image>
+      </ImageView>
       <ImageView fx:id="missingIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
          <image>
             <Image url="@../src/missIcon.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="monkImage" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
-         <image>
-            <Image url="@../src/monkImage.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="wizardIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
-         <image>
-            <Image url="@../src/Wizard Icon.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="barbIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
-         <image>
-            <Image url="@../src/barb Icon.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="bardIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
-         <image>
-            <Image url="@../src/bard Icon.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="warlockIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
-         <image>
-            <Image url="@../src/Warlock Icon.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="paladinIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
-         <image>
-            <Image url="@../src/Pala Icon.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="druidIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
-         <image>
-            <Image url="@../src/Druid Icon.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="clericLady" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
-         <image>
-            <Image url="@../src/clericLady.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="fighterIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
-         <image>
-            <Image url="@../src/Fighter Icon.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="dndRanger" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
-         <image>
-            <Image url="@../src/dndRanger.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="rogueGirl" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0">
-         <image>
-            <Image url="@../src/rogueGirl.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="sorcererIcon" fitHeight="230.0" fitWidth="235.0" layoutX="92.0" layoutY="110.0">
+      <ImageView fx:id="sorcererIcon" fitHeight="230.0" fitWidth="235.0" layoutX="93.0" layoutY="113.0" visible="false">
          <image>
             <Image url="@../src/Sorcerer Icon.png" />
          </image>

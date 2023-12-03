@@ -9,6 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -364,29 +365,11 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="485.0" prefWidth="722.0">
                      <children>
-                        <ImageView fitHeight="180.0" fitWidth="200.0" layoutX="245.0" layoutY="314.0">
-                           <image>
-                              <Image url="@../src/pngtree-stamp-border-red-stamp-red-border-retro-broken-border-rectangle-border-png-image_8293809-removebg-preview.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="180.0" fitWidth="200.0" layoutX="235.0" layoutY="-53.0">
-                           <image>
-                              <Image url="@../src/pngtree-stamp-border-red-stamp-red-border-retro-broken-border-rectangle-border-png-image_8293809-removebg-preview.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="218.0" fitWidth="233.0" layoutX="478.0" layoutY="98.0">
-                           <image>
-                              <Image url="@../src/38bb3a9af069b9eb62d39238ed8c757b-removebg-preview.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="186.0" fitWidth="200.0" layoutX="239.0" layoutY="150.0">
-                           <image>
-                              <Image url="@../src/pngtree-stamp-border-red-stamp-red-border-retro-broken-border-rectangle-border-png-image_8293809-removebg-preview.png" />
-                           </image>
-                        </ImageView>
-                        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="160.0" layoutX="139.0" layoutY="61.0" stroke="#ae8406" strokeType="INSIDE" width="421.0" />
-                        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="107.0" layoutX="163.0" layoutY="270.0" stroke="#ae8406" strokeType="INSIDE" width="381.0" />
-                        <Text fill="#ff010a" layoutX="281.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Background ">
+                        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="214.0" layoutX="11.0" layoutY="7.0" stroke="#ae8406" strokeType="INSIDE" width="681.0" />
+                        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="152.0" layoutX="96.0" layoutY="225.0" stroke="#ae8406" strokeType="INSIDE" width="499.0" />
+                        <Ellipse fill="#1e2022" layoutX="343.0" layoutY="247.0" radiusX="100.0" radiusY="16.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Ellipse fill="#1e2022" layoutX="242.0" layoutY="27.0" radiusX="80.0" radiusY="16.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fill="#ff010a" layoutX="278.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Background ">
                            <font>
                               <Font name="Baskerville Old Face" size="21.0" />
                            </font>
@@ -397,7 +380,7 @@
                            </font>
                         </Text>
                         <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="35.0" layoutX="349.0" layoutY="436.0" stroke="#ae8406" strokeType="INSIDE" width="144.0" />
-                        <Text fill="#ff010a" layoutX="287.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Characterics " wrappingWidth="146.9794921875">
+                        <Text fill="#ff010a" layoutX="287.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Characterics " wrappingWidth="146.9794921875">
                            <font>
                               <Font name="Baskerville Old Face" size="21.0" />
                            </font>
@@ -480,14 +463,29 @@
                               <Image url="@../src/flat_750x_075_f-pad_750x1000_f8f8f8.u2-removebg-preview.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="295.0" fitWidth="178.0" layoutX="2.0" layoutY="1.0">
+                        <ImageView fitHeight="294.0" fitWidth="168.0" layoutX="2.0" layoutY="1.0">
                            <image>
                               <Image url="@../src/Screenshot_Capture_-_2023-12-02_-_16-22-32-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="218.0" fitWidth="233.0" layoutX="478.0" layoutY="98.0">
+                           <image>
+                              <Image url="@../src/38bb3a9af069b9eb62d39238ed8c757b-removebg-preview.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="221.0" fitWidth="212.0" layoutX="-26.0" layoutY="281.0">
                            <image>
                               <Image url="@../src/IMG_0820-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="186.0" fitWidth="200.0" layoutX="237.0" layoutY="-63.0">
+                           <image>
+                              <Image url="@../src/pngtree-stamp-border-red-stamp-red-border-retro-broken-border-rectangle-border-png-image_8293809-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="186.0" fitWidth="200.0" layoutX="238.0" layoutY="136.0">
+                           <image>
+                              <Image url="@../src/pngtree-stamp-border-red-stamp-red-border-retro-broken-border-rectangle-border-png-image_8293809-removebg-preview.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -614,17 +612,17 @@
                         <Line endX="155.0" layoutX="341.0" layoutY="338.0" startX="-202.45751953125" startY="-1.75" stroke="#ff010a" />
                         <ImageView fitHeight="191.0" fitWidth="221.0" layoutX="501.0" layoutY="64.0">
                            <image>
-                              <Image url="@../src/Screenshot_Capture_-_2023-12-02_-_17-13-00-removebg-preview.png" />
+                              <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-12-02_-_17-13-00-removebg-preview.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="168.0" fitWidth="162.0" layoutX="-17.0" layoutY="68.0">
                            <image>
-                              <Image url="@../src/Screenshot_Capture_-_2023-12-02_-_17-25-36-removebg-preview.png" />
+                              <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-12-02_-_17-25-36-removebg-preview.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="183.0" fitWidth="259.0" layoutX="468.0" layoutY="300.0">
                            <image>
-                              <Image url="@../src/output-onlinegiftools (3).gif" />
+                              <Image url="@../../../../Downloads/output-onlinegiftools%20(3).gif" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="144.0" fitWidth="135.0" layoutX="528.0" layoutY="334.0">
