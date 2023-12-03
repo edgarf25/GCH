@@ -75,10 +75,12 @@ public class raceController implements Initializable{
                 else if (newValue.equals("Human"))
                 {
                     backgroundDescription.setText(descriptions[9]);
+                    characterData.setSubrace(null);
                 }
                 else if (newValue.equals("Dragonborn"))
                 {
                     backgroundDescription.setText(descriptions[10]);
+                    characterData.setSubrace(null);
                 }
                 else if (newValue.equals("Gnome"))
                 {
@@ -88,14 +90,17 @@ public class raceController implements Initializable{
                 else if (newValue.equals("Half-Elf"))
                 {
                     backgroundDescription.setText(descriptions[14]);
+                    characterData.setSubrace(null);
                 }
                 else if (newValue.equals("Half-Orc"))
                 {
                     backgroundDescription.setText(descriptions[15]);
+                    characterData.setSubrace(null);
                 }
                 else if (newValue.equals("Tiefling"))
                 {
                     backgroundDescription.setText(descriptions[16]);
+                    characterData.setSubrace(null);
                 }
 
                 characterData.setRace(newValue); //setting the race on character data
