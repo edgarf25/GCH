@@ -9,7 +9,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Ellipse?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -365,11 +364,19 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="485.0" prefWidth="722.0">
                      <children>
-                        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="214.0" layoutX="11.0" layoutY="7.0" stroke="#ae8406" strokeType="INSIDE" width="681.0" />
-                        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="152.0" layoutX="96.0" layoutY="225.0" stroke="#ae8406" strokeType="INSIDE" width="499.0" />
-                        <Ellipse fill="#1e2022" layoutX="343.0" layoutY="247.0" radiusX="100.0" radiusY="16.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Ellipse fill="#1e2022" layoutX="242.0" layoutY="27.0" radiusX="80.0" radiusY="16.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Text fill="#ff010a" layoutX="278.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Background ">
+                        <ImageView fitHeight="166.0" fitWidth="200.0" layoutX="238.0" layoutY="156.0">
+                           <image>
+                              <Image url="@../src/red border.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="168.0" fitWidth="200.0" layoutX="237.0" layoutY="-54.0">
+                           <image>
+                              <Image url="@../src/red border.png" />
+                           </image>
+                        </ImageView>
+                        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="154.0" layoutX="145.0" layoutY="59.0" stroke="#ae8406" strokeType="INSIDE" width="403.0" />
+                        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="108.0" layoutX="159.0" layoutY="269.0" stroke="#ae8406" strokeType="INSIDE" width="388.0" />
+                        <Text fill="#ff010a" layoutX="283.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Background ">
                            <font>
                               <Font name="Baskerville Old Face" size="21.0" />
                            </font>
@@ -380,7 +387,7 @@
                            </font>
                         </Text>
                         <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="35.0" layoutX="349.0" layoutY="436.0" stroke="#ae8406" strokeType="INSIDE" width="144.0" />
-                        <Text fill="#ff010a" layoutX="287.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Characterics " wrappingWidth="146.9794921875">
+                        <Text fill="#ff010a" layoutX="286.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Characterics " wrappingWidth="146.9794921875">
                            <font>
                               <Font name="Baskerville Old Face" size="21.0" />
                            </font>
@@ -460,32 +467,27 @@
                         <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="35.0" layoutX="194.0" layoutY="436.0" stroke="#ae8406" strokeType="INSIDE" width="144.0" />
                         <ImageView fitHeight="184.0" fitWidth="154.0" layoutX="531.0" layoutY="309.0">
                            <image>
-                              <Image url="@../src/flat_750x_075_f-pad_750x1000_f8f8f8.u2-removebg-preview.png" />
+                              <Image url="@../src/dice2.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="294.0" fitWidth="168.0" layoutX="2.0" layoutY="1.0">
                            <image>
-                              <Image url="@../src/Screenshot_Capture_-_2023-12-02_-_16-22-32-removebg-preview.png" />
+                              <Image url="@../src/knight.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="218.0" fitWidth="233.0" layoutX="478.0" layoutY="98.0">
+                        <ImageView fitHeight="218.0" fitWidth="233.0" layoutX="448.0" layoutY="95.0">
                            <image>
-                              <Image url="@../src/38bb3a9af069b9eb62d39238ed8c757b-removebg-preview.png" />
+                              <Image url="@../src/book sketch.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="221.0" fitWidth="212.0" layoutX="-26.0" layoutY="281.0">
                            <image>
-                              <Image url="@../src/IMG_0820-removebg-preview.png" />
+                              <Image url="@../src/write.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="186.0" fitWidth="200.0" layoutX="237.0" layoutY="-63.0">
+                        <ImageView fitHeight="166.0" fitWidth="200.0" layoutX="242.0" layoutY="320.0">
                            <image>
-                              <Image url="@../src/pngtree-stamp-border-red-stamp-red-border-retro-broken-border-rectangle-border-png-image_8293809-removebg-preview.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="186.0" fitWidth="200.0" layoutX="238.0" layoutY="136.0">
-                           <image>
-                              <Image url="@../src/pngtree-stamp-border-red-stamp-red-border-retro-broken-border-rectangle-border-png-image_8293809-removebg-preview.png" />
+                              <Image url="@../src/red border.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -498,12 +500,12 @@
                      <children>
                         <ImageView fitHeight="206.0" fitWidth="220.0" layoutX="215.0" layoutY="-70.0">
                            <image>
-                              <Image url="@../src/pngtree-stamp-border-red-stamp-red-border-retro-broken-border-rectangle-border-png-image_8293809-removebg-preview.png" />
+                              <Image url="@../src/red border.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="206.0" fitWidth="220.0" layoutX="219.0" layoutY="125.0">
                            <image>
-                              <Image url="@../src/pngtree-stamp-border-red-stamp-red-border-retro-broken-border-rectangle-border-png-image_8293809-removebg-preview.png" />
+                              <Image url="@../src/red border.png" />
                            </image>
                         </ImageView>
                         <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="133.0" layoutX="172.0" layoutY="65.0" stroke="#ae8406" strokeType="INSIDE" width="321.0" />
@@ -535,37 +537,37 @@
                         </Label>
                         <ImageView fitHeight="260.0" fitWidth="207.0" layoutX="482.0" layoutY="3.0">
                            <image>
-                              <Image url="@../src/Screenshot_Capture_-_2023-12-02_-_14-46-45-removebg-preview.png" />
+                              <Image url="@../src/banner.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="218.0" fitWidth="132.0" layoutX="526.0" layoutY="-1.0">
                            <image>
-                              <Image url="@../src/Screenshot_Capture_-_2023-12-01_-_21-57-28-removebg-preview.png" />
+                              <Image url="@../src/clan1.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="236.0" fitWidth="222.0" layoutX="488.0" layoutY="250.0">
                            <image>
-                              <Image url="@../src/1000_F_398041999_aeNNPEvw9Y2MOc0O2hsIDjI74ven0NYR-removebg-preview.png" />
+                              <Image url="@../src/Viking.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="269.0" fitWidth="207.0" layoutX="-29.0" layoutY="3.0">
                            <image>
-                              <Image url="@../src/Screenshot_Capture_-_2023-12-02_-_14-46-45-removebg-preview.png" />
+                              <Image url="@../src/banner.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="192.0" fitWidth="113.0" layoutX="24.0" layoutY="16.0">
                            <image>
-                              <Image url="@../src/Screenshot_Capture_-_2023-12-02_-_14-53-25-removebg-preview.png" />
+                              <Image url="@../src/clan2.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="247.0" fitWidth="188.0" layoutX="-22.0" layoutY="241.0">
                            <image>
-                              <Image url="@../src/360_F_400117579_o7jsToUuWwnrqW25WRFUMZxnfbxENQA2-removebg-preview.png" />
+                              <Image url="@../src/Arch.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="68.0" fitWidth="68.0" layoutX="421.0" layoutY="-1.0">
                            <image>
-                              <Image url="@../src/173572-200-removebg-preview.png" />
+                              <Image url="@../src/bash.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -578,12 +580,12 @@
                      <children>
                         <ImageView fitHeight="191.0" fitWidth="220.0" layoutX="200.0" layoutY="185.0">
                            <image>
-                              <Image url="@../src/pngtree-stamp-border-red-stamp-red-border-retro-broken-border-rectangle-border-png-image_8293809-removebg-preview.png" />
+                              <Image url="@../src/red border.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="206.0" fitWidth="220.0" layoutX="195.0" layoutY="-70.0">
                            <image>
-                              <Image url="@../src/pngtree-stamp-border-red-stamp-red-border-retro-broken-border-rectangle-border-png-image_8293809-removebg-preview.png" />
+                              <Image url="@../src/red border.png" />
                            </image>
                         </ImageView>
                         <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="186.0" layoutX="135.0" layoutY="66.0" stroke="#ae8406" strokeType="INSIDE" width="366.0" />
@@ -612,32 +614,32 @@
                         <Line endX="155.0" layoutX="341.0" layoutY="338.0" startX="-202.45751953125" startY="-1.75" stroke="#ff010a" />
                         <ImageView fitHeight="191.0" fitWidth="221.0" layoutX="501.0" layoutY="64.0">
                            <image>
-                              <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-12-02_-_17-13-00-removebg-preview.png" />
+                              <Image url="@../src/glove - Copy.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="168.0" fitWidth="162.0" layoutX="-17.0" layoutY="68.0">
+                        <ImageView fitHeight="168.0" fitWidth="162.0" layoutX="-10.0" layoutY="66.0">
                            <image>
-                              <Image url="@../../../../Downloads/Screenshot_Capture_-_2023-12-02_-_17-25-36-removebg-preview.png" />
+                              <Image url="@../src/backpack.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="183.0" fitWidth="259.0" layoutX="468.0" layoutY="300.0">
                            <image>
-                              <Image url="@../../../../Downloads/output-onlinegiftools%20(3).gif" />
+                              <Image url="@../src/flow.gif" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="144.0" fitWidth="135.0" layoutX="528.0" layoutY="334.0">
                            <image>
-                              <Image url="@../../../../Downloads/1243596799sign-guestbook-animation-3.gif" />
+                              <Image url="@../src/GuestBook.gif" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="493.0" layoutY="251.0">
                            <image>
-                              <Image url="@../src/output-onlinegiftools (6).gif" />
+                              <Image url="@../src/blue orb.gif" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="122.0" fitWidth="146.0" layoutX="-2.0" layoutY="320.0">
+                        <ImageView fitHeight="163.0" fitWidth="146.0" layoutX="-2.0" layoutY="310.0">
                            <image>
-                              <Image url="@../src/Screenshot_Capture_-_2023-12-02_-_20-08-17-removebg-preview.png" />
+                              <Image url="@../src/bottle.png" />
                            </image>
                         </ImageView>
                      </children>
