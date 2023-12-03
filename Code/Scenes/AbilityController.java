@@ -167,6 +167,11 @@ public class AbilityController implements Initializable{
             if (newValue != null) {
                 if (newValue.equals("Point Buy")) {
                     pointBuy();
+                    for (int i = 6; i < 6; i++) //setting the points back to 8
+                    {
+                        finalValues[i] = 8;
+                    }
+                    characterData.setAbilities(finalValues);
                 }
                 else if (newValue.equals("Standard Array"))
                 {
