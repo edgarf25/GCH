@@ -15,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.image.ImageView;
 import javafx.fxml.FXML;
+import javafx.collections.FXCollections;
 
 public class AbilityController implements Initializable{
 
@@ -142,6 +143,7 @@ public class AbilityController implements Initializable{
     private Integer[] stdArray = {8, 10, 12, 13, 14, 15};
     private Integer[] finalValues = {8, 8, 8, 8, 8, 8,};
     List<Integer> stdList = new ArrayList<>(Arrays.asList(stdArray));
+    private List<Integer> availableOptions;
 
     CharacterData characterData = CharacterData.getInstance(); //created a character data instance
 
@@ -172,6 +174,13 @@ public class AbilityController implements Initializable{
                 }
                 else if (newValue.equals("Standard Array"))
                 {
+                    availableOptions = new ArrayList<>(Arrays.asList(stdArray));
+                    strDropdown.setItems(FXCollections.observableArrayList(availableOptions));
+                    dexDropdown.setItems(FXCollections.observableArrayList(availableOptions));
+                    conDropdown.setItems(FXCollections.observableArrayList(availableOptions));
+                    intDropdown.setItems(FXCollections.observableArrayList(availableOptions));
+                    wisDropdown.setItems(FXCollections.observableArrayList(availableOptions));
+                    chaDropdown.setItems(FXCollections.observableArrayList(availableOptions));
                     standardArray();
                 }
                 else if (newValue.equals("Dice Roll"))
@@ -387,12 +396,12 @@ public class AbilityController implements Initializable{
         intDropdown.setVisible(true);
         wisDropdown.setVisible(true);
         chaDropdown.setVisible(true);
-        strDropdown.getItems().addAll(stdArray);
-        dexDropdown.getItems().addAll(stdArray);
-        conDropdown.getItems().addAll(stdArray);
-        intDropdown.getItems().addAll(stdArray);
-        wisDropdown.getItems().addAll(stdArray);
-        chaDropdown.getItems().addAll(stdArray);
+        //strDropdown.getItems().addAll(stdArray);
+        //dexDropdown.getItems().addAll(stdArray);
+        //conDropdown.getItems().addAll(stdArray);
+        //intDropdown.getItems().addAll(stdArray);
+        //wisDropdown.getItems().addAll(stdArray);
+        //chaDropdown.getItems().addAll(stdArray);
 
     }
     public void pointBuy()

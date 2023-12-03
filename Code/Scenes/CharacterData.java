@@ -39,6 +39,8 @@ public class CharacterData {
     private int stealthBonus;
     private int survivalBonus;
     private int historyBonus;
+    private int armorAmount;
+    private int healthAmount;
     private List<String> equipment;
 
     // Private constructor to prevent external instantiation
@@ -367,6 +369,22 @@ public class CharacterData {
     
     public void setHistoryBonus(int historyBonus) {
         this.historyBonus = historyBonus;
+    }
+
+    public int getArmorAmount() {
+        return armorAmount;
+    }
+    
+    public void setArmorAmount(int armorAmount) {
+        this.armorAmount = armorAmount;
+    }
+
+    public int getHealthAmount() {
+        return healthAmount;
+    }
+    
+    public void setHealthAmount(int healthAmount) {
+        this.healthAmount = healthAmount;
     }
     
 }
