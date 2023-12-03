@@ -19,7 +19,7 @@ public class CharacterData {
     private String eyes;
     private String height;
     private String weight;
-    private int age;
+    private String age;
     private String gender;
     private int acrobaticsBonus;
     private int animalHandlingBonus;
@@ -195,12 +195,12 @@ public class CharacterData {
         this.weight = weight;
     }
 
-    public int getAge()
+    public String getAge()
     {
         return age;
     }
 
-    public void setAge(int age) 
+    public void setAge(String age) 
     {
         this.age = age;
     }

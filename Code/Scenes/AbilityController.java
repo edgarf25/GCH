@@ -140,7 +140,7 @@ public class AbilityController implements Initializable{
     private String[] options = {"Standard Array", "Point Buy", "Dice Roll"};
     private sceneController controller; //created a scenceController instance
     private Integer[] stdArray = {8, 10, 12, 13, 14, 15};
-    private Integer[] finalValues = {0, 0, 0, 0, 0, 0,};
+    private Integer[] finalValues = {8, 8, 8, 8, 8, 8,};
     List<Integer> stdList = new ArrayList<>(Arrays.asList(stdArray));
 
     CharacterData characterData = CharacterData.getInstance(); //created a character data instance
@@ -629,6 +629,7 @@ public class AbilityController implements Initializable{
                 updateValues(chaLabel, +1, 'p', 5);
             }
             
+            characterData.setAbilities(finalValues);
         }
     }
 

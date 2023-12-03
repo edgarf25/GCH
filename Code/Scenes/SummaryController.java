@@ -15,9 +15,42 @@ public class SummaryController implements Initializable{
     private Label currentHealth;
     @FXML
     private TextField healthAmount;
-    private int healthValue = 1;
     @FXML
     public Label nameS;
+    @FXML
+    private Label strLabel;
+    @FXML
+    private Label dexLabel;
+    @FXML
+    private Label conLabel;
+    @FXML
+    private Label intLabel;
+    @FXML
+    private Label wisLabel;
+    @FXML
+    private Label chaLabel;
+    @FXML
+    private Label hairLabel;
+    @FXML
+    private Label skinLabel;
+    @FXML
+    private Label eyesLabel;
+    @FXML
+    private Label heightLabel;
+    @FXML
+    private Label weightLabel;
+    @FXML
+    private Label genderLabel;
+    @FXML
+    private Label ageLabel;
+    @FXML
+    private Label skill1Label;
+    @FXML
+    private Label skill2Label;
+
+    private int healthValue = 1;
+    private Integer[] abilityValues;
+
 
     private sceneController controller; //created a scenceController instance
     CharacterData characterData = CharacterData.getInstance();
@@ -31,6 +64,60 @@ public class SummaryController implements Initializable{
             nameS.setText(characterData.getName());
         }
         System.out.println(characterData.getName());
+
+        if (characterData.getAbilities() != null) //setting abilities
+        {
+            abilityValues = characterData.getAbilities();
+            strLabel.setText(String.valueOf(abilityValues[0]));
+            dexLabel.setText(String.valueOf(abilityValues[1]));
+            conLabel.setText(String.valueOf(abilityValues[2]));
+            intLabel.setText(String.valueOf(abilityValues[3]));
+            wisLabel.setText(String.valueOf(abilityValues[4]));
+            chaLabel.setText(String.valueOf(abilityValues[5]));
+        }
+
+        if (characterData.getHair() != null) //setting hair
+        {
+            hairLabel.setText(characterData.getHair());
+        }
+
+        if (characterData.getEyes() != null) //setting eyes
+        {
+            eyesLabel.setText(characterData.getEyes());
+        }
+
+        if (characterData.getGender() != null) //setting gender
+        {
+            genderLabel.setText(characterData.getGender());
+        }
+
+        if (characterData.getSkin() != null) //setting skin
+        {
+            skinLabel.setText(characterData.getSkin());
+        }
+
+        if (characterData.getHeight() != null) //setting height
+        {
+            heightLabel.setText(characterData.getHeight());
+        }
+
+        if (characterData.getSkillsAndProficiencies1() != null)
+        {
+            skill1Label.setText(characterData.getSkillsAndProficiencies1());
+        }
+
+        if (characterData.getSkillsAndProficiencies2() != null)
+        {
+            skill2Label.setText(characterData.getSkillsAndProficiencies2());
+        }
+
+        if (characterData.getAge() !=  null)
+        {
+            ageLabel.setText(characterData.getAge());
+        }
+        
+
+        
     };
 
     public void heal() // Heal Control
