@@ -167,20 +167,14 @@ public class AbilityController implements Initializable{
         optionsChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
         {
             if (newValue != null) {
-                if (newValue.equals("Point Buy")) {
+                if (newValue.equals("Point Buy")) 
+                {
                     pointBuy();
                     Arrays.fill(finalValues, 8); //setting the array back to 8's if changing scenes
                     characterData.setAbilities(finalValues);
                 }
                 else if (newValue.equals("Standard Array"))
                 {
-                    availableOptions = new ArrayList<>(Arrays.asList(stdArray));
-                    strDropdown.setItems(FXCollections.observableArrayList(availableOptions));
-                    dexDropdown.setItems(FXCollections.observableArrayList(availableOptions));
-                    conDropdown.setItems(FXCollections.observableArrayList(availableOptions));
-                    intDropdown.setItems(FXCollections.observableArrayList(availableOptions));
-                    wisDropdown.setItems(FXCollections.observableArrayList(availableOptions));
-                    chaDropdown.setItems(FXCollections.observableArrayList(availableOptions));
                     standardArray();
                 }
                 else if (newValue.equals("Dice Roll"))
@@ -189,147 +183,8 @@ public class AbilityController implements Initializable{
                 }
             }
         });
-        strDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
-        {
-            setChoice(strDropdown, newValue);
-        });
-        dexDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
-        {
-            setChoice(dexDropdown, newValue);
-        });
-        conDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
-        {
-            setChoice(conDropdown, newValue);
-        });
-        intDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
-        {
-            setChoice(intDropdown, newValue);
-        });
-        wisDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
-        {
-            setChoice(wisDropdown, newValue);
-        });
-        chaDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
-        {
-            setChoice(chaDropdown, newValue);
-        });
     }
-
-    private void setChoice(ChoiceBox<Integer> c, Integer newValue) {
-        if (c == strDropdown) {
-            if (newValue != null) {
-                if (newValue.equals(8)) {
-                    strChoice = 8;
-                } else if (newValue.equals(10)) {
-                    strChoice = 10;
-                } else if (newValue.equals(12)) {
-                    strChoice = 12;
-                } else if (newValue.equals(13)) {
-                    strChoice = 13;
-                } else if (newValue.equals(14)) {
-                    strChoice = 14;
-                } else if (newValue.equals(15)) {
-                    strChoice = 15;
-                }
-            }
-        } else if (c == dexDropdown) {
-            if (newValue != null) {
-                if (newValue.equals(8)) {
-                    dexChoice = 8;
-                } else if (newValue.equals(10)) {
-                    dexChoice = 10;
-                } else if (newValue.equals(12)) {
-                    dexChoice = 12;
-                } else if (newValue.equals(13)) {
-                    dexChoice = 13;
-                } else if (newValue.equals(14)) {
-                    dexChoice = 14;
-                } else if (newValue.equals(15)) {
-                    dexChoice = 15;
-                }
-            }
-        }
-        else if (c == conDropdown) {
-            if (newValue != null) {
-                if (newValue.equals(8)) {
-                    conChoice = 8;
-                } else if (newValue.equals(10)) {
-                    conChoice = 10;
-                } else if (newValue.equals(12)) {
-                    conChoice = 12;
-                } else if (newValue.equals(13)) {
-                    conChoice = 13;
-                } else if (newValue.equals(14)) {
-                    conChoice = 14;
-                } else if (newValue.equals(15)) {
-                    conChoice = 15;
-                }
-            }
-        }
-        else if (c == intDropdown) {
-            if (newValue != null) {
-                if (newValue.equals(8)) {
-                    intChoice = 8;
-                } else if (newValue.equals(10)) {
-                    intChoice = 10;
-                } else if (newValue.equals(12)) {
-                    intChoice = 12;
-                } else if (newValue.equals(13)) {
-                    intChoice = 13;
-                } else if (newValue.equals(14)) {
-                    intChoice = 14;
-                } else if (newValue.equals(15)) {
-                    intChoice = 15;
-                }
-            }
-        }
-        else if (c == wisDropdown) {
-            if (newValue != null) {
-                if (newValue.equals(8)) {
-                    wisChoice = 8;
-                } else if (newValue.equals(10)) {
-                    wisChoice = 10;
-                } else if (newValue.equals(12)) {
-                    wisChoice = 12;
-                } else if (newValue.equals(13)) {
-                    wisChoice = 13;
-                } else if (newValue.equals(14)) {
-                    wisChoice = 14;
-                } else if (newValue.equals(15)) {
-                    wisChoice = 15;
-                }
-            }
-        }
-        else if (c == chaDropdown) {
-            if (newValue != null) {
-                if (newValue.equals(8)) {
-                    chaChoice = 8;
-                } else if (newValue.equals(10)) {
-                    chaChoice = 10;
-                } else if (newValue.equals(12)) {
-                    chaChoice = 12;
-                } else if (newValue.equals(13)) {
-                    chaChoice = 13;
-                } else if (newValue.equals(14)) {
-                    chaChoice = 14;
-                } else if (newValue.equals(15)) {
-                    chaChoice = 15;
-                }
-            }
-        }
-    }
-
-
-    public void updateAttributeDropdowns(){
-        strDropdown.getItems().clear();
-        dexDropdown.getItems().clear();
-        conDropdown.getItems().clear();
-        intDropdown.getItems().clear();
-        wisDropdown.getItems().clear();
-        chaDropdown.getItems().clear();
-
-
-    }
+    
     public void startAbilityScene()
     {
         pointsRemainingText.setVisible(false);
@@ -396,14 +251,46 @@ public class AbilityController implements Initializable{
         intDropdown.setVisible(true);
         wisDropdown.setVisible(true);
         chaDropdown.setVisible(true);
-        //strDropdown.getItems().addAll(stdArray);
-        //dexDropdown.getItems().addAll(stdArray);
-        //conDropdown.getItems().addAll(stdArray);
-        //intDropdown.getItems().addAll(stdArray);
-        //wisDropdown.getItems().addAll(stdArray);
-        //chaDropdown.getItems().addAll(stdArray);
+        // Create a list to store the available options for each choice box
+        List<List<Integer>> availableOptionsList = new ArrayList<>();
+        for (int i = 0; i < 6; i++) 
+        {
+            availableOptionsList.add(new ArrayList<>(Arrays.asList(stdArray)));
+        }
+
+        // Set up the choice boxes
+        setChoiceBox(strDropdown, 0, availableOptionsList);
+        setChoiceBox(dexDropdown, 1, availableOptionsList);
+        setChoiceBox(conDropdown, 2, availableOptionsList);
+        setChoiceBox(intDropdown, 3, availableOptionsList);
+        setChoiceBox(wisDropdown, 4, availableOptionsList);
+        setChoiceBox(chaDropdown, 5, availableOptionsList);
 
     }
+
+    // Helper method to set up a choice box with available options
+    private void setChoiceBox(ChoiceBox<Integer> choiceBox, int index, List<List<Integer>> availableOptionsList) {
+        List<Integer> availableOptions = availableOptionsList.get(index);
+        choiceBox.setVisible(true);
+        choiceBox.setItems(FXCollections.observableArrayList(availableOptions));
+    
+        // Add a listener to update other choice boxes when an option is selected
+        choiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                // Remove the selected option from other choice boxes
+                for (int i = 0; i < 6; i++) {
+                    if (i != index) {
+                        availableOptionsList.get(i).clear();
+                        availableOptionsList.get(i).addAll(stdList); // Add all options back
+    
+                        // Remove the selected option from other choice boxes
+                        availableOptionsList.get(i).remove(newValue);
+                    }
+                }
+            }
+        });
+    }
+
     public void pointBuy()
     {
         startAbilityScene();

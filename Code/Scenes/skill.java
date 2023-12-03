@@ -427,7 +427,64 @@ public class skill {
             historyBonus += 3;
         }
     }
+
+    public void updateAbilities() {
+        Integer[] newAbilities = characterData.getAbilities();
+        Integer newStrength = newAbilities[0];
+        Integer newDexterity = newAbilities[1];
+        Integer newConstitution = newAbilities[2];
+        Integer newIntelligence = newAbilities[3];
+        Integer newWisdom = newAbilities[4];
+        Integer newCharisma = newAbilities[5];
+        if (characterData.getRace().equals("Half-Orc")) {
+            newStrength += 2;
+            newConstitution++;
+        }
+        if (characterData.getSubrace().equals("Mountain Dwarf")) {
+            newStrength += 2;
+        }
+        if (characterData.getRace().equals("Elf")) {
+            newDexterity += 2;
+        }
+        if (characterData.getRace().equals("Halfling")) {
+            newDexterity += 2;
+        }
+        if (characterData.getSubrace().equals("Hill Dwarf")) {
+            newConstitution += 2;
+            newWisdom++;
+        }
+        if (characterData.getRace().equals("Dragonborn")) {
+            newConstitution += 2;
+            newCharisma++;
+        }
+        if (characterData.getSubrace().equals("Rock Gnome")) {
+            newIntelligence++;
+        }
+        if (characterData.getSubrace().equals("High Elf")) {
+            newIntelligence++;
+        }
+        if (characterData.getRace().equals("Tiefling")) {
+            newIntelligence++;
+            newCharisma += 2;
+        }
+        if (characterData.getSubrace().equals("Wood Elf")) {
+            newWisdom++;
+        }
+        if (characterData.getRace().equals("Half-Elf")) {
+            newCharisma += 2;
+        }
+
+        newAbilities[0] = newStrength;
+        newAbilities[1] = newDexterity;
+        newAbilities[2] = newConstitution;
+        newAbilities[3] = newIntelligence;
+        newAbilities[4] = newWisdom;
+        newAbilities[5] = newCharisma;
+
+        characterData.setAbilities(newAbilities);
+    }
 }
+
 
 
 
