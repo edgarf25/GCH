@@ -78,10 +78,10 @@
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="450.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="123.0" layoutX="560.0" layoutY="85.0" stroke="#ae8406" strokeType="INSIDE" width="98.0" />
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="236.0" layoutX="678.0" layoutY="78.0" stroke="#ae8406" strokeType="INSIDE" width="319.0" />
-      <Circle fill="#1f93ff11" layoutX="752.0" layoutY="148.0" radius="61.0" stroke="BLACK" strokeType="INSIDE" />
-      <Button fx:id="healButton" layoutX="891.0" layoutY="231.0" mnemonicParsing="false" onMouseClicked="#heal" prefHeight="25.0" prefWidth="42.0" text="Heal" textFill="#07d000" />
-      <TextField fx:id="healthAmount" layoutX="912.0" layoutY="195.0" prefHeight="26.0" prefWidth="42.0" />
-      <Button layoutX="940.0" layoutY="231.0" mnemonicParsing="false" onMouseClicked="#dmg" text="Dmg" textFill="#fc0101" />
+      <Circle fill="#1f93ff11" layoutX="775.0" layoutY="148.0" radius="61.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button fx:id="healButton" layoutX="890.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#heal" prefHeight="25.0" prefWidth="45.0" text="Heal" textFill="#07d000" />
+      <TextField fx:id="healthAmount" layoutX="915.0" layoutY="200.0" prefHeight="25.0" prefWidth="45.0" />
+      <Button layoutX="940.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#dmg" prefHeight="24.0" prefWidth="45.0" text="Dmg" textFill="#fc0101" />
       <Text layoutX="22.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Strength">
          <font>
             <Font name="Century" size="18.0" />
@@ -118,26 +118,26 @@
             <Font name="Century" size="18.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#16426b" height="39.0" layoutX="690.0" layoutY="225.0" stroke="BLACK" strokeType="INSIDE" width="179.0" />
-      <Label fx:id="currentHealth" layoutX="704.0" layoutY="211.0" prefHeight="66.0" prefWidth="68.0" text="1" textFill="#23f7b1">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="40.0" layoutX="690.0" layoutY="225.0" stroke="BLACK" strokeType="INSIDE" width="170.0" />
+      <Label fx:id="currentHealth" alignment="CENTER" contentDisplay="CENTER" layoutX="695.0" layoutY="215.0" prefHeight="50.0" prefWidth="75.0" text="1" textAlignment="CENTER" textFill="RED">
          <font>
-            <Font size="45.0" />
+            <Font name="Century" size="45.0" />
          </font>
       </Label>
-      <Label layoutX="796.0" layoutY="212.0" prefHeight="66.0" prefWidth="68.0" text="10" textFill="#23f7b1">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="780.0" layoutY="215.0" prefHeight="50.0" prefWidth="75.0" text="10" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font size="45.0" />
+            <Font name="Century" size="45.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4aa8ff" height="45.0" layoutX="766.0" layoutY="221.0" stroke="BLACK" strokeType="INSIDE" width="15.0" />
-      <Text layoutX="707.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CUR">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#595959" height="40.0" layoutX="770.0" layoutY="225.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
+      <Text layoutX="705.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CUR">
          <font>
-            <Font size="24.0" />
+            <Font name="Century" size="24.0" />
          </font>
       </Text>
-      <Text layoutX="796.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAX">
+      <Text layoutX="790.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAX">
          <font>
-            <Font size="24.0" />
+            <Font name="Century" size="24.0" />
          </font>
       </Text>
       <Text layoutX="40.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MOD">
@@ -547,7 +547,7 @@
             </Tab>
         </tabs>
       </TabPane>
-      <Label fx:id="nameS" alignment="CENTER" contentDisplay="CENTER" layoutX="813.0" layoutY="81.0" prefHeight="114.0" prefWidth="186.0" text="Name" textAlignment="CENTER">
+      <Label fx:id="nameS" alignment="CENTER" contentDisplay="CENTER" layoutX="800.0" layoutY="100.0" prefHeight="100.0" prefWidth="200.0" text="Name" textAlignment="CENTER">
          <font>
             <Font name="Century" size="32.0" />
          </font>
