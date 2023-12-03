@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.fxml.FXML;
+import javafx.scene.image.ImageView;
 
 public class SummaryController implements Initializable{
     @FXML
@@ -17,6 +18,32 @@ public class SummaryController implements Initializable{
     private TextField healthAmount;
     @FXML
     public Label nameS;
+    @FXML
+    private ImageView missingCircle;
+    @FXML
+    private ImageView barbCircle;
+    @FXML
+    private ImageView bardCircle;
+    @FXML
+    private ImageView clericCircle;
+    @FXML
+    private ImageView rangerCircle;
+    @FXML
+    private ImageView druidCircle;
+    @FXML
+    private ImageView fighterCircle;
+    @FXML
+    private ImageView monkCircle;
+    @FXML
+    private ImageView paladinCircle;
+    @FXML
+    private ImageView rogueCircle;
+    @FXML
+    private ImageView sorcererCircle;
+    @FXML
+    private ImageView warlockCircle;
+    @FXML
+    private ImageView wizardCircle;
     @FXML
     private Label strLabel;
     @FXML
@@ -75,6 +102,70 @@ public class SummaryController implements Initializable{
             wisLabel.setText(String.valueOf(abilityValues[4]));
             chaLabel.setText(String.valueOf(abilityValues[5]));
         }
+        if (characterData.getCharacterClass() != null)
+        {
+            if (characterData.getCharacterClass().equals("Barbarian"))
+            {
+                clearImg();
+                barbCircle.setVisible(true);
+            }
+            else if (characterData.getCharacterClass().equals("Bard"))
+            {
+                clearImg();
+                bardCircle.setVisible(true);
+            }
+            else if (characterData.getCharacterClass().equals("Cleric"))
+            {
+                clearImg();
+                clericCircle.setVisible(true);
+            }
+            else if (characterData.getCharacterClass().equals("Ranger"))
+            {
+                clearImg();
+                rangerCircle.setVisible(true);
+            }
+            else if (characterData.getCharacterClass().equals("Druid"))
+            {
+                clearImg();
+                druidCircle.setVisible(true);
+            }
+            else if (characterData.getCharacterClass().equals("Fighter"))
+            {
+                clearImg();
+                fighterCircle.setVisible(true);
+            }
+            else if (characterData.getCharacterClass().equals("Monk"))
+            {
+                clearImg();
+                monkCircle.setVisible(true);
+            }
+            else if (characterData.getCharacterClass().equals("Paladin"))
+            {
+                clearImg();
+                paladinCircle.setVisible(true);
+            }
+            else if (characterData.getCharacterClass().equals("Rogue"))
+            {
+                clearImg();
+                rogueCircle.setVisible(true);
+            }
+            else if (characterData.getCharacterClass().equals("Sorcerer"))
+            {
+                clearImg();
+                sorcererCircle.setVisible(true);
+            }
+            else if (characterData.getCharacterClass().equals("Warlock"))
+            {
+                clearImg();
+                warlockCircle.setVisible(true);
+            }
+            else if (characterData.getCharacterClass().equals("Wizard"))
+            {
+                clearImg();
+                wizardCircle.setVisible(true);
+            }
+        }
+
 
         if (characterData.getHair() != null) //setting hair
         {
@@ -120,6 +211,22 @@ public class SummaryController implements Initializable{
         
     };
 
+    public void clearImg()
+    {
+        barbCircle.setVisible(false);
+        bardCircle.setVisible(false);
+        monkCircle.setVisible(false);
+        wizardCircle.setVisible(false);
+        missingCircle.setVisible(false);
+        warlockCircle.setVisible(false);
+        paladinCircle.setVisible(false);
+        druidCircle.setVisible(false);
+        clericCircle.setVisible(false);
+        fighterCircle.setVisible(false);
+        rangerCircle.setVisible(false);
+        rogueCircle.setVisible(false);
+        sorcererCircle.setVisible(false);
+    }
     public void heal() // Heal Control
     {
         if (!Objects.equals(healthAmount.getText(), ""))

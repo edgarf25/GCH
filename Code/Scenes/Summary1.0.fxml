@@ -607,12 +607,12 @@
             <Image url="@../src/dndRangerCircle.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="druicCircle" fitHeight="120.0" fitWidth="120.0" layoutX="715.0" layoutY="88.0" visible="false">
+      <ImageView fx:id="druidCircle" fitHeight="120.0" fitWidth="120.0" layoutX="715.0" layoutY="88.0" visible="false">
          <image>
             <Image url="@../src/Druid IconCircle.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="figherCircle" fitHeight="120.0" fitWidth="120.0" layoutX="715.0" layoutY="88.0" visible="false">
+      <ImageView fx:id="fighterCircle" fitHeight="120.0" fitWidth="120.0" layoutX="715.0" layoutY="88.0" visible="false">
          <image>
             <Image url="@../src/Fighter IconCircle.png" />
          </image>
