@@ -5,9 +5,12 @@ import javafx.event.ActionEvent;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
+import java.util.Set;
+
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -141,8 +144,10 @@ public class AbilityController implements Initializable{
     private String[] options = {"Standard Array", "Point Buy", "Dice Roll"};
     private sceneController controller; //created a scenceController instance
     private Integer[] stdArray = {8, 10, 12, 13, 14, 15};
-    private Integer[] finalValues = {8, 8, 8, 8, 8, 8,};
-    List<Integer> stdList = new ArrayList<>(Arrays.asList(stdArray));
+    private Integer[] finalValues = {8, 8, 8, 8, 8, 8};
+    private Integer[] currentArray = {0, 0, 0, 0, 0, 0};
+    private Integer[] uniqueArray;
+    //List<Integer> stdList = new ArrayList<>(Arrays.asList(stdArray));
     private List<Integer> availableOptions;
 
     CharacterData characterData = CharacterData.getInstance(); //created a character data instance
@@ -175,12 +180,118 @@ public class AbilityController implements Initializable{
                 }
                 else if (newValue.equals("Standard Array"))
                 {
+                    Arrays.fill(currentArray, 0);//filling array with 0 if changing ability option so they can re enter options again
                     standardArray();
+                    setStandardArrayOptions(stdArray);
+                    addChoiceBoxListeners();
                 }
                 else if (newValue.equals("Dice Roll"))
                 {
                     diceRoll();
                 }
+            }
+        });
+    }
+
+    // Initialize the options for the six ChoiceBox dropdowns with the values from the standard array
+    private void setStandardArrayOptions(Integer[] array) 
+    {
+        availableOptions = new ArrayList<>(Arrays.asList(array));
+        strDropdown.setItems(FXCollections.observableArrayList(availableOptions));
+        dexDropdown.setItems(FXCollections.observableArrayList(availableOptions));
+        conDropdown.setItems(FXCollections.observableArrayList(availableOptions));
+        intDropdown.setItems(FXCollections.observableArrayList(availableOptions));
+        wisDropdown.setItems(FXCollections.observableArrayList(availableOptions));
+        chaDropdown.setItems(FXCollections.observableArrayList(availableOptions));
+    }
+
+    //method that helps determine which values are taken and which are not
+    public static Integer[] compareArrays(Integer[] array1, Integer[] array2) {
+        // Convert arrays to sets for efficient comparison
+        Set<Integer> set2 = new HashSet<>(Arrays.asList(array2));
+
+        // Create a list to store the unique values
+        List<Integer> uniqueValues = new ArrayList<>();
+
+        // Check each value in array1
+        for (Integer value : array1) {
+            if (!set2.contains(value)) {
+                uniqueValues.add(value);
+            }
+        }
+
+        // Convert the list of unique values to an array
+        return uniqueValues.toArray(new Integer[0]);
+    }
+
+    // Add listeners to the ChoiceBoxes to be able to change what options they can select
+    private void addChoiceBoxListeners() 
+    {
+        
+        strDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                //addint newval to currentArray
+                currentArray[0] = newValue;
+                // calling compareArray function with the stdArray that has base options then setting the options available only to the ones not chosen
+                uniqueArray = compareArrays(stdArray, currentArray);
+                setStandardArrayOptions(uniqueArray);
+                strDropdown.setValue(newValue);
+            }
+        });
+
+        dexDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                // Handle the selection change for dexterity (dex) ChoiceBox
+                currentArray[1] = newValue;
+                // You can perform additional actions if needed
+                uniqueArray = compareArrays(stdArray, currentArray);
+                setStandardArrayOptions(uniqueArray);
+                dexDropdown.setValue(newValue);
+                
+            }
+        });
+
+        conDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                // Handle the selection change for constitution (con) ChoiceBox
+                currentArray[2] = newValue;
+                // You can perform additional actions if needed
+                uniqueArray = compareArrays(stdArray, currentArray);
+                setStandardArrayOptions(uniqueArray);
+                conDropdown.setValue(newValue);
+            }
+        });
+
+        intDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                // Handle the selection change for intelligence (int) ChoiceBox
+                currentArray[3] = newValue;
+                // You can perform additional actions if needed
+                uniqueArray = compareArrays(stdArray, currentArray);
+                setStandardArrayOptions(uniqueArray);
+                intDropdown.setValue(newValue);
+            }
+        });
+
+        wisDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                // Handle the selection change for wisdom (wis) ChoiceBox
+                currentArray[4] = newValue;
+                // You can perform additional actions if needed
+                uniqueArray = compareArrays(stdArray, currentArray);
+                setStandardArrayOptions(uniqueArray);
+                wisDropdown.setValue(newValue);
+            }
+        });
+
+        chaDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                // Handle the selection change for charisma (cha) ChoiceBox
+                currentArray[5] = newValue;
+                // You can perform additional actions if needed
+                uniqueArray = compareArrays(stdArray, currentArray);
+                setStandardArrayOptions(uniqueArray);
+                chaDropdown.setValue(newValue);
             }
         });
     }
@@ -251,45 +362,16 @@ public class AbilityController implements Initializable{
         intDropdown.setVisible(true);
         wisDropdown.setVisible(true);
         chaDropdown.setVisible(true);
-        // Create a list to store the available options for each choice box
-        List<List<Integer>> availableOptionsList = new ArrayList<>();
-        for (int i = 0; i < 6; i++) 
-        {
-            availableOptionsList.add(new ArrayList<>(Arrays.asList(stdArray)));
-        }
-
-        // Set up the choice boxes
-        setChoiceBox(strDropdown, 0, availableOptionsList);
-        setChoiceBox(dexDropdown, 1, availableOptionsList);
-        setChoiceBox(conDropdown, 2, availableOptionsList);
-        setChoiceBox(intDropdown, 3, availableOptionsList);
-        setChoiceBox(wisDropdown, 4, availableOptionsList);
-        setChoiceBox(chaDropdown, 5, availableOptionsList);
+        //setting the dropdowns to null so that if they change to another option those values won't be there
+        strDropdown.setValue(null);
+        dexDropdown.setValue(null);
+        conDropdown.setValue(null);
+        intDropdown.setValue(null);
+        wisDropdown.setValue(null);
+        chaDropdown.setValue(null);
 
     }
 
-    // Helper method to set up a choice box with available options
-    private void setChoiceBox(ChoiceBox<Integer> choiceBox, int index, List<List<Integer>> availableOptionsList) {
-        List<Integer> availableOptions = availableOptionsList.get(index);
-        choiceBox.setVisible(true);
-        choiceBox.setItems(FXCollections.observableArrayList(availableOptions));
-    
-        // Add a listener to update other choice boxes when an option is selected
-        choiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue != null) {
-                // Remove the selected option from other choice boxes
-                for (int i = 0; i < 6; i++) {
-                    if (i != index) {
-                        availableOptionsList.get(i).clear();
-                        availableOptionsList.get(i).addAll(stdList); // Add all options back
-    
-                        // Remove the selected option from other choice boxes
-                        availableOptionsList.get(i).remove(newValue);
-                    }
-                }
-            }
-        });
-    }
 
     public void pointBuy()
     {
