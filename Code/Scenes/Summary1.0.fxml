@@ -766,10 +766,52 @@
             <Image url="@../src/shield.png" />
          </image>
       </ImageView>
-      <Label layoutX="590.0" layoutY="247.0" text="Label" textFill="#f5f5f5">
+      <Label fx:id="armorLabel" layoutX="590.0" layoutY="247.0" text="Label" textFill="#f5f5f5">
          <font>
             <Font name="Baskerville Old Face" size="18.0" />
          </font>
       </Label>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="107.0" layoutX="305.0" layoutY="211.0" stroke="#ae8406" strokeType="INSIDE" width="235.0" />
+      <Text layoutX="317.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STR">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="317.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEX">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="318.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CON">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="438.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INT">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="439.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIS">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="437.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHA">
+         <font>
+            <Font name="Baskerville Old Face" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="365.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saving Throws">
+         <font>
+            <Font name="Baskerville Old Face" size="17.0" />
+         </font>
+      </Text>
+      <Label layoutX="365.0" layoutY="222.0" text="label" />
+      <Label layoutX="366.0" layoutY="249.0" text="label" />
+      <Label layoutX="367.0" layoutY="273.0" text="label" />
+      <Label layoutX="480.0" layoutY="223.0" text="label" />
+      <Label layoutX="480.0" layoutY="248.0" text="label" />
+      <Label layoutX="479.0" layoutY="273.0" text="label" />
    </children>
 </AnchorPane>
