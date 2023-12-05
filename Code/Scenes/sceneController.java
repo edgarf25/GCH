@@ -91,7 +91,7 @@ public class sceneController {
     public void switchToScene7(ActionEvent event) throws IOException 
     {
         counter = 6;
-        loadSceneSummary(event);
+        loadScene(event);
     }
 
    
