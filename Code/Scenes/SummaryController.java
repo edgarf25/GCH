@@ -261,6 +261,7 @@ public class SummaryController implements Initializable{
             classDisplayLabel.setText(characterData.getCharacterClass());
         }
 
+        //setting the skill bonus to their values stored on data class
         animalHandlingLabel.setText(String.valueOf(characterData.getAnimalHandlingBonus()));
         arcanaLabel.setText(String.valueOf(characterData.getArcanaBonus()));
         athleticsLabel.setText(String.valueOf(characterData.getAthleticsBonus()));
