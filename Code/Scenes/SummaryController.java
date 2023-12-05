@@ -76,18 +76,62 @@ public class SummaryController implements Initializable{
     private Label skill2Label;
     @FXML
     private Label backgroundTextLabel;
+    @FXML
+    private Label classDisplayLabel;
+    @FXML
+    private Label animalHandlingLabel;
+    @FXML
+    private Label arcanaLabel;
+    @FXML
+    private Label athleticsLabel;
+    @FXML
+    private Label deceptionLabel;
+    @FXML
+    private Label insightLabel;
+    @FXML
+    private Label intimidationLabel;
+    @FXML
+    private Label investigationLabel;
+    @FXML
+    private Label medicineLabel;
+    @FXML
+    private Label natureLabel;
+    @FXML
+    private Label perceptionLabel;
+    @FXML
+    private Label performanceLabel;
+    @FXML
+    private Label persuasionLabel;
+    @FXML
+    private Label religionLabel;
+    @FXML
+    private Label sleightLabel;
+    @FXML
+    private Label stealthLabel;
+    @FXML
+    private Label survivalLabel;
+    @FXML
+    private Label acrobaticsLabel;
+    @FXML
+    private Label historyLabel;
+
 
     private int healthValue = 1;
     private Integer[] abilityValues;
 
 
     private sceneController controller; //created a scenceController instance
+    private skill skillController;
     CharacterData characterData = CharacterData.getInstance();
 
     
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+
+        skillController = new skill();
+        skillController.startSkills();
+
         if (characterData.getName() != null) 
         {
             nameS.setText(characterData.getName());
@@ -213,9 +257,25 @@ public class SummaryController implements Initializable{
         {
             backgroundTextLabel.setText(characterData.getbackgroundText());
         }
-        
 
-        
+        animalHandlingLabel.setText(String.valueOf(characterData.getAnimalHandlingBonus()));
+        arcanaLabel.setText(String.valueOf(characterData.getArcanaBonus()));
+        athleticsLabel.setText(String.valueOf(characterData.getAthleticsBonus()));
+        deceptionLabel.setText(String.valueOf(characterData.getDeceptionBonus()));
+        insightLabel.setText(String.valueOf(characterData.getInsightBonus()));
+        intimidationLabel.setText(String.valueOf(characterData.getIntimidationBonus()));
+        investigationLabel.setText(String.valueOf(characterData.getInvestigationBonus()));
+        medicineLabel.setText(String.valueOf(characterData.getMedicineBonus()));
+        natureLabel.setText(String.valueOf(characterData.getNatureBonus()));
+        perceptionLabel.setText(String.valueOf(characterData.getPerceptionBonus()));
+        performanceLabel.setText(String.valueOf(characterData.getPerceptionBonus()));
+        persuasionLabel.setText(String.valueOf(characterData.getAnimalHandlingBonus()));
+        religionLabel.setText(String.valueOf(characterData.getReligionBonus()));
+        sleightLabel.setText(String.valueOf(characterData.getSleightOfHandBonus()));
+        stealthLabel.setText(String.valueOf(characterData.getStealthBonus()));
+        survivalLabel.setText(String.valueOf(characterData.getSurvivalBonus()));
+        acrobaticsLabel.setText(String.valueOf(characterData.getAcrobaticsBonus()));
+        historyLabel.setText(String.valueOf(characterData.getHistoryBonus()));
     };
 
     public void clearImg()

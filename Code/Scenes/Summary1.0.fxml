@@ -339,25 +339,24 @@
             <Font name="Century" size="12.0" />
          </font>
       </Text>
-      <Label layoutX="220.0" layoutY="277.0" text="Label" />
-      <Label layoutX="220.0" layoutY="306.0" text="Label" />
-      <Label layoutX="220.0" layoutY="337.0" text="Label" />
-      <Label layoutX="220.0" layoutY="367.0" text="Label" />
-      <Label layoutX="220.0" layoutY="397.0" text="Label" />
-      <Label layoutX="220.0" layoutY="427.0" text="Label" />
-      <Label layoutX="220.0" layoutY="457.0" text="Label" />
-      <Label layoutX="220.0" layoutY="487.0" text="Label" />
-      <Label layoutX="220.0" layoutY="517.0" text="Label" />
-      <Label layoutX="220.0" layoutY="546.0" text="Label" />
-      <Label layoutX="220.0" layoutY="577.0" text="Label" />
-      <Label layoutX="220.0" layoutY="607.0" text="Label" />
-      <Label layoutX="220.0" layoutY="637.0" text="Label" />
-      <Label layoutX="220.0" layoutY="667.0" text="Label" />
-      <Label layoutX="220.0" layoutY="697.0" text="Label" />
-      <Label layoutX="220.0" layoutY="725.0" text="Label" />
-      <Label layoutX="220.0" layoutY="750.0" text="Label" />
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="35.0" layoutX="193.0" layoutY="268.0" stroke="#ae8406" strokeType="INSIDE" width="82.0" />
-      <Label layoutX="220.0" layoutY="776.0" text="Label" />
+      <Label fx:id="acrobaticsLabel" layoutX="220.0" layoutY="277.0" text="Label" />
+      <Label fx:id="animalHandlingLabel" layoutX="220.0" layoutY="306.0" text="Label" />
+      <Label fx:id="arcanaLabel" layoutX="220.0" layoutY="337.0" text="Label" />
+      <Label fx:id="athleticsLabel" layoutX="220.0" layoutY="367.0" text="Label" />
+      <Label fx:id="deceptionLabel" layoutX="220.0" layoutY="397.0" text="Label" />
+      <Label fx:id="insightLabel" layoutX="220.0" layoutY="427.0" text="Label" />
+      <Label fx:id="intimidationLabel" layoutX="220.0" layoutY="457.0" text="Label" />
+      <Label fx:id="investigationLabel" layoutX="220.0" layoutY="487.0" text="Label" />
+      <Label fx:id="medicineLabel" layoutX="220.0" layoutY="517.0" text="Label" />
+      <Label fx:id="natureLabel" layoutX="220.0" layoutY="546.0" text="Label" />
+      <Label fx:id="perceptionLabel" layoutX="220.0" layoutY="577.0" text="Label" />
+      <Label fx:id="performanceLabel" layoutX="220.0" layoutY="607.0" text="Label" />
+      <Label fx:id="persuasionLabel" layoutX="220.0" layoutY="637.0" text="Label" />
+      <Label fx:id="religionLabel" layoutX="220.0" layoutY="667.0" text="Label" />
+      <Label fx:id="sleightLabel" layoutX="220.0" layoutY="697.0" text="Label" />
+      <Label fx:id="stealthLabel" layoutX="220.0" layoutY="725.0" text="Label" />
+      <Label fx:id="survivalLabel" layoutX="220.0" layoutY="750.0" text="Label" />
+      <Label fx:id="historyLabel" layoutX="220.0" layoutY="776.0" text="Label" />
       <TabPane layoutX="305.0" layoutY="322.0" prefHeight="514.0" prefWidth="691.0" tabClosingPolicy="UNAVAILABLE">
          <tabs>
             <Tab text="Background">
