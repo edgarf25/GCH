@@ -257,6 +257,9 @@ public class SummaryController implements Initializable{
         {
             backgroundTextLabel.setText(characterData.getbackgroundText());
         }
+        if(characterData.getCharacterClass() != null){
+            classDisplayLabel.setText(characterData.getCharacterClass());
+        }
 
         animalHandlingLabel.setText(String.valueOf(characterData.getAnimalHandlingBonus()));
         arcanaLabel.setText(String.valueOf(characterData.getArcanaBonus()));

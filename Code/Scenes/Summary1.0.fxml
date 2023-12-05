@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -508,7 +509,7 @@
                            </image>
                         </ImageView>
                         <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="133.0" layoutX="172.0" layoutY="65.0" stroke="#ae8406" strokeType="INSIDE" width="321.0" />
-                        <Label layoutX="271.0" layoutY="68.0" text="classDisplay ">
+                        <Label fx:id="classDisplayLabel" layoutX="271.0" layoutY="68.0" text="classDisplay ">
                            <font>
                               <Font name="Baskerville Old Face" size="20.0" />
                            </font>
@@ -647,7 +648,10 @@
             </Tab>
             <Tab text="Notes">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea layoutX="14.0" layoutY="14.0" prefHeight="461.0" prefWidth="664.0" />
+                     </children></AnchorPane>
                </content>
             </Tab>
          </tabs>

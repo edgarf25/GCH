@@ -395,5 +395,7 @@ public class CharacterData {
     public void setBackgroundText(String backgroundText) {
         this.backgroundText = backgroundText;
     }
-    
+
+
+
 }
