@@ -483,9 +483,24 @@ public class skill {
 
         characterData.setAbilities(newAbilities);
     }
+
+    public void updateHealth() {
+        int health = 0;
+        if (characterData.getCharacterClass().equals("Barbarian")) {
+            health = 12 + characterData.getAbilities()[2];
+            characterData.setHealthAmount(health);
+        }
+        if (characterData.getCharacterClass().equals("Fighter") || characterData.getCharacterClass().equals("Paladin") || characterData.getCharacterClass().equals("Ranger")) {
+            health = 10 + characterData.getAbilities()[2];
+            characterData.setHealthAmount(health);
+        }
+        if (characterData.getCharacterClass().equals("Bard") || characterData.getCharacterClass().equals("Cleric") || characterData.getCharacterClass().equals("Druid") || characterData.getCharacterClass().equals("Monk") || characterData.getCharacterClass().equals("Rogue") || characterData.getCharacterClass().equals("Warlock")) {
+            health = 8 + characterData.getAbilities()[2];
+            characterData.setHealthAmount(health);
+        }
+        if (characterData.getCharacterClass().equals("Sorcerer") || characterData.getCharacterClass().equals("Wizard")) {
+            health = 6 + characterData.getAbilities()[2];
+            characterData.setHealthAmount(health);
+        }
+    }
 }
-
-
-
-
-
