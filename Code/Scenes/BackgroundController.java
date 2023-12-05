@@ -87,6 +87,16 @@ public class BackgroundController implements Initializable {
         skillBox1.setVisible(false);
         skillBox2.setVisible(false);
         ageEntry.setEditable(true);
+        saveData();
+        nameText.setText(characterData.getName());
+        hairText.setText(characterData.getHair());
+        skinText.setText((characterData.getSkin()));
+        eyesText.setText((characterData.getEyes()));
+        heightText.setText((characterData.getHeight()));
+        weightText.setText((characterData.getWeight()));
+        ageEntry.setText(characterData.getAge());
+        genderText.setText((characterData.getGender()));
+        backgroundChoiceBox.getSelectionModel().select(characterData.getBackground());
 
         backgroundChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
@@ -265,6 +275,182 @@ public class BackgroundController implements Initializable {
         });
     }
 
+    public void saveData()
+    {
+        String newValue = characterData.getBackground();
+        if (newValue != null) {
+            skillBox1.getItems().clear();
+            skillBox2.getItems().clear();
+
+            if (newValue.equals("Acolyte")) {
+                skillText1.setEditable(false);
+                skillText2.setEditable(false);
+                backgroundTextBox.setEditable(false);
+                skillText1.setVisible(true);
+                skillText2.setVisible(true);
+                skillBox1.setVisible(false);
+                skillBox2.setVisible(false);
+                backgroundTextBox.setText(descriptions[0]);
+                skillText1.setText("Insight");
+                skillText2.setText("Religion");
+                SkillProficiencies("Insight", "Religion"); //setting the skill and proficiencies on data class
+            }
+            else if (newValue.equals("Criminal/Spy")) {
+                skillText1.setEditable(false);
+                skillText2.setEditable(false);
+                backgroundTextBox.setEditable(false);
+                skillText1.setVisible(true);
+                skillText2.setVisible(true);
+                skillBox1.setVisible(false);
+                skillBox2.setVisible(false);
+                backgroundTextBox.setText(descriptions[1]);
+                skillText1.setText("Deception");
+                skillText2.setText("Stealth");
+                SkillProficiencies("Deception", "Stealth"); //setting the skill and proficiencies on data class
+            }
+            else if (newValue.equals("Folk Hero")) {
+                skillText1.setEditable(false);
+                skillText2.setEditable(false);
+                backgroundTextBox.setEditable(false);
+                skillText1.setVisible(true);
+                skillText2.setVisible(true);
+                skillBox1.setVisible(false);
+                skillBox2.setVisible(false);
+                backgroundTextBox.setText(descriptions[2]);
+                skillText1.setText("Animal Handling");
+                skillText2.setText("Survival");
+                SkillProficiencies("Animal Handling", "Survival"); //setting the skill and proficiencies on data class
+            }
+            else if (newValue.equals("Haunted One")) {
+                backgroundTextBox.setText(descriptions[3]);
+                skillText1.setVisible(false);
+                skillText2.setVisible(false);
+                backgroundTextBox.setEditable(false);
+                skillBox1.setVisible(true);
+                skillBox2.setVisible(true);
+                skillBox1.getItems().addAll(hauntedOneProf);
+                skillBox2.getItems().addAll(hauntedOneProf);
+                skillBox1.getSelectionModel().selectedItemProperty().addListener((observable2, oldValue2, newValue2) -> {
+                    if (newValue2 != null)
+                    {
+                        if (newValue2.equals("Arcana")) {
+                            if (skillBox2.getSelectionModel().isEmpty() || skillBox2.getValue().equals("Arcana")) {
+                                characterData.setSkillsAndProficiencies1("Arcana"); //setting the skill and proficiencies on data class
+                                skillBox2.getItems().clear();
+                                skillBox2.getItems().addAll(noArcana);
+                            }
+                        }
+                        else if (newValue2.equals("Investigation")) {
+                            if (skillBox2.getSelectionModel().isEmpty() || skillBox2.getValue().equals("Investigation")) {
+                                characterData.setSkillsAndProficiencies1("Investigation"); //setting the skill and proficiencies on data class
+                                skillBox2.getItems().clear();
+                                skillBox2.getItems().addAll(noInvestigation);
+                            }
+                        }
+                        else if (newValue2.equals("Religion")) {
+                            if (skillBox2.getSelectionModel().isEmpty() || skillBox2.getValue().equals("Religion")) {
+                                characterData.setSkillsAndProficiencies1("Religion"); //setting the skill and proficiencies on data class
+                                skillBox2.getItems().clear();
+                                skillBox2.getItems().addAll(noReligion);
+                            }
+                        }
+                        else if (newValue2.equals("Survival")) {
+                            if (skillBox2.getSelectionModel().isEmpty() || skillBox2.getValue().equals("Survival")) {
+                                characterData.setSkillsAndProficiencies1("Survival"); //setting the skill and proficiencies on data class
+                                skillBox2.getItems().clear();
+                                skillBox2.getItems().addAll(noSurvival);
+                            }
+                        }
+                    }
+                });
+                skillBox2.getSelectionModel().selectedItemProperty().addListener((observable3, oldValue3, newValue3) -> {
+                    if (newValue3 != null)
+                    {
+                        if (newValue3.equals("Arcana")) {
+                            if (skillBox1.getSelectionModel().isEmpty() || skillBox1.getValue().equals("Arcana")) {
+                                characterData.setSkillsAndProficiencies2("Arcana"); //setting the skill and proficiencies on data class
+                                skillBox1.getItems().clear();
+                                skillBox1.getItems().addAll(noArcana);
+                            }
+                        }
+                        else if (newValue3.equals("Investigation")) {
+                            if (skillBox1.getSelectionModel().isEmpty() || skillBox1.getValue().equals("Investigation")) {
+                                characterData.setSkillsAndProficiencies2("Investigation"); //setting the skill and proficiencies on data class
+                                skillBox1.getItems().clear();
+                                skillBox1.getItems().addAll(noInvestigation);
+                            }
+                        }
+                        else if (newValue3.equals("Religion")) {
+                            if (skillBox1.getSelectionModel().isEmpty() || skillBox1.getValue().equals("Religion")) {
+                                characterData.setSkillsAndProficiencies2("Religion"); //setting the skill and proficiencies on data class
+                                skillBox1.getItems().clear();
+                                skillBox1.getItems().addAll(noReligion);
+                            }
+                        }
+                        else if (newValue3.equals("Survival")) {
+                            if (skillBox1.getSelectionModel().isEmpty() || skillBox1.getValue().equals("Survival")) {
+                                characterData.setSkillsAndProficiencies2("Survival"); //setting the skill and proficiencies on data class
+                                skillBox1.getItems().clear();
+                                skillBox1.getItems().addAll(noSurvival);
+                            }
+                        }
+                    }
+                });
+            }
+            else if (newValue.equals("Noble")) {
+                skillText1.setEditable(false);
+                skillText2.setEditable(false);
+                backgroundTextBox.setEditable(false);
+                skillText1.setVisible(true);
+                skillText2.setVisible(true);
+                skillBox1.setVisible(false);
+                skillBox2.setVisible(false);
+                backgroundTextBox.setText(descriptions[4]);
+                skillText1.setText("History");
+                skillText2.setText("Persuasion");
+                SkillProficiencies("History", "Persuasion");
+            }
+            else if (newValue.equals("Sage")) {
+                skillText1.setEditable(false);
+                skillText2.setEditable(false);
+                backgroundTextBox.setEditable(false);
+                skillText1.setVisible(true);
+                skillText2.setVisible(true);
+                skillBox1.setVisible(false);
+                skillBox2.setVisible(false);
+                backgroundTextBox.setText(descriptions[5]);
+                skillText1.setText("Arcana");
+                skillText2.setText("History");
+                SkillProficiencies("Arcana", "History");
+            }
+            else if (newValue.equals("Soldier")) {
+                skillText1.setEditable(false);
+                skillText2.setEditable(false);
+                backgroundTextBox.setEditable(false);
+                skillText1.setVisible(true);
+                skillText2.setVisible(true);
+                skillBox1.setVisible(false);
+                skillBox2.setVisible(false);
+                backgroundTextBox.setText(descriptions[6]);
+                skillText1.setText("Athletics");
+                skillText2.setText("Intimidation");
+                SkillProficiencies("Athletics", "Intimidation");
+            }
+            else {
+                backgroundTextBox.setEditable(true);
+                backgroundTextBox.setText("");
+                skillText1.setVisible(true);
+                skillText1.clear();
+                skillText2.setVisible(true);
+                skillText2.clear();
+                skillBox1.setVisible(false);
+                skillBox2.setVisible(false);
+                skillText1.setEditable(true);
+                skillText2.setEditable(true);
+            }
+
+        }
+    }
     public void updateName() //updating name on data class
     {
         characterData.setName(nameText.getText());
