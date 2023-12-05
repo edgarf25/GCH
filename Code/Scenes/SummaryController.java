@@ -114,6 +114,18 @@ public class SummaryController implements Initializable{
     private Label acrobaticsLabel;
     @FXML
     private Label historyLabel;
+    @FXML
+    private Label strThrowLabel;
+    @FXML
+    private Label dexThrowLabel;
+    @FXML
+    private Label conThrowLabel;
+    @FXML
+    private Label intThrowLabel;
+    @FXML
+    private Label wisThrowLabel;
+    @FXML
+    private Label chaThrowLabel;
 
 
     private int healthValue = 1;
@@ -280,6 +292,12 @@ public class SummaryController implements Initializable{
         survivalLabel.setText(String.valueOf(characterData.getSurvivalBonus()));
         acrobaticsLabel.setText(String.valueOf(characterData.getAcrobaticsBonus()));
         historyLabel.setText(String.valueOf(characterData.getHistoryBonus()));
+        strThrowLabel.setText(String.valueOf(characterData.getStrThrow()));
+        dexThrowLabel.setText(String.valueOf(characterData.getDexThrow()));
+        conThrowLabel.setText(String.valueOf(characterData.getConThrow()));
+        intThrowLabel.setText(String.valueOf(characterData.getIntThrow()));
+        wisThrowLabel.setText(String.valueOf(characterData.getWisThrow()));
+        chaThrowLabel.setText(String.valueOf(characterData.getChaThrow()));
     };
 
     public void clearImg()
