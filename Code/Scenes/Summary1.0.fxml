@@ -642,6 +642,16 @@
                               <Image url="@../src/bottle.png" />
                            </image>
                         </ImageView>
+                        <TextArea fx:id="equipmentArea" blendMode="MULTIPLY" editable="false" layoutX="146.0" layoutY="105.0" prefHeight="135.0" prefWidth="343.0">
+                           <font>
+                              <Font name="Century" size="12.0" />
+                           </font>
+                        </TextArea>
+                        <TextArea fx:id="spellsArea" blendMode="MULTIPLY" editable="false" layoutX="149.0" layoutY="345.0" prefHeight="130.0" prefWidth="335.0">
+                           <font>
+                              <Font name="Century" size="12.0" />
+                           </font>
+                        </TextArea>
                      </children>
                   </AnchorPane>
                </content>

@@ -2,6 +2,7 @@ package Scenes;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
@@ -48,7 +49,7 @@ public class EquipmentController implements Initializable {
 
     private int amountOfGold = 0;
     private String goldLine = "";
-
+    CharacterData characterData = CharacterData.getInstance();
 
     public void initialize(URL arg0, ResourceBundle arg1){
         //  Weapons Array Lists of String
@@ -160,6 +161,7 @@ public class EquipmentController implements Initializable {
         {
             ListText += weaponText;
             TextAreaList.setText(ListText);
+            characterData.setEquipment(ListText);
             weaponText = "";
 
         }
@@ -170,6 +172,7 @@ public class EquipmentController implements Initializable {
         {
             ListText += armorText;
             TextAreaList.setText(ListText);
+            characterData.setEquipment(ListText);
             armorText = "";
 
         }
@@ -180,6 +183,7 @@ public class EquipmentController implements Initializable {
         {
             ListText += posText;
             TextAreaList.setText(ListText);
+            characterData.setEquipment(ListText);
             posText = "";
         }
     }
@@ -189,6 +193,14 @@ public class EquipmentController implements Initializable {
         {
             ListText += spellText;
             TextAreaList.setText(ListText);
+            if (characterData.getSpells() != null)
+            {
+                characterData.setSpells(characterData.getSpells() + spellText + "\n");
+            }
+            else
+            {
+                characterData.setSpells(spellText + "\n");
+            }
             spellText = "";
         }
     }
@@ -208,6 +220,7 @@ public class EquipmentController implements Initializable {
                  ListText +=  "Gold: "  +  amountOfGold + "g\n";
              }
              TextAreaList.setText(ListText);
+             characterData.setEquipment(ListText);
              GoldInput.setText("");
          }
 

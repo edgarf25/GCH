@@ -48,7 +48,8 @@ public class CharacterData {
     private int intThrow;
     private int wisThrow;
     private int chaThrow;
-    private List<String> equipment;
+    private String equipment;
+    private String spells;
     private String notes;
 
     // Private constructor to prevent external instantiation
@@ -225,14 +226,23 @@ public class CharacterData {
         this.gender = gender;
     }
 
-    public List<String> getEquipment() 
+    public String getEquipment()
     {
         return equipment;
     }
 
-    public void setEquipment(List<String> equipment) 
+    public void setEquipment(String equipment)
     {
         this.equipment = equipment;
+    }
+    public String getSpells()
+    {
+        return spells;
+    }
+
+    public void setSpells(String spells)
+    {
+        this.spells = spells;
     }
 
     public int getAcrobaticsBonus() {
