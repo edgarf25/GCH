@@ -1,0 +1,11 @@
+/* styles.css */
+
+.root {
+    -fx-font-size: 14px;
+}
+
+/* Set scene size as a percentage of the screen width and height */
+.scene {
+    -fx-pref-width: 80vw;
+    -fx-pref-height: 80vh;
+}
