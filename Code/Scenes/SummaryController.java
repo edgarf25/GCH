@@ -129,7 +129,10 @@ public class SummaryController implements Initializable{
     private Label chaThrowLabel;
     @FXML
     private TextArea notesText;
-
+    @FXML
+    private TextArea equipmentArea;
+    @FXML
+    private TextArea spellsArea;
     private int healthValue = 1;
     private Integer[] abilityValues;
 
@@ -274,8 +277,18 @@ public class SummaryController implements Initializable{
         if(characterData.getCharacterClass() != null){
             classDisplayLabel.setText(characterData.getCharacterClass());
         }
-
-        notesText.setText(characterData.getNotes());
+        if (characterData.getEquipment() != null)
+        {
+            equipmentArea.setText(characterData.getEquipment());
+        }
+        if (characterData.getSpells() != null)
+        {
+            spellsArea.setText(characterData.getSpells());
+        }
+        if (characterData.getNotes() != null)
+        {
+            notesText.setText(characterData.getNotes());
+        }
 
         //setting the skill bonus to their values stored on data class
         animalHandlingLabel.setText(String.valueOf(characterData.getAnimalHandlingBonus()));
