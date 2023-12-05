@@ -32,12 +32,12 @@
          </font>
       </Label>
       <ChoiceBox fx:id="subraceChoiceBox" blendMode="HARD_LIGHT" layoutX="403.0" layoutY="245.0" prefWidth="206.0" />
-      <Label layoutX="52.0" layoutY="374.0" text="Description">
+      <Label layoutX="292.0" layoutY="328.0" text="Description">
          <font>
-            <Font size="25.0" />
+            <Font name="Century" size="25.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="150.0" layoutX="50.0" layoutY="410.0" stroke="#ae8406" strokeType="INSIDE" width="650.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="150.0" layoutX="50.0" layoutY="385.0" stroke="#ae8406" strokeType="INSIDE" width="650.0" />
       <Button layoutX="684.0" layoutY="557.0" mnemonicParsing="false" onAction="#next" text="Next" />
       <Button layoutX="14.0" layoutY="557.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
       <AnchorPane layoutX="-4.0" layoutY="3.0" prefHeight="68.0" prefWidth="759.0">
@@ -87,10 +87,10 @@
             <Button layoutX="650.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToScene7" opacity="0.0" text="Summary" />
          </children>
       </AnchorPane>
-      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="150.0" layoutX="50.0" layoutY="410.0" stroke="#ae8406" strokeType="INSIDE" width="650.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="150.0" layoutX="50.0" layoutY="385.0" stroke="#ae8406" strokeType="INSIDE" width="650.0" />
       <Button layoutX="684.0" layoutY="557.0" mnemonicParsing="false" onAction="#next" text="Next" />
       <Button layoutX="14.0" layoutY="557.0" mnemonicParsing="false" onAction="#prev" text="Previous" />
-      <TextArea fx:id="backgroundDescription" blendMode="MULTIPLY" editable="false" layoutX="50.0" layoutY="410.0" prefHeight="150.0" prefWidth="650.0" wrapText="true">
+      <TextArea fx:id="backgroundDescription" blendMode="MULTIPLY" editable="false" layoutX="50.0" layoutY="386.0" prefHeight="150.0" prefWidth="650.0" wrapText="true">
          <font>
             <Font name="Lucida Calligraphy Italic" size="18.0" />
          </font></TextArea>

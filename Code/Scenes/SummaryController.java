@@ -77,6 +77,10 @@ public class SummaryController implements Initializable{
     @FXML
     private Label backgroundTextLabel;
 
+    @FXML
+    private Label classDisplayLabel;
+    @FXML
+    private Label spellDisplay;
     private int healthValue = 1;
     private Integer[] abilityValues;
 
@@ -213,9 +217,12 @@ public class SummaryController implements Initializable{
         {
             backgroundTextLabel.setText(characterData.getbackgroundText());
         }
-        
+        if(characterData.getCharacterClass() != null){
+            classDisplayLabel.setText(characterData.getCharacterClass());
+        }
 
-        
+
+
     };
 
     public void clearImg()
