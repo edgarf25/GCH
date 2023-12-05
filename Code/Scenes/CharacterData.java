@@ -444,5 +444,13 @@ public class CharacterData {
     public void setChaThrow(int chaThrow) {
         this.chaThrow = chaThrow;
     }
+    public int getWisThrow() {
+        return wisThrow;
+    }
+
+    public void setWisThrow(int wisThrow) {
+        this.wisThrow = wisThrow;
+    }
+
 
 }
