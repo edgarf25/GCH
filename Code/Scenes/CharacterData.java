@@ -42,6 +42,12 @@ public class CharacterData {
     private int historyBonus;
     private int armorAmount;
     private int healthAmount;
+    private int strThrow;
+    private int dexThrow;
+    private int conThrow;
+    private int intThrow;
+    private int wisThrow;
+    private int chaThrow;
     private List<String> equipment;
 
     // Private constructor to prevent external instantiation
@@ -396,6 +402,44 @@ public class CharacterData {
         this.backgroundText = backgroundText;
     }
 
+    public int getStrThrow() {
+        return strThrow;
+    }
+    
+    public void setStrThrow(int strThrow) {
+        this.strThrow = strThrow;
+    }
 
+    public int getDexThrow() {
+        return dexThrow;
+    }
+    
+    public void setDexThrow(int dexThrow) {
+        this.dexThrow = dexThrow;
+    }
+
+    public int getConThrow() {
+        return conThrow;
+    }
+    
+    public void setConThrow(int conThrow) {
+        this.conThrow = conThrow;
+    }
+
+    public int getIntThrow() {
+        return intThrow;
+    }
+
+    public void setIntThrow(int intThrow) {
+        this.intThrow = intThrow;
+    }
+    
+    public int getChaThrow() {
+        return chaThrow;
+    }
+    
+    public void setChaThrow(int chaThrow) {
+        this.chaThrow = chaThrow;
+    }
 
 }
