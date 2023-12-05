@@ -23,162 +23,209 @@ public class skill {
     public void updateAcrobaticsBonus() {
         if (characterData.getSubrace().equals("Lightfoot Halfling")) { // checking for bonuses for acrobatics
             acrobaticsBonus++;
+            characterData.setAcrobaticsBonus(acrobaticsBonus);
         }
         if (characterData.getSubrace().equals("Wood Elf")) {
             acrobaticsBonus++;
+            characterData.setAcrobaticsBonus(acrobaticsBonus);
         }
         if (characterData.getSkillsAndProficiencies1().equals("Acrobatics") || characterData.getSkillsAndProficiencies2().equals("Acrobatics")) {
             acrobaticsBonus++;
+            characterData.setAcrobaticsBonus(acrobaticsBonus);
         }
         if (characterData.getAbilities()[1] <= 9) {
             acrobaticsBonus--;
+            characterData.setAcrobaticsBonus(acrobaticsBonus);
         }
         else if (characterData.getAbilities()[1] <= 13 && characterData.getAbilities()[1] > 11) {
             acrobaticsBonus++;
+            characterData.setAcrobaticsBonus(acrobaticsBonus);
         }
         else if (characterData.getAbilities()[1] <= 15) {
             acrobaticsBonus += 2;
+            characterData.setAcrobaticsBonus(acrobaticsBonus);
         }
         else if (characterData.getAbilities()[1] <= 20) {
             acrobaticsBonus += 3;
+            characterData.setAcrobaticsBonus(acrobaticsBonus);
         }
     }
 
     public void updateAnimalHandlingBonus() {
         if (characterData.getSubrace().equals("Hill Dwarf")) {
             animalHandlingBonus++;
+            characterData.setAnimalHandlingBonus(animalHandlingBonus);
         }
         if (characterData.getSubrace().equals("Stout Halfling")) {
             animalHandlingBonus++;
+            characterData.setAnimalHandlingBonus(animalHandlingBonus);
         }
         if (characterData.getSkillsAndProficiencies1().equals("Animal Handlling") || characterData.getSkillsAndProficiencies2().equals("Animal Handling")) {
             animalHandlingBonus++;
+            characterData.setAnimalHandlingBonus(animalHandlingBonus);
         }
         if (characterData.getAbilities()[4] <= 9) {
             animalHandlingBonus--;
+            characterData.setAnimalHandlingBonus(animalHandlingBonus);
         }
         else if (characterData.getAbilities()[4] <= 13 && characterData.getAbilities()[4] > 11) {
             animalHandlingBonus++;
+            characterData.setAnimalHandlingBonus(animalHandlingBonus);
         }
         else if (characterData.getAbilities()[4] <= 15) {
             animalHandlingBonus += 2;
+            characterData.setAnimalHandlingBonus(animalHandlingBonus);
         }
         else if (characterData.getAbilities()[4] <= 20) {
             animalHandlingBonus += 3;
+            characterData.setAnimalHandlingBonus(animalHandlingBonus);
         }
     }
 
     public void updateArcanaBonus() {
         if (characterData.getSubrace().equals("High Elf")) {
             arcanaBonus++;
+            characterData.setArcanaBonus(arcanaBonus);
         }
         if (characterData.getSkillsAndProficiencies1().equals("Arcana") || characterData.getSkillsAndProficiencies2().equals("Arcana")) {
             arcanaBonus++;
+            characterData.setArcanaBonus(arcanaBonus);
         }
         if (characterData.getAbilities()[3] <= 9) {
             arcanaBonus--;
+            characterData.setArcanaBonus(arcanaBonus);
         }
         else if (characterData.getAbilities()[3] <= 13 && characterData.getAbilities()[3] > 11) {
             arcanaBonus++;
+            characterData.setArcanaBonus(arcanaBonus);
         }
         else if (characterData.getAbilities()[3] <= 15) {
             arcanaBonus += 2;
+            characterData.setArcanaBonus(arcanaBonus);
         }
         else if (characterData.getAbilities()[3] <= 20) {
             arcanaBonus += 3;
+            characterData.setArcanaBonus(arcanaBonus);
         }
     }
 
     public void updateAthleticsBonus() {
         if (characterData.getSubrace().equals("Mountain Dwarf")) {
             athleticsBonus++;
+            characterData.setAthleticsBonus(athleticsBonus);
         }
         if (characterData.getSkillsAndProficiencies1().equals("Athletics") || characterData.getSkillsAndProficiencies2().equals("Athletics")) {
             animalHandlingBonus++;
+            characterData.setAthleticsBonus(athleticsBonus);
         }
         if (characterData.getAbilities()[0] <= 9) {
             athleticsBonus--;
+            characterData.setAthleticsBonus(athleticsBonus);
         }
         else if (characterData.getAbilities()[0] <= 13 && characterData.getAbilities()[0] > 11) {
             athleticsBonus++;
+            characterData.setAthleticsBonus(athleticsBonus);
         }
         else if (characterData.getAbilities()[0] <= 15) {
             athleticsBonus += 2;
+            characterData.setAthleticsBonus(athleticsBonus);
         }
         else if (characterData.getAbilities()[0] <= 20) {
             athleticsBonus += 3;
+            characterData.setAthleticsBonus(athleticsBonus);
         }
     }
 
     public void updateDeceptionBonus() {
         if (characterData.getRace().equals("Tiefling")) {
             deceptionBonus++;
+            characterData.setDeceptionBonus(deceptionBonus);
         }
         if (characterData.getRace().equals("Half-Elf")) {
             deceptionBonus++;
+            characterData.setDeceptionBonus(deceptionBonus);
         }
         if (characterData.getSkillsAndProficiencies1().equals("Deception") || characterData.getSkillsAndProficiencies2().equals("Deception")) {
             deceptionBonus++;
+            characterData.setDeceptionBonus(deceptionBonus);
         }
         if (characterData.getAbilities()[5] <= 9) {
             deceptionBonus--;
+            characterData.setDeceptionBonus(deceptionBonus);
         }
         else if (characterData.getAbilities()[5] <= 13 && characterData.getAbilities()[5] > 11) {
             deceptionBonus++;
+            characterData.setDeceptionBonus(deceptionBonus);
         }
         else if (characterData.getAbilities()[5] <= 15) {
             deceptionBonus += 2;
+            characterData.setDeceptionBonus(deceptionBonus);
         }
         else if (characterData.getAbilities()[5] <= 20) {
             deceptionBonus += 3;
+            characterData.setDeceptionBonus(deceptionBonus);
         }
     }
 
     public void updateInsightBonus() {
         if (characterData.getSubrace().equals("Wood Elf")) {
             insightBonus++;
+            characterData.setInsightBonus(insightBonus);
         }
         if (characterData.getSubrace().equals("Hill Dwarf")) {
             insightBonus++;
+            characterData.setInsightBonus(insightBonus);
         }
         if (characterData.getSkillsAndProficiencies1().equals("Insight") || characterData.getSkillsAndProficiencies2().equals("Insight")) {
             insightBonus++;
+            characterData.setInsightBonus(insightBonus);
         }
         if (characterData.getAbilities()[4] <= 9) {
             insightBonus--;
+            characterData.setInsightBonus(insightBonus);
         }
         else if (characterData.getAbilities()[4] <= 13 && characterData.getAbilities()[4] > 11) {
             insightBonus++;
+            characterData.setInsightBonus(insightBonus);
         }
         else if (characterData.getAbilities()[4] <= 15) {
             insightBonus += 2;
+            characterData.setInsightBonus(insightBonus);
         }
         else if (characterData.getAbilities()[4] <= 20) {
             insightBonus += 3;
+            characterData.setInsightBonus(insightBonus);
         }
     }
 
     public void updateIntimidationBonus() {
         if (characterData.getRace().equals("Dragonborn")) {
             intimidationBonus++;
+            characterData.setIntimidationBonus(intimidationBonus);
         }
         if (characterData.getRace().equals("Half-Orc")) {
             intimidationBonus++;
+            characterData.setIntimidationBonus(intimidationBonus);
         }
         if (characterData.getSkillsAndProficiencies1().equals("Intimidation") || characterData.getSkillsAndProficiencies2().equals("Intimidation")) {
             intimidationBonus++;
+            characterData.setIntimidationBonus(intimidationBonus);
         }
         if (characterData.getAbilities()[5] <= 9) {
             intimidationBonus--;
+            characterData.setIntimidationBonus(intimidationBonus);
         }
         else if (characterData.getAbilities()[5] <= 13 && characterData.getAbilities()[5] > 11) {
             intimidationBonus++;
+            characterData.setIntimidationBonus(intimidationBonus);
         }
         else if (characterData.getAbilities()[5] <= 15) {
             intimidationBonus += 2;
+            characterData.setIntimidationBonus(intimidationBonus);
         }
         else if (characterData.getAbilities()[5] <= 20) {
             intimidationBonus += 3;
+            characterData.setIntimidationBonus(intimidationBonus);
         }
     }
 

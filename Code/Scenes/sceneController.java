@@ -44,6 +44,20 @@ public class sceneController {
         stage.show(); 
     }
 
+     public void loadSceneSummary(ActionEvent event) throws IOException
+    {
+        Image cursor = new Image("/src/sword.png");//changing cursor
+        root = FXMLLoader.load(getClass().getResource(array[counter]));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        String css = this.getClass().getResource("summary.css").toExternalForm();
+        scene.getStylesheets().add(css);
+        scene.setCursor(new ImageCursor(cursor));
+        stage.setScene(scene);
+        stage.centerOnScreen(); // Centering the stage on the screen
+        stage.show(); 
+    }
+
     public void switchToScene2(ActionEvent event) throws IOException 
     {
         counter = 1;
@@ -77,7 +91,7 @@ public class sceneController {
     public void switchToScene7(ActionEvent event) throws IOException 
     {
         counter = 6;
-        loadScene(event);
+        loadSceneSummary(event);
     }
 
    

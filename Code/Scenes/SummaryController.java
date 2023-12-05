@@ -74,6 +74,8 @@ public class SummaryController implements Initializable{
     private Label skill1Label;
     @FXML
     private Label skill2Label;
+    @FXML
+    private Label backgroundTextLabel;
 
     private int healthValue = 1;
     private Integer[] abilityValues;
@@ -205,6 +207,11 @@ public class SummaryController implements Initializable{
         if (characterData.getAge() !=  null)
         {
             ageLabel.setText(characterData.getAge());
+        }
+        
+        if (characterData.getbackgroundText() != null)
+        {
+            backgroundTextLabel.setText(characterData.getbackgroundText());
         }
         
 

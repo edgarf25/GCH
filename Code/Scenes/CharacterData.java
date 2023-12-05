@@ -5,11 +5,11 @@ import java.util.List;
 public class CharacterData {
     private static CharacterData instance = new CharacterData(); // Singleton instance
 
+    private Integer[] abilities;
     private String race;
     private String subrace;
     private String characterClass;
     private String subclass;
-    private Integer[] abilities;
     private String name;
     private String background;
     private String skillsAndProficiencies1;
@@ -21,6 +21,7 @@ public class CharacterData {
     private String weight;
     private String age;
     private String gender;
+    private String backgroundText;
     private int acrobaticsBonus;
     private int animalHandlingBonus;
     private int arcanaBonus;
@@ -385,6 +386,14 @@ public class CharacterData {
     
     public void setHealthAmount(int healthAmount) {
         this.healthAmount = healthAmount;
+    }
+
+    public String getbackgroundText() {
+        return backgroundText;
+    }
+    
+    public void setBackgroundText(String backgroundText) {
+        this.backgroundText = backgroundText;
     }
     
 }

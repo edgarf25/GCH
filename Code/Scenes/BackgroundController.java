@@ -112,6 +112,7 @@ public class BackgroundController implements Initializable {
                     skillBox1.setVisible(false);
                     skillBox2.setVisible(false);
                     backgroundTextBox.setText(descriptions[0]);
+                    characterData.setBackgroundText(descriptions[0]);//setting background text to data class
                     skillText1.setText("Insight");
                     skillText2.setText("Religion");
                     SkillProficiencies("Insight", "Religion"); //setting the skill and proficiencies on data class
@@ -125,6 +126,7 @@ public class BackgroundController implements Initializable {
                     skillBox1.setVisible(false);
                     skillBox2.setVisible(false);
                     backgroundTextBox.setText(descriptions[1]);
+                    characterData.setBackgroundText(descriptions[1]);//setting background text to data class
                     skillText1.setText("Deception");
                     skillText2.setText("Stealth");
                     SkillProficiencies("Deception", "Stealth"); //setting the skill and proficiencies on data class
@@ -138,12 +140,14 @@ public class BackgroundController implements Initializable {
                     skillBox1.setVisible(false);
                     skillBox2.setVisible(false);
                     backgroundTextBox.setText(descriptions[2]);
+                    characterData.setBackgroundText(descriptions[2]);//setting background text to data class
                     skillText1.setText("Animal Handling"); 
                     skillText2.setText("Survival");
                     SkillProficiencies("Animal Handling", "Survival"); //setting the skill and proficiencies on data class
                 }
                 else if (newValue.equals("Haunted One")) {
                     backgroundTextBox.setText(descriptions[3]);
+                    characterData.setBackgroundText(descriptions[3]);//setting background text to data class
                     skillText1.setVisible(false);
                     skillText2.setVisible(false);
                     backgroundTextBox.setEditable(false);
@@ -227,6 +231,7 @@ public class BackgroundController implements Initializable {
                     skillBox1.setVisible(false);
                     skillBox2.setVisible(false);
                     backgroundTextBox.setText(descriptions[4]);
+                    characterData.setBackgroundText(descriptions[4]);//setting background text to data class
                     skillText1.setText("History");
                     skillText2.setText("Persuasion");
                     SkillProficiencies("History", "Persuasion");
@@ -240,6 +245,7 @@ public class BackgroundController implements Initializable {
                     skillBox1.setVisible(false);
                     skillBox2.setVisible(false);
                     backgroundTextBox.setText(descriptions[5]);
+                    characterData.setBackgroundText(descriptions[5]);//setting background text to data class
                     skillText1.setText("Arcana");
                     skillText2.setText("History");
                     SkillProficiencies("Arcana", "History");
@@ -253,6 +259,7 @@ public class BackgroundController implements Initializable {
                     skillBox1.setVisible(false);
                     skillBox2.setVisible(false);
                     backgroundTextBox.setText(descriptions[6]);
+                    characterData.setBackgroundText(descriptions[6]);//setting background text to data class
                     skillText1.setText("Athletics");
                     skillText2.setText("Intimidation");
                     SkillProficiencies("Athletics", "Intimidation");
@@ -291,6 +298,7 @@ public class BackgroundController implements Initializable {
                 skillBox1.setVisible(false);
                 skillBox2.setVisible(false);
                 backgroundTextBox.setText(descriptions[0]);
+                characterData.setBackgroundText(descriptions[0]);//setting background text to data class
                 skillText1.setText("Insight");
                 skillText2.setText("Religion");
                 SkillProficiencies("Insight", "Religion"); //setting the skill and proficiencies on data class
@@ -304,6 +312,7 @@ public class BackgroundController implements Initializable {
                 skillBox1.setVisible(false);
                 skillBox2.setVisible(false);
                 backgroundTextBox.setText(descriptions[1]);
+                characterData.setBackgroundText(descriptions[1]);//setting background text to data class
                 skillText1.setText("Deception");
                 skillText2.setText("Stealth");
                 SkillProficiencies("Deception", "Stealth"); //setting the skill and proficiencies on data class
@@ -317,12 +326,14 @@ public class BackgroundController implements Initializable {
                 skillBox1.setVisible(false);
                 skillBox2.setVisible(false);
                 backgroundTextBox.setText(descriptions[2]);
+                characterData.setBackgroundText(descriptions[2]);//setting background text to data class
                 skillText1.setText("Animal Handling");
                 skillText2.setText("Survival");
                 SkillProficiencies("Animal Handling", "Survival"); //setting the skill and proficiencies on data class
             }
             else if (newValue.equals("Haunted One")) {
                 backgroundTextBox.setText(descriptions[3]);
+                characterData.setBackgroundText(descriptions[3]);//setting background text to data class
                 skillText1.setVisible(false);
                 skillText2.setVisible(false);
                 backgroundTextBox.setEditable(false);
@@ -406,6 +417,7 @@ public class BackgroundController implements Initializable {
                 skillBox1.setVisible(false);
                 skillBox2.setVisible(false);
                 backgroundTextBox.setText(descriptions[4]);
+                characterData.setBackgroundText(descriptions[4]);//setting background text to data class
                 skillText1.setText("History");
                 skillText2.setText("Persuasion");
                 SkillProficiencies("History", "Persuasion");
@@ -419,6 +431,7 @@ public class BackgroundController implements Initializable {
                 skillBox1.setVisible(false);
                 skillBox2.setVisible(false);
                 backgroundTextBox.setText(descriptions[5]);
+                characterData.setBackgroundText(descriptions[5]);//setting background text to data class
                 skillText1.setText("Arcana");
                 skillText2.setText("History");
                 SkillProficiencies("Arcana", "History");
@@ -432,6 +445,7 @@ public class BackgroundController implements Initializable {
                 skillBox1.setVisible(false);
                 skillBox2.setVisible(false);
                 backgroundTextBox.setText(descriptions[6]);
+                characterData.setBackgroundText(descriptions[6]);//setting background text to data class
                 skillText1.setText("Athletics");
                 skillText2.setText("Intimidation");
                 SkillProficiencies("Athletics", "Intimidation");
