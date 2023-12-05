@@ -133,6 +133,9 @@ public class SummaryController implements Initializable{
     private TextArea equipmentArea;
     @FXML
     private TextArea spellsArea;
+    @FXML
+    private Label armorLabel;
+
     private int healthValue = 1;
     private Integer[] abilityValues;
 
@@ -315,6 +318,7 @@ public class SummaryController implements Initializable{
         intThrowLabel.setText(String.valueOf(characterData.getIntThrow()));
         wisThrowLabel.setText(String.valueOf(characterData.getWisThrow()));
         chaThrowLabel.setText(String.valueOf(characterData.getChaThrow()));
+        armorLabel.setText(String.valueOf(characterData.getArmorAmount()));
     };
 
     public void clearImg()

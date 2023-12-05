@@ -1,6 +1,5 @@
 package Scenes;
 
-import java.util.List;
 
 public class CharacterData {
     private static CharacterData instance = new CharacterData(); // Singleton instance

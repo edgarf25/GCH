@@ -25,6 +25,7 @@ public class skill {
     int intelligenceThrow = 0;
     int wisdomThrow = 0;
     int charismaThrow = 0;
+    int armor = 0;
 
 
     public void updateAcrobaticsBonus() {
@@ -680,6 +681,30 @@ public class skill {
         }
     }
 
+    public void armorModifier()
+    {
+        armor = 10;
+
+        if (characterData.getAbilities() != null && characterData.getCharacterClass() != null)
+        {
+            dexterityThrow = (characterData.getAbilities()[1] - 10) / 2;
+            armor = armor + dexterityThrow;
+            if (characterData.getCharacterClass().equals("Barbarian"))
+            {
+                constitutionThrow = (characterData.getAbilities()[2] - 10) / 2;
+                armor = armor + constitutionThrow;
+            }
+
+            if (characterData.getCharacterClass().equals("Monk"))
+            {
+                wisdomThrow = (characterData.getAbilities()[4] - 10) / 2;
+                armor = armor + wisdomThrow;
+            }
+        }
+
+        characterData.setArmorAmount(armor);
+    }
+
     public void startSkills()
     {
         updateHealth();
@@ -703,5 +728,6 @@ public class skill {
         updateAnimalHandlingBonus();
         updateAcrobaticsBonus();
         savingThrows();
+        armorModifier();
     }
 }
