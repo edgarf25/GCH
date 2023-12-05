@@ -195,11 +195,11 @@ public class EquipmentController implements Initializable {
             TextAreaList.setText(ListText);
             if (characterData.getSpells() != null)
             {
-                characterData.setSpells(characterData.getSpells() + spellText + "\n");
+                characterData.setSpells(characterData.getSpells() + spellText);
             }
             else
             {
-                characterData.setSpells(spellText + "\n");
+                characterData.setSpells(spellText);
             }
             spellText = "";
         }
