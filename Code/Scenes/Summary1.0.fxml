@@ -650,7 +650,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TextArea layoutX="14.0" layoutY="14.0" prefHeight="461.0" prefWidth="664.0" />
+                        <TextArea fx:id="notesText" layoutX="14.0" layoutY="14.0" onKeyTyped="#updateNotes" prefHeight="461.0" prefWidth="664.0" />
                      </children></AnchorPane>
                </content>
             </Tab>
