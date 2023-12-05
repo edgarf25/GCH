@@ -458,7 +458,7 @@
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <Label layoutX="195.0" layoutY="68.0" prefHeight="85.0" prefWidth="321.0" text="                Display Background Info ">
+                        <Label fx:id="backgroundTextLabel" layoutX="195.0" layoutY="68.0" prefHeight="85.0" prefWidth="321.0" text="                Display Background Info ">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -510,7 +510,7 @@
                            </image>
                         </ImageView>
                         <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="133.0" layoutX="172.0" layoutY="65.0" stroke="#ae8406" strokeType="INSIDE" width="321.0" />
-                        <Label layoutX="271.0" layoutY="68.0" text="classDisplay ">
+                        <Label fx:id="classDisplayLabel" layoutX="271.0" layoutY="68.0" text="classDisplay ">
                            <font>
                               <Font name="Baskerville Old Face" size="20.0" />
                            </font>
