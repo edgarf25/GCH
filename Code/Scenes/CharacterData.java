@@ -49,6 +49,7 @@ public class CharacterData {
     private int wisThrow;
     private int chaThrow;
     private List<String> equipment;
+    private String notes;
 
     // Private constructor to prevent external instantiation
     private CharacterData() 
@@ -402,10 +403,12 @@ public class CharacterData {
         this.backgroundText = backgroundText;
     }
 
+    public String getNotes(){return notes;}
+    public void setNotes(String notes) {this.notes = notes;}
     public int getStrThrow() {
         return strThrow;
     }
-    
+
     public void setStrThrow(int strThrow) {
         this.strThrow = strThrow;
     }
@@ -441,5 +444,13 @@ public class CharacterData {
     public void setChaThrow(int chaThrow) {
         this.chaThrow = chaThrow;
     }
+    public int getWisThrow() {
+        return wisThrow;
+    }
+
+    public void setWisThrow(int wisThrow) {
+        this.wisThrow = wisThrow;
+    }
+
 
 }

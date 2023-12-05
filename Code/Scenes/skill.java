@@ -19,6 +19,13 @@ public class skill {
     int stealthBonus = 0;
     int survivalBonus = 0;
     int historyBonus = 0;
+    int strengthThrow = 0;
+    int dexterityThrow = 0;
+    int constitutionThrow = 0;
+    int intelligenceThrow = 0;
+    int wisdomThrow = 0;
+    int charismaThrow = 0;
+
 
     public void updateAcrobaticsBonus() {
         if (characterData.getSubrace() != null && characterData.getSkillsAndProficiencies1() != null && characterData.getSkillsAndProficiencies2() != null && characterData.getAbilities() != null) {
@@ -605,6 +612,71 @@ public class skill {
                 health = 6 + characterData.getAbilities()[2];
                 characterData.setHealthAmount(health);
             }
+        }
+    }
+
+    public void savingThrows() {
+        if (characterData.getAbilities() != null && characterData.getCharacterClass() != null) {
+            strengthThrow += characterData.getAbilities()[0];
+            dexterityThrow += characterData.getAbilities()[1];
+            constitutionThrow += characterData.getAbilities()[2];
+            intelligenceThrow += characterData.getAbilities()[3];
+            wisdomThrow += characterData.getAbilities()[4];
+            charismaThrow += characterData.getAbilities()[5];
+            if (characterData.getCharacterClass().equals("Barbarian")) {
+                strengthThrow += 2;
+                constitutionThrow += 2;
+            }
+            if (characterData.getCharacterClass().equals("Bard")) {
+                dexterityThrow += 2;
+                charismaThrow += 2;
+            }
+            if (characterData.getCharacterClass().equals("Cleric")) {
+                wisdomThrow += 2;
+                charismaThrow += 2;
+            }
+            if (characterData.getCharacterClass().equals("Druid")) {
+                intelligenceThrow += 2;
+                wisdomThrow += 2;
+            }
+            if (characterData.getCharacterClass().equals("Fighter")) {
+                strengthThrow += 2;
+                constitutionThrow += 2;
+            }
+            if (characterData.getCharacterClass().equals("Monk")) {
+                strengthThrow += 2;
+                dexterityThrow += 2;
+            }
+            if (characterData.getCharacterClass().equals("Paladin")) {
+                wisdomThrow += 2;
+                charismaThrow += 2;
+            }
+            if (characterData.getCharacterClass().equals("Ranger")) {
+                strengthThrow += 2;
+                dexterityThrow += 2;
+            }
+            if (characterData.getCharacterClass().equals("Rogue")) {
+                dexterityThrow += 2;
+                intelligenceThrow += 2;
+            }
+            if (characterData.getCharacterClass().equals("Sorcerer")) {
+                constitutionThrow += 2;
+                charismaThrow += 2;
+            }
+            if (characterData.getCharacterClass().equals("Warlock")) {
+                wisdomThrow += 2;
+                charismaThrow += 2;
+            }
+            if (characterData.getCharacterClass().equals("Wizard")) {
+                intelligenceThrow += 2;
+                wisdomThrow += 2;
+            }
+            characterData.setStrThrow(strengthThrow);
+            characterData.setDexThrow(dexterityThrow);
+            characterData.setConThrow(constitutionThrow);
+            characterData.setIntThrow(intelligenceThrow);
+            characterData.setWisThrow(wisdomThrow);
+            characterData.setChaThrow(charismaThrow);
         }
     }
 

@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
@@ -126,7 +127,8 @@ public class SummaryController implements Initializable{
     private Label wisThrowLabel;
     @FXML
     private Label chaThrowLabel;
-
+    @FXML
+    private TextArea notesText;
 
     private int healthValue = 1;
     private Integer[] abilityValues;
@@ -273,6 +275,8 @@ public class SummaryController implements Initializable{
             classDisplayLabel.setText(characterData.getCharacterClass());
         }
 
+        notesText.setText(characterData.getNotes());
+
         //setting the skill bonus to their values stored on data class
         animalHandlingLabel.setText(String.valueOf(characterData.getAnimalHandlingBonus()));
         arcanaLabel.setText(String.valueOf(characterData.getArcanaBonus()));
@@ -343,7 +347,7 @@ public class SummaryController implements Initializable{
         healthAmount.setText("");
     }
 
-
+    public void updateNotes() {characterData.setNotes(notesText.getText());}
     public void prev(ActionEvent event) throws IOException
     {
         controller = new sceneController();
