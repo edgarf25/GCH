@@ -282,7 +282,7 @@ public class skill {
     }
 
     public void updateNatureBonus() {
-        if (characterData.getRace() != null && characterData.getSkillsAndProficiencies1() != null && characterData.getSkillsAndProficiencies2() != null && characterData.getAbilities() != null) {
+        if (characterData.getRace() != null && characterData.getSkillsAndProficiencies1() != null && characterData.getSkillsAndProficiencies2() != null && characterData.getAbilities() != null && characterData.getSubrace() != null) {
             if (characterData.getSubrace().equals("Wood Elf")) {
                 natureBonus++;
                 characterData.setNatureBonus(natureBonus);
@@ -594,7 +594,7 @@ public class skill {
 
     public void updateHealth() {
         int health = 0;
-        if (characterData.getCharacterClass() != null)
+        if (characterData.getCharacterClass() != null && characterData.getAbilities() != null)
         {
             if (characterData.getCharacterClass().equals("Barbarian")) {
                 health = 12 + characterData.getAbilities()[2];
@@ -617,12 +617,12 @@ public class skill {
 
     public void savingThrows() {
         if (characterData.getAbilities() != null && characterData.getCharacterClass() != null) {
-            strengthThrow += characterData.getAbilities()[0];
-            dexterityThrow += characterData.getAbilities()[1];
-            constitutionThrow += characterData.getAbilities()[2];
-            intelligenceThrow += characterData.getAbilities()[3];
-            wisdomThrow += characterData.getAbilities()[4];
-            charismaThrow += characterData.getAbilities()[5];
+            strengthThrow = (characterData.getAbilities()[0] - 10) / 2;
+            dexterityThrow = (characterData.getAbilities()[1] - 10) / 2;
+            constitutionThrow = (characterData.getAbilities()[2] - 10) / 2;
+            intelligenceThrow = (characterData.getAbilities()[3] - 10) / 2;
+            wisdomThrow = (characterData.getAbilities()[4] - 10) / 2;
+            charismaThrow = (characterData.getAbilities()[5] - 10) / 2;
             if (characterData.getCharacterClass().equals("Barbarian")) {
                 strengthThrow += 2;
                 constitutionThrow += 2;
@@ -702,5 +702,6 @@ public class skill {
         updateArcanaBonus();
         updateAnimalHandlingBonus();
         updateAcrobaticsBonus();
+        savingThrows();
     }
 }
