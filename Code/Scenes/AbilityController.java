@@ -236,6 +236,8 @@ public class AbilityController implements Initializable{
                 uniqueArray = compareArrays(stdArray, currentArray);
                 setStandardArrayOptions(uniqueArray);
                 strDropdown.setValue(newValue);
+                finalValues[0] = newValue;
+                characterData.setAbilities(finalValues);//storing finalvalues in characterData
             }
         });
 
@@ -247,7 +249,8 @@ public class AbilityController implements Initializable{
                 uniqueArray = compareArrays(stdArray, currentArray);
                 setStandardArrayOptions(uniqueArray);
                 dexDropdown.setValue(newValue);
-                
+                finalValues[1] = newValue;
+                characterData.setAbilities(finalValues);//storing finalvalues in characterData
             }
         });
 
@@ -259,6 +262,8 @@ public class AbilityController implements Initializable{
                 uniqueArray = compareArrays(stdArray, currentArray);
                 setStandardArrayOptions(uniqueArray);
                 conDropdown.setValue(newValue);
+                finalValues[2] = newValue;
+                characterData.setAbilities(finalValues);//storing finalvalues in characterData
             }
         });
 
@@ -270,6 +275,8 @@ public class AbilityController implements Initializable{
                 uniqueArray = compareArrays(stdArray, currentArray);
                 setStandardArrayOptions(uniqueArray);
                 intDropdown.setValue(newValue);
+                finalValues[3] = newValue;
+                characterData.setAbilities(finalValues);//storing finalvalues in characterData
             }
         });
 
@@ -281,6 +288,8 @@ public class AbilityController implements Initializable{
                 uniqueArray = compareArrays(stdArray, currentArray);
                 setStandardArrayOptions(uniqueArray);
                 wisDropdown.setValue(newValue);
+                finalValues[4] = newValue;
+                characterData.setAbilities(finalValues);//storing finalvalues in characterData
             }
         });
 
@@ -292,6 +301,8 @@ public class AbilityController implements Initializable{
                 uniqueArray = compareArrays(stdArray, currentArray);
                 setStandardArrayOptions(uniqueArray);
                 chaDropdown.setValue(newValue);
+                finalValues[5] = newValue;
+                characterData.setAbilities(finalValues);//storing finalvalues in characterData
             }
         });
     }
