@@ -263,6 +263,8 @@ public class EquipmentController implements Initializable {
         armorChoiceBox.getSelectionModel().clearSelection();
         possessionChoiceBox.getSelectionModel().clearSelection();
         spellChoiceBox.getSelectionModel().clearSelection();
+        characterData.setEquipment("");
+        characterData.setSpells("");
     }
 
     private sceneController controller; //created a scenceControl7ler instance
