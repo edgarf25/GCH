@@ -57,7 +57,21 @@ public class EquipmentController implements Initializable {
         weaponChoiceBox.getItems().addAll(weaponArray);   // GET ALL WEAPONS IN ARRAY
         armorChoiceBox.getItems().addAll(armorArray);     // GET ALL ARMOR   IN ARRAY
         possessionChoiceBox.getItems().addAll(posArray);  // GET ALL POS     IN ARRAY
-
+        if (characterData.getEquipment() != null)
+        {
+            if (characterData.getSpells() != null)
+            {
+                TextAreaList.setText(characterData.getEquipment() + characterData.getSpells());
+            }
+            else
+            {
+                TextAreaList.setText(characterData.getEquipment());
+            }
+        }
+        else if (characterData.getSpells() != null)
+        {
+            TextAreaList.setText(characterData.getSpells());
+        }
 
         weaponChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
