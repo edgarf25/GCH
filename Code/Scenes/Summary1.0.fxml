@@ -508,7 +508,7 @@
                            </image>
                         </ImageView>
                         <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="133.0" layoutX="173.0" layoutY="67.0" stroke="#ae8406" strokeType="INSIDE" width="321.0" />
-                        <Label fx:id="classDisplayLabel" layoutX="277.0" layoutY="101.0" text="classDisplay ">
+                        <Label fx:id="classDisplayLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="101.0" prefWidth="150.0" text="classDisplay " textAlignment="CENTER">
                            <font>
                               <Font name="Baskerville Old Face" size="20.0" />
                            </font>
@@ -529,7 +529,7 @@
                               <Font name="Baskerville Old Face" size="16.0" />
                            </font>
                         </Label>
-                        <Label fx:id="raceDisplay" layoutX="279.0" layoutY="316.0" text="raceDisplay" textFill="#464545">
+                        <Label fx:id="raceDisplay" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="316.0" prefWidth="150.0" text="raceDisplay" textAlignment="CENTER" textFill="#464545">
                            <font>
                               <Font name="Baskerville Old Face" size="20.0" />
                            </font>
@@ -569,7 +569,7 @@
                               <Image url="@../src/bash.png" />
                            </image>
                         </ImageView>
-                        <Label fx:id="subclassDisplayLabel" layoutX="260.0" layoutY="165.0" text="subClassDisplay">
+                        <Label fx:id="subclassDisplayLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="165.0" prefWidth="150.0" text="subClassDisplay" textAlignment="CENTER">
                            <font>
                               <Font name="Baskerville Old Face" size="20.0" />
                            </font></Label>
@@ -592,7 +592,7 @@
                               <Font name="Baskerville Old Face" size="30.0" />
                            </font>
                         </Text>
-                        <Label fx:id="subraceDisplay" layoutX="279.0" layoutY="397.0" text="subDisplay" textFill="#464545">
+                        <Label fx:id="subraceDisplay" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="397.0" prefWidth="150.0" text="subDisplay" textAlignment="CENTER" textFill="#464545">
                            <font>
                               <Font name="Baskerville Old Face" size="20.0" />
                            </font>
