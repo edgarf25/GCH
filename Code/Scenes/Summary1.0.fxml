@@ -666,9 +666,9 @@
             </Tab>
          </tabs>
       </TabPane>
-      <Label fx:id="nameS" alignment="CENTER" contentDisplay="CENTER" layoutX="800.0" layoutY="100.0" prefHeight="100.0" prefWidth="200.0" text="Name" textAlignment="CENTER">
+      <Label fx:id="nameS" alignment="CENTER" contentDisplay="CENTER" layoutX="838.0" layoutY="100.0" prefHeight="100.0" prefWidth="162.0" text="Name" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font name="Century" size="32.0" />
+            <Font name="Century" size="12.0" />
          </font>
       </Label>
       <Label fx:id="strLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="115.0" prefHeight="62.0" prefWidth="98.0" text="?" textAlignment="CENTER">
