@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.sceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.Settings">
    <children>
       <ImageView fitHeight="650.0" fitWidth="605.0" layoutX="-105.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../src/background color.png" />
          </image>
       </ImageView>
-      <Button blendMode="HARD_LIGHT" layoutX="138.0" layoutY="500.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="224.0" text="Return" />
+      <Button blendMode="HARD_LIGHT" layoutX="138.0" layoutY="500.0" mnemonicParsing="false" onAction="#returnScene" prefHeight="51.0" prefWidth="224.0" text="Return" />
       <ImageView fitHeight="169.0" fitWidth="272.0" layoutX="115.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../src/dungeons-dragons.png" />
