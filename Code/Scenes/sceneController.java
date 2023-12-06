@@ -17,7 +17,7 @@ public class sceneController {
 
 
     String array[] = {"Welcome.fxml","Race-Subrace 1.0.fxml","Class1.0.fxml","Ability1.0.fxml","Background1.0.fxml","Equipment1.0.fxml","Summary1.0.fxml"};
-    String otherScenes[] = {"Settings.fxml"};
+    String otherScenes[] = {"Settings.fxml", "Credits.fxml"};
     public static int counter = 0;
     CharacterData characterData = CharacterData.getInstance();
     
@@ -106,6 +106,13 @@ public class sceneController {
         counter = 0;
         loadOtherScenes(event);
     }
+
+    public void switchToCredits(ActionEvent event) throws IOException
+    {
+        counter = 1;
+        loadOtherScenes(event);
+    }
+
 
    
 }

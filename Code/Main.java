@@ -43,7 +43,7 @@ public class Main extends Application {
 
     private void playBackgroundMusic() {
         String musicFilePath = "/src/song.mp3";
-        Media media = new Media(getClass().getResource(musicFilePath).toExternalForm());
+        media = new Media(getClass().getResource(musicFilePath).toExternalForm());
         //Media media = new Media(Paths.get(musicFilePath).toUri().toString());
         mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setVolume(volumeLevel);

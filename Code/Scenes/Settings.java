@@ -1,8 +1,6 @@
 package Scenes;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -25,7 +23,6 @@ public class Settings {
 
             @Override
             public void changed(ObservableValue<? extends Number> arg0, Number arg1, Number arg2) {
-                // TODO Auto-generated method stub
                 mediaPlayer.setVolume(volumeSlider.getValue() * 0.01);
                 characterData.setVolume(volumeSlider.getValue() * 0.01);
                 System.out.println(characterData.getVolume());

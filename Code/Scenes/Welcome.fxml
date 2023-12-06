@@ -16,7 +16,7 @@
       </ImageView>
       <Button fx:id="buttonStart" blendMode="HARD_LIGHT" layoutX="138.0" layoutY="340.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="51.0" prefWidth="224.0" text="Start" />
       <Button blendMode="HARD_LIGHT" layoutX="138.0" layoutY="420.0" mnemonicParsing="false" onAction="#switchToSettings" prefHeight="51.0" prefWidth="224.0" text="Settings" />
-      <Button blendMode="HARD_LIGHT" layoutX="138.0" layoutY="500.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="224.0" text="Credits" />
+      <Button blendMode="HARD_LIGHT" layoutX="138.0" layoutY="500.0" mnemonicParsing="false" onAction="#switchToCredits" prefHeight="51.0" prefWidth="224.0" text="Credits" />
       <ImageView fitHeight="169.0" fitWidth="272.0" layoutX="114.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../src/dungeons-dragons.png" />

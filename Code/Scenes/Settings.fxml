@@ -45,8 +45,8 @@
             </Label>
             <Button layoutX="263.0" layoutY="67.0" mnemonicParsing="false" onAction="#candyCaneCursor" opacity="0.0" prefHeight="171.0" prefWidth="192.0" text="Button" />
             <Button layoutX="30.0" layoutY="67.0" mnemonicParsing="false" onAction="#swordCursor" opacity="0.0" prefHeight="171.0" prefWidth="192.0" text="Button" />
-            <Slider fx:id="volumeSlider" layoutX="103.0" layoutY="267.0" prefHeight="42.0" prefWidth="296.0" />
-            <Label alignment="CENTER" layoutX="1.0" layoutY="217.0" prefHeight="42.0" prefWidth="500.0" text="Volume:" textFill="#998543">
+            <Slider fx:id="volumeSlider" disable="true" layoutX="103.0" layoutY="267.0" prefHeight="42.0" prefWidth="296.0" visible="false" />
+            <Label alignment="CENTER" disable="true" layoutX="1.0" layoutY="217.0" prefHeight="42.0" prefWidth="500.0" text="Volume:" textFill="#998543" visible="false">
                <font>
                   <Font name="Lucida Sans Italic" size="35.0" />
                </font>
