@@ -52,12 +52,14 @@ public class CharacterData {
     private String spells;
     private String notes;
     private String cursor;
+    private double volume;
 
     // Private constructor to prevent external instantiation
     private CharacterData() 
     {
         // You can initialize default values here if needed
         cursor = "/src/sword.png";
+        volume = 0.15;
     }
 
     public static CharacterData getInstance() 
@@ -466,6 +468,7 @@ public class CharacterData {
     public void setChaThrow(int chaThrow) {
         this.chaThrow = chaThrow;
     }
+
     public int getWisThrow() {
         return wisThrow;
     }
@@ -482,5 +485,12 @@ public class CharacterData {
         this.cursor = cursor;
     }
 
+    public double getVolume() {
+        return volume;
+    }
+
+    public void setVolume(double volume) {
+        this.volume = volume;
+    }
 
 }

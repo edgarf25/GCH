@@ -7,8 +7,6 @@ import javafx.scene.image.Image;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
-import java.io.File;
-import java.nio.file.Paths;
 
 import Scenes.Settings;
 
@@ -16,12 +14,14 @@ public class Main extends Application {
 
     private Media media;
     private MediaPlayer mediaPlayer;
+    private Double volumeLevel; // Declare volumeLevel as an instance variable
 
     @Override
     public void start(Stage primaryStage) {
         try {
             Settings settings = new Settings();
             String cursorPath = settings.getCursor();
+            volumeLevel = settings.getVolume();
             Image cursor = new Image(cursorPath); // loading custom cursor
             Parent root = FXMLLoader.load(getClass().getResource("/Scenes/Welcome.fxml"));
             Scene scene = new Scene(root);
@@ -46,6 +46,7 @@ public class Main extends Application {
         Media media = new Media(getClass().getResource(musicFilePath).toExternalForm());
         //Media media = new Media(Paths.get(musicFilePath).toUri().toString());
         mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setVolume(volumeLevel);
         mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE); // Loop the music indefinitely
         mediaPlayer.play();
     }
