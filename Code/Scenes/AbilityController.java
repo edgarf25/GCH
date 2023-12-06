@@ -659,15 +659,13 @@ public class AbilityController implements Initializable{
     
     private void updateValues(Label label, int change, char operator, int slot) //class that updates the actual values
     {
-        int currentValue = Integer.parseInt(label.getText()) + change;
-        label.setText(String.valueOf(currentValue));
-        finalValues[slot] = currentValue;
+        int currentValue = Integer.parseInt(label.getText());
 
         if (currentValue > 13 & operator == 's')//adding or subtracting an extra point if value > 13
         {
             pointBuy += 1;
         }
-        else if (currentValue > 13 & operator != 's')
+        else if (currentValue >= 13 & operator != 's')
         {
             pointBuy -= 1;
         }
@@ -678,6 +676,10 @@ public class AbilityController implements Initializable{
         }
         else
             pointBuy -= 1;
+
+        currentValue = currentValue + change;
+        label.setText(String.valueOf(currentValue));
+        finalValues[slot] = currentValue;
         pointBuyLabel.setText(String.valueOf(pointBuy));
     }
 

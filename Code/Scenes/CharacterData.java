@@ -5,6 +5,7 @@ public class CharacterData {
     private static CharacterData instance = new CharacterData(); // Singleton instance
 
     private Integer[] abilities;
+    private Integer[] updateAbilities;
     private String race;
     private String subrace;
     private String characterClass;
@@ -114,6 +115,16 @@ public class CharacterData {
     public void setAbilities(Integer[] abilities) 
     {
         this.abilities = abilities;
+    }
+
+    public Integer[] getUpdateAbilities() 
+    {
+        return updateAbilities;
+    }
+
+    public void setUpdateAbilities(Integer[] updateAbilities) 
+    {
+        this.updateAbilities = updateAbilities;
     }
 
     public String getName() 

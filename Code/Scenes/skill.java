@@ -1,4 +1,7 @@
 package Scenes;
+
+import java.util.Arrays;
+
 public class skill {
     CharacterData characterData = CharacterData.getInstance();
     int acrobaticsBonus = 0;
@@ -538,7 +541,7 @@ public class skill {
 
     public void updateAbilities() {
         if (characterData.getRace() != null && characterData.getSubrace() != null && characterData.getAbilities() != null) {
-            Integer[] newAbilities = characterData.getAbilities();
+            Integer[] newAbilities = Arrays.copyOf(characterData.getAbilities(), characterData.getAbilities().length);
             Integer newStrength = newAbilities[0];
             Integer newDexterity = newAbilities[1];
             Integer newConstitution = newAbilities[2];
@@ -589,7 +592,7 @@ public class skill {
             newAbilities[4] = newWisdom;
             newAbilities[5] = newCharisma;
 
-            characterData.setAbilities(newAbilities);
+            characterData.setUpdateAbilities(newAbilities);
         }
     }
 
@@ -618,12 +621,13 @@ public class skill {
 
     public void savingThrows() {
         if (characterData.getAbilities() != null && characterData.getCharacterClass() != null) {
-            strengthThrow = (characterData.getAbilities()[0] - 10) / 2;
-            dexterityThrow = (characterData.getAbilities()[1] - 10) / 2;
-            constitutionThrow = (characterData.getAbilities()[2] - 10) / 2;
-            intelligenceThrow = (characterData.getAbilities()[3] - 10) / 2;
-            wisdomThrow = (characterData.getAbilities()[4] - 10) / 2;
-            charismaThrow = (characterData.getAbilities()[5] - 10) / 2;
+            Integer[] temp = characterData.getAbilities();
+            strengthThrow = (temp[0] - 10) / 2;
+            dexterityThrow = (temp[1] - 10) / 2;
+            constitutionThrow = (temp[2] - 10) / 2;
+            intelligenceThrow = (temp[3] - 10) / 2;
+            wisdomThrow = (temp[4] - 10) / 2;
+            charismaThrow = (temp[5] - 10) / 2;
             if (characterData.getCharacterClass().equals("Barbarian")) {
                 strengthThrow += 2;
                 constitutionThrow += 2;

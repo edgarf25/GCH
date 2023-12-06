@@ -158,9 +158,9 @@ public class SummaryController implements Initializable{
         }
         System.out.println(characterData.getName());
 
-        if (characterData.getAbilities() != null) //setting abilities
+        if (characterData.getUpdateAbilities() != null) //setting abilities
         {
-            abilityValues = characterData.getAbilities();
+            abilityValues = characterData.getUpdateAbilities();
             strLabel.setText(String.valueOf(abilityValues[0]));
             dexLabel.setText(String.valueOf(abilityValues[1]));
             conLabel.setText(String.valueOf(abilityValues[2]));
