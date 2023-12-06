@@ -60,16 +60,19 @@ public class raceController implements Initializable{
                 if (newValue.equals("Dwarf")) {
                     subraceChoiceBox.getItems().addAll(dwarfSubraces);
                     backgroundDescription.setText(descriptions[0]);
+                    characterData.setSubrace("");
                 }
                 else if (newValue.equals("Elf"))
                 {
                     subraceChoiceBox.getItems().addAll(elfSubraces);
                     backgroundDescription.setText(descriptions[3]);
+                    characterData.setSubrace("");
                 }
                 else if (newValue.equals("Halfling"))
                 {
                     subraceChoiceBox.getItems().addAll(halflingSubraces);
                     backgroundDescription.setText(descriptions[6]);
+                    characterData.setSubrace("");
                 }
                 else if (newValue.equals("Human"))
                 {
@@ -85,6 +88,7 @@ public class raceController implements Initializable{
                 {
                     subraceChoiceBox.getItems().addAll(gnomeSubraces);
                     backgroundDescription.setText(descriptions[11]);
+                    characterData.setSubrace("");
                 }
                 else if (newValue.equals("Half-Elf"))
                 {
@@ -103,6 +107,19 @@ public class raceController implements Initializable{
                 }
 
                 characterData.setRace(newValue); //setting the race on character data
+                if (characterData.getSubrace() != null)
+                {
+                    if (characterData.getSubrace().equals("No Subrace"))
+                    {
+                        subraceChoiceBox.getSelectionModel().select("No Subrace");
+                    }
+                    else
+                    {
+                        subraceChoiceBox.getSelectionModel().select("");
+                    }
+
+                }
+
             }
         });
         subraceChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {

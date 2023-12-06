@@ -135,6 +135,8 @@ public class SummaryController implements Initializable{
     private TextArea spellsArea;
     @FXML
     private Label armorLabel;
+    @FXML
+    private TextArea backgroundTextArea;
 
     private int healthValue = 1;
     private Integer[] abilityValues;
@@ -275,7 +277,7 @@ public class SummaryController implements Initializable{
         
         if (characterData.getbackgroundText() != null)
         {
-            backgroundTextLabel.setText(characterData.getbackgroundText());
+           backgroundTextArea.setText(characterData.getbackgroundText());
         }
         if(characterData.getCharacterClass() != null){
             classDisplayLabel.setText(characterData.getCharacterClass());
