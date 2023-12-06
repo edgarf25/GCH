@@ -143,6 +143,7 @@ public class SummaryController implements Initializable{
     private Label armorLabel;
     @FXML
     private TextArea backgroundTextArea;
+
     private int healthValue = 1;
     private Integer[] abilityValues;
 
@@ -158,6 +159,7 @@ public class SummaryController implements Initializable{
 
         skillController = new skill();
         skillController.startSkills();
+
         if (characterData.getName() != null) 
         {
             nameS.setText(characterData.getName());

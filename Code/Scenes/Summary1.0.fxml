@@ -364,6 +364,11 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="485.0" prefWidth="722.0">
                      <children>
+                        <ImageView fitHeight="166.0" fitWidth="200.0" layoutX="242.0" layoutY="320.0">
+                           <image>
+                              <Image url="@../src/red border.png" />
+                           </image>
+                        </ImageView>
                         <ImageView fitHeight="166.0" fitWidth="200.0" layoutX="238.0" layoutY="156.0">
                            <image>
                               <Image url="@../src/red border.png" />
@@ -381,7 +386,7 @@
                               <Font name="Baskerville Old Face" size="21.0" />
                            </font>
                         </Text>
-                        <Text fill="#d30909" layoutX="274.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Skills Profencies ">
+                        <Text fill="#d30909" layoutX="264.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Skills Proficiencies ">
                            <font>
                               <Font name="Baskerville Old Face" size="21.0" />
                            </font>
@@ -427,17 +432,17 @@
                               <Font name="Century" size="18.0" />
                            </font>
                         </Text>
-                        <Label fx:id="hairLabel" layoutX="259.0" layoutY="281.0" prefHeight="25.0" prefWidth="74.0" text="MyHair">
+                        <Label fx:id="hairLabel" layoutX="259.0" layoutY="281.0" prefHeight="25.0" prefWidth="93.0" text="MyHair">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <Label fx:id="skinLabel" layoutX="261.0" layoutY="341.0" prefHeight="25.0" prefWidth="74.0" text="MySkin">
+                        <Label fx:id="skinLabel" layoutX="261.0" layoutY="341.0" prefHeight="25.0" prefWidth="82.0" text="MySkin">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <Label fx:id="eyesLabel" layoutX="259.0" layoutY="311.0" prefHeight="25.0" prefWidth="74.0" text="MyEyes">
+                        <Label fx:id="eyesLabel" layoutX="259.0" layoutY="311.0" prefHeight="25.0" prefWidth="87.0" text="MyEyes">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -447,7 +452,7 @@
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <Label fx:id="ageLabel" layoutX="450.0" layoutY="279.0" prefHeight="25.0" prefWidth="68.0" text="MyAge">
+                        <Label fx:id="ageLabel" layoutX="450.0" layoutY="279.0" prefHeight="25.0" prefWidth="74.0" text="MyAge">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -473,11 +478,6 @@
                         <ImageView fitHeight="221.0" fitWidth="212.0" layoutX="-26.0" layoutY="281.0">
                            <image>
                               <Image url="@../src/write.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="166.0" fitWidth="200.0" layoutX="242.0" layoutY="320.0">
-                           <image>
-                              <Image url="@../src/red border.png" />
                            </image>
                         </ImageView>
                         <TextArea fx:id="backgroundTextArea" blendMode="MULTIPLY" editable="false" layoutX="147.0" layoutY="62.0" prefHeight="149.0" prefWidth="399.0" wrapText="true">
