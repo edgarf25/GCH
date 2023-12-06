@@ -621,13 +621,18 @@ public class skill {
 
     public void savingThrows() {
         if (characterData.getAbilities() != null && characterData.getCharacterClass() != null) {
-            Integer[] temp = characterData.getAbilities();
-            strengthThrow = (temp[0] - 10) / 2;
-            dexterityThrow = (temp[1] - 10) / 2;
-            constitutionThrow = (temp[2] - 10) / 2;
-            intelligenceThrow = (temp[3] - 10) / 2;
-            wisdomThrow = (temp[4] - 10) / 2;
-            charismaThrow = (temp[5] - 10) / 2;
+            strengthThrow = (characterData.getUpdateAbilities()[0] - 10) / 2;
+            System.out.println(characterData.getUpdateAbilities()[0]);
+            dexterityThrow = (characterData.getUpdateAbilities()[1] - 10) / 2;
+            System.out.println(characterData.getUpdateAbilities()[1]);
+            constitutionThrow = (characterData.getUpdateAbilities()[2] - 10) / 2;
+            System.out.println(characterData.getUpdateAbilities()[2]);
+            intelligenceThrow = (characterData.getUpdateAbilities()[3] - 10) / 2;
+            System.out.println(characterData.getUpdateAbilities()[3]);
+            wisdomThrow = (characterData.getUpdateAbilities()[4] - 10) / 2;
+            System.out.println(characterData.getUpdateAbilities()[4]);
+            charismaThrow = (characterData.getUpdateAbilities()[5] - 10) / 2;
+            System.out.println(characterData.getUpdateAbilities()[5]);
             if (characterData.getCharacterClass().equals("Barbarian")) {
                 strengthThrow += 2;
                 constitutionThrow += 2;
