@@ -98,6 +98,7 @@ public class ClassController implements Initializable{
         {
             if (newValue != null)
             {
+                characterData.setSpells("");
                 if (newValue.equals("Barbarian")) 
                 {
                     classDescription.setText(descriptions[0]);
