@@ -457,11 +457,6 @@
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <Label fx:id="backgroundTextLabel" layoutX="195.0" layoutY="68.0" prefHeight="85.0" prefWidth="321.0" text="                Display Background Info ">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
                         <Label fx:id="skill1Label" layoutX="241.0" layoutY="445.0" text="skill Display " />
                         <Label fx:id="skill2Label" layoutX="387.0" layoutY="444.0" text="skill Display " />
                         <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="35.0" layoutX="194.0" layoutY="436.0" stroke="#ae8406" strokeType="INSIDE" width="144.0" />
@@ -475,11 +470,6 @@
                               <Image url="@../src/knight.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="218.0" fitWidth="233.0" layoutX="448.0" layoutY="95.0">
-                           <image>
-                              <Image url="@../src/book sketch.png" />
-                           </image>
-                        </ImageView>
                         <ImageView fitHeight="221.0" fitWidth="212.0" layoutX="-26.0" layoutY="281.0">
                            <image>
                               <Image url="@../src/write.png" />
@@ -488,6 +478,15 @@
                         <ImageView fitHeight="166.0" fitWidth="200.0" layoutX="242.0" layoutY="320.0">
                            <image>
                               <Image url="@../src/red border.png" />
+                           </image>
+                        </ImageView>
+                        <TextArea fx:id="backgroundTextArea" blendMode="MULTIPLY" editable="false" layoutX="147.0" layoutY="62.0" prefHeight="149.0" prefWidth="399.0" wrapText="true">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font></TextArea>
+                        <ImageView fitHeight="218.0" fitWidth="233.0" layoutX="499.0" layoutY="102.0">
+                           <image>
+                              <Image url="@../src/book sketch.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -508,8 +507,8 @@
                               <Image url="@../src/red border.png" />
                            </image>
                         </ImageView>
-                        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="133.0" layoutX="172.0" layoutY="65.0" stroke="#ae8406" strokeType="INSIDE" width="321.0" />
-                        <Label fx:id="classDisplayLabel" layoutX="271.0" layoutY="68.0" text="classDisplay ">
+                        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="133.0" layoutX="173.0" layoutY="67.0" stroke="#ae8406" strokeType="INSIDE" width="321.0" />
+                        <Label fx:id="classDisplayLabel" layoutX="277.0" layoutY="101.0" text="classDisplay ">
                            <font>
                               <Font name="Baskerville Old Face" size="20.0" />
                            </font>
@@ -519,20 +518,20 @@
                               <Font name="Baskerville Old Face" size="20.0" />
                            </font>
                         </Text>
-                        <Text fill="#d30909" layoutX="254.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFICIENCIES">
+                        <Text fill="#d30909" layoutX="250.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RACE FEATURES">
                            <font>
                               <Font name="Baskerville Old Face" size="20.0" />
                            </font>
                         </Text>
-                        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="203.0" layoutX="158.0" layoutY="262.0" stroke="#ae8406" strokeType="INSIDE" width="355.0" />
-                        <Label layoutX="269.0" layoutY="105.0" text="HIT POINTS : ">
+                        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="196.0" layoutX="162.0" layoutY="262.0" stroke="#ae8406" strokeType="INSIDE" width="337.0" />
+                        <Label layoutX="269.0" layoutY="105.0">
                            <font>
                               <Font name="Baskerville Old Face" size="16.0" />
                            </font>
                         </Label>
-                        <Label layoutX="244.0" layoutY="337.0" text="proficienciesDisplay" textFill="#464545">
+                        <Label layoutX="279.0" layoutY="316.0" text="raceDisplay" textFill="#464545">
                            <font>
-                              <Font size="20.0" />
+                              <Font name="Baskerville Old Face" size="20.0" />
                            </font>
                         </Label>
                         <ImageView fitHeight="260.0" fitWidth="207.0" layoutX="482.0" layoutY="3.0">
@@ -570,6 +569,34 @@
                               <Image url="@../src/bash.png" />
                            </image>
                         </ImageView>
+                        <Label layoutX="260.0" layoutY="165.0" text="subClassDisplay">
+                           <font>
+                              <Font name="Baskerville Old Face" size="20.0" />
+                           </font></Label>
+                        <Text layoutX="273.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sub Class">
+                           <font>
+                              <Font name="Baskerville Old Face" size="30.0" />
+                           </font></Text>
+                        <Text layoutX="294.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class">
+                           <font>
+                              <Font name="Baskerville Old Face" size="30.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="297.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Race">
+                           <font>
+                              <Font name="Baskerville Old Face" size="30.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="273.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sub Race">
+                           <font>
+                              <Font name="Baskerville Old Face" size="30.0" />
+                           </font>
+                        </Text>
+                        <Label layoutX="279.0" layoutY="397.0" text="subDisplay" textFill="#464545">
+                           <font>
+                              <Font name="Baskerville Old Face" size="20.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
                </content>
