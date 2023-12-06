@@ -80,6 +80,12 @@ public class SummaryController implements Initializable{
     @FXML
     private Label classDisplayLabel;
     @FXML
+    private Label subclassDisplayLabel;
+    @FXML
+    private Label raceDisplay;
+    @FXML
+    private Label subraceDisplay;
+    @FXML
     private Label animalHandlingLabel;
     @FXML
     private Label arcanaLabel;
@@ -281,6 +287,18 @@ public class SummaryController implements Initializable{
         }
         if(characterData.getCharacterClass() != null){
             classDisplayLabel.setText(characterData.getCharacterClass());
+        }
+        if(characterData.getSubclass() != null)
+        {
+            subclassDisplayLabel.setText(characterData.getSubclass());
+        }
+        if(characterData.getRace() != null)
+        {
+            raceDisplay.setText(characterData.getRace());
+        }
+        if(characterData.getSubrace() != null)
+        {
+            subraceDisplay.setText(characterData.getSubrace());
         }
         if (characterData.getEquipment() != null)
         {
