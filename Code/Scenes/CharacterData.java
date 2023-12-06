@@ -50,11 +50,13 @@ public class CharacterData {
     private String equipment;
     private String spells;
     private String notes;
+    private String cursor;
 
     // Private constructor to prevent external instantiation
     private CharacterData() 
     {
         // You can initialize default values here if needed
+        cursor = "/src/candycane.gif";
     }
 
     public static CharacterData getInstance() 
@@ -459,6 +461,14 @@ public class CharacterData {
 
     public void setWisThrow(int wisThrow) {
         this.wisThrow = wisThrow;
+    }
+
+    public String getCursor() {
+        return cursor;
+    }
+    
+    public void setCursor(String cursor) {
+        this.cursor = cursor;
     }
 
 

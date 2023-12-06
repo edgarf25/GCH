@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    CharacterData characterData = CharacterData.getInstance();
     @Override
     public void start(Stage primaryStage) 
     {
