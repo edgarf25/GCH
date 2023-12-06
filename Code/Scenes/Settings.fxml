@@ -32,7 +32,7 @@
                   <Image url="@../src/sword.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="112.0" fitWidth="158.0" layoutX="8.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" x="275.0">
+            <ImageView fitHeight="112.0" fitWidth="158.0" layoutX="8.0" layoutY="80.0" onMouseClicked="#candyCaneCursor" pickOnBounds="true" preserveRatio="true" x="275.0">
                <image>
                   <Image url="@../src/candycane.gif" />
                </image>
@@ -42,6 +42,8 @@
                   <Font name="Lucida Sans Italic" size="35.0" />
                </font>
             </Label>
+            <Button layoutX="263.0" layoutY="67.0" mnemonicParsing="false" onAction="#candyCaneCursor" opacity="0.0" prefHeight="171.0" prefWidth="192.0" text="Button" />
+            <Button layoutX="30.0" layoutY="67.0" mnemonicParsing="false" onAction="#swordCursor" opacity="0.0" prefHeight="171.0" prefWidth="192.0" text="Button" />
          </children>
       </AnchorPane>
    </children>

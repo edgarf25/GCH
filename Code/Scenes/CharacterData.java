@@ -56,7 +56,7 @@ public class CharacterData {
     private CharacterData() 
     {
         // You can initialize default values here if needed
-        cursor = "/src/candycane.gif";
+        cursor = "/src/sword.png";
     }
 
     public static CharacterData getInstance() 

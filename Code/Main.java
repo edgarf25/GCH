@@ -1,3 +1,4 @@
+import Scenes.Settings;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.ImageCursor;
@@ -16,7 +17,9 @@ public class Main extends Application {
     {
         try
         {
-            Image cursor = new Image("/src/sword.png"); //loading custom cursor
+            Settings  settings = new Settings();
+            String cursorPath = settings.getCursor();
+            Image cursor = new Image(cursorPath); //loading custom cursor
             Parent root = FXMLLoader.load(getClass().getResource("/Scenes/Welcome.fxml"));
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
@@ -31,4 +34,6 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
+
 }
