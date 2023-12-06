@@ -340,24 +340,24 @@
             <Font name="Century" size="12.0" />
          </font>
       </Text>
-      <Label fx:id="acrobaticsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="277.0" text="Label" textAlignment="CENTER" />
-      <Label fx:id="animalHandlingLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="306.0" text="Label" textAlignment="CENTER" />
-      <Label fx:id="arcanaLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="337.0" text="Label" textAlignment="CENTER" />
-      <Label fx:id="athleticsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="367.0" text="Label" textAlignment="CENTER" />
-      <Label fx:id="deceptionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="397.0" text="Label" textAlignment="CENTER" />
-      <Label fx:id="insightLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="427.0" text="Label" textAlignment="CENTER" />
-      <Label fx:id="intimidationLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="457.0" text="Label" textAlignment="CENTER" />
-      <Label fx:id="investigationLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="487.0" text="Label" textAlignment="CENTER" />
-      <Label fx:id="medicineLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="517.0" text="Label" textAlignment="CENTER" />
-      <Label fx:id="natureLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="546.0" text="Label" textAlignment="CENTER" />
-      <Label fx:id="perceptionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="577.0" text="Label" textAlignment="CENTER" />
-      <Label fx:id="performanceLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="607.0" text="Label" textAlignment="CENTER" />
-      <Label fx:id="persuasionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="637.0" text="Label" textAlignment="CENTER" />
-      <Label fx:id="religionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="667.0" text="Label" textAlignment="CENTER" />
-      <Label fx:id="sleightLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="697.0" text="Label" textAlignment="CENTER" />
-      <Label fx:id="stealthLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="725.0" text="Label" textAlignment="CENTER" />
-      <Label fx:id="survivalLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="750.0" text="Label" textAlignment="CENTER" />
-      <Label fx:id="historyLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="776.0" text="Label" textAlignment="CENTER" />
+      <Label fx:id="acrobaticsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="277.0" scaleShape="false" text="Label" textAlignment="CENTER" />
+      <Label fx:id="animalHandlingLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="306.0" scaleShape="false" text="Label" textAlignment="CENTER" />
+      <Label fx:id="arcanaLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="337.0" scaleShape="false" text="Label" textAlignment="CENTER" />
+      <Label fx:id="athleticsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="367.0" scaleShape="false" text="Label" textAlignment="CENTER" />
+      <Label fx:id="deceptionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="397.0" scaleShape="false" text="Label" textAlignment="CENTER" />
+      <Label fx:id="insightLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="427.0" scaleShape="false" text="Label" textAlignment="CENTER" />
+      <Label fx:id="intimidationLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="457.0" scaleShape="false" text="Label" textAlignment="CENTER" />
+      <Label fx:id="investigationLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="487.0" scaleShape="false" text="Label" textAlignment="CENTER" />
+      <Label fx:id="medicineLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="517.0" scaleShape="false" text="Label" textAlignment="CENTER" />
+      <Label fx:id="natureLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="546.0" scaleShape="false" text="Label" textAlignment="CENTER" />
+      <Label fx:id="perceptionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="577.0" scaleShape="false" text="Label" textAlignment="CENTER" />
+      <Label fx:id="performanceLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="607.0" scaleShape="false" text="Label" textAlignment="CENTER" />
+      <Label fx:id="persuasionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="637.0" scaleShape="false" text="Label" textAlignment="CENTER" />
+      <Label fx:id="religionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="667.0" scaleShape="false" text="Label" textAlignment="CENTER" />
+      <Label fx:id="sleightLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="697.0" scaleShape="false" text="Label" textAlignment="CENTER" />
+      <Label fx:id="stealthLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="725.0" scaleShape="false" text="Label" textAlignment="CENTER" />
+      <Label fx:id="survivalLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="750.0" scaleShape="false" text="Label" textAlignment="CENTER" />
+      <Label fx:id="historyLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="776.0" scaleShape="false" text="Label" textAlignment="CENTER" />
       <TabPane layoutX="305.0" layoutY="322.0" prefHeight="514.0" prefWidth="691.0" tabClosingPolicy="UNAVAILABLE">
          <tabs>
             <Tab text="Background">
@@ -776,7 +776,7 @@
             <Image url="@../src/shield.png" />
          </image>
       </ImageView>
-      <Label fx:id="armorLabel" layoutX="590.0" layoutY="247.0" text="Label" textFill="#f5f5f5">
+      <Label fx:id="armorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="590.0" layoutY="247.0" scaleShape="false" text="Label" textAlignment="CENTER" textFill="#f5f5f5">
          <font>
             <Font name="Baskerville Old Face" size="18.0" />
          </font>
