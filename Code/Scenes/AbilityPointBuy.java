@@ -139,7 +139,7 @@ public class AbilityPointBuy implements AbilitySelection{
     //List<Integer> stdList = new ArrayList<>(Arrays.asList(stdArray));
     private List<Integer> availableOptions;
 
-    CharacterBuilder characterBuilder = CharacterBuilder.getInstance(); //created a character data instance
+    SummaryBuilder summaryBuilder = SummaryBuilder.getInstance(); //created a character data instance
 
     public void setAbilities(){
         /// Insert
@@ -231,7 +231,7 @@ public class AbilityPointBuy implements AbilitySelection{
                 updateValues(chaLabel, +1, 'p', 5);
             }
 
-            characterBuilder.setAbilities(finalValues);
+            summaryBuilder.setAbilities(finalValues);
         }
     }
     public void subPointBuy(ActionEvent event) //decreases label
@@ -263,7 +263,7 @@ public class AbilityPointBuy implements AbilitySelection{
             {
                 updateValues(chaLabel, -1, 's', 5);
             }
-            characterBuilder.setAbilities(finalValues);
+            summaryBuilder.setAbilities(finalValues);
         }
     }
 }

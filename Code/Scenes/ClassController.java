@@ -68,7 +68,7 @@ public class ClassController implements Initializable{
                                      "Warlocks are spellcasters who form pacts with powerful otherworldly entities for magical abilities. They have unique spellcasting mechanics, choose abilities called \"Eldritch Invocations,\" and are defined by their patrons, such as Archfey or Fiends. Warlocks serve as versatile spellcasters in a party, specializing in various roles. Their character alignment and motivations vary, often shaped by their patrons.",
                                      "Wizards are spellcasters known for their scholarly pursuit of magic through study and spellbook knowledge. They use their spellbook to cast a variety of magical spells, prepare spells daily, and recover spell slots through \"Arcane Recovery.\" Wizards choose an \"Arcane Tradition\" that defines their magical focus. They excel in roles like damage dealing, control, utility, and support."};
     private sceneController controller; //created a scenceController instance
-    CharacterBuilder characterBuilder = CharacterBuilder.getInstance(); //created a character data instance
+    SummaryBuilder summaryBuilder = SummaryBuilder.getInstance(); //created a character data instance
 
 
     public String setClass()
@@ -98,7 +98,7 @@ public class ClassController implements Initializable{
         {
             if (newValue != null)
             {
-                characterBuilder.setSpells("");
+                summaryBuilder.setSpells("");
                 if (newValue.equals("Barbarian")) 
                 {
                     classDescription.setText(descriptions[0]);
@@ -172,21 +172,21 @@ public class ClassController implements Initializable{
                     wizardIcon.setVisible(true);
                 }
                 userClass = newValue;
-                characterBuilder.setCharacterClass(newValue);
+                summaryBuilder.setCharacterClass(newValue);
             }
         });
     };
 
     public void updateSubClass()
     {
-        characterBuilder.setSubclass(subClassText.getText());
+        summaryBuilder.setSubclass(subClassText.getText());
     }
 
 
     private void saveData()
     {
-        String newValue = characterBuilder.getCharacterClass();
-        subClassText.setText(characterBuilder.getSubclass());
+        String newValue = summaryBuilder.getCharacterClass();
+        subClassText.setText(summaryBuilder.getSubclass());
         if(newValue == null)
         {
             missingIcon.setVisible(true);
@@ -267,7 +267,7 @@ public class ClassController implements Initializable{
                 wizardIcon.setVisible(true);
             }
             userClass = newValue;
-            characterBuilder.setCharacterClass(newValue);
+            summaryBuilder.setCharacterClass(newValue);
         }
     }
 

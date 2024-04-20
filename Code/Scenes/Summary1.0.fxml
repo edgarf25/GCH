@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.SummaryController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.Summary">
    <children>
       <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1f93ff00" height="236.0" layoutX="678.0" layoutY="80.0" stroke="#ae8406" strokeType="INSIDE" width="304.0" />
       <ImageView fitHeight="856.0" fitWidth="1025.0" layoutX="-7.0" layoutY="8.0" pickOnBounds="true">

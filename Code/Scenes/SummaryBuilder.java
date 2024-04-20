@@ -1,8 +1,8 @@
 package Scenes;
 
 
-public class CharacterBuilder {
-    private static CharacterBuilder instance = new CharacterBuilder(); // Singleton instance
+public class SummaryBuilder {
+    private static SummaryBuilder instance = new SummaryBuilder(); // Singleton instance
 
     private Integer[] abilities;
     private Integer[] updateAbilities;
@@ -55,14 +55,14 @@ public class CharacterBuilder {
     private double volume;
 
     // Private constructor to prevent external instantiation
-    private CharacterBuilder()
+    private SummaryBuilder()
     {
         // You can initialize default values here if needed
         cursor = "/src/sword.png";
         volume = 0.15;
     }
 
-    public static CharacterBuilder getInstance()
+    public static SummaryBuilder getInstance()
     {
         return instance;
     }

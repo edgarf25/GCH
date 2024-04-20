@@ -41,7 +41,7 @@ public class raceController implements Initializable{
                                      "Tieflings are a distinctive race with infernal ancestry, marked by unique physical traits like horns and tails, as well as supernatural abilities tied to their fiendish lineage. They often face prejudice and struggle with their identity but are known for their resilience and determination."};
 
     private sceneController controller; //created a scenceController instance
-    CharacterBuilder characterBuilder = CharacterBuilder.getInstance(); //created a character data instance
+    SummaryBuilder summaryBuilder = SummaryBuilder.getInstance(); //created a character data instance
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -60,56 +60,56 @@ public class raceController implements Initializable{
                 if (newValue.equals("Dwarf")) {
                     subraceChoiceBox.getItems().addAll(dwarfSubraces);
                     backgroundDescription.setText(descriptions[0]);
-                    characterBuilder.setSubrace("");
+                    summaryBuilder.setSubrace("");
                 }
                 else if (newValue.equals("Elf"))
                 {
                     subraceChoiceBox.getItems().addAll(elfSubraces);
                     backgroundDescription.setText(descriptions[3]);
-                    characterBuilder.setSubrace("");
+                    summaryBuilder.setSubrace("");
                 }
                 else if (newValue.equals("Halfling"))
                 {
                     subraceChoiceBox.getItems().addAll(halflingSubraces);
                     backgroundDescription.setText(descriptions[6]);
-                    characterBuilder.setSubrace("");
+                    summaryBuilder.setSubrace("");
                 }
                 else if (newValue.equals("Human"))
                 {
                     backgroundDescription.setText(descriptions[9]);
-                    characterBuilder.setSubrace("No Subrace");
+                    summaryBuilder.setSubrace("No Subrace");
                 }
                 else if (newValue.equals("Dragonborn"))
                 {
                     backgroundDescription.setText(descriptions[10]);
-                    characterBuilder.setSubrace("No Subrace");
+                    summaryBuilder.setSubrace("No Subrace");
                 }
                 else if (newValue.equals("Gnome"))
                 {
                     subraceChoiceBox.getItems().addAll(gnomeSubraces);
                     backgroundDescription.setText(descriptions[11]);
-                    characterBuilder.setSubrace("");
+                    summaryBuilder.setSubrace("");
                 }
                 else if (newValue.equals("Half-Elf"))
                 {
                     backgroundDescription.setText(descriptions[14]);
-                    characterBuilder.setSubrace("No Subrace");
+                    summaryBuilder.setSubrace("No Subrace");
                 }
                 else if (newValue.equals("Half-Orc"))
                 {
                     backgroundDescription.setText(descriptions[15]);
-                    characterBuilder.setSubrace("No Subrace");
+                    summaryBuilder.setSubrace("No Subrace");
                 }
                 else if (newValue.equals("Tiefling"))
                 {
                     backgroundDescription.setText(descriptions[16]);
-                    characterBuilder.setSubrace("No Subrace");
+                    summaryBuilder.setSubrace("No Subrace");
                 }
 
-                characterBuilder.setRace(newValue); //setting the race on character data
-                if (characterBuilder.getSubrace() != null)
+                summaryBuilder.setRace(newValue); //setting the race on character data
+                if (summaryBuilder.getSubrace() != null)
                 {
-                    if (characterBuilder.getSubrace().equals("No Subrace"))
+                    if (summaryBuilder.getSubrace().equals("No Subrace"))
                     {
                         subraceChoiceBox.getSelectionModel().select("No Subrace");
                     }
@@ -157,7 +157,7 @@ public class raceController implements Initializable{
                     backgroundDescription.setText(descriptions[13]);
                 }
 
-                characterBuilder.setSubrace(newValue); //setting subrace on data class
+                summaryBuilder.setSubrace(newValue); //setting subrace on data class
             }
         });
     }
@@ -165,9 +165,9 @@ public class raceController implements Initializable{
 
     private void saveData()
     {
-        if (characterBuilder.getRace() != null)
+        if (summaryBuilder.getRace() != null)
         {
-            String newValue = characterBuilder.getRace();
+            String newValue = summaryBuilder.getRace();
             myChoiceBox.getSelectionModel().select(newValue);
             if (newValue != null) {
                 // Clear existing items in the second ChoiceBox
@@ -200,9 +200,9 @@ public class raceController implements Initializable{
             }
         }
 
-        if (characterBuilder.getSubrace() != null)
+        if (summaryBuilder.getSubrace() != null)
         {
-            String newValue = characterBuilder.getSubrace();
+            String newValue = summaryBuilder.getSubrace();
             subraceChoiceBox.getSelectionModel().select(newValue);
             if (newValue != null)
             {

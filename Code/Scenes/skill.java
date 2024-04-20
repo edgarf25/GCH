@@ -3,7 +3,7 @@ package Scenes;
 import java.util.Arrays;
 
 public class skill {
-    CharacterBuilder characterBuilder = CharacterBuilder.getInstance();
+    SummaryBuilder summaryBuilder = SummaryBuilder.getInstance();
     int acrobaticsBonus = 0;
     int animalHandlingBonus = 0;
     int arcanaBonus = 0;
@@ -32,557 +32,557 @@ public class skill {
 
 
     public void updateAcrobaticsBonus() {
-        if (characterBuilder.getSubrace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null) {
-            if (characterBuilder.getSubrace().equals("Lightfoot Halfling")) { // checking for bonuses for acrobatics
+        if (summaryBuilder.getSubrace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null) {
+            if (summaryBuilder.getSubrace().equals("Lightfoot Halfling")) { // checking for bonuses for acrobatics
                 acrobaticsBonus++;
-                characterBuilder.setAcrobaticsBonus(acrobaticsBonus);
+                summaryBuilder.setAcrobaticsBonus(acrobaticsBonus);
             }
-            if (characterBuilder.getSubrace().equals("Wood Elf")) {
+            if (summaryBuilder.getSubrace().equals("Wood Elf")) {
                 acrobaticsBonus++;
-                characterBuilder.setAcrobaticsBonus(acrobaticsBonus);
+                summaryBuilder.setAcrobaticsBonus(acrobaticsBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("Acrobatics") || characterBuilder.getSkillsAndProficiencies2().equals("Acrobatics")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("Acrobatics") || summaryBuilder.getSkillsAndProficiencies2().equals("Acrobatics")) {
                 acrobaticsBonus++;
-                characterBuilder.setAcrobaticsBonus(acrobaticsBonus);
+                summaryBuilder.setAcrobaticsBonus(acrobaticsBonus);
             }
-            if (characterBuilder.getAbilities()[1] <= 9) {
+            if (summaryBuilder.getAbilities()[1] <= 9) {
                 acrobaticsBonus--;
-                characterBuilder.setAcrobaticsBonus(acrobaticsBonus);
-            } else if (characterBuilder.getAbilities()[1] <= 13 && characterBuilder.getAbilities()[1] > 11) {
+                summaryBuilder.setAcrobaticsBonus(acrobaticsBonus);
+            } else if (summaryBuilder.getAbilities()[1] <= 13 && summaryBuilder.getAbilities()[1] > 11) {
                 acrobaticsBonus++;
-                characterBuilder.setAcrobaticsBonus(acrobaticsBonus);
-            } else if (characterBuilder.getAbilities()[1] <= 15) {
+                summaryBuilder.setAcrobaticsBonus(acrobaticsBonus);
+            } else if (summaryBuilder.getAbilities()[1] <= 15) {
                 acrobaticsBonus += 2;
-                characterBuilder.setAcrobaticsBonus(acrobaticsBonus);
-            } else if (characterBuilder.getAbilities()[1] <= 20) {
+                summaryBuilder.setAcrobaticsBonus(acrobaticsBonus);
+            } else if (summaryBuilder.getAbilities()[1] <= 20) {
                 acrobaticsBonus += 3;
-                characterBuilder.setAcrobaticsBonus(acrobaticsBonus);
+                summaryBuilder.setAcrobaticsBonus(acrobaticsBonus);
             }
         }
     }
 
     public void updateAnimalHandlingBonus() {
-        if (characterBuilder.getSubrace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null) {
-            if (characterBuilder.getSubrace().equals("Hill Dwarf")) {
+        if (summaryBuilder.getSubrace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null) {
+            if (summaryBuilder.getSubrace().equals("Hill Dwarf")) {
                 animalHandlingBonus++;
-                characterBuilder.setAnimalHandlingBonus(animalHandlingBonus);
+                summaryBuilder.setAnimalHandlingBonus(animalHandlingBonus);
             }
-            if (characterBuilder.getSubrace().equals("Stout Halfling")) {
+            if (summaryBuilder.getSubrace().equals("Stout Halfling")) {
                 animalHandlingBonus++;
-                characterBuilder.setAnimalHandlingBonus(animalHandlingBonus);
+                summaryBuilder.setAnimalHandlingBonus(animalHandlingBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("Animal Handlling") || characterBuilder.getSkillsAndProficiencies2().equals("Animal Handling")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("Animal Handlling") || summaryBuilder.getSkillsAndProficiencies2().equals("Animal Handling")) {
                 animalHandlingBonus++;
-                characterBuilder.setAnimalHandlingBonus(animalHandlingBonus);
+                summaryBuilder.setAnimalHandlingBonus(animalHandlingBonus);
             }
-            if (characterBuilder.getAbilities()[4] <= 9) {
+            if (summaryBuilder.getAbilities()[4] <= 9) {
                 animalHandlingBonus--;
-                characterBuilder.setAnimalHandlingBonus(animalHandlingBonus);
-            } else if (characterBuilder.getAbilities()[4] <= 13 && characterBuilder.getAbilities()[4] > 11) {
+                summaryBuilder.setAnimalHandlingBonus(animalHandlingBonus);
+            } else if (summaryBuilder.getAbilities()[4] <= 13 && summaryBuilder.getAbilities()[4] > 11) {
                 animalHandlingBonus++;
-                characterBuilder.setAnimalHandlingBonus(animalHandlingBonus);
-            } else if (characterBuilder.getAbilities()[4] <= 15) {
+                summaryBuilder.setAnimalHandlingBonus(animalHandlingBonus);
+            } else if (summaryBuilder.getAbilities()[4] <= 15) {
                 animalHandlingBonus += 2;
-                characterBuilder.setAnimalHandlingBonus(animalHandlingBonus);
-            } else if (characterBuilder.getAbilities()[4] <= 20) {
+                summaryBuilder.setAnimalHandlingBonus(animalHandlingBonus);
+            } else if (summaryBuilder.getAbilities()[4] <= 20) {
                 animalHandlingBonus += 3;
-                characterBuilder.setAnimalHandlingBonus(animalHandlingBonus);
+                summaryBuilder.setAnimalHandlingBonus(animalHandlingBonus);
             }
         }
     }
 
     public void updateArcanaBonus() {
-        if (characterBuilder.getSubrace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null) {
-            if (characterBuilder.getSubrace().equals("High Elf")) {
+        if (summaryBuilder.getSubrace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null) {
+            if (summaryBuilder.getSubrace().equals("High Elf")) {
                 arcanaBonus++;
-                characterBuilder.setArcanaBonus(arcanaBonus);
+                summaryBuilder.setArcanaBonus(arcanaBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("Arcana") || characterBuilder.getSkillsAndProficiencies2().equals("Arcana")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("Arcana") || summaryBuilder.getSkillsAndProficiencies2().equals("Arcana")) {
                 arcanaBonus++;
-                characterBuilder.setArcanaBonus(arcanaBonus);
+                summaryBuilder.setArcanaBonus(arcanaBonus);
             }
-            if (characterBuilder.getAbilities()[3] <= 9) {
+            if (summaryBuilder.getAbilities()[3] <= 9) {
                 arcanaBonus--;
-                characterBuilder.setArcanaBonus(arcanaBonus);
-            } else if (characterBuilder.getAbilities()[3] <= 13 && characterBuilder.getAbilities()[3] > 11) {
+                summaryBuilder.setArcanaBonus(arcanaBonus);
+            } else if (summaryBuilder.getAbilities()[3] <= 13 && summaryBuilder.getAbilities()[3] > 11) {
                 arcanaBonus++;
-                characterBuilder.setArcanaBonus(arcanaBonus);
-            } else if (characterBuilder.getAbilities()[3] <= 15) {
+                summaryBuilder.setArcanaBonus(arcanaBonus);
+            } else if (summaryBuilder.getAbilities()[3] <= 15) {
                 arcanaBonus += 2;
-                characterBuilder.setArcanaBonus(arcanaBonus);
-            } else if (characterBuilder.getAbilities()[3] <= 20) {
+                summaryBuilder.setArcanaBonus(arcanaBonus);
+            } else if (summaryBuilder.getAbilities()[3] <= 20) {
                 arcanaBonus += 3;
-                characterBuilder.setArcanaBonus(arcanaBonus);
+                summaryBuilder.setArcanaBonus(arcanaBonus);
             }
         }
     }
 
     public void updateAthleticsBonus() {
-        if (characterBuilder.getSubrace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null) {
-            if (characterBuilder.getSubrace().equals("Mountain Dwarf")) {
+        if (summaryBuilder.getSubrace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null) {
+            if (summaryBuilder.getSubrace().equals("Mountain Dwarf")) {
                 athleticsBonus++;
-                characterBuilder.setAthleticsBonus(athleticsBonus);
+                summaryBuilder.setAthleticsBonus(athleticsBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("Athletics") || characterBuilder.getSkillsAndProficiencies2().equals("Athletics")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("Athletics") || summaryBuilder.getSkillsAndProficiencies2().equals("Athletics")) {
                 animalHandlingBonus++;
-                characterBuilder.setAthleticsBonus(athleticsBonus);
+                summaryBuilder.setAthleticsBonus(athleticsBonus);
             }
-            if (characterBuilder.getAbilities()[0] <= 9) {
+            if (summaryBuilder.getAbilities()[0] <= 9) {
                 athleticsBonus--;
-                characterBuilder.setAthleticsBonus(athleticsBonus);
-            } else if (characterBuilder.getAbilities()[0] <= 13 && characterBuilder.getAbilities()[0] > 11) {
+                summaryBuilder.setAthleticsBonus(athleticsBonus);
+            } else if (summaryBuilder.getAbilities()[0] <= 13 && summaryBuilder.getAbilities()[0] > 11) {
                 athleticsBonus++;
-                characterBuilder.setAthleticsBonus(athleticsBonus);
-            } else if (characterBuilder.getAbilities()[0] <= 15) {
+                summaryBuilder.setAthleticsBonus(athleticsBonus);
+            } else if (summaryBuilder.getAbilities()[0] <= 15) {
                 athleticsBonus += 2;
-                characterBuilder.setAthleticsBonus(athleticsBonus);
-            } else if (characterBuilder.getAbilities()[0] <= 20) {
+                summaryBuilder.setAthleticsBonus(athleticsBonus);
+            } else if (summaryBuilder.getAbilities()[0] <= 20) {
                 athleticsBonus += 3;
-                characterBuilder.setAthleticsBonus(athleticsBonus);
+                summaryBuilder.setAthleticsBonus(athleticsBonus);
             }
         }
     }
 
     public void updateDeceptionBonus() {
-        if (characterBuilder.getRace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null) {
-            if (characterBuilder.getRace().equals("Tiefling")) {
+        if (summaryBuilder.getRace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null) {
+            if (summaryBuilder.getRace().equals("Tiefling")) {
                 deceptionBonus++;
-                characterBuilder.setDeceptionBonus(deceptionBonus);
+                summaryBuilder.setDeceptionBonus(deceptionBonus);
             }
-            if (characterBuilder.getRace().equals("Half-Elf")) {
+            if (summaryBuilder.getRace().equals("Half-Elf")) {
                 deceptionBonus++;
-                characterBuilder.setDeceptionBonus(deceptionBonus);
+                summaryBuilder.setDeceptionBonus(deceptionBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("Deception") || characterBuilder.getSkillsAndProficiencies2().equals("Deception")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("Deception") || summaryBuilder.getSkillsAndProficiencies2().equals("Deception")) {
                 deceptionBonus++;
-                characterBuilder.setDeceptionBonus(deceptionBonus);
+                summaryBuilder.setDeceptionBonus(deceptionBonus);
             }
-            if (characterBuilder.getAbilities()[5] <= 9) {
+            if (summaryBuilder.getAbilities()[5] <= 9) {
                 deceptionBonus--;
-                characterBuilder.setDeceptionBonus(deceptionBonus);
-            } else if (characterBuilder.getAbilities()[5] <= 13 && characterBuilder.getAbilities()[5] > 11) {
+                summaryBuilder.setDeceptionBonus(deceptionBonus);
+            } else if (summaryBuilder.getAbilities()[5] <= 13 && summaryBuilder.getAbilities()[5] > 11) {
                 deceptionBonus++;
-                characterBuilder.setDeceptionBonus(deceptionBonus);
-            } else if (characterBuilder.getAbilities()[5] <= 15) {
+                summaryBuilder.setDeceptionBonus(deceptionBonus);
+            } else if (summaryBuilder.getAbilities()[5] <= 15) {
                 deceptionBonus += 2;
-                characterBuilder.setDeceptionBonus(deceptionBonus);
-            } else if (characterBuilder.getAbilities()[5] <= 20) {
+                summaryBuilder.setDeceptionBonus(deceptionBonus);
+            } else if (summaryBuilder.getAbilities()[5] <= 20) {
                 deceptionBonus += 3;
-                characterBuilder.setDeceptionBonus(deceptionBonus);
+                summaryBuilder.setDeceptionBonus(deceptionBonus);
             }
         }
     }
 
     public void updateInsightBonus() {
-        if (characterBuilder.getSubrace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null) {
-            if (characterBuilder.getSubrace().equals("Wood Elf")) {
+        if (summaryBuilder.getSubrace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null) {
+            if (summaryBuilder.getSubrace().equals("Wood Elf")) {
                 insightBonus++;
-                characterBuilder.setInsightBonus(insightBonus);
+                summaryBuilder.setInsightBonus(insightBonus);
             }
-            if (characterBuilder.getSubrace().equals("Hill Dwarf")) {
+            if (summaryBuilder.getSubrace().equals("Hill Dwarf")) {
                 insightBonus++;
-                characterBuilder.setInsightBonus(insightBonus);
+                summaryBuilder.setInsightBonus(insightBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("Insight") || characterBuilder.getSkillsAndProficiencies2().equals("Insight")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("Insight") || summaryBuilder.getSkillsAndProficiencies2().equals("Insight")) {
                 insightBonus++;
-                characterBuilder.setInsightBonus(insightBonus);
+                summaryBuilder.setInsightBonus(insightBonus);
             }
-            if (characterBuilder.getAbilities()[4] <= 9) {
+            if (summaryBuilder.getAbilities()[4] <= 9) {
                 insightBonus--;
-                characterBuilder.setInsightBonus(insightBonus);
-            } else if (characterBuilder.getAbilities()[4] <= 13 && characterBuilder.getAbilities()[4] > 11) {
+                summaryBuilder.setInsightBonus(insightBonus);
+            } else if (summaryBuilder.getAbilities()[4] <= 13 && summaryBuilder.getAbilities()[4] > 11) {
                 insightBonus++;
-                characterBuilder.setInsightBonus(insightBonus);
-            } else if (characterBuilder.getAbilities()[4] <= 15) {
+                summaryBuilder.setInsightBonus(insightBonus);
+            } else if (summaryBuilder.getAbilities()[4] <= 15) {
                 insightBonus += 2;
-                characterBuilder.setInsightBonus(insightBonus);
-            } else if (characterBuilder.getAbilities()[4] <= 20) {
+                summaryBuilder.setInsightBonus(insightBonus);
+            } else if (summaryBuilder.getAbilities()[4] <= 20) {
                 insightBonus += 3;
-                characterBuilder.setInsightBonus(insightBonus);
+                summaryBuilder.setInsightBonus(insightBonus);
             }
         }
     }
 
     public void updateIntimidationBonus() {
-        if (characterBuilder.getRace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null) {
-            if (characterBuilder.getRace().equals("Dragonborn")) {
+        if (summaryBuilder.getRace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null) {
+            if (summaryBuilder.getRace().equals("Dragonborn")) {
                 intimidationBonus++;
-                characterBuilder.setIntimidationBonus(intimidationBonus);
+                summaryBuilder.setIntimidationBonus(intimidationBonus);
             }
-            if (characterBuilder.getRace().equals("Half-Orc")) {
+            if (summaryBuilder.getRace().equals("Half-Orc")) {
                 intimidationBonus++;
-                characterBuilder.setIntimidationBonus(intimidationBonus);
+                summaryBuilder.setIntimidationBonus(intimidationBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("Intimidation") || characterBuilder.getSkillsAndProficiencies2().equals("Intimidation")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("Intimidation") || summaryBuilder.getSkillsAndProficiencies2().equals("Intimidation")) {
                 intimidationBonus++;
-                characterBuilder.setIntimidationBonus(intimidationBonus);
+                summaryBuilder.setIntimidationBonus(intimidationBonus);
             }
-            if (characterBuilder.getAbilities()[5] <= 9) {
+            if (summaryBuilder.getAbilities()[5] <= 9) {
                 intimidationBonus--;
-                characterBuilder.setIntimidationBonus(intimidationBonus);
-            } else if (characterBuilder.getAbilities()[5] <= 13 && characterBuilder.getAbilities()[5] > 11) {
+                summaryBuilder.setIntimidationBonus(intimidationBonus);
+            } else if (summaryBuilder.getAbilities()[5] <= 13 && summaryBuilder.getAbilities()[5] > 11) {
                 intimidationBonus++;
-                characterBuilder.setIntimidationBonus(intimidationBonus);
-            } else if (characterBuilder.getAbilities()[5] <= 15) {
+                summaryBuilder.setIntimidationBonus(intimidationBonus);
+            } else if (summaryBuilder.getAbilities()[5] <= 15) {
                 intimidationBonus += 2;
-                characterBuilder.setIntimidationBonus(intimidationBonus);
-            } else if (characterBuilder.getAbilities()[5] <= 20) {
+                summaryBuilder.setIntimidationBonus(intimidationBonus);
+            } else if (summaryBuilder.getAbilities()[5] <= 20) {
                 intimidationBonus += 3;
-                characterBuilder.setIntimidationBonus(intimidationBonus);
+                summaryBuilder.setIntimidationBonus(intimidationBonus);
             }
         }
     }
 
     public void updateInvestigationBonus() {
-        if (characterBuilder.getRace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null) {
-            if (characterBuilder.getRace().equals("Gnome")) {
+        if (summaryBuilder.getRace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null) {
+            if (summaryBuilder.getRace().equals("Gnome")) {
                 investigationBonus++;
-                characterBuilder.setInvestigationBonus(investigationBonus);
+                summaryBuilder.setInvestigationBonus(investigationBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("Investigation") || characterBuilder.getSkillsAndProficiencies2().equals("Investigation")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("Investigation") || summaryBuilder.getSkillsAndProficiencies2().equals("Investigation")) {
                 investigationBonus++;
-                characterBuilder.setInvestigationBonus(investigationBonus);
+                summaryBuilder.setInvestigationBonus(investigationBonus);
             }
-            if (characterBuilder.getAbilities()[3] <= 9) {
+            if (summaryBuilder.getAbilities()[3] <= 9) {
                 investigationBonus--;
-                characterBuilder.setInvestigationBonus(investigationBonus);
-            } else if (characterBuilder.getAbilities()[3] <= 13 && characterBuilder.getAbilities()[3] > 11) {
+                summaryBuilder.setInvestigationBonus(investigationBonus);
+            } else if (summaryBuilder.getAbilities()[3] <= 13 && summaryBuilder.getAbilities()[3] > 11) {
                 investigationBonus++;
-                characterBuilder.setInvestigationBonus(investigationBonus);
-            } else if (characterBuilder.getAbilities()[3] <= 15) {
+                summaryBuilder.setInvestigationBonus(investigationBonus);
+            } else if (summaryBuilder.getAbilities()[3] <= 15) {
                 investigationBonus += 2;
-                characterBuilder.setInvestigationBonus(investigationBonus);
-            } else if (characterBuilder.getAbilities()[3] <= 20) {
+                summaryBuilder.setInvestigationBonus(investigationBonus);
+            } else if (summaryBuilder.getAbilities()[3] <= 20) {
                 investigationBonus += 3;
-                characterBuilder.setInvestigationBonus(investigationBonus);
+                summaryBuilder.setInvestigationBonus(investigationBonus);
             }
         }
     }
 
     public void updateMedicineBonus() {
-        if (characterBuilder.getSubrace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null) {
-            if (characterBuilder.getSubrace().equals("Hill Dwarf")) {
+        if (summaryBuilder.getSubrace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null) {
+            if (summaryBuilder.getSubrace().equals("Hill Dwarf")) {
                 medicineBonus++;
-                characterBuilder.setMedicineBonus(medicineBonus);
+                summaryBuilder.setMedicineBonus(medicineBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("Medicine") || characterBuilder.getSkillsAndProficiencies2().equals("Medicine")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("Medicine") || summaryBuilder.getSkillsAndProficiencies2().equals("Medicine")) {
                 medicineBonus++;
-                characterBuilder.setMedicineBonus(medicineBonus);
+                summaryBuilder.setMedicineBonus(medicineBonus);
             }
-            if (characterBuilder.getAbilities()[4] <= 9) {
+            if (summaryBuilder.getAbilities()[4] <= 9) {
                 medicineBonus--;
-                characterBuilder.setMedicineBonus(medicineBonus);
-            } else if (characterBuilder.getAbilities()[4] <= 13 && characterBuilder.getAbilities()[4] > 11) {
+                summaryBuilder.setMedicineBonus(medicineBonus);
+            } else if (summaryBuilder.getAbilities()[4] <= 13 && summaryBuilder.getAbilities()[4] > 11) {
                 medicineBonus++;
-                characterBuilder.setMedicineBonus(medicineBonus);
-            } else if (characterBuilder.getAbilities()[4] <= 15) {
+                summaryBuilder.setMedicineBonus(medicineBonus);
+            } else if (summaryBuilder.getAbilities()[4] <= 15) {
                 medicineBonus += 2;
-                characterBuilder.setMedicineBonus(medicineBonus);
-            } else if (characterBuilder.getAbilities()[4] <= 20) {
+                summaryBuilder.setMedicineBonus(medicineBonus);
+            } else if (summaryBuilder.getAbilities()[4] <= 20) {
                 medicineBonus += 3;
-                characterBuilder.setMedicineBonus(medicineBonus);
+                summaryBuilder.setMedicineBonus(medicineBonus);
             }
         }
     }
 
     public void updateNatureBonus() {
-        if (characterBuilder.getRace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null && characterBuilder.getSubrace() != null) {
-            if (characterBuilder.getSubrace().equals("Wood Elf")) {
+        if (summaryBuilder.getRace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null && summaryBuilder.getSubrace() != null) {
+            if (summaryBuilder.getSubrace().equals("Wood Elf")) {
                 natureBonus++;
-                characterBuilder.setNatureBonus(natureBonus);
+                summaryBuilder.setNatureBonus(natureBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("Nature") || characterBuilder.getSkillsAndProficiencies2().equals("Nature")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("Nature") || summaryBuilder.getSkillsAndProficiencies2().equals("Nature")) {
                 natureBonus++;
-                characterBuilder.setNatureBonus(natureBonus);
+                summaryBuilder.setNatureBonus(natureBonus);
             }
-            if (characterBuilder.getAbilities()[3] <= 9) {
+            if (summaryBuilder.getAbilities()[3] <= 9) {
                 natureBonus--;
-                characterBuilder.setNatureBonus(natureBonus);
-            } else if (characterBuilder.getAbilities()[3] <= 13 && characterBuilder.getAbilities()[3] > 11) {
+                summaryBuilder.setNatureBonus(natureBonus);
+            } else if (summaryBuilder.getAbilities()[3] <= 13 && summaryBuilder.getAbilities()[3] > 11) {
                 natureBonus++;
-                characterBuilder.setNatureBonus(natureBonus);
-            } else if (characterBuilder.getAbilities()[3] <= 15) {
+                summaryBuilder.setNatureBonus(natureBonus);
+            } else if (summaryBuilder.getAbilities()[3] <= 15) {
                 natureBonus += 2;
-                characterBuilder.setNatureBonus(natureBonus);
-            } else if (characterBuilder.getAbilities()[3] <= 20) {
+                summaryBuilder.setNatureBonus(natureBonus);
+            } else if (summaryBuilder.getAbilities()[3] <= 20) {
                 natureBonus += 3;
-                characterBuilder.setNatureBonus(natureBonus);
+                summaryBuilder.setNatureBonus(natureBonus);
             }
         }
     }
 
     public void updatePerceptionBonus() {
-        if (characterBuilder.getRace() != null && characterBuilder.getSubrace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null) {
-            if (characterBuilder.getSubrace().equals("Wood Elf")) {
+        if (summaryBuilder.getRace() != null && summaryBuilder.getSubrace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null) {
+            if (summaryBuilder.getSubrace().equals("Wood Elf")) {
                 perceptionBonus++;
-                characterBuilder.setPerceptionBonus(perceptionBonus);
+                summaryBuilder.setPerceptionBonus(perceptionBonus);
             }
-            if (characterBuilder.getRace().equals("Half-Elf")) {
+            if (summaryBuilder.getRace().equals("Half-Elf")) {
                 perceptionBonus++;
-                characterBuilder.setPerceptionBonus(perceptionBonus);
+                summaryBuilder.setPerceptionBonus(perceptionBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("Perception") || characterBuilder.getSkillsAndProficiencies2().equals("Perception")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("Perception") || summaryBuilder.getSkillsAndProficiencies2().equals("Perception")) {
                 perceptionBonus++;
-                characterBuilder.setPerceptionBonus(perceptionBonus);
+                summaryBuilder.setPerceptionBonus(perceptionBonus);
             }
-            if (characterBuilder.getAbilities()[4] <= 9) {
+            if (summaryBuilder.getAbilities()[4] <= 9) {
                 perceptionBonus--;
-                characterBuilder.setPerceptionBonus(perceptionBonus);
-            } else if (characterBuilder.getAbilities()[4] <= 13 && characterBuilder.getAbilities()[4] > 11) {
+                summaryBuilder.setPerceptionBonus(perceptionBonus);
+            } else if (summaryBuilder.getAbilities()[4] <= 13 && summaryBuilder.getAbilities()[4] > 11) {
                 perceptionBonus++;
-                characterBuilder.setPerceptionBonus(perceptionBonus);
-            } else if (characterBuilder.getAbilities()[4] <= 15) {
+                summaryBuilder.setPerceptionBonus(perceptionBonus);
+            } else if (summaryBuilder.getAbilities()[4] <= 15) {
                 perceptionBonus += 2;
-                characterBuilder.setPerceptionBonus(perceptionBonus);
-            } else if (characterBuilder.getAbilities()[4] <= 20) {
+                summaryBuilder.setPerceptionBonus(perceptionBonus);
+            } else if (summaryBuilder.getAbilities()[4] <= 20) {
                 perceptionBonus += 3;
-                characterBuilder.setPerceptionBonus(perceptionBonus);
+                summaryBuilder.setPerceptionBonus(perceptionBonus);
             }
         }
     }
 
     public void updatePerformanceBonus() {
-        if (characterBuilder.getRace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null) {
-            if (characterBuilder.getRace().equals("Half-Elf")) {
+        if (summaryBuilder.getRace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null) {
+            if (summaryBuilder.getRace().equals("Half-Elf")) {
                 performanceBonus++;
-                characterBuilder.setPerformanceBonus(performanceBonus);
+                summaryBuilder.setPerformanceBonus(performanceBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("Performance") || characterBuilder.getSkillsAndProficiencies2().equals("Performance")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("Performance") || summaryBuilder.getSkillsAndProficiencies2().equals("Performance")) {
                 performanceBonus++;
-                characterBuilder.setPerformanceBonus(performanceBonus);
+                summaryBuilder.setPerformanceBonus(performanceBonus);
             }
-            if (characterBuilder.getAbilities()[5] <= 9) {
+            if (summaryBuilder.getAbilities()[5] <= 9) {
                 performanceBonus--;
-                characterBuilder.setPerformanceBonus(performanceBonus);
-            } else if (characterBuilder.getAbilities()[5] <= 13 && characterBuilder.getAbilities()[5] > 11) {
+                summaryBuilder.setPerformanceBonus(performanceBonus);
+            } else if (summaryBuilder.getAbilities()[5] <= 13 && summaryBuilder.getAbilities()[5] > 11) {
                 performanceBonus++;
-                characterBuilder.setPerformanceBonus(performanceBonus);
-            } else if (characterBuilder.getAbilities()[5] <= 15) {
+                summaryBuilder.setPerformanceBonus(performanceBonus);
+            } else if (summaryBuilder.getAbilities()[5] <= 15) {
                 performanceBonus += 2;
-                characterBuilder.setPerformanceBonus(performanceBonus);
-            } else if (characterBuilder.getAbilities()[5] <= 20) {
+                summaryBuilder.setPerformanceBonus(performanceBonus);
+            } else if (summaryBuilder.getAbilities()[5] <= 20) {
                 performanceBonus += 3;
-                characterBuilder.setPerformanceBonus(performanceBonus);
+                summaryBuilder.setPerformanceBonus(performanceBonus);
             }
         }
     }
 
     public void updatePersuasionBonus() {
-        if (characterBuilder.getRace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null) {
-            if (characterBuilder.getRace().equals("Half-Elf")) {
+        if (summaryBuilder.getRace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null) {
+            if (summaryBuilder.getRace().equals("Half-Elf")) {
                 persuasionBonus++;
-                characterBuilder.setPersuasionBonus(persuasionBonus);
+                summaryBuilder.setPersuasionBonus(persuasionBonus);
             }
-            if (characterBuilder.getRace().equals("Half-Orc")) {
+            if (summaryBuilder.getRace().equals("Half-Orc")) {
                 persuasionBonus++;
-                characterBuilder.setPersuasionBonus(persuasionBonus);
+                summaryBuilder.setPersuasionBonus(persuasionBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("Persuasion") || characterBuilder.getSkillsAndProficiencies2().equals("Persuasion")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("Persuasion") || summaryBuilder.getSkillsAndProficiencies2().equals("Persuasion")) {
                 persuasionBonus++;
-                characterBuilder.setPersuasionBonus(persuasionBonus);
+                summaryBuilder.setPersuasionBonus(persuasionBonus);
             }
-            if (characterBuilder.getAbilities()[5] <= 9) {
+            if (summaryBuilder.getAbilities()[5] <= 9) {
                 persuasionBonus--;
-                characterBuilder.setPersuasionBonus(persuasionBonus);
-            } else if (characterBuilder.getAbilities()[5] <= 13 && characterBuilder.getAbilities()[5] > 11) {
+                summaryBuilder.setPersuasionBonus(persuasionBonus);
+            } else if (summaryBuilder.getAbilities()[5] <= 13 && summaryBuilder.getAbilities()[5] > 11) {
                 persuasionBonus++;
-                characterBuilder.setPersuasionBonus(persuasionBonus);
-            } else if (characterBuilder.getAbilities()[5] <= 15) {
+                summaryBuilder.setPersuasionBonus(persuasionBonus);
+            } else if (summaryBuilder.getAbilities()[5] <= 15) {
                 persuasionBonus += 2;
-                characterBuilder.setPersuasionBonus(persuasionBonus);
-            } else if (characterBuilder.getAbilities()[5] <= 20) {
+                summaryBuilder.setPersuasionBonus(persuasionBonus);
+            } else if (summaryBuilder.getAbilities()[5] <= 20) {
                 persuasionBonus += 3;
-                characterBuilder.setPersuasionBonus(persuasionBonus);
+                summaryBuilder.setPersuasionBonus(persuasionBonus);
             }
         }
     }
 
     public void updateReligionBonus() {
-        if (characterBuilder.getRace() != null && characterBuilder.getSubrace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null) {
-            if (characterBuilder.getRace().equals("Tiefling")) {
+        if (summaryBuilder.getRace() != null && summaryBuilder.getSubrace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null) {
+            if (summaryBuilder.getRace().equals("Tiefling")) {
                 religionBonus++;
-                characterBuilder.setReligionBonus(religionBonus);
+                summaryBuilder.setReligionBonus(religionBonus);
             }
-            if (characterBuilder.getSubrace().equals("Hill Dwarf")) {
+            if (summaryBuilder.getSubrace().equals("Hill Dwarf")) {
                 religionBonus++;
-                characterBuilder.setReligionBonus(religionBonus);
+                summaryBuilder.setReligionBonus(religionBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("Religion") || characterBuilder.getSkillsAndProficiencies2().equals("Religion")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("Religion") || summaryBuilder.getSkillsAndProficiencies2().equals("Religion")) {
                 religionBonus++;
-                characterBuilder.setReligionBonus(religionBonus);
+                summaryBuilder.setReligionBonus(religionBonus);
             }
-            if (characterBuilder.getAbilities()[3] <= 9) {
+            if (summaryBuilder.getAbilities()[3] <= 9) {
                 religionBonus--;
-                characterBuilder.setReligionBonus(religionBonus);
-            } else if (characterBuilder.getAbilities()[3] <= 13 && characterBuilder.getAbilities()[3] > 11) {
+                summaryBuilder.setReligionBonus(religionBonus);
+            } else if (summaryBuilder.getAbilities()[3] <= 13 && summaryBuilder.getAbilities()[3] > 11) {
                 religionBonus++;
-                characterBuilder.setReligionBonus(religionBonus);
-            } else if (characterBuilder.getAbilities()[3] <= 15) {
+                summaryBuilder.setReligionBonus(religionBonus);
+            } else if (summaryBuilder.getAbilities()[3] <= 15) {
                 religionBonus += 2;
-                characterBuilder.setReligionBonus(religionBonus);
-            } else if (characterBuilder.getAbilities()[3] <= 20) {
+                summaryBuilder.setReligionBonus(religionBonus);
+            } else if (summaryBuilder.getAbilities()[3] <= 20) {
                 religionBonus += 3;
-                characterBuilder.setReligionBonus(religionBonus);
+                summaryBuilder.setReligionBonus(religionBonus);
             }
         }
     }
 
     public void updateSleightOfHandBonus() {
-        if (characterBuilder.getSubrace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null) {
-            if (characterBuilder.getSubrace().equals("Lightfoot Halfling")) {
+        if (summaryBuilder.getSubrace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null) {
+            if (summaryBuilder.getSubrace().equals("Lightfoot Halfling")) {
                 sleightOfHandBonus++;
-                characterBuilder.setSleightOfHandBonus(sleightOfHandBonus);
+                summaryBuilder.setSleightOfHandBonus(sleightOfHandBonus);
             }
-            if (characterBuilder.getSubrace().equals("Wood Dwarf")) {
+            if (summaryBuilder.getSubrace().equals("Wood Dwarf")) {
                 sleightOfHandBonus++;
-                characterBuilder.setSleightOfHandBonus(sleightOfHandBonus);
+                summaryBuilder.setSleightOfHandBonus(sleightOfHandBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("Sleight Of Hand") || characterBuilder.getSkillsAndProficiencies2().equals("Sleight Of Hand")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("Sleight Of Hand") || summaryBuilder.getSkillsAndProficiencies2().equals("Sleight Of Hand")) {
                 sleightOfHandBonus++;
-                characterBuilder.setSleightOfHandBonus(sleightOfHandBonus);
+                summaryBuilder.setSleightOfHandBonus(sleightOfHandBonus);
             }
-            if (characterBuilder.getAbilities()[1] <= 9) {
+            if (summaryBuilder.getAbilities()[1] <= 9) {
                 sleightOfHandBonus--;
-                characterBuilder.setSleightOfHandBonus(sleightOfHandBonus);
-            } else if (characterBuilder.getAbilities()[1] <= 13 && characterBuilder.getAbilities()[1] > 11) {
+                summaryBuilder.setSleightOfHandBonus(sleightOfHandBonus);
+            } else if (summaryBuilder.getAbilities()[1] <= 13 && summaryBuilder.getAbilities()[1] > 11) {
                 sleightOfHandBonus++;
-                characterBuilder.setSleightOfHandBonus(sleightOfHandBonus);
-            } else if (characterBuilder.getAbilities()[1] <= 15) {
+                summaryBuilder.setSleightOfHandBonus(sleightOfHandBonus);
+            } else if (summaryBuilder.getAbilities()[1] <= 15) {
                 sleightOfHandBonus += 2;
-                characterBuilder.setSleightOfHandBonus(sleightOfHandBonus);
-            } else if (characterBuilder.getAbilities()[1] <= 20) {
+                summaryBuilder.setSleightOfHandBonus(sleightOfHandBonus);
+            } else if (summaryBuilder.getAbilities()[1] <= 20) {
                 sleightOfHandBonus += 3;
-                characterBuilder.setSleightOfHandBonus(sleightOfHandBonus);
+                summaryBuilder.setSleightOfHandBonus(sleightOfHandBonus);
             }
         }
     }
 
     public void updateStealthBonus() {
-        if (characterBuilder.getSubrace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null) {
-            if (characterBuilder.getSubrace().equals("Wood Elf")) {
+        if (summaryBuilder.getSubrace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null) {
+            if (summaryBuilder.getSubrace().equals("Wood Elf")) {
                 stealthBonus++;
-                characterBuilder.setStealthBonus(stealthBonus);
+                summaryBuilder.setStealthBonus(stealthBonus);
             }
-            if (characterBuilder.getSubrace().equals("Lightfoot Halfling")) {
+            if (summaryBuilder.getSubrace().equals("Lightfoot Halfling")) {
                 stealthBonus++;
-                characterBuilder.setStealthBonus(stealthBonus);
+                summaryBuilder.setStealthBonus(stealthBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("Stealth") || characterBuilder.getSkillsAndProficiencies2().equals("Stealth")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("Stealth") || summaryBuilder.getSkillsAndProficiencies2().equals("Stealth")) {
                 stealthBonus++;
-                characterBuilder.setStealthBonus(stealthBonus);
+                summaryBuilder.setStealthBonus(stealthBonus);
             }
-            if (characterBuilder.getAbilities()[1] <= 9) {
+            if (summaryBuilder.getAbilities()[1] <= 9) {
                 stealthBonus--;
-                characterBuilder.setStealthBonus(stealthBonus);
-            } else if (characterBuilder.getAbilities()[1] <= 13 && characterBuilder.getAbilities()[1] > 11) {
+                summaryBuilder.setStealthBonus(stealthBonus);
+            } else if (summaryBuilder.getAbilities()[1] <= 13 && summaryBuilder.getAbilities()[1] > 11) {
                 stealthBonus++;
-                characterBuilder.setStealthBonus(stealthBonus);
-            } else if (characterBuilder.getAbilities()[1] <= 15) {
+                summaryBuilder.setStealthBonus(stealthBonus);
+            } else if (summaryBuilder.getAbilities()[1] <= 15) {
                 stealthBonus += 2;
-                characterBuilder.setStealthBonus(stealthBonus);
-            } else if (characterBuilder.getAbilities()[1] <= 20) {
+                summaryBuilder.setStealthBonus(stealthBonus);
+            } else if (summaryBuilder.getAbilities()[1] <= 20) {
                 stealthBonus += 3;
-                characterBuilder.setStealthBonus(stealthBonus);
+                summaryBuilder.setStealthBonus(stealthBonus);
             }
         }
     }
 
     public void updateSurvivalBonus() {
-        if (characterBuilder.getSubrace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null) {
-            if (characterBuilder.getSubrace().equals("Wood Elf")) {
+        if (summaryBuilder.getSubrace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null) {
+            if (summaryBuilder.getSubrace().equals("Wood Elf")) {
                 survivalBonus++;
-                characterBuilder.setSurvivalBonus(survivalBonus);
+                summaryBuilder.setSurvivalBonus(survivalBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("Survival") || characterBuilder.getSkillsAndProficiencies2().equals("Survival")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("Survival") || summaryBuilder.getSkillsAndProficiencies2().equals("Survival")) {
                 survivalBonus++;
-                characterBuilder.setSurvivalBonus(survivalBonus);
+                summaryBuilder.setSurvivalBonus(survivalBonus);
             }
-            if (characterBuilder.getAbilities()[4] <= 9) {
+            if (summaryBuilder.getAbilities()[4] <= 9) {
                 survivalBonus--;
-                characterBuilder.setSurvivalBonus(survivalBonus);
-            } else if (characterBuilder.getAbilities()[4] <= 13 && characterBuilder.getAbilities()[4] > 11) {
+                summaryBuilder.setSurvivalBonus(survivalBonus);
+            } else if (summaryBuilder.getAbilities()[4] <= 13 && summaryBuilder.getAbilities()[4] > 11) {
                 survivalBonus++;
-                characterBuilder.setSurvivalBonus(survivalBonus);
-            } else if (characterBuilder.getAbilities()[4] <= 15) {
+                summaryBuilder.setSurvivalBonus(survivalBonus);
+            } else if (summaryBuilder.getAbilities()[4] <= 15) {
                 survivalBonus += 2;
-                characterBuilder.setSurvivalBonus(survivalBonus);
-            } else if (characterBuilder.getAbilities()[4] <= 20) {
+                summaryBuilder.setSurvivalBonus(survivalBonus);
+            } else if (summaryBuilder.getAbilities()[4] <= 20) {
                 survivalBonus += 3;
-                characterBuilder.setSurvivalBonus(survivalBonus);
+                summaryBuilder.setSurvivalBonus(survivalBonus);
             }
         }
     }
 
     public void updateHistoryBonus() {
-        if (characterBuilder.getSubrace() != null && characterBuilder.getSkillsAndProficiencies1() != null && characterBuilder.getSkillsAndProficiencies2() != null && characterBuilder.getAbilities() != null) {
-            if (characterBuilder.getSubrace().equals("Hill Dwarf")) {
+        if (summaryBuilder.getSubrace() != null && summaryBuilder.getSkillsAndProficiencies1() != null && summaryBuilder.getSkillsAndProficiencies2() != null && summaryBuilder.getAbilities() != null) {
+            if (summaryBuilder.getSubrace().equals("Hill Dwarf")) {
                 historyBonus++;
-                characterBuilder.setHistoryBonus(historyBonus);
+                summaryBuilder.setHistoryBonus(historyBonus);
             }
-            if (characterBuilder.getSkillsAndProficiencies1().equals("History") || characterBuilder.getSkillsAndProficiencies2().equals("History ")) {
+            if (summaryBuilder.getSkillsAndProficiencies1().equals("History") || summaryBuilder.getSkillsAndProficiencies2().equals("History ")) {
                 historyBonus++;
-                characterBuilder.setHistoryBonus(historyBonus);
+                summaryBuilder.setHistoryBonus(historyBonus);
             }
-            if (characterBuilder.getAbilities()[3] <= 9) {
+            if (summaryBuilder.getAbilities()[3] <= 9) {
                 historyBonus--;
-                characterBuilder.setHistoryBonus(historyBonus);
-            } else if (characterBuilder.getAbilities()[3] <= 13 && characterBuilder.getAbilities()[3] > 11) {
+                summaryBuilder.setHistoryBonus(historyBonus);
+            } else if (summaryBuilder.getAbilities()[3] <= 13 && summaryBuilder.getAbilities()[3] > 11) {
                 historyBonus++;
-                characterBuilder.setHistoryBonus(historyBonus);
-            } else if (characterBuilder.getAbilities()[3] <= 15) {
+                summaryBuilder.setHistoryBonus(historyBonus);
+            } else if (summaryBuilder.getAbilities()[3] <= 15) {
                 historyBonus += 2;
-                characterBuilder.setHistoryBonus(historyBonus);
-            } else if (characterBuilder.getAbilities()[3] <= 20) {
+                summaryBuilder.setHistoryBonus(historyBonus);
+            } else if (summaryBuilder.getAbilities()[3] <= 20) {
                 historyBonus += 3;
-                characterBuilder.setHistoryBonus(historyBonus);
+                summaryBuilder.setHistoryBonus(historyBonus);
             }
         }
     }
 
     public void updateAbilities() {
-        if (characterBuilder.getRace() != null && characterBuilder.getSubrace() != null && characterBuilder.getAbilities() != null) {
-            Integer[] newAbilities = Arrays.copyOf(characterBuilder.getAbilities(), characterBuilder.getAbilities().length);
+        if (summaryBuilder.getRace() != null && summaryBuilder.getSubrace() != null && summaryBuilder.getAbilities() != null) {
+            Integer[] newAbilities = Arrays.copyOf(summaryBuilder.getAbilities(), summaryBuilder.getAbilities().length);
             Integer newStrength = newAbilities[0];
             Integer newDexterity = newAbilities[1];
             Integer newConstitution = newAbilities[2];
             Integer newIntelligence = newAbilities[3];
             Integer newWisdom = newAbilities[4];
             Integer newCharisma = newAbilities[5];
-            if (characterBuilder.getRace().equals("Half-Orc")) {
+            if (summaryBuilder.getRace().equals("Half-Orc")) {
                 newStrength += 2;
                 newConstitution++;
             }
-            if (characterBuilder.getSubrace().equals("Mountain Dwarf")) {
+            if (summaryBuilder.getSubrace().equals("Mountain Dwarf")) {
                 newStrength += 2;
             }
-            if (characterBuilder.getRace().equals("Elf")) {
+            if (summaryBuilder.getRace().equals("Elf")) {
                 newDexterity += 2;
             }
-            if (characterBuilder.getRace().equals("Halfling")) {
+            if (summaryBuilder.getRace().equals("Halfling")) {
                 newDexterity += 2;
             }
-            if (characterBuilder.getSubrace().equals("Hill Dwarf")) {
+            if (summaryBuilder.getSubrace().equals("Hill Dwarf")) {
                 newConstitution += 2;
                 newWisdom++;
             }
-            if (characterBuilder.getRace().equals("Dragonborn")) {
+            if (summaryBuilder.getRace().equals("Dragonborn")) {
                 newConstitution += 2;
                 newCharisma++;
             }
-            if (characterBuilder.getSubrace().equals("Rock Gnome")) {
+            if (summaryBuilder.getSubrace().equals("Rock Gnome")) {
                 newIntelligence++;
             }
-            if (characterBuilder.getSubrace().equals("High Elf")) {
+            if (summaryBuilder.getSubrace().equals("High Elf")) {
                 newIntelligence++;
             }
-            if (characterBuilder.getRace().equals("Tiefling")) {
+            if (summaryBuilder.getRace().equals("Tiefling")) {
                 newIntelligence++;
                 newCharisma += 2;
             }
-            if (characterBuilder.getSubrace().equals("Wood Elf")) {
+            if (summaryBuilder.getSubrace().equals("Wood Elf")) {
                 newWisdom++;
             }
-            if (characterBuilder.getRace().equals("Half-Elf")) {
+            if (summaryBuilder.getRace().equals("Half-Elf")) {
                 newCharisma += 2;
             }
             newAbilities[0] = newStrength;
@@ -592,101 +592,101 @@ public class skill {
             newAbilities[4] = newWisdom;
             newAbilities[5] = newCharisma;
 
-            characterBuilder.setUpdateAbilities(newAbilities);
+            summaryBuilder.setUpdateAbilities(newAbilities);
         }
     }
 
     public void updateHealth() {
         int health = 0;
-        if (characterBuilder.getCharacterClass() != null && characterBuilder.getAbilities() != null)
+        if (summaryBuilder.getCharacterClass() != null && summaryBuilder.getAbilities() != null)
         {
-            if (characterBuilder.getCharacterClass().equals("Barbarian")) {
-                health = 12 + characterBuilder.getAbilities()[2];
-                characterBuilder.setHealthAmount(health);
+            if (summaryBuilder.getCharacterClass().equals("Barbarian")) {
+                health = 12 + summaryBuilder.getAbilities()[2];
+                summaryBuilder.setHealthAmount(health);
             }
-            if (characterBuilder.getCharacterClass().equals("Fighter") || characterBuilder.getCharacterClass().equals("Paladin") || characterBuilder.getCharacterClass().equals("Ranger")) {
-                health = 10 + characterBuilder.getAbilities()[2];
-                characterBuilder.setHealthAmount(health);
+            if (summaryBuilder.getCharacterClass().equals("Fighter") || summaryBuilder.getCharacterClass().equals("Paladin") || summaryBuilder.getCharacterClass().equals("Ranger")) {
+                health = 10 + summaryBuilder.getAbilities()[2];
+                summaryBuilder.setHealthAmount(health);
             }
-            if (characterBuilder.getCharacterClass().equals("Bard") || characterBuilder.getCharacterClass().equals("Cleric") || characterBuilder.getCharacterClass().equals("Druid") || characterBuilder.getCharacterClass().equals("Monk") || characterBuilder.getCharacterClass().equals("Rogue") || characterBuilder.getCharacterClass().equals("Warlock")) {
-                health = 8 + characterBuilder.getAbilities()[2];
-                characterBuilder.setHealthAmount(health);
+            if (summaryBuilder.getCharacterClass().equals("Bard") || summaryBuilder.getCharacterClass().equals("Cleric") || summaryBuilder.getCharacterClass().equals("Druid") || summaryBuilder.getCharacterClass().equals("Monk") || summaryBuilder.getCharacterClass().equals("Rogue") || summaryBuilder.getCharacterClass().equals("Warlock")) {
+                health = 8 + summaryBuilder.getAbilities()[2];
+                summaryBuilder.setHealthAmount(health);
             }
-            if (characterBuilder.getCharacterClass().equals("Sorcerer") || characterBuilder.getCharacterClass().equals("Wizard")) {
-                health = 6 + characterBuilder.getAbilities()[2];
-                characterBuilder.setHealthAmount(health);
+            if (summaryBuilder.getCharacterClass().equals("Sorcerer") || summaryBuilder.getCharacterClass().equals("Wizard")) {
+                health = 6 + summaryBuilder.getAbilities()[2];
+                summaryBuilder.setHealthAmount(health);
             }
         }
     }
 
     public void savingThrows() {
-        if (characterBuilder.getAbilities() != null && characterBuilder.getCharacterClass() != null) {
-            strengthThrow = (characterBuilder.getUpdateAbilities()[0] - 10) / 2;
-            System.out.println(characterBuilder.getUpdateAbilities()[0]);
-            dexterityThrow = (characterBuilder.getUpdateAbilities()[1] - 10) / 2;
-            System.out.println(characterBuilder.getUpdateAbilities()[1]);
-            constitutionThrow = (characterBuilder.getUpdateAbilities()[2] - 10) / 2;
-            System.out.println(characterBuilder.getUpdateAbilities()[2]);
-            intelligenceThrow = (characterBuilder.getUpdateAbilities()[3] - 10) / 2;
-            System.out.println(characterBuilder.getUpdateAbilities()[3]);
-            wisdomThrow = (characterBuilder.getUpdateAbilities()[4] - 10) / 2;
-            System.out.println(characterBuilder.getUpdateAbilities()[4]);
-            charismaThrow = (characterBuilder.getUpdateAbilities()[5] - 10) / 2;
-            System.out.println(characterBuilder.getUpdateAbilities()[5]);
-            if (characterBuilder.getCharacterClass().equals("Barbarian")) {
+        if (summaryBuilder.getAbilities() != null && summaryBuilder.getCharacterClass() != null) {
+            strengthThrow = (summaryBuilder.getUpdateAbilities()[0] - 10) / 2;
+            System.out.println(summaryBuilder.getUpdateAbilities()[0]);
+            dexterityThrow = (summaryBuilder.getUpdateAbilities()[1] - 10) / 2;
+            System.out.println(summaryBuilder.getUpdateAbilities()[1]);
+            constitutionThrow = (summaryBuilder.getUpdateAbilities()[2] - 10) / 2;
+            System.out.println(summaryBuilder.getUpdateAbilities()[2]);
+            intelligenceThrow = (summaryBuilder.getUpdateAbilities()[3] - 10) / 2;
+            System.out.println(summaryBuilder.getUpdateAbilities()[3]);
+            wisdomThrow = (summaryBuilder.getUpdateAbilities()[4] - 10) / 2;
+            System.out.println(summaryBuilder.getUpdateAbilities()[4]);
+            charismaThrow = (summaryBuilder.getUpdateAbilities()[5] - 10) / 2;
+            System.out.println(summaryBuilder.getUpdateAbilities()[5]);
+            if (summaryBuilder.getCharacterClass().equals("Barbarian")) {
                 strengthThrow += 2;
                 constitutionThrow += 2;
             }
-            if (characterBuilder.getCharacterClass().equals("Bard")) {
+            if (summaryBuilder.getCharacterClass().equals("Bard")) {
                 dexterityThrow += 2;
                 charismaThrow += 2;
             }
-            if (characterBuilder.getCharacterClass().equals("Cleric")) {
+            if (summaryBuilder.getCharacterClass().equals("Cleric")) {
                 wisdomThrow += 2;
                 charismaThrow += 2;
             }
-            if (characterBuilder.getCharacterClass().equals("Druid")) {
+            if (summaryBuilder.getCharacterClass().equals("Druid")) {
                 intelligenceThrow += 2;
                 wisdomThrow += 2;
             }
-            if (characterBuilder.getCharacterClass().equals("Fighter")) {
+            if (summaryBuilder.getCharacterClass().equals("Fighter")) {
                 strengthThrow += 2;
                 constitutionThrow += 2;
             }
-            if (characterBuilder.getCharacterClass().equals("Monk")) {
+            if (summaryBuilder.getCharacterClass().equals("Monk")) {
                 strengthThrow += 2;
                 dexterityThrow += 2;
             }
-            if (characterBuilder.getCharacterClass().equals("Paladin")) {
+            if (summaryBuilder.getCharacterClass().equals("Paladin")) {
                 wisdomThrow += 2;
                 charismaThrow += 2;
             }
-            if (characterBuilder.getCharacterClass().equals("Ranger")) {
+            if (summaryBuilder.getCharacterClass().equals("Ranger")) {
                 strengthThrow += 2;
                 dexterityThrow += 2;
             }
-            if (characterBuilder.getCharacterClass().equals("Rogue")) {
+            if (summaryBuilder.getCharacterClass().equals("Rogue")) {
                 dexterityThrow += 2;
                 intelligenceThrow += 2;
             }
-            if (characterBuilder.getCharacterClass().equals("Sorcerer")) {
+            if (summaryBuilder.getCharacterClass().equals("Sorcerer")) {
                 constitutionThrow += 2;
                 charismaThrow += 2;
             }
-            if (characterBuilder.getCharacterClass().equals("Warlock")) {
+            if (summaryBuilder.getCharacterClass().equals("Warlock")) {
                 wisdomThrow += 2;
                 charismaThrow += 2;
             }
-            if (characterBuilder.getCharacterClass().equals("Wizard")) {
+            if (summaryBuilder.getCharacterClass().equals("Wizard")) {
                 intelligenceThrow += 2;
                 wisdomThrow += 2;
             }
-            characterBuilder.setStrThrow(strengthThrow);
-            characterBuilder.setDexThrow(dexterityThrow);
-            characterBuilder.setConThrow(constitutionThrow);
-            characterBuilder.setIntThrow(intelligenceThrow);
-            characterBuilder.setWisThrow(wisdomThrow);
-            characterBuilder.setChaThrow(charismaThrow);
+            summaryBuilder.setStrThrow(strengthThrow);
+            summaryBuilder.setDexThrow(dexterityThrow);
+            summaryBuilder.setConThrow(constitutionThrow);
+            summaryBuilder.setIntThrow(intelligenceThrow);
+            summaryBuilder.setWisThrow(wisdomThrow);
+            summaryBuilder.setChaThrow(charismaThrow);
         }
     }
 
@@ -694,24 +694,24 @@ public class skill {
     {
         armor = 10;
 
-        if (characterBuilder.getAbilities() != null && characterBuilder.getCharacterClass() != null)
+        if (summaryBuilder.getAbilities() != null && summaryBuilder.getCharacterClass() != null)
         {
-            dexterityThrow = (characterBuilder.getAbilities()[1] - 10) / 2;
+            dexterityThrow = (summaryBuilder.getAbilities()[1] - 10) / 2;
             armor = armor + dexterityThrow;
-            if (characterBuilder.getCharacterClass().equals("Barbarian"))
+            if (summaryBuilder.getCharacterClass().equals("Barbarian"))
             {
-                constitutionThrow = (characterBuilder.getAbilities()[2] - 10) / 2;
+                constitutionThrow = (summaryBuilder.getAbilities()[2] - 10) / 2;
                 armor = armor + constitutionThrow;
             }
 
-            if (characterBuilder.getCharacterClass().equals("Monk"))
+            if (summaryBuilder.getCharacterClass().equals("Monk"))
             {
-                wisdomThrow = (characterBuilder.getAbilities()[4] - 10) / 2;
+                wisdomThrow = (summaryBuilder.getAbilities()[4] - 10) / 2;
                 armor = armor + wisdomThrow;
             }
         }
 
-        characterBuilder.setArmorAmount(armor);
+        summaryBuilder.setArmorAmount(armor);
     }
 
     public void startSkills()

@@ -150,7 +150,7 @@ public class AbilityController implements Initializable{
     //List<Integer> stdList = new ArrayList<>(Arrays.asList(stdArray));
     public List<Integer> availableOptions;
 
-    CharacterBuilder characterBuilder = CharacterBuilder.getInstance(); //created a character data instance
+    SummaryBuilder summaryBuilder = SummaryBuilder.getInstance(); //created a character data instance
 
 
     public void prev(ActionEvent event) throws IOException
@@ -176,7 +176,7 @@ public class AbilityController implements Initializable{
                 {
                     pointBuy();
                     Arrays.fill(finalValues, 8); //setting the array back to 8's if changing scenes
-                    characterBuilder.setAbilities(finalValues);
+                    summaryBuilder.setAbilities(finalValues);
                 }
                 else if (newValue.equals("Standard Array"))
                 {
@@ -237,7 +237,7 @@ public class AbilityController implements Initializable{
                 setStandardArrayOptions(uniqueArray);
                 strDropdown.setValue(newValue);
                 finalValues[0] = newValue;
-                characterBuilder.setAbilities(finalValues);//storing finalvalues in characterBuilder
+                summaryBuilder.setAbilities(finalValues);//storing finalvalues in summaryBuilder
             }
         });
 
@@ -250,7 +250,7 @@ public class AbilityController implements Initializable{
                 setStandardArrayOptions(uniqueArray);
                 dexDropdown.setValue(newValue);
                 finalValues[1] = newValue;
-                characterBuilder.setAbilities(finalValues);//storing finalvalues in characterBuilder
+                summaryBuilder.setAbilities(finalValues);//storing finalvalues in summaryBuilder
             }
         });
 
@@ -263,7 +263,7 @@ public class AbilityController implements Initializable{
                 setStandardArrayOptions(uniqueArray);
                 conDropdown.setValue(newValue);
                 finalValues[2] = newValue;
-                characterBuilder.setAbilities(finalValues);//storing finalvalues in characterBuilder
+                summaryBuilder.setAbilities(finalValues);//storing finalvalues in summaryBuilder
             }
         });
 
@@ -276,7 +276,7 @@ public class AbilityController implements Initializable{
                 setStandardArrayOptions(uniqueArray);
                 intDropdown.setValue(newValue);
                 finalValues[3] = newValue;
-                characterBuilder.setAbilities(finalValues);//storing finalvalues in characterBuilder
+                summaryBuilder.setAbilities(finalValues);//storing finalvalues in summaryBuilder
             }
         });
 
@@ -289,7 +289,7 @@ public class AbilityController implements Initializable{
                 setStandardArrayOptions(uniqueArray);
                 wisDropdown.setValue(newValue);
                 finalValues[4] = newValue;
-                characterBuilder.setAbilities(finalValues);//storing finalvalues in characterBuilder
+                summaryBuilder.setAbilities(finalValues);//storing finalvalues in summaryBuilder
             }
         });
 
@@ -302,7 +302,7 @@ public class AbilityController implements Initializable{
                 setStandardArrayOptions(uniqueArray);
                 chaDropdown.setValue(newValue);
                 finalValues[5] = newValue;
-                characterBuilder.setAbilities(finalValues);//storing finalvalues in characterBuilder
+                summaryBuilder.setAbilities(finalValues);//storing finalvalues in summaryBuilder
             }
         });
     }
@@ -542,7 +542,7 @@ public class AbilityController implements Initializable{
         finalValues[3] = intResult;
         finalValues[4] = wisResult;
         finalValues[5] = chaResult;
-        characterBuilder.setAbilities(finalValues);//storing finalvalues in characterBuilder
+        summaryBuilder.setAbilities(finalValues);//storing finalvalues in summaryBuilder
 
         for (int i = 4; i > 0; i--) //this shows the 4 values rolled
         {
@@ -619,7 +619,7 @@ public class AbilityController implements Initializable{
                 updateValues(chaLabel, +1, 'p', 5);
             }
             
-            characterBuilder.setAbilities(finalValues);
+            summaryBuilder.setAbilities(finalValues);
         }
     }
 
@@ -652,7 +652,7 @@ public class AbilityController implements Initializable{
             {   
                 updateValues(chaLabel, -1, 's', 5);
             }
-            characterBuilder.setAbilities(finalValues);
+            summaryBuilder.setAbilities(finalValues);
         }
     }
     

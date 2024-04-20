@@ -19,9 +19,9 @@ public class sceneController {
     String array[] = {"Welcome.fxml","Race-Subrace 1.0.fxml","Class1.0.fxml","Ability1.0.fxml","Background1.0.fxml","Equipment1.0.fxml","Summary1.0.fxml"};
     String otherScenes[] = {"Settings.fxml", "Credits.fxml"};
     public static int counter = 0;
-    CharacterBuilder characterBuilder = CharacterBuilder.getInstance();
+    SummaryBuilder summaryBuilder = SummaryBuilder.getInstance();
     
-    String cursorPath = characterBuilder.getCursor();
+    String cursorPath = summaryBuilder.getCursor();
 
     public void prev(ActionEvent event) throws IOException
     {

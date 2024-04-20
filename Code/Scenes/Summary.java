@@ -12,7 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 
-public class SummaryController implements Initializable{
+public class Summary implements Initializable{
     @FXML
     private Label currentHealth;
     @FXML
@@ -150,26 +150,26 @@ public class SummaryController implements Initializable{
 
     private sceneController controller; //created a scenceController instance
     private skill skillController;
-    CharacterBuilder characterBuilder = CharacterBuilder.getInstance();
+    SummaryBuilder summaryBuilder = SummaryBuilder.getInstance();
 
-    
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+
 
         skillController = new skill();
         skillController.startSkills();
 
 
-        if (characterBuilder.getName() != null)
+        if (summaryBuilder.getName() != null)
         {
-            nameS.setText(characterBuilder.getName());
+            nameS.setText(summaryBuilder.getName());
         }
-        System.out.println(characterBuilder.getName());
+        System.out.println(summaryBuilder.getName());
 
-        if (characterBuilder.getUpdateAbilities() != null) //setting abilities
+        if (summaryBuilder.getUpdateAbilities() != null) //setting abilities
         {
-            abilityValues = characterBuilder.getUpdateAbilities();
+            abilityValues = summaryBuilder.getUpdateAbilities();
             strLabel.setText(String.valueOf(abilityValues[0]));
             dexLabel.setText(String.valueOf(abilityValues[1]));
             conLabel.setText(String.valueOf(abilityValues[2]));
@@ -177,64 +177,64 @@ public class SummaryController implements Initializable{
             wisLabel.setText(String.valueOf(abilityValues[4]));
             chaLabel.setText(String.valueOf(abilityValues[5]));
         }
-        if (characterBuilder.getCharacterClass() != null)
+        if (summaryBuilder.getCharacterClass() != null)
         {
-            if (characterBuilder.getCharacterClass().equals("Barbarian"))
+            if (summaryBuilder.getCharacterClass().equals("Barbarian"))
             {
                 clearImg();
                 barbCircle.setVisible(true);
             }
-            else if (characterBuilder.getCharacterClass().equals("Bard"))
+            else if (summaryBuilder.getCharacterClass().equals("Bard"))
             {
                 clearImg();
                 bardCircle.setVisible(true);
             }
-            else if (characterBuilder.getCharacterClass().equals("Cleric"))
+            else if (summaryBuilder.getCharacterClass().equals("Cleric"))
             {
                 clearImg();
                 clericCircle.setVisible(true);
             }
-            else if (characterBuilder.getCharacterClass().equals("Ranger"))
+            else if (summaryBuilder.getCharacterClass().equals("Ranger"))
             {
                 clearImg();
                 rangerCircle.setVisible(true);
             }
-            else if (characterBuilder.getCharacterClass().equals("Druid"))
+            else if (summaryBuilder.getCharacterClass().equals("Druid"))
             {
                 clearImg();
                 druidCircle.setVisible(true);
             }
-            else if (characterBuilder.getCharacterClass().equals("Fighter"))
+            else if (summaryBuilder.getCharacterClass().equals("Fighter"))
             {
                 clearImg();
                 fighterCircle.setVisible(true);
             }
-            else if (characterBuilder.getCharacterClass().equals("Monk"))
+            else if (summaryBuilder.getCharacterClass().equals("Monk"))
             {
                 clearImg();
                 monkCircle.setVisible(true);
             }
-            else if (characterBuilder.getCharacterClass().equals("Paladin"))
+            else if (summaryBuilder.getCharacterClass().equals("Paladin"))
             {
                 clearImg();
                 paladinCircle.setVisible(true);
             }
-            else if (characterBuilder.getCharacterClass().equals("Rogue"))
+            else if (summaryBuilder.getCharacterClass().equals("Rogue"))
             {
                 clearImg();
                 rogueCircle.setVisible(true);
             }
-            else if (characterBuilder.getCharacterClass().equals("Sorcerer"))
+            else if (summaryBuilder.getCharacterClass().equals("Sorcerer"))
             {
                 clearImg();
                 sorcererCircle.setVisible(true);
             }
-            else if (characterBuilder.getCharacterClass().equals("Warlock"))
+            else if (summaryBuilder.getCharacterClass().equals("Warlock"))
             {
                 clearImg();
                 warlockCircle.setVisible(true);
             }
-            else if (characterBuilder.getCharacterClass().equals("Wizard"))
+            else if (summaryBuilder.getCharacterClass().equals("Wizard"))
             {
                 clearImg();
                 wizardCircle.setVisible(true);
@@ -242,104 +242,104 @@ public class SummaryController implements Initializable{
         }
 
 
-        if (characterBuilder.getHair() != null) //setting hair
+        if (summaryBuilder.getHair() != null) //setting hair
         {
-            hairLabel.setText(characterBuilder.getHair());
+            hairLabel.setText(summaryBuilder.getHair());
         }
 
-        if (characterBuilder.getEyes() != null) //setting eyes
+        if (summaryBuilder.getEyes() != null) //setting eyes
         {
-            eyesLabel.setText(characterBuilder.getEyes());
+            eyesLabel.setText(summaryBuilder.getEyes());
         }
 
-        if (characterBuilder.getGender() != null) //setting gender
+        if (summaryBuilder.getGender() != null) //setting gender
         {
-            genderLabel.setText(characterBuilder.getGender());
+            genderLabel.setText(summaryBuilder.getGender());
         }
 
-        if (characterBuilder.getSkin() != null) //setting skin
+        if (summaryBuilder.getSkin() != null) //setting skin
         {
-            skinLabel.setText(characterBuilder.getSkin());
+            skinLabel.setText(summaryBuilder.getSkin());
         }
 
-        if (characterBuilder.getHeight() != null) //setting height
+        if (summaryBuilder.getHeight() != null) //setting height
         {
-            heightLabel.setText(characterBuilder.getHeight());
+            heightLabel.setText(summaryBuilder.getHeight());
         }
 
-        if (characterBuilder.getSkillsAndProficiencies1() != null)
+        if (summaryBuilder.getSkillsAndProficiencies1() != null)
         {
-            skill1Label.setText(characterBuilder.getSkillsAndProficiencies1());
+            skill1Label.setText(summaryBuilder.getSkillsAndProficiencies1());
         }
 
-        if (characterBuilder.getSkillsAndProficiencies2() != null)
+        if (summaryBuilder.getSkillsAndProficiencies2() != null)
         {
-            skill2Label.setText(characterBuilder.getSkillsAndProficiencies2());
+            skill2Label.setText(summaryBuilder.getSkillsAndProficiencies2());
         }
 
-        if (characterBuilder.getAge() !=  null)
+        if (summaryBuilder.getAge() !=  null)
         {
-            ageLabel.setText(characterBuilder.getAge());
+            ageLabel.setText(summaryBuilder.getAge());
         }
         
-        if (characterBuilder.getbackgroundText() != null)
+        if (summaryBuilder.getbackgroundText() != null)
         {
-           backgroundTextArea.setText(characterBuilder.getbackgroundText());
+           backgroundTextArea.setText(summaryBuilder.getbackgroundText());
         }
-        if(characterBuilder.getCharacterClass() != null){
-            classDisplayLabel.setText(characterBuilder.getCharacterClass());
+        if(summaryBuilder.getCharacterClass() != null){
+            classDisplayLabel.setText(summaryBuilder.getCharacterClass());
         }
-        if(characterBuilder.getSubclass() != null)
+        if(summaryBuilder.getSubclass() != null)
         {
-            subclassDisplayLabel.setText(characterBuilder.getSubclass());
+            subclassDisplayLabel.setText(summaryBuilder.getSubclass());
         }
-        if(characterBuilder.getRace() != null)
+        if(summaryBuilder.getRace() != null)
         {
-            raceDisplay.setText(characterBuilder.getRace());
+            raceDisplay.setText(summaryBuilder.getRace());
         }
-        if(characterBuilder.getSubrace() != null)
+        if(summaryBuilder.getSubrace() != null)
         {
-            subraceDisplay.setText(characterBuilder.getSubrace());
+            subraceDisplay.setText(summaryBuilder.getSubrace());
         }
-        if (characterBuilder.getEquipment() != null)
+        if (summaryBuilder.getEquipment() != null)
         {
-            equipmentArea.setText(characterBuilder.getEquipment());
+            equipmentArea.setText(summaryBuilder.getEquipment());
         }
-        if (characterBuilder.getSpells() != null)
+        if (summaryBuilder.getSpells() != null)
         {
-            spellsArea.setText(characterBuilder.getSpells());
+            spellsArea.setText(summaryBuilder.getSpells());
         }
-        if (characterBuilder.getNotes() != null)
+        if (summaryBuilder.getNotes() != null)
         {
-            notesText.setText(characterBuilder.getNotes());
+            notesText.setText(summaryBuilder.getNotes());
         }
 
         //setting the skill bonus to their values stored on data class
-        animalHandlingLabel.setText(String.valueOf(characterBuilder.getAnimalHandlingBonus()));
-        arcanaLabel.setText(String.valueOf(characterBuilder.getArcanaBonus()));
-        athleticsLabel.setText(String.valueOf(characterBuilder.getAthleticsBonus()));
-        deceptionLabel.setText(String.valueOf(characterBuilder.getDeceptionBonus()));
-        insightLabel.setText(String.valueOf(characterBuilder.getInsightBonus()));
-        intimidationLabel.setText(String.valueOf(characterBuilder.getIntimidationBonus()));
-        investigationLabel.setText(String.valueOf(characterBuilder.getInvestigationBonus()));
-        medicineLabel.setText(String.valueOf(characterBuilder.getMedicineBonus()));
-        natureLabel.setText(String.valueOf(characterBuilder.getNatureBonus()));
-        perceptionLabel.setText(String.valueOf(characterBuilder.getPerceptionBonus()));
-        performanceLabel.setText(String.valueOf(characterBuilder.getPerceptionBonus()));
-        persuasionLabel.setText(String.valueOf(characterBuilder.getAnimalHandlingBonus()));
-        religionLabel.setText(String.valueOf(characterBuilder.getReligionBonus()));
-        sleightLabel.setText(String.valueOf(characterBuilder.getSleightOfHandBonus()));
-        stealthLabel.setText(String.valueOf(characterBuilder.getStealthBonus()));
-        survivalLabel.setText(String.valueOf(characterBuilder.getSurvivalBonus()));
-        acrobaticsLabel.setText(String.valueOf(characterBuilder.getAcrobaticsBonus()));
-        historyLabel.setText(String.valueOf(characterBuilder.getHistoryBonus()));
-        strThrowLabel.setText(String.valueOf(characterBuilder.getStrThrow()));
-        dexThrowLabel.setText(String.valueOf(characterBuilder.getDexThrow()));
-        conThrowLabel.setText(String.valueOf(characterBuilder.getConThrow()));
-        intThrowLabel.setText(String.valueOf(characterBuilder.getIntThrow()));
-        wisThrowLabel.setText(String.valueOf(characterBuilder.getWisThrow()));
-        chaThrowLabel.setText(String.valueOf(characterBuilder.getChaThrow()));
-        armorLabel.setText(String.valueOf(characterBuilder.getArmorAmount()));
+        animalHandlingLabel.setText(String.valueOf(summaryBuilder.getAnimalHandlingBonus()));
+        arcanaLabel.setText(String.valueOf(summaryBuilder.getArcanaBonus()));
+        athleticsLabel.setText(String.valueOf(summaryBuilder.getAthleticsBonus()));
+        deceptionLabel.setText(String.valueOf(summaryBuilder.getDeceptionBonus()));
+        insightLabel.setText(String.valueOf(summaryBuilder.getInsightBonus()));
+        intimidationLabel.setText(String.valueOf(summaryBuilder.getIntimidationBonus()));
+        investigationLabel.setText(String.valueOf(summaryBuilder.getInvestigationBonus()));
+        medicineLabel.setText(String.valueOf(summaryBuilder.getMedicineBonus()));
+        natureLabel.setText(String.valueOf(summaryBuilder.getNatureBonus()));
+        perceptionLabel.setText(String.valueOf(summaryBuilder.getPerceptionBonus()));
+        performanceLabel.setText(String.valueOf(summaryBuilder.getPerceptionBonus()));
+        persuasionLabel.setText(String.valueOf(summaryBuilder.getAnimalHandlingBonus()));
+        religionLabel.setText(String.valueOf(summaryBuilder.getReligionBonus()));
+        sleightLabel.setText(String.valueOf(summaryBuilder.getSleightOfHandBonus()));
+        stealthLabel.setText(String.valueOf(summaryBuilder.getStealthBonus()));
+        survivalLabel.setText(String.valueOf(summaryBuilder.getSurvivalBonus()));
+        acrobaticsLabel.setText(String.valueOf(summaryBuilder.getAcrobaticsBonus()));
+        historyLabel.setText(String.valueOf(summaryBuilder.getHistoryBonus()));
+        strThrowLabel.setText(String.valueOf(summaryBuilder.getStrThrow()));
+        dexThrowLabel.setText(String.valueOf(summaryBuilder.getDexThrow()));
+        conThrowLabel.setText(String.valueOf(summaryBuilder.getConThrow()));
+        intThrowLabel.setText(String.valueOf(summaryBuilder.getIntThrow()));
+        wisThrowLabel.setText(String.valueOf(summaryBuilder.getWisThrow()));
+        chaThrowLabel.setText(String.valueOf(summaryBuilder.getChaThrow()));
+        armorLabel.setText(String.valueOf(summaryBuilder.getArmorAmount()));
     };
 
     public void clearImg()
@@ -386,7 +386,7 @@ public class SummaryController implements Initializable{
     }
 
     public void updateNotes() {
-        characterBuilder.setNotes(notesText.getText());}
+        summaryBuilder.setNotes(notesText.getText());}
     public void prev(ActionEvent event) throws IOException
     {
         controller = new sceneController();
