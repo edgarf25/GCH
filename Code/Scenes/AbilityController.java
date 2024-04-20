@@ -167,11 +167,11 @@ public class AbilityController implements Initializable{
 
     public void initialize(URL arg0, ResourceBundle arg1)
     {
-        startAbilityScene();
-        optionsChoiceBox.getItems().addAll(options);
+        startAbilityScene(); //prepares scene when tab is opened
+        optionsChoiceBox.getItems().addAll(options);    //adds options to top dropdown
         optionsChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
         {
-            if (newValue != null) {
+            if (newValue != null) {             //different operations depending on the choice selected
                 if (newValue.equals("Point Buy")) 
                 {
                     pointBuy();
