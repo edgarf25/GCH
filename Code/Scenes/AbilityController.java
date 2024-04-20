@@ -25,113 +25,113 @@ public class AbilityController implements Initializable{
     public static int pointBuy;
 
     @FXML
-    private Label strLabel;
+    public Label strLabel;
     @FXML
-    private Label dexLabel;
+    public Label dexLabel;
     @FXML
-    private Label conLabel;
+    public Label conLabel;
     @FXML
-    private Label intLabel;
+    public Label intLabel;
     @FXML
-    private Label wisLabel;
+    public Label wisLabel;
     @FXML
-    private Label chaLabel;
+    public Label chaLabel;
     @FXML
-    private Label strVal1;
+    public Label strVal1;
     @FXML
-    private Label strVal2;
+    public Label strVal2;
     @FXML
-    private Label strVal3;
+    public Label strVal3;
     @FXML
-    private Label strVal4;
+    public Label strVal4;
     @FXML
-    private Label dexVal1;
+    public Label dexVal1;
     @FXML
-    private Label dexVal2;
+    public Label dexVal2;
     @FXML
-    private Label dexVal3;
+    public Label dexVal3;
     @FXML
-    private Label dexVal4;
+    public Label dexVal4;
     @FXML
-    private Label conVal1;
+    public Label conVal1;
     @FXML
-    private Label conVal2;
+    public Label conVal2;
     @FXML
-    private Label conVal3;
+    public Label conVal3;
     @FXML
-    private Label conVal4;
+    public Label conVal4;
     @FXML
-    private Label intVal1;
+    public Label intVal1;
     @FXML
-    private Label intVal2;
+    public Label intVal2;
     @FXML
-    private Label intVal3;
+    public Label intVal3;
     @FXML
-    private Label intVal4;
+    public Label intVal4;
     @FXML
-    private Label wisVal1;
+    public Label wisVal1;
     @FXML
-    private Label wisVal2;
+    public Label wisVal2;
     @FXML
-    private Label wisVal3;
+    public Label wisVal3;
     @FXML
-    private Label wisVal4;
+    public Label wisVal4;
     @FXML
-    private Label chaVal1;
+    public Label chaVal1;
     @FXML
-    private Label chaVal2;
+    public Label chaVal2;
     @FXML
-    private Label chaVal3;
+    public Label chaVal3;
     @FXML
-    private Label chaVal4;
+    public Label chaVal4;
     @FXML
-    private ChoiceBox<Integer> strDropdown;
+    public ChoiceBox<Integer> strDropdown;
     @FXML
-    private ChoiceBox<Integer> dexDropdown;
+    public ChoiceBox<Integer> dexDropdown;
     @FXML
-    private ChoiceBox<Integer> conDropdown;
+    public ChoiceBox<Integer> conDropdown;
     @FXML
-    private ChoiceBox<Integer> intDropdown;
+    public ChoiceBox<Integer> intDropdown;
     @FXML
-    private ChoiceBox<Integer> wisDropdown;
+    public ChoiceBox<Integer> wisDropdown;
     @FXML
-    private ChoiceBox<Integer> chaDropdown;
+    public ChoiceBox<Integer> chaDropdown;
     @FXML
-    private Button strPlusButton;
+    public Button strPlusButton;
     @FXML
-    private Button dexPlusButton;
+    public Button dexPlusButton;
     @FXML
-    private Button conPlusButton;
+    public Button conPlusButton;
     @FXML
-    private Button intPlusButton;
+    public Button intPlusButton;
     @FXML
-    private Button wisPlusButton;
+    public Button wisPlusButton;
     @FXML
-    private Button chaPlusButton;
+    public Button chaPlusButton;
     @FXML
-    private Button strSubButton;
+    public Button strSubButton;
     @FXML
-    private Button dexSubButton;
+    public Button dexSubButton;
     @FXML
-    private Button conSubButton;
+    public Button conSubButton;
     @FXML
-    private Button intSubButton;
+    public Button intSubButton;
     @FXML
-    private Button wisSubButton;
+    public Button wisSubButton;
     @FXML
-    private Button chaSubButton;
+    public Button chaSubButton;
     @FXML
-    private Button diceButton;
+    public Button diceButton;
     @FXML
-    private Label pointBuyLabel;
+    public Label pointBuyLabel;
     @FXML
-    private Label pointsRemainingText;
+    public Label pointsRemainingText;
     @FXML
-    private Rectangle pointsRemaining;
+    public Rectangle pointsRemaining;
     @FXML
-    private Label diceRollLabel;
+    public Label diceRollLabel;
     @FXML
-    private ImageView diceGif;
+    public ImageView diceGif;
     @FXML
     private ChoiceBox<String> optionsChoiceBox;
     public int strChoice;
@@ -148,7 +148,7 @@ public class AbilityController implements Initializable{
     private Integer[] currentArray = {0, 0, 0, 0, 0, 0};
     private Integer[] uniqueArray;
     //List<Integer> stdList = new ArrayList<>(Arrays.asList(stdArray));
-    private List<Integer> availableOptions;
+    public List<Integer> availableOptions;
 
     CharacterData characterData = CharacterData.getInstance(); //created a character data instance
 
