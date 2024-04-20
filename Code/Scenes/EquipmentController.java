@@ -48,7 +48,7 @@ public class EquipmentController implements Initializable {
 
     private int amountOfGold = 0;
     private String goldLine = "";
-    CharacterData characterData = CharacterData.getInstance();
+    CharacterBuilder characterBuilder = CharacterBuilder.getInstance();
 
     public void initialize(URL arg0, ResourceBundle arg1) {
         //  Weapons Array Lists of String
@@ -57,20 +57,20 @@ public class EquipmentController implements Initializable {
         weaponChoiceBox.getItems().addAll(weaponArray);   // GET ALL WEAPONS IN ARRAY
         armorChoiceBox.getItems().addAll(armorArray);     // GET ALL ARMOR   IN ARRAY
         possessionChoiceBox.getItems().addAll(posArray);  // GET ALL POS     IN ARRAY
-        if (characterData.getEquipment() != null)
+        if (characterBuilder.getEquipment() != null)
         {
-            if (characterData.getSpells() != null)
+            if (characterBuilder.getSpells() != null)
             {
-                TextAreaList.setText(characterData.getEquipment() + characterData.getSpells());
+                TextAreaList.setText(characterBuilder.getEquipment() + characterBuilder.getSpells());
             }
             else
             {
-                TextAreaList.setText(characterData.getEquipment());
+                TextAreaList.setText(characterBuilder.getEquipment());
             }
         }
-        else if (characterData.getSpells() != null)
+        else if (characterBuilder.getSpells() != null)
         {
-            TextAreaList.setText(characterData.getSpells());
+            TextAreaList.setText(characterBuilder.getSpells());
         }
 
         weaponChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
@@ -143,18 +143,18 @@ public class EquipmentController implements Initializable {
 
     public void addWeapon() {
         if (weaponText != null) {
-            if (characterData.getEquipment() != null) {
-                characterData.setEquipment(characterData.getEquipment() + weaponText);
-                if (characterData.getSpells() == null) {
-                    TextAreaList.setText(characterData.getEquipment());
+            if (characterBuilder.getEquipment() != null) {
+                characterBuilder.setEquipment(characterBuilder.getEquipment() + weaponText);
+                if (characterBuilder.getSpells() == null) {
+                    TextAreaList.setText(characterBuilder.getEquipment());
                 } else {
-                    TextAreaList.setText(characterData.getEquipment() + characterData.getSpells());
+                    TextAreaList.setText(characterBuilder.getEquipment() + characterBuilder.getSpells());
                 }
-            } else if (characterData.getSpells() != null) {
-                TextAreaList.setText(weaponText + characterData.getSpells());
-                characterData.setEquipment(weaponText);
+            } else if (characterBuilder.getSpells() != null) {
+                TextAreaList.setText(weaponText + characterBuilder.getSpells());
+                characterBuilder.setEquipment(weaponText);
             } else {
-                characterData.setEquipment(weaponText);
+                characterBuilder.setEquipment(weaponText);
                 TextAreaList.setText(weaponText);
             }
             weaponText = "";
@@ -163,18 +163,18 @@ public class EquipmentController implements Initializable {
 
     public void addArmor() {
         if (armorText != null) {
-            if (characterData.getEquipment() != null) {
-                characterData.setEquipment(characterData.getEquipment() + armorText);
-                if (characterData.getSpells() == null) {
-                    TextAreaList.setText(characterData.getEquipment());
+            if (characterBuilder.getEquipment() != null) {
+                characterBuilder.setEquipment(characterBuilder.getEquipment() + armorText);
+                if (characterBuilder.getSpells() == null) {
+                    TextAreaList.setText(characterBuilder.getEquipment());
                 } else {
-                    TextAreaList.setText(characterData.getEquipment() + characterData.getSpells());
+                    TextAreaList.setText(characterBuilder.getEquipment() + characterBuilder.getSpells());
                 }
-            } else if (characterData.getSpells() != null) {
-                characterData.setEquipment(armorText);
-                TextAreaList.setText(armorText + characterData.getSpells());
+            } else if (characterBuilder.getSpells() != null) {
+                characterBuilder.setEquipment(armorText);
+                TextAreaList.setText(armorText + characterBuilder.getSpells());
             } else {
-                characterData.setEquipment(armorText);
+                characterBuilder.setEquipment(armorText);
                 TextAreaList.setText(armorText);
             }
             armorText = "";
@@ -183,18 +183,18 @@ public class EquipmentController implements Initializable {
 
     public void addPossession() {
         if (posText != null) {
-            if (characterData.getEquipment() != null) {
-                characterData.setEquipment(characterData.getEquipment() + posText);
-                if (characterData.getSpells() == null) {
-                    TextAreaList.setText(characterData.getEquipment());
+            if (characterBuilder.getEquipment() != null) {
+                characterBuilder.setEquipment(characterBuilder.getEquipment() + posText);
+                if (characterBuilder.getSpells() == null) {
+                    TextAreaList.setText(characterBuilder.getEquipment());
                 } else {
-                    TextAreaList.setText(characterData.getEquipment() + characterData.getSpells());
+                    TextAreaList.setText(characterBuilder.getEquipment() + characterBuilder.getSpells());
                 }
-            } else if (characterData.getSpells() != null) {
-                characterData.setEquipment(posText);
-                TextAreaList.setText(posText + characterData.getSpells());
+            } else if (characterBuilder.getSpells() != null) {
+                characterBuilder.setEquipment(posText);
+                TextAreaList.setText(posText + characterBuilder.getSpells());
             } else {
-                characterData.setEquipment(posText);
+                characterBuilder.setEquipment(posText);
                 TextAreaList.setText(posText);
             }
             posText = "";
@@ -203,18 +203,18 @@ public class EquipmentController implements Initializable {
 
     public void addSpell() {
         if (spellText != null) {
-            if (characterData.getSpells() != null) {
-                characterData.setSpells(characterData.getSpells() + spellText);
-                if (characterData.getEquipment() == null) {
-                    TextAreaList.setText(characterData.getSpells());
+            if (characterBuilder.getSpells() != null) {
+                characterBuilder.setSpells(characterBuilder.getSpells() + spellText);
+                if (characterBuilder.getEquipment() == null) {
+                    TextAreaList.setText(characterBuilder.getSpells());
                 } else {
-                    TextAreaList.setText(characterData.getEquipment() + characterData.getSpells());
+                    TextAreaList.setText(characterBuilder.getEquipment() + characterBuilder.getSpells());
                 }
-            } else if (characterData.getEquipment() != null) {
-                characterData.setSpells(spellText);
-                TextAreaList.setText(characterData.getEquipment() + spellText);
+            } else if (characterBuilder.getEquipment() != null) {
+                characterBuilder.setSpells(spellText);
+                TextAreaList.setText(characterBuilder.getEquipment() + spellText);
             } else {
-                characterData.setSpells(spellText);
+                characterBuilder.setSpells(spellText);
                 TextAreaList.setText(spellText);
             }
             spellText = "";
@@ -223,7 +223,7 @@ public class EquipmentController implements Initializable {
 
     public void addGold() {
         // System.out.println(amountOfGold);
-        String list = characterData.getEquipment();
+        String list = characterBuilder.getEquipment();
         if (GoldInput != null && !GoldInput.getText().isEmpty()) {
             if (list != null) {
                 StringBuffer text = new StringBuffer(list);
@@ -234,21 +234,21 @@ public class EquipmentController implements Initializable {
                     System.out.println(goldLine);
                     text.replace(list.indexOf("Gold"), list.indexOf("g") + 1, goldLine);
                     sub = list.substring(list.indexOf("Gold"), list.indexOf("g") + 1);
-                    characterData.setEquipment(list.replace(sub, goldLine));
+                    characterBuilder.setEquipment(list.replace(sub, goldLine));
                 } else {
-                    characterData.setEquipment(list + "Gold: " + amountOfGold + "g\n");
+                    characterBuilder.setEquipment(list + "Gold: " + amountOfGold + "g\n");
                 }
-                if (characterData.getSpells() == null) {
-                    TextAreaList.setText(characterData.getEquipment());
+                if (characterBuilder.getSpells() == null) {
+                    TextAreaList.setText(characterBuilder.getEquipment());
                 } else {
-                    TextAreaList.setText(characterData.getEquipment() + characterData.getSpells());
+                    TextAreaList.setText(characterBuilder.getEquipment() + characterBuilder.getSpells());
                 }
-            } else if (characterData.getSpells() != null) {
-                characterData.setEquipment("Gold: " + GoldInput.getText() + "g\n");
-                TextAreaList.setText("Gold: " + GoldInput.getText() + "g\n" + characterData.getSpells());
+            } else if (characterBuilder.getSpells() != null) {
+                characterBuilder.setEquipment("Gold: " + GoldInput.getText() + "g\n");
+                TextAreaList.setText("Gold: " + GoldInput.getText() + "g\n" + characterBuilder.getSpells());
                 addGold();
             } else {
-                characterData.setEquipment("Gold: " + GoldInput.getText() + "g\n");
+                characterBuilder.setEquipment("Gold: " + GoldInput.getText() + "g\n");
                 TextAreaList.setText("Gold: " + GoldInput.getText() + "g\n");
                 addGold();
             }
@@ -277,8 +277,8 @@ public class EquipmentController implements Initializable {
         armorChoiceBox.getSelectionModel().clearSelection();
         possessionChoiceBox.getSelectionModel().clearSelection();
         spellChoiceBox.getSelectionModel().clearSelection();
-        characterData.setEquipment("");
-        characterData.setSpells("");
+        characterBuilder.setEquipment("");
+        characterBuilder.setSpells("");
     }
 
     private sceneController controller; //created a scenceControl7ler instance

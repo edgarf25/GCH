@@ -15,7 +15,7 @@ public class Settings {
     private MediaPlayer mediaPlayer;
 
     sceneController sceneController = new sceneController();
-    CharacterData characterData = CharacterData.getInstance();
+    CharacterBuilder characterBuilder = CharacterBuilder.getInstance();
 
     public void initialize() {
         // Set a listener on the volume slider to update the MediaPlayer volume
@@ -24,8 +24,8 @@ public class Settings {
             @Override
             public void changed(ObservableValue<? extends Number> arg0, Number arg1, Number arg2) {
                 mediaPlayer.setVolume(volumeSlider.getValue() * 0.01);
-                characterData.setVolume(volumeSlider.getValue() * 0.01);
-                System.out.println(characterData.getVolume());
+                characterBuilder.setVolume(volumeSlider.getValue() * 0.01);
+                System.out.println(characterBuilder.getVolume());
             }
             
         });
@@ -33,15 +33,15 @@ public class Settings {
 
     public void candyCaneCursor(ActionEvent event) throws IOException
     {
-        characterData.setCursor("/src/candycane.gif");
-        System.out.println(characterData.getCursor());
+        characterBuilder.setCursor("/src/candycane.gif");
+        System.out.println(characterBuilder.getCursor());
         sceneController.switchToSettings(event);
     }
 
     public void swordCursor(ActionEvent event) throws IOException
     {
-        characterData.setCursor("/src/sword.png");
-        System.out.println(characterData.getCursor());
+        characterBuilder.setCursor("/src/sword.png");
+        System.out.println(characterBuilder.getCursor());
         sceneController.switchToSettings(event);
         
     }
@@ -54,12 +54,12 @@ public class Settings {
 
     public String getCursor()
     {
-        return characterData.getCursor();
+        return characterBuilder.getCursor();
     }
 
     public Double getVolume()
     {
-        return characterData.getVolume();
+        return characterBuilder.getVolume();
     }
 
     
