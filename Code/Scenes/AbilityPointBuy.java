@@ -1,4 +1,7 @@
 package Scenes;
 
-public class AbilityPointBuy {
+public class AbilityPointBuy implements AbilitySelection{
+    public void setAbilities(){
+
+    }
 }
