@@ -307,8 +307,7 @@ public class AbilityController implements Initializable{
         });
     }
     
-    public void startAbilityScene()
-    {
+    public void startAbilityScene(){
         pointsRemainingText.setVisible(false);
         pointBuyLabel.setVisible(false);
         pointsRemaining.setVisible(false);
