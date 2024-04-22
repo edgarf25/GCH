@@ -20,7 +20,7 @@ import javafx.scene.image.ImageView;
 import javafx.fxml.FXML;
 import javafx.collections.FXCollections;
 
-public class AbilityController implements Initializable{
+public class AbilityController implements Initializable {
 
     public static int pointBuy;
 
@@ -143,10 +143,10 @@ public class AbilityController implements Initializable{
 
     private String[] options = {"Standard Array", "Point Buy", "Dice Roll"};
     private sceneController controller; //created a scenceController instance
-    private Integer[] stdArray = {8, 10, 12, 13, 14, 15};
-    private Integer[] finalValues = {8, 8, 8, 8, 8, 8};
-    private Integer[] currentArray = {0, 0, 0, 0, 0, 0};
-    private Integer[] uniqueArray;
+    public Integer[] stdArray = {8, 10, 12, 13, 14, 15};
+    public Integer[] finalValues = {8, 8, 8, 8, 8, 8};
+    public Integer[] currentArray = {0, 0, 0, 0, 0, 0};
+    public Integer[] uniqueArray;
     //List<Integer> stdList = new ArrayList<>(Arrays.asList(stdArray));
     public List<Integer> availableOptions;
 
@@ -182,6 +182,7 @@ public class AbilityController implements Initializable{
                 {
                     Arrays.fill(currentArray, 0);//filling array with 0 if changing ability option so they can re enter options again
                     standardArray();
+                    //sa.setAbilities();
                     setStandardArrayOptions(stdArray);
                     addChoiceBoxListeners();
                 }

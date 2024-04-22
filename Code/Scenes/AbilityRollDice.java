@@ -1,6 +1,6 @@
 package Scenes;
 
-public class AbilityRollDice {
+public class AbilityRollDice extends AbilityController implements AbilitySelection{
     public void setAbilities(){
 
     }

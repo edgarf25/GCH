@@ -10,134 +10,9 @@ import javafx.scene.shape.Rectangle;
 
 import java.util.List;
 
-public class AbilityPointBuy implements AbilitySelection{
+public class AbilityPointBuy extends AbilityController implements AbilitySelection{
+    AbilityController a = new AbilityController();
     public static int pointBuy;
-
-    @FXML
-    private Label strLabel;
-    @FXML
-    private Label dexLabel;
-    @FXML
-    private Label conLabel;
-    @FXML
-    private Label intLabel;
-    @FXML
-    private Label wisLabel;
-    @FXML
-    private Label chaLabel;
-    @FXML
-    private Label strVal1;
-    @FXML
-    private Label strVal2;
-    @FXML
-    private Label strVal3;
-    @FXML
-    private Label strVal4;
-    @FXML
-    private Label dexVal1;
-    @FXML
-    private Label dexVal2;
-    @FXML
-    private Label dexVal3;
-    @FXML
-    private Label dexVal4;
-    @FXML
-    private Label conVal1;
-    @FXML
-    private Label conVal2;
-    @FXML
-    private Label conVal3;
-    @FXML
-    private Label conVal4;
-    @FXML
-    private Label intVal1;
-    @FXML
-    private Label intVal2;
-    @FXML
-    private Label intVal3;
-    @FXML
-    private Label intVal4;
-    @FXML
-    private Label wisVal1;
-    @FXML
-    private Label wisVal2;
-    @FXML
-    private Label wisVal3;
-    @FXML
-    private Label wisVal4;
-    @FXML
-    private Label chaVal1;
-    @FXML
-    private Label chaVal2;
-    @FXML
-    private Label chaVal3;
-    @FXML
-    private Label chaVal4;
-    @FXML
-    private ChoiceBox<Integer> strDropdown;
-    @FXML
-    private ChoiceBox<Integer> dexDropdown;
-    @FXML
-    private ChoiceBox<Integer> conDropdown;
-    @FXML
-    private ChoiceBox<Integer> intDropdown;
-    @FXML
-    private ChoiceBox<Integer> wisDropdown;
-    @FXML
-    private ChoiceBox<Integer> chaDropdown;
-    @FXML
-    private Button strPlusButton;
-    @FXML
-    private Button dexPlusButton;
-    @FXML
-    private Button conPlusButton;
-    @FXML
-    private Button intPlusButton;
-    @FXML
-    private Button wisPlusButton;
-    @FXML
-    private Button chaPlusButton;
-    @FXML
-    private Button strSubButton;
-    @FXML
-    private Button dexSubButton;
-    @FXML
-    private Button conSubButton;
-    @FXML
-    private Button intSubButton;
-    @FXML
-    private Button wisSubButton;
-    @FXML
-    private Button chaSubButton;
-    @FXML
-    private Button diceButton;
-    @FXML
-    private Label pointBuyLabel;
-    @FXML
-    private Label pointsRemainingText;
-    @FXML
-    private Rectangle pointsRemaining;
-    @FXML
-    private Label diceRollLabel;
-    @FXML
-    private ImageView diceGif;
-    @FXML
-    private ChoiceBox<String> optionsChoiceBox;
-    public int strChoice;
-    public int dexChoice;
-    public int conChoice;
-    public int intChoice;
-    public int wisChoice;
-    public int chaChoice;
-
-    private String[] options = {"Standard Array", "Point Buy", "Dice Roll"};
-    private sceneController controller; //created a scenceController instance
-    private Integer[] stdArray = {8, 10, 12, 13, 14, 15};
-    private Integer[] finalValues = {8, 8, 8, 8, 8, 8};
-    private Integer[] currentArray = {0, 0, 0, 0, 0, 0};
-    private Integer[] uniqueArray;
-    //List<Integer> stdList = new ArrayList<>(Arrays.asList(stdArray));
-    private List<Integer> availableOptions;
 
     SummaryBuilder summaryBuilder = SummaryBuilder.getInstance(); //created a character data instance
 
@@ -145,35 +20,35 @@ public class AbilityPointBuy implements AbilitySelection{
         /// Insert
     }
     public void pointBuy() {
-        pointsRemainingText.setVisible(true);
-        pointBuyLabel.setVisible(true);
-        pointsRemaining.setVisible(true);
-        strPlusButton.setVisible(true);
-        strSubButton.setVisible(true);
-        strLabel.setVisible(true);
-        dexPlusButton.setVisible(true);
-        dexSubButton.setVisible(true);
-        dexLabel.setVisible(true);
-        conPlusButton.setVisible(true);
-        conSubButton.setVisible(true);
-        conLabel.setVisible(true);
-        intPlusButton.setVisible(true);
-        intSubButton.setVisible(true);
-        intLabel.setVisible(true);
-        wisPlusButton.setVisible(true);
-        wisSubButton.setVisible(true);
-        wisLabel.setVisible(true);
-        chaPlusButton.setVisible(true);
-        chaSubButton.setVisible(true);
-        chaLabel.setVisible(true);
+        a.pointsRemainingText.setVisible(true);
+        a.pointBuyLabel.setVisible(true);
+        a.pointsRemaining.setVisible(true);
+        a.strPlusButton.setVisible(true);
+        a.strSubButton.setVisible(true);
+        a.strLabel.setVisible(true);
+        a.dexPlusButton.setVisible(true);
+        a.dexSubButton.setVisible(true);
+        a.dexLabel.setVisible(true);
+        a.conPlusButton.setVisible(true);
+        a.conSubButton.setVisible(true);
+        a.conLabel.setVisible(true);
+        a.intPlusButton.setVisible(true);
+        a.intSubButton.setVisible(true);
+        a.intLabel.setVisible(true);
+        a.wisPlusButton.setVisible(true);
+        a.wisSubButton.setVisible(true);
+        a.wisLabel.setVisible(true);
+        a.chaPlusButton.setVisible(true);
+        a.chaSubButton.setVisible(true);
+        a.chaLabel.setVisible(true);
         pointBuy = 27;
-        strLabel.setText("8");
-        dexLabel.setText("8");
-        conLabel.setText("8");
-        intLabel.setText("8");
-        wisLabel.setText("8");
-        chaLabel.setText("8");
-        pointBuyLabel.setText(String.valueOf(pointBuy));
+        a.strLabel.setText("8");
+        a.dexLabel.setText("8");
+        a.conLabel.setText("8");
+        a.intLabel.setText("8");
+        a.wisLabel.setText("8");
+        a.chaLabel.setText("8");
+        a.pointBuyLabel.setText(String.valueOf(pointBuy));
     }
 
     private void updateValues(Label label, int change, char operator, int slot) //class that updates the actual values
@@ -198,40 +73,40 @@ public class AbilityPointBuy implements AbilitySelection{
 
         currentValue = currentValue + change;
         label.setText(String.valueOf(currentValue));
-        finalValues[slot] = currentValue;
-        pointBuyLabel.setText(String.valueOf(pointBuy));
+        a.finalValues[slot] = currentValue;
+        a.pointBuyLabel.setText(String.valueOf(pointBuy));
     }
     public void plusPointBuy(ActionEvent event) //increases label
     {
         String buttonId = ((Button) event.getSource()).getId();
         if (pointBuy != 0 )
         {
-            if ("strPlusButton".equals(buttonId) && !strLabel.getText().equals("15"))
+            if ("strPlusButton".equals(buttonId) && !a.strLabel.getText().equals("15"))
             {
-                updateValues(strLabel, +1, 'p', 0);
+                updateValues(a.strLabel, +1, 'p', 0);
             }
-            else if ("dexPlusButton".equals(buttonId) && !dexLabel.getText().equals("15"))
+            else if ("dexPlusButton".equals(buttonId) && !a.dexLabel.getText().equals("15"))
             {
-                updateValues(dexLabel, +1, 'p', 1);
+                updateValues(a.dexLabel, +1, 'p', 1);
             }
-            else if ("conPlusButton".equals(buttonId) && !conLabel.getText().equals("15"))
+            else if ("conPlusButton".equals(buttonId) && !a.conLabel.getText().equals("15"))
             {
-                updateValues(conLabel, +1, 'p', 2);
+                updateValues(a.conLabel, +1, 'p', 2);
             }
-            else if ("intPlusButton".equals(buttonId) && !intLabel.getText().equals("15"))
+            else if ("intPlusButton".equals(buttonId) && !a.intLabel.getText().equals("15"))
             {
-                updateValues(intLabel, +1, 'p', 3);
+                updateValues(a.intLabel, +1, 'p', 3);
             }
-            else if ("wisPlusButton".equals(buttonId) && !wisLabel.getText().equals("15"))
+            else if ("wisPlusButton".equals(buttonId) && !a.wisLabel.getText().equals("15"))
             {
-                updateValues(wisLabel, +1, 'p', 4);
+                updateValues(a.wisLabel, +1, 'p', 4);
             }
-            else if ("chaPlusButton".equals(buttonId) && !chaLabel.getText().equals("15"))
+            else if ("chaPlusButton".equals(buttonId) && !a.chaLabel.getText().equals("15"))
             {
-                updateValues(chaLabel, +1, 'p', 5);
+                updateValues(a.chaLabel, +1, 'p', 5);
             }
 
-            summaryBuilder.setAbilities(finalValues);
+            summaryBuilder.setAbilities(a.finalValues);
         }
     }
     public void subPointBuy(ActionEvent event) //decreases label
@@ -239,31 +114,31 @@ public class AbilityPointBuy implements AbilitySelection{
         String buttonId = ((Button) event.getSource()).getId(); //to know which button was clicked
         if (pointBuy < 27)
         {
-            if ("strSubButton".equals(buttonId) && !strLabel.getText().equals("8"))
+            if ("strSubButton".equals(buttonId) && !a.strLabel.getText().equals("8"))
             {
-                updateValues(strLabel, -1, 's', 0);
+                updateValues(a.strLabel, -1, 's', 0);
             }
-            else if ("dexSubButton".equals(buttonId) && !dexLabel.getText().equals("8"))
+            else if ("dexSubButton".equals(buttonId) && !a.dexLabel.getText().equals("8"))
             {
-                updateValues(dexLabel, -1, 's', 1);
+                updateValues(a.dexLabel, -1, 's', 1);
             }
-            else if ("conSubButton".equals(buttonId) && !conLabel.getText().equals("8"))
+            else if ("conSubButton".equals(buttonId) && !a.conLabel.getText().equals("8"))
             {
-                updateValues(conLabel, -1, 's', 2);
+                updateValues(a.conLabel, -1, 's', 2);
             }
-            else if ("intSubButton".equals(buttonId) && !intLabel.getText().equals("8"))
+            else if ("intSubButton".equals(buttonId) && !a.intLabel.getText().equals("8"))
             {
-                updateValues(intLabel, -1, 's', 3);
+                updateValues(a.intLabel, -1, 's', 3);
             }
-            else if ("wisSubButton".equals(buttonId) && !wisLabel.getText().equals("8"))
+            else if ("wisSubButton".equals(buttonId) && !a.wisLabel.getText().equals("8"))
             {
-                updateValues(wisLabel, -1, 's', 4);
+                updateValues(a.wisLabel, -1, 's', 4);
             }
-            else if ("chaSubButton".equals(buttonId) && !chaLabel.getText().equals("8"))
+            else if ("chaSubButton".equals(buttonId) && !a.chaLabel.getText().equals("8"))
             {
-                updateValues(chaLabel, -1, 's', 5);
+                updateValues(a.chaLabel, -1, 's', 5);
             }
-            summaryBuilder.setAbilities(finalValues);
+            summaryBuilder.setAbilities(a.finalValues);
         }
     }
 }

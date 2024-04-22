@@ -4,57 +4,38 @@ import javafx.collections.FXCollections;
 
 import java.util.*;
 
-public class AbilityStandardArray {
-    AbilityController a = new AbilityController();
-    public void setAbilities(){
+public class AbilityStandardArray extends AbilityController implements AbilitySelection {
 
+
+
+    public void setAbilities() {
+        standardArray();
     }
 
-    private void setStandardArrayOptions(Integer[] array)
-    {
-        a.availableOptions = new ArrayList<>(Arrays.asList(array));
-        a.strDropdown.setItems(FXCollections.observableArrayList(a.availableOptions));
-        a.dexDropdown.setItems(FXCollections.observableArrayList(a.availableOptions));
-        a.conDropdown.setItems(FXCollections.observableArrayList(a.availableOptions));
-        a.intDropdown.setItems(FXCollections.observableArrayList(a.availableOptions));
-        a.wisDropdown.setItems(FXCollections.observableArrayList(a.availableOptions));
-        a.chaDropdown.setItems(FXCollections.observableArrayList(a.availableOptions));
+    private void setStandardArrayOptions(Integer[] array) {
+        availableOptions = new ArrayList<>(Arrays.asList(array));
+        strDropdown.setItems(FXCollections.observableArrayList(availableOptions));
+        dexDropdown.setItems(FXCollections.observableArrayList(availableOptions));
+        conDropdown.setItems(FXCollections.observableArrayList(availableOptions));
+        intDropdown.setItems(FXCollections.observableArrayList(availableOptions));
+        wisDropdown.setItems(FXCollections.observableArrayList(availableOptions));
+        chaDropdown.setItems(FXCollections.observableArrayList(availableOptions));
     }
 
-    public static Integer[] compareArrays(Integer[] array1, Integer[] array2) {
-        // Convert arrays to sets for efficient comparison
-        Set<Integer> set2 = new HashSet<>(Arrays.asList(array2));
-
-        // Create a list to store the unique values
-        List<Integer> uniqueValues = new ArrayList<>();
-
-        // Check each value in array1
-        for (Integer value : array1) {
-            if (!set2.contains(value)) {
-                uniqueValues.add(value);
-            }
-        }
-
-        // Convert the list of unique values to an array
-        return uniqueValues.toArray(new Integer[0]);
-    }
-
-    public void standardArray()
-    {
-        a.startAbilityScene();
-        a.strDropdown.setVisible(true);
-        a.dexDropdown.setVisible(true);
-        a.conDropdown.setVisible(true);
-        a.intDropdown.setVisible(true);
-        a.wisDropdown.setVisible(true);
-        a.chaDropdown.setVisible(true);
+    public void standardArray() {
+        startAbilityScene();
+        strDropdown.setVisible(true);
+        dexDropdown.setVisible(true);
+        conDropdown.setVisible(true);
+        intDropdown.setVisible(true);
+        wisDropdown.setVisible(true);
+        chaDropdown.setVisible(true);
         //setting the dropdowns to null so that if they change to another option those values won't be there
-        a.strDropdown.setValue(null);
-        a.dexDropdown.setValue(null);
-        a.conDropdown.setValue(null);
-        a.intDropdown.setValue(null);
-        a.wisDropdown.setValue(null);
-        a.chaDropdown.setValue(null);
-
+        strDropdown.setValue(null);
+        dexDropdown.setValue(null);
+        conDropdown.setValue(null);
+        intDropdown.setValue(null);
+        wisDropdown.setValue(null);
+        chaDropdown.setValue(null);
     }
 }

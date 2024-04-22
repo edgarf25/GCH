@@ -61,7 +61,14 @@ public class SummaryBuilder {
         cursor = "/src/sword.png";
         volume = 0.15;
     }
+    public Memento createMemento(String desp)
+    {
+        return new Memento();
+    }
+    public void setMemento(Memento m)
+    {
 
+    }
     public static SummaryBuilder getInstance()
     {
         return instance;
