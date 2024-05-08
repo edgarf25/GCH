@@ -21,6 +21,7 @@ import javafx.fxml.FXML;
 import javafx.collections.FXCollections;
 
 public class AbilityController implements Initializable {
+    AbilitySelection abilitySelection;
 
     public static int pointBuy;
 
@@ -172,8 +173,9 @@ public class AbilityController implements Initializable {
         optionsChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
         {
             if (newValue != null) {             //different operations depending on the choice selected
-                if (newValue.equals("Point Buy")) 
+                if (newValue.equals("Point Buy"))
                 {
+                    abilitySelection = new AbilityPointBuy();
                     pointBuy();
                     Arrays.fill(finalValues, 8); //setting the array back to 8's if changing scenes
                     summaryBuilder.setAbilities(finalValues);
@@ -182,20 +184,22 @@ public class AbilityController implements Initializable {
                 {
                     Arrays.fill(currentArray, 0);//filling array with 0 if changing ability option so they can re enter options again
                     standardArray();
-                    //sa.setAbilities();
+                    abilitySelection = new AbilityStandardArray();
                     setStandardArrayOptions(stdArray);
                     addChoiceBoxListeners();
                 }
                 else if (newValue.equals("Dice Roll"))
                 {
+                    abilitySelection = new AbilityRollDice();
                     diceRoll();
                 }
+                abilitySelection.setAbilities();
             }
         });
     }
 
     // Initialize the options for the six ChoiceBox dropdowns with the values from the standard array
-    private void setStandardArrayOptions(Integer[] array) 
+    private void setStandardArrayOptions(Integer[] array)
     {
         availableOptions = new ArrayList<>(Arrays.asList(array));
         strDropdown.setItems(FXCollections.observableArrayList(availableOptions));
@@ -226,9 +230,9 @@ public class AbilityController implements Initializable {
     }
 
     // Add listeners to the ChoiceBoxes to be able to change what options they can select
-    private void addChoiceBoxListeners() 
+    private void addChoiceBoxListeners()
     {
-        
+
         strDropdown.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
                 //addint newval to currentArray
@@ -307,7 +311,7 @@ public class AbilityController implements Initializable {
             }
         });
     }
-    
+
     public void startAbilityScene(){
         pointsRemainingText.setVisible(false);
         pointBuyLabel.setVisible(false);
@@ -557,7 +561,7 @@ public class AbilityController implements Initializable {
                 chaVal1.setText(String.valueOf(chaArray[i - 1]));
             }
 
-            if (i == 3) 
+            if (i == 3)
             {
                 strVal2.setText(String.valueOf(strArray[i - 1]));
                 dexVal2.setText(String.valueOf(dexArray[i - 1]));
@@ -590,41 +594,41 @@ public class AbilityController implements Initializable {
         }
     }
 
-    public void plusPointBuy(ActionEvent event) //increases label 
+    public void plusPointBuy(ActionEvent event) //increases label
     {
         String buttonId = ((Button) event.getSource()).getId();
         if (pointBuy != 0 )
         {
             if ("strPlusButton".equals(buttonId) && !strLabel.getText().equals("15"))
-            {   
+            {
                 updateValues(strLabel, +1, 'p', 0);
             }
             else if ("dexPlusButton".equals(buttonId) && !dexLabel.getText().equals("15"))
-            {   
+            {
                 updateValues(dexLabel, +1, 'p', 1);
             }
             else if ("conPlusButton".equals(buttonId) && !conLabel.getText().equals("15"))
-            {   
+            {
                 updateValues(conLabel, +1, 'p', 2);
             }
             else if ("intPlusButton".equals(buttonId) && !intLabel.getText().equals("15"))
-            {   
+            {
                 updateValues(intLabel, +1, 'p', 3);
             }
             else if ("wisPlusButton".equals(buttonId) && !wisLabel.getText().equals("15"))
-            {   
+            {
                 updateValues(wisLabel, +1, 'p', 4);
             }
             else if ("chaPlusButton".equals(buttonId) && !chaLabel.getText().equals("15"))
-            {   
+            {
                 updateValues(chaLabel, +1, 'p', 5);
             }
-            
+
             summaryBuilder.setAbilities(finalValues);
         }
     }
 
-    public void subPointBuy(ActionEvent event) //decreases label 
+    public void subPointBuy(ActionEvent event) //decreases label
     {
         String buttonId = ((Button) event.getSource()).getId(); //to know which button was clicked
         if (pointBuy < 27)
@@ -634,29 +638,29 @@ public class AbilityController implements Initializable {
                 updateValues(strLabel, -1, 's', 0);
             }
             else if ("dexSubButton".equals(buttonId) && !dexLabel.getText().equals("8"))
-            {   
+            {
                 updateValues(dexLabel, -1, 's', 1);
             }
             else if ("conSubButton".equals(buttonId) && !conLabel.getText().equals("8"))
-            {   
+            {
                 updateValues(conLabel, -1, 's', 2);
             }
             else if ("intSubButton".equals(buttonId) && !intLabel.getText().equals("8"))
-            {   
+            {
                 updateValues(intLabel, -1, 's', 3);
             }
             else if ("wisSubButton".equals(buttonId) && !wisLabel.getText().equals("8"))
-            {   
+            {
                 updateValues(wisLabel, -1, 's', 4);
             }
             else if ("chaSubButton".equals(buttonId) && !chaLabel.getText().equals("8"))
-            {   
+            {
                 updateValues(chaLabel, -1, 's', 5);
             }
             summaryBuilder.setAbilities(finalValues);
         }
     }
-    
+
     private void updateValues(Label label, int change, char operator, int slot) //class that updates the actual values
     {
         int currentValue = Integer.parseInt(label.getText());
