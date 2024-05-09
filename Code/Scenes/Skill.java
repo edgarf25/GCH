@@ -2,7 +2,7 @@ package Scenes;
 
 import java.util.Arrays;
 
-public class skill {
+public class Skill {
     SummaryBuilder summaryBuilder = SummaryBuilder.getInstance();
     int acrobaticsBonus = 0;
     int animalHandlingBonus = 0;

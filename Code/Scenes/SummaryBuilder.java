@@ -3,6 +3,7 @@ package Scenes;
 
 public class SummaryBuilder {
     private static SummaryBuilder instance = new SummaryBuilder(); // Singleton instance
+    public static int instanceCount = 0;
 
     private Integer[] abilities;
     private Integer[] updateAbilities;
@@ -69,8 +70,16 @@ public class SummaryBuilder {
     {
 
     }
+    public Summary build()
+    {
+        return new Summary(this);
+    }
     public static SummaryBuilder getInstance()
     {
+        if (instanceCount < 1)
+        {
+            instance = new SummaryBuilder();
+        }
         return instance;
     }
 

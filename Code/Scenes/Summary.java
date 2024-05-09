@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 
 public class Summary implements Initializable{
+
     @FXML
     private Label currentHealth;
     @FXML
@@ -149,15 +150,18 @@ public class Summary implements Initializable{
 
 
     private sceneController controller; //created a scenceController instance
-    private skill skillController;
+    private Skill skillController;
     SummaryBuilder summaryBuilder = SummaryBuilder.getInstance();
+    Summary(SummaryBuilder builder)
+    {
 
+    }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
 
-        skillController = new skill();
+        skillController = new Skill();
         skillController.startSkills();
 
 
@@ -314,7 +318,7 @@ public class Summary implements Initializable{
             notesText.setText(summaryBuilder.getNotes());
         }
 
-        //setting the skill bonus to their values stored on data class
+        //setting the Skill bonus to their values stored on data class
         animalHandlingLabel.setText(String.valueOf(summaryBuilder.getAnimalHandlingBonus()));
         arcanaLabel.setText(String.valueOf(summaryBuilder.getArcanaBonus()));
         athleticsLabel.setText(String.valueOf(summaryBuilder.getAthleticsBonus()));
