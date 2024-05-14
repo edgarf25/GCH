@@ -1,6 +1,7 @@
 package Scenes;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
@@ -152,10 +153,7 @@ public class Summary implements Initializable{
     private sceneController controller; //created a scenceController instance
     private Skill skillController;
     SummaryBuilder summaryBuilder = SummaryBuilder.getInstance();
-//    Summary(SummaryBuilder builder)
-//    {
-//
-//    }
+
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {

@@ -1,6 +1,8 @@
 package Scenes;
 
 
+import java.lang.reflect.InvocationTargetException;
+
 public class SummaryBuilder {
     private static SummaryBuilder instance = new SummaryBuilder(); // Singleton instance
     public static int instanceCount = 0;
@@ -70,11 +72,9 @@ public class SummaryBuilder {
     {
 
     }
-//    public Summary build()
-//    {
-//        //return new Summary(this);
-//        return null;
-//    }
+    public Summary build() throws Exception {
+        return new Summary();
+    }
     public static SummaryBuilder getInstance()
     {
         if (instanceCount < 1)
