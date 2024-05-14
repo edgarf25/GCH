@@ -152,10 +152,10 @@ public class Summary implements Initializable{
     private sceneController controller; //created a scenceController instance
     private Skill skillController;
     SummaryBuilder summaryBuilder = SummaryBuilder.getInstance();
-    Summary(SummaryBuilder builder)
-    {
-
-    }
+//    Summary(SummaryBuilder builder)
+//    {
+//
+//    }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {

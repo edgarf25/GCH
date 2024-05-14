@@ -70,15 +70,17 @@ public class SummaryBuilder {
     {
 
     }
-    public Summary build()
-    {
-        return new Summary(this);
-    }
+//    public Summary build()
+//    {
+//        //return new Summary(this);
+//        return null;
+//    }
     public static SummaryBuilder getInstance()
     {
         if (instanceCount < 1)
         {
-            instance = new SummaryBuilder();
+            instance = new SummaryBuilder(); //eventually use build() here
+            instanceCount++;
         }
         return instance;
     }
